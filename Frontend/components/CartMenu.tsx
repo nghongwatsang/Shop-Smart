@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
+// Cart extension feature, not finished yet
+
 export default function CartMenu() {
     const [visible, setVisible] = useState(false);
 

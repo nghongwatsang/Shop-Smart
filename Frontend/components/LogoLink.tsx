@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+// Standard logo linking to the homepage for all pages
+
 export default function LogoLink() {
     return (
         <Link href="/">
