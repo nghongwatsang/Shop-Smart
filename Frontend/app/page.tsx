@@ -1,7 +1,9 @@
-'use client';
+"use client"
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   
@@ -43,6 +45,12 @@ export default function Home() {
             </Card>
           </div>
       ))}
+      </div>
+
+      <div className="pt-10">
+        <Link href="/search">
+          <Button>Start Saving!</Button>
+        </Link>
       </div>
     </div>
   );
