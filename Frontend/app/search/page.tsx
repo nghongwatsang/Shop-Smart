@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { Card, CardContent} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import LogoLink from "@/components/LogoLink";
+import CartMenu from "@/components/CartMenu";
 
 export default function SearchPage() {
     function fetchCategories() {
@@ -53,7 +55,7 @@ export default function SearchPage() {
                     ))}
                 </div>
             </section>
-            <section className="w-1/5">Cart component</section>
+            <section className="w-1/5 justify-end"><CartMenu /></section>
         </section>
     );
 }
