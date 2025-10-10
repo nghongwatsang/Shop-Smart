@@ -19,7 +19,8 @@ def scrape_hannaford_products(url):
             "category":     inp.get("data-category"),
             "store":        inp.get("data-store"),
             "size":         inp.get("data-size") or None,
-            "cost":         inp.get("data-price"),
+            #the discount price is the same as the price of the good if there is no discount amount, always take from this when webscraping
+            "cost":         inp.get("data-discount-price"),
             "quantity":     inp.get("data-quantity"),
             "discount":     inp.get("data-discount"),
             "coupon":       inp.get("data-coupon") or None,
