@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+#This will scrape hannafords for all products sold by them from each department.
+#TODO: get past that "see more" button that hides things ona  page, it doesn't change the source when you click it because it technically isn't a new page.
 def scrape_hannaford_products(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
