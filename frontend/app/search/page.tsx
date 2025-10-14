@@ -9,14 +9,9 @@ export default function SearchPage() {
     function fetchCategories() {
         // fetch categories from backend once setup, dummy data for now
         return [
-            
-        ]
-    }
-
-    const categories = /*fetchCategories()*/[
         {
             id: 1,
-            name: "Apples",
+            name: "Apples!",
         },
         {
             id: 2,
@@ -34,7 +29,10 @@ export default function SearchPage() {
             id: 5,
             name: "Else",
         },
-    ];
+        ];
+    }
+
+    const categories = fetchCategories();
 
     return(
         <section className="flex flex-row justify-center w-screen h-screen p-10">

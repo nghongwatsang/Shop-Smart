@@ -9,7 +9,7 @@ export default function CartMenu() {
     return (
         <div className="flex flex-col items-end">
             <button className="rounded transition duration-175 hover:brightness-85" onClick={() => setVisible(!visible)}>
-                <Image src="/cart.png" alt="Cart" width={100} height={100} />
+                <Image src="/CART-transparent.png" alt="Cart" width={100} height={100} />
             </button>
             {visible && (
                 <div className="cart-menu">
