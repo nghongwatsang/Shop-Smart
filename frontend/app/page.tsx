@@ -9,7 +9,7 @@ export default function Home() {
 
   const [stores, setStores] = useState([1,2,3]);
 
-  function changeStore(category) {
+  function changeStore(category: {id: number, logo_path: string}) {
     if (stores.includes(category.id)) {
       setStores(stores.filter(id => id !== category.id));
     } else {
