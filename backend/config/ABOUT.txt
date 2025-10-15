@@ -1,0 +1,1 @@
+Each store has unique selectors, URLs, rate limits, etc. Separate configs prevent cross-contamination and make updates safer.
