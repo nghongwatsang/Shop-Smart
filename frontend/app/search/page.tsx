@@ -4,7 +4,7 @@ import { Card, CardContent} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import LogoLink from "@/components/LogoLink";
 import CartMenu from "@/components/CartMenu";
-import Footer from "@/components/Footer";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 export default function SearchPage() {
     function fetchCategories() {
@@ -12,7 +12,7 @@ export default function SearchPage() {
         return [
         {
             id: 1,
-            name: "Apples!",
+            name: "Apples",
         },
         {
             id: 2,
@@ -32,7 +32,6 @@ export default function SearchPage() {
         },
         ];
     }
-
     const categories = fetchCategories();
 
     return(
@@ -57,7 +56,7 @@ export default function SearchPage() {
                 </section>
                 <section className="w-1/5 justify-end"><CartMenu /></section>
             </section>
-            <Footer />
+            <DarkModeToggle />
         </section>
     );
 }

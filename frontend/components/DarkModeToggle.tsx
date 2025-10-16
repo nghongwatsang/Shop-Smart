@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 
-export default function Footer() {
+export default function DarkModeToggle() {
     // This is gonna have more information about our webpages or website, just dark mode toggle for now
 
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -15,7 +15,7 @@ export default function Footer() {
         }
     }, [isDarkMode]);
     return (
-        <div>
+        <div className="fixed bottom-0 right-0 z-50 p-10">
             <div className="flex items-center">
                 <label className="flex items-center cursor-pointer">
                     <div className="relative">

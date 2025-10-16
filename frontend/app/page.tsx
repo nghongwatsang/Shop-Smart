@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 export default function Home() {
 
@@ -49,7 +50,7 @@ export default function Home() {
       <div className="flex flex-row items-center">
         {categories.map((category) => (
           <div key={category.id} className="px-10">
-            <Card className={`w-30 h-30 hover:scale-110 transition-all cursor-pointer ${!stores.includes(category.id) ? 'saturate-0' : ''}`} onClick={() => changeStore(category)}>
+            <Card className={`w-30 h-30 hover:scale-110 transition-all cursor-pointer ${!stores.includes(category.id) ? 'saturate-0 brightness-85' : ''}`} onClick={() => changeStore(category)}>
               <CardContent className="w-30 h-30 flex items-center justify-center">
                 <Image src={category.logo_path} alt="Logo" width={100} height={100} />
               </CardContent>
@@ -63,6 +64,7 @@ export default function Home() {
           <Button>Start Saving!</Button>
         </Link>
       </div>
+      <DarkModeToggle />
     </div>
   );
 }
