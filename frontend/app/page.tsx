@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import DarkModeToggle from "@/components/DarkModeToggle";
 
 export default function Home() {
 
@@ -64,7 +63,6 @@ export default function Home() {
           <Button>Start Saving!</Button>
         </Link>
       </div>
-      <DarkModeToggle />
     </div>
   );
 }

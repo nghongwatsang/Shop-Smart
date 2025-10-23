@@ -3,6 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import {GlobalProvider } from "./context/GlobalContext";
 import "./globals.css";
 
+import LogoLink from "@/components/LogoLink";
+import CartMenu from "@/components/CartMenu";
+import DarkModeToggle from "@/components/DarkModeToggle";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,7 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GlobalProvider>{children}</GlobalProvider>
+        <GlobalProvider>
+          <LogoLink/>
+          <CartMenu/>
+          <DarkModeToggle/>
+          {children}
+        </GlobalProvider>
       </body>
     </html>
   );
