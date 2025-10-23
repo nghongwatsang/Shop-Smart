@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import {GlobalProvider } from "./context/GlobalContext";
 import "./globals.css";
+
+import LogoLink from "@/components/LogoLink";
+import CartMenu from "@/components/CartMenu";
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <GlobalProvider>
+          <LogoLink/>
+          <CartMenu/>
+          <DarkModeToggle/>
+          {children}
+        </GlobalProvider>
       </body>
     </html>
   );
