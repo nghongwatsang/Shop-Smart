@@ -92,8 +92,6 @@
   --sidebar-ring: oklch(0.65 0.08 150);
 }
 
-
-
 .dark {
   --background: oklch(0.18 0.03 95);       /* deep olive-tinted charcoal */
   --foreground: oklch(0.96 0.01 95);
@@ -132,8 +130,6 @@
   --sidebar-ring: oklch(0.7 0.08 150);
 }
 
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -142,3 +138,4 @@
     @apply bg-background text-foreground;
   }
 }
+

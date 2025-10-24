@@ -1,43 +1,30 @@
 "use client";
 import React, {useState, useEffect} from 'react';
-
+import { Moon, Sun } from 'lucide-react';
 
 export default function DarkModeToggle() {
-    // This is gonna have more information about our webpages or website, just dark mode toggle for now
-
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Toggle dark mode by adding or removing the "dark" class on the HTML element.
+    // Toggle dark mode by adding or removing the "dark" class on the HTML element.
     useEffect(() => {
         if (isDarkMode) {
-        document.documentElement.classList.add("dark");
+            document.documentElement.classList.add("dark");
         } else {
-        document.documentElement.classList.remove("dark");
+            document.documentElement.classList.remove("dark");
         }
     }, [isDarkMode]);
+
     return (
-        <div className="fixed bottom-0 right-0 z-50 p-10">
-            <div className="flex items-center">
-                <label className="flex items-center cursor-pointer">
-                    <div className="relative">
-                    <input
-                        type="checkbox"
-                        className="sr-only"
-                        checked={isDarkMode}
-                        onChange={() => setIsDarkMode((prev) => !prev)}
-                    />
-                    <div className="w-11 h-6 bg-gray-300 dark:bg-gray-600 rounded-full" />
-                    <div
-                        className={`absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform ${
-                        isDarkMode ? "translate-x-5" : ""
-                        }`}
-                    ></div>
-                    </div>
-                    <span className="ml-3  text-lg font-bold">
-                    Enable Dark Mode
-                    </span>
-                </label>
-            </div>
-        </div>
+        <button
+            onClick={() => setIsDarkMode((prev) => !prev)}
+            className="p-2 rounded-full transition delay-150 duration-5000"
+            aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+        >
+            {isDarkMode ? (
+                <Sun className="h-5 w-5 text-white text-yellow-400" />
+            ) : (
+                <Moon className="h-5 w-5 text-gray-800" />
+            )}
+        </button>
     );
 }

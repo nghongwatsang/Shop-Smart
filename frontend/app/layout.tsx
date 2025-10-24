@@ -4,8 +4,10 @@ import {GlobalProvider } from "./context/GlobalContext";
 import "./globals.css";
 
 import LogoLink from "@/components/LogoLink";
-import CartMenu from "@/components/CartMenu";
 import DarkModeToggle from "@/components/DarkModeToggle";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { CartTrigger } from "@/components/CartTrigger";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,10 +35,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <GlobalProvider>
-          <LogoLink/>
-          <CartMenu/>
-          <DarkModeToggle/>
-          {children}
+          <SidebarProvider>
+            <main>
+              <div className="flex flex-row justify-between p-10 fixed top-0 left-0 z-50">
+                <LogoLink/>
+                <DarkModeToggle/>
+              </div>
+              
+              {children}
+              <CartTrigger />
+            </main>
+            <AppSidebar />
+          </SidebarProvider>
         </GlobalProvider>
       </body>
     </html>

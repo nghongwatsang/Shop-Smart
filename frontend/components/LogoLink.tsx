@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function LogoLink() {
     return (
-        <div className="p-10 fixed top-0 left-0 z-50">
+        <div>
             <Link href="/">
-                <Image src="/LOGO2-transparent.png" alt="Homepage" width={100} height={100} className="p-1 transition duration-175 hover:brightness-85"/>
+                <Image src="/LOGO2-transparent.png" alt="Homepage" width={50} height={50} className="p-1 transition duration-175 hover:brightness-85"/>
             </Link>
         </div>
     );
