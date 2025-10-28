@@ -26,7 +26,7 @@ export default function SearchPage() {
                     <div className=" w-1/2 flex flex-row items-center bg-white dark:bg-input/30 rounded-md shadow-xs border-1">
                         <Search className="mx-2"/>
                         <Input type="searchbar" placeholder="Search" className="bg-white px-0 border-none"/>
-                        <Button className="rounded-l-none bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => {}}>
+                        <Button className="rounded-l-none bg-primary text-primary-foreground hover:bg-primary/90">
                          <MoveRight />
                         </Button>
                     </div>

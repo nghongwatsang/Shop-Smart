@@ -21,7 +21,7 @@ export default function DarkModeToggle() {
             aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
             {isDarkMode ? (
-                <Sun className="h-5 w-5 text-white text-yellow-400" />
+                <Sun className="h-5 w-5 text-yellow-400" />
             ) : (
                 <Moon className="h-5 w-5 text-gray-800" />
             )}
