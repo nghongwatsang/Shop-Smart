@@ -1,0 +1,51 @@
+{
+  "scraped_at": "2025-10-27T12:27:54.260716",
+  "total_products": 5,
+  "products": [
+    {
+      "name": "Clancy'sOriginal  Kettle Chips, 8 oz8 oz$1.99",
+      "price": "$1.99",
+      "category": "Chips, Crackers & Popcorn",
+      "size": "8",
+      "unit": "oz",
+      "source": "aldi",
+      "product_url": "https://www.aldi.us/product/clancy-s-original-kettle-chips-8-oz-0000000000000005"
+    },
+    {
+      "name": "Benton'sBlueberry  Breakfast Biscuits, 5 pack8.8 oz$3.59",
+      "price": "$3.59",
+      "category": "Cookies & Sweets",
+      "size": "8.8",
+      "unit": "oz",
+      "source": "aldi",
+      "product_url": "https://www.aldi.us/product/benton-s-blueberry-breakfast-biscuits-8-8-oz-0000000000000006"
+    },
+    {
+      "name": "Simply NatureOrganic Unrefined Coconut Oil, 14 fl oz14 oz$5.29",
+      "price": "$5.29",
+      "category": "Oils & Vinegars",
+      "size": "14",
+      "unit": "oz",
+      "source": "aldi",
+      "product_url": "https://www.aldi.us/product/simply-nature-organic-unrefined-coconut-oil-14-fl-oz-0000000000000008"
+    },
+    {
+      "name": "Friendly FarmsPlain Whole Milk Greek Yogurt, 32 oz32 oz$4.09",
+      "price": "$4.09",
+      "category": "Yogurt & Sour Cream",
+      "size": "32",
+      "unit": "oz",
+      "source": "aldi",
+      "product_url": "https://www.aldi.us/product/friendly-farms-plain-whole-milk-greek-yogurt-32-oz-0000000000000009"
+    },
+    {
+      "name": "Fremont Fish MarketWild Caught Frozen Pink Salmon, 16 oz16 oz$8.45",
+      "price": "$8.45",
+      "category": "Frozen Meat, Poultry & Seafood",
+      "size": "16",
+      "unit": "oz",
+      "source": "aldi",
+      "product_url": "https://www.aldi.us/product/fremont-fish-market-wild-caught-frozen-pink-salmon-16-oz-0000000000000010"
+    }
+  ]
+}
