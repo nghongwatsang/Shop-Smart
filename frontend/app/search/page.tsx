@@ -2,6 +2,9 @@
 import React from "react";
 import { Card, CardContent} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MoveRight } from "lucide-react";
 
 export default function SearchPage() {
     function fetchCategories() {
@@ -19,9 +22,13 @@ export default function SearchPage() {
     return(
         <section>
             <section className="flex flex-row items-center justify-center w-screen h-screen p-10">
-                <section className="flex flex-col w-3/5 h-full items-center bg-green-700">
-                    <div className="pb-2 w-1/2">
-                        <Input type="searchbar" placeholder="Search" className="bg-white"/>
+                <section className="flex flex-col w-3/5 h-full items-center gap-2">
+                    <div className=" w-1/2 flex flex-row items-center bg-white dark:bg-input/30 rounded-md shadow-xs border-1">
+                        <Search className="mx-2"/>
+                        <Input type="searchbar" placeholder="Search" className="bg-white px-0 border-none"/>
+                        <Button className="rounded-l-none bg-primary text-primary-foreground hover:bg-primary/90">
+                         <MoveRight />
+                        </Button>
                     </div>
                     <div className="flex flex-wrap gap-2 w-1/2 justify-center">
                         {categories.map((category) => (
