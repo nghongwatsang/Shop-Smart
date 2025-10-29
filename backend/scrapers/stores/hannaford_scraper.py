@@ -105,6 +105,9 @@ class HannafordScraper(BaseWebScraper):
             if not name or len(name.strip()) < 2:
                 return None
             
+            # Parse brand and name for Hannaford
+            brand_info = self.parse_brand_and_name(name)
+            
             # Extract price (Hannaford-specific selectors)
             price_selectors = [
                 '.price',
@@ -118,13 +121,15 @@ class HannafordScraper(BaseWebScraper):
             # For now, return a basic product structure
             # In a real implementation, you'd extract size, category, etc.
             return Product(
-                name=name.strip(),
+                brand=brand_info['brand'],
+                name=brand_info['name'],
                 price=price,
                 category="General",  # Would extract from breadcrumbs like Aldi
                 size="Not specified",
                 unit="Not specified",
                 source=self.store_name.lower(),
-                product_url=None  # Would extract product URL
+                product_url=None,  # Would extract product URL
+                raw_name=name.strip()
             )
             
         except Exception as e:

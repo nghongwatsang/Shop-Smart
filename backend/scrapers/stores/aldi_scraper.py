@@ -36,6 +36,31 @@ class AldiScraper(BaseWebScraper):
             "https://www.aldi.us/weekly-specials"
         ]
     
+    def get_pagination_urls(self, soup: BeautifulSoup, current_url: str) -> List[str]:
+        """
+        Generate pagination URLs for Aldi using their known URL pattern
+        Aldi uses: https://www.aldi.us/products?page=2, page=3, etc.
+        They show 60 products per page
+        
+        Args:
+            soup: BeautifulSoup object of current page (not used for Aldi)
+            current_url: Current page URL
+            
+        Returns:
+            List of pagination URLs to scrape
+        """
+        pagination_urls = []
+        base_products_url = "https://www.aldi.us/products"
+        
+        # Generate URLs for pages 2-5 (can be adjusted based on needs)
+        # Page 1 is the default products page without ?page= parameter
+        for page_num in range(2, 6):  # Pages 2, 3, 4, 5
+            page_url = f"{base_products_url}?page={page_num}"
+            pagination_urls.append(page_url)
+        
+        print(f"Generated {len(pagination_urls)} pagination URLs for pages 2-5")
+        return pagination_urls
+    
     def extract_products_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Product]:
         """
         Extract products from an Aldi page
@@ -67,20 +92,80 @@ class AldiScraper(BaseWebScraper):
             if product_elements:
                 print(f"Found {len(product_elements)} products using selector: {selector}")
                 
-                # Limit to first 10 products to avoid too many requests
-                for i, element in enumerate(product_elements[:10]):
-                    print(f"Processing product {i+1}/10...")
+                # Process all products on the page (removed artificial limit)
+                for i, element in enumerate(product_elements):
+                    if (i + 1) % 10 == 0:  # Progress indicator every 10 products
+                        print(f"Processing product {i+1}/{len(product_elements)}...")
+                    
                     product_info = self.extract_product_info(element)
                     if product_info:
                         products.append(product_info)
                     
-                    # Add delay between requests
+                    # Add delay between requests for category extraction
                     self.delay_request()
                 
                 print(f"Successfully extracted {len(products)} products")
                 
                 if products:  # Only break if we actually got product data
                     break
+        
+        # Look for pagination links
+        pagination_urls = self.get_pagination_urls(soup, page_url)
+        
+        # Process pagination pages
+        for page_num, pagination_url in enumerate(pagination_urls, 2):
+            print(f"\n📄 Moving to page {page_num}: {pagination_url}")
+            
+            response = self.make_request(pagination_url)
+            if not response:
+                print(f"Failed to access page {page_num}")
+                continue
+            
+            pagination_soup = self.parse_html(response.text)
+            pagination_products = self._extract_products_from_single_page(pagination_soup)
+            
+            if pagination_products:
+                print(f"Found {len(pagination_products)} products on page {page_num}")
+                products.extend(pagination_products)
+            else:
+                print(f"No products found on page {page_num}")
+            
+            # Add delay between page requests
+            self.delay_request()
+        
+        return products
+    
+    def _extract_products_from_single_page(self, soup: BeautifulSoup) -> List[Product]:
+        """
+        Extract products from a single page (helper method for pagination)
+        
+        Args:
+            soup: BeautifulSoup object of the page
+            
+        Returns:
+            List of Product objects from this page
+        """
+        products = []
+        
+        product_selectors = [
+            '.product-tile', 
+            '.product',
+            '.product-card',
+            '.item',
+            '[data-testid*="product"]',
+            '.weekly-special',
+            '.product-container'
+        ]
+        
+        for selector in product_selectors:
+            product_elements = soup.select(selector)
+            if product_elements:
+                for element in product_elements:
+                    product_info = self.extract_product_info(element)
+                    if product_info:
+                        products.append(product_info)
+                    self.delay_request()
+                break
         
         return products
     
@@ -114,6 +199,12 @@ class AldiScraper(BaseWebScraper):
             if not name or len(name.strip()) < 2:
                 return None
             
+            # Clean up the raw name - remove duplicate text and pricing
+            cleaned_raw_name = self._clean_raw_product_name(name)
+            
+            # Parse brand and product name
+            brand_info = self.parse_brand_and_name(cleaned_raw_name)
+            
             # Extract price
             price_selectors = [
                 '.price', '.cost', '.amount',
@@ -141,13 +232,15 @@ class AldiScraper(BaseWebScraper):
             category = self._extract_category_from_detail_page(product_url) if product_url else "General"
             
             return Product(
-                name=name.strip(),
+                brand=brand_info['brand'],
+                name=brand_info['name'],
                 price=price,
                 category=category,
                 size=size_info['size'],
                 unit=size_info['unit'],
                 source=self.store_name.lower(),
-                product_url=product_url
+                product_url=product_url,
+                raw_name=name.strip()
             )
             
         except Exception as e:
@@ -310,6 +403,35 @@ class AldiScraper(BaseWebScraper):
         
         return size_info
     
+    def _clean_raw_product_name(self, raw_name: str) -> str:
+        """
+        Clean up the raw product name by removing duplicate text and pricing
+        
+        Args:
+            raw_name: Raw product name from the website
+            
+        Returns:
+            Cleaned product name
+        """
+        if not raw_name:
+            return ""
+        
+        # Remove price information that often gets concatenated
+        cleaned = re.sub(r'\$\d+\.?\d*', '', raw_name)
+        
+        # Remove duplicate size information (like "8 oz8 oz")
+        # This handles cases where size appears twice
+        size_pattern = r'(\d+\.?\d*\s*(?:oz|lb|lbs|pounds|ounces|kg|g|ml|l|liters?|ct|count|pack|pcs?|pieces?))\1+'
+        cleaned = re.sub(size_pattern, r'\1', cleaned, flags=re.IGNORECASE)
+        
+        # Remove extra whitespace and normalize spacing
+        cleaned = re.sub(r'\s+', ' ', cleaned)
+        
+        # Remove trailing commas and periods that might be left over
+        cleaned = cleaned.strip(' ,.;-')
+        
+        return cleaned
+    
     def display_products(self, products: List[Product]) -> None:
         """
         Display products in a nice format
@@ -326,29 +448,74 @@ class AldiScraper(BaseWebScraper):
         
         for i, product in enumerate(products, 1):
             print(f"\nProduct {i}:")
+            print(f"  Brand: {product.brand}")
             print(f"  Name: {product.name}")
             print(f"  Price: {product.price}")
             print(f"  Category: {product.category}")
             print(f"  Size: {product.size} {product.unit}")
             if product.product_url:
                 print(f"  URL: {product.product_url}")
+            if product.raw_name:
+                print(f"  Raw Name: {product.raw_name}")
 
 
 def main():
     """Main function to run the Aldi scraper"""
-    scraper = AldiScraper(delay=0.5)
+    import json
+    import os
+    
+    scraper = AldiScraper(delay=0.3)  # Slightly faster for more products
     
     # Test connectivity
     if not scraper.test_connectivity():
         return
     
-    # Scrape products (limited to 10 for demo)
-    products = scraper.scrape_products(limit=10)
+    # Scrape more products to test pagination
+    print("🛒 Starting enhanced Aldi scraper with pagination support...")
+    products = scraper.scrape_products(limit=120)  # Increased limit to ensure we hit second page
     
     # Display results
     scraper.display_products(products)
     
-    print(f"\nSummary: Successfully scraped {len(products)} products from {scraper.store_name}")
+    # Save to JSON file
+    if products:
+        # Convert products to dictionaries
+        products_data = [product.to_dict() for product in products]
+        
+        # Get the project root directory (3 levels up from this file)
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+        json_file_path = os.path.join(project_root, "scraped_products.json")
+        
+        # Save to JSON file
+        with open(json_file_path, 'w', encoding='utf-8') as f:
+            json.dump(products_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"\n💾 Saved {len(products)} products to {json_file_path}")
+    
+    # Show summary statistics
+    if products:
+        brands = {}
+        categories = {}
+        
+        for product in products:
+            brands[product.brand] = brands.get(product.brand, 0) + 1
+            categories[product.category] = categories.get(product.category, 0) + 1
+        
+        print(f"\n📊 Scraping Summary:")
+        print(f"Total products: {len(products)}")
+        print(f"Unique brands: {len(brands)}")
+        print(f"Unique categories: {len(categories)}")
+        
+        print(f"\n🏭 Top Brands:")
+        for brand, count in sorted(brands.items(), key=lambda x: x[1], reverse=True)[:5]:
+            print(f"  • {brand}: {count} products")
+        
+        print(f"\n🏷️ Top Categories:")
+        for category, count in sorted(categories.items(), key=lambda x: x[1], reverse=True)[:5]:
+            print(f"  • {category}: {count} products")
+    
+    print(f"\n✅ Summary: Successfully scraped {len(products)} products from {scraper.store_name}")
 
 
 if __name__ == "__main__":

@@ -147,7 +147,7 @@ class ScrapingService:
     
     def search_products(self, query: str) -> List[Dict[str, Any]]:
         """
-        Search products by name
+        Search products by name or brand
         
         Args:
             query: Search query
@@ -159,7 +159,24 @@ class ScrapingService:
         return [
             product.to_dict() 
             for product in self.scraped_data 
-            if query_lower in product.name.lower()
+            if (query_lower in product.name.lower() or 
+                query_lower in product.brand.lower())
+        ]
+    
+    def get_products_by_brand(self, brand: str) -> List[Dict[str, Any]]:
+        """
+        Get products filtered by brand
+        
+        Args:
+            brand: Brand name to filter by
+            
+        Returns:
+            List of products from the specified brand
+        """
+        return [
+            product.to_dict() 
+            for product in self.scraped_data 
+            if product.brand.lower() == brand.lower()
         ]
     
     def get_categories(self) -> List[str]:
@@ -184,6 +201,7 @@ class ScrapingService:
         
         stores = {}
         categories = {}
+        brands = {}
         price_ranges = []
         
         for product in self.scraped_data:
@@ -194,6 +212,10 @@ class ScrapingService:
             # Count by category
             category = product.category
             categories[category] = categories.get(category, 0) + 1
+            
+            # Count by brand
+            brand = product.brand
+            brands[brand] = brands.get(brand, 0) + 1
             
             # Collect prices for analysis
             if product.price.startswith('$'):
@@ -207,6 +229,7 @@ class ScrapingService:
             'total_products': len(self.scraped_data),
             'stores': stores,
             'categories': categories,
+            'brands': brands,
             'last_scrape': self.last_scrape_time.isoformat() if self.last_scrape_time else None
         }
         
@@ -261,7 +284,7 @@ class ScrapingService:
                 print("No data to save")
                 return False
             
-            fieldnames = ['name', 'price', 'category', 'size', 'unit', 'source', 'product_url']
+            fieldnames = ['brand', 'name', 'price', 'category', 'size', 'unit', 'source', 'product_url', 'raw_name']
             
             with open(filename, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -297,6 +320,7 @@ def main():
         stats = service.get_statistics()
         print(f"  Total products: {stats['total_products']}")
         print(f"  Categories: {len(stats['categories'])}")
+        print(f"  Brands: {len(stats['brands'])}")
         print(f"  Stores: {list(stats['stores'].keys())}")
         
         if 'price_stats' in stats:
@@ -309,6 +333,20 @@ def main():
         for category in service.get_categories():
             count = len(service.get_products_by_category(category))
             print(f"  • {category}: {count} products")
+        
+        # Show brands
+        print(f"\n🏭 Available brands:")
+        for brand_name in sorted(stats['brands'].keys()):
+            count = stats['brands'][brand_name]
+            print(f"  • {brand_name}: {count} products")
+        
+        # Demo brand search
+        if stats['brands']:
+            first_brand = list(stats['brands'].keys())[0]
+            brand_products = service.get_products_by_brand(first_brand)
+            print(f"\n🔍 Products from '{first_brand}':")
+            for product in brand_products[:2]:  # Show first 2
+                print(f"  • {product['name']} - {product['price']}")
         
         # Save data
         print(f"\n💾 Saving data...")

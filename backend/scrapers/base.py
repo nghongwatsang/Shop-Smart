@@ -11,24 +11,28 @@ import time
 @dataclass
 class Product:
     """Data class representing a product"""
-    name: str
+    brand: str
+    name: str  # This is now the item name without brand
     price: str
     category: str
     size: str
     unit: str
     source: str
     product_url: Optional[str] = None
+    raw_name: Optional[str] = None  # Store the original unparsed name for reference
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert product to dictionary"""
         return {
+            'brand': self.brand,
             'name': self.name,
             'price': self.price,
             'category': self.category,
             'size': self.size,
             'unit': self.unit,
             'source': self.source,
-            'product_url': self.product_url
+            'product_url': self.product_url,
+            'raw_name': self.raw_name
         }
 
 
@@ -119,6 +123,91 @@ class BaseWebScraper(ABC):
                     return text
         return None
     
+    def parse_brand_and_name(self, raw_name: str) -> Dict[str, str]:
+        """
+        Parse brand and product name from raw product name
+        
+        Args:
+            raw_name: Raw product name string
+            
+        Returns:
+            Dictionary with 'brand' and 'name' keys
+        """
+        if not raw_name:
+            return {'brand': 'Unknown', 'name': 'Unknown Product'}
+        
+        # Clean up the raw name first
+        cleaned_name = raw_name.strip()
+        
+        # Common Aldi brand patterns - these are store-specific but can be overridden
+        # Ordered by length (longest first) to match multi-word brands before single words
+        known_brands = [
+            'Fremont Fish Market', 'Park Street Deli', 'Emporium Selection', 
+            'Specially Selected', 'Simply Nature', 'Season\'s Choice',
+            'Friendly Farms', 'Happy Farms', 'Chef\'s Cupboard', 'Southern Grove',
+            'L\'oven Fresh', 'Sundae Shoppe', 'Tuscan Garden', 'Casa Mamita',
+            'Bake Shop', 'Never Any!', 'Lunch Mate', 'Lunch Buddies', 
+            'Appleton Farms', 'Little Journey', 'Sweet Harvest', 'Pueblo Lindo',
+            'Fit & Active', 'Northern Catch', 'Merry Moments', 'Deutsche Küche',
+            'Baker\'s Corner', 'ElevationDouble', 'TandilOriginal', 'BoulderGallon',
+            'BoulderRegular', 'BoulderTall', 'Earthly Grains', 'ChoceurMilk',
+            'Burman\'s', 'Priano', 'Carlini', 'Clancy\'s', 'Benton\'s', 'Stonemill', 
+            'Bremer', 'Millville', 'Barissimo', 'Reggano', 'Parkview', 'Kirkwood', 
+            'Brookdale', 'Beer'  # Keep single-word brands last
+        ]
+        
+        # Try to find a known brand at the start
+        for brand in known_brands:
+            if cleaned_name.startswith(brand):
+                # Extract the brand and the rest as product name
+                remaining_name = cleaned_name[len(brand):].strip()
+                
+                # Remove any leading punctuation or whitespace
+                remaining_name = remaining_name.lstrip('- .,')
+                
+                # Remove size information (everything from comma onwards)
+                if ',' in remaining_name:
+                    remaining_name = remaining_name.split(',')[0].strip()
+                
+                if remaining_name:
+                    return {
+                        'brand': brand,
+                        'name': remaining_name
+                    }
+        
+        # If no known brand found, try to extract first word/phrase as brand
+        # Look for patterns like "BrandName Product Description"
+        words = cleaned_name.split()
+        if len(words) >= 2:
+            # Check if first word could be a brand (capitalized, not too long)
+            first_word = words[0]
+            if (first_word[0].isupper() and 
+                len(first_word) >= 2 and 
+                len(first_word) <= 15 and
+                not any(char in first_word for char in ['$', '(', ')', '%'])):
+                
+                remaining = ' '.join(words[1:])
+                
+                # Remove size information (everything from comma onwards)
+                if ',' in remaining:
+                    remaining = remaining.split(',')[0].strip()
+                
+                return {
+                    'brand': first_word,
+                    'name': remaining
+                }
+        
+        # Fallback: if we can't parse it, put everything in name with generic brand
+        # Remove size information (everything from comma onwards)
+        cleaned_fallback_name = cleaned_name
+        if ',' in cleaned_fallback_name:
+            cleaned_fallback_name = cleaned_fallback_name.split(',')[0].strip()
+            
+        return {
+            'brand': 'Store Brand',
+            'name': cleaned_fallback_name
+        }
+    
     @abstractmethod
     def get_product_pages(self) -> List[str]:
         """
@@ -167,6 +256,8 @@ class BaseWebScraper(ABC):
             List of Product objects
         """
         print(f"Starting {self.store_name} product scraping...")
+        if limit:
+            print(f"Limit set to {limit} products")
         
         all_products = []
         product_pages = self.get_product_pages()
@@ -188,6 +279,7 @@ class BaseWebScraper(ABC):
                 # Check if we've reached the limit
                 if limit and len(all_products) >= limit:
                     all_products = all_products[:limit]
+                    print(f"Reached limit of {limit} products, stopping...")
                     break
             else:
                 print("No products found on this page")
