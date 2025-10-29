@@ -1,9 +1,21 @@
-'use client';
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
+
+  const [stores, setStores] = useState([1,2,3]);
+
+  function changeStore(category: {id: number, logo_path: string}) {
+    if (stores.includes(category.id)) {
+      setStores(stores.filter(id => id !== category.id));
+    } else {
+      setStores([...stores, category.id])
+    }
+  }
   
   const categories = [
     {
@@ -19,6 +31,7 @@ export default function Home() {
       logo_path: "/Market_32.png",
     },
   ];
+  
   return(
     <div className="flex flex-col w-screen h-screen items-center justify-center p-10">
       
@@ -36,13 +49,19 @@ export default function Home() {
       <div className="flex flex-row items-center">
         {categories.map((category) => (
           <div key={category.id} className="px-10">
-            <Card className="w-30 h-30 hover:scale-110 transition-all cursor-pointer" onClick={() => console.log(category.id)}>
+            <Card className={`w-30 h-30 hover:scale-110 transition-all cursor-pointer ${!stores.includes(category.id) ? 'saturate-0 brightness-85' : ''}`} onClick={() => changeStore(category)}>
               <CardContent className="w-30 h-30 flex items-center justify-center">
                 <Image src={category.logo_path} alt="Logo" width={100} height={100} />
               </CardContent>
             </Card>
           </div>
       ))}
+      </div>
+
+      <div className="pt-10">
+        <Link href="/search">
+          <Button>Start Saving!</Button>
+        </Link>
       </div>
     </div>
   );

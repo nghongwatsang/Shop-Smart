@@ -1,0 +1,15 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+// Standard logo linking to the homepage for all pages
+
+export default function LogoLink() {
+    return (
+        <div>
+            <Link href="/">
+                <Image src="/LOGO2-transparent.png" alt="Homepage" width={50} height={50} className="p-1 transition duration-175 hover:brightness-85"/>
+            </Link>
+        </div>
+    );
+}
