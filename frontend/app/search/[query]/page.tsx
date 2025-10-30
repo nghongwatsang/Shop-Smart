@@ -81,7 +81,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 />
                 <Button
                     type="submit"
-                    className="rounded-l-none bg-primary text-primary-foreground hover:bg-primary/90"
+                    className="rounded-l-none bg-primary text-primary-foreground cursor-pointer hover:bg-primary/90"
                 >
                     <MoveRight />
                 </Button>
@@ -98,7 +98,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 results.map((result,index) =>
                     <div className="pt-1 w-3/5" key={index}>
                         <Card className="flex items-center justify-center w-full bg-gray-50 hover:brightness-90" onClick={changeCart(result)}>
-                            <section className="flex flex-row items-center justify-between w-full">
+                            <section className="flex flex-row items-center justify-between w-full cursor-pointer">
                                 <CardContent className="w-1/4 text-center"><Image src={`${result.imgSrc}`} alt={"Img"} width={10} height={10}/></CardContent>
                                 <CardContent className="w-1/4 text-center">{result.itemName}</CardContent>
                                 <CardContent className="w-1/4 text-center italic">{result.brandName}</CardContent>

@@ -12,7 +12,7 @@ interface GoBackButtonProps {
 
 export default function GoBackButton({
   router,
-  className = "",
+  className = "cursor-pointer",
   label = "Go Back",
 }: GoBackButtonProps) {
   return (

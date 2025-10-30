@@ -10,13 +10,9 @@ import {
 import {useRouter} from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import GoBackButton from "@/components/back-button";
-import {useRouter} from "next/navigation";
-import { ArrowLeft } from "lucide-react";
-import GoBackButton from "@/components/back-button";
 
 export default function ResultsPage() {
   const { shoppingList } = useGlobal();
-  const router = useRouter();
   const router = useRouter();
   function fetchResults() {
     // fetch results from backend using the shoppingList
@@ -56,7 +52,6 @@ export default function ResultsPage() {
         {/* Accordion */}
         <Accordion
           type="multiple"
-          defaultValue={results.map((_, index) => String(index))}
           className="w-full max-w-md flex flex-col space-y-2"
         >
           {results.map((element, index) => (
@@ -71,21 +66,6 @@ export default function ResultsPage() {
                 <div className="flex-1 text-right">${element.cost}</div>
               </AccordionTrigger>
 
-              <AccordionContent className="flex flex-col px-6 pb-3">
-                {element.basket.map((sub_element, sub_index) => (
-                  <div
-                    className="flex flex-row justify-between py-1 text-sm"
-                    key={sub_index}
-                  >
-                    <div>{sub_element.item}</div>
-                    <div>${sub_element.cost}</div>
-                  </div>
-                ))}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
               <AccordionContent className="flex flex-col px-6 pb-3">
                 {element.basket.map((sub_element, sub_index) => (
                   <div

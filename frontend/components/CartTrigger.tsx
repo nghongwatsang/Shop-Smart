@@ -8,7 +8,7 @@ export function CartTrigger() {
 
   return (
     <div className="relative">
-      <SidebarTrigger className="fixed right-8 top-8 z-[9999]" />
+      <SidebarTrigger className="fixed right-8 top-8 z-[9999] cursor-pointer" />
       {/* 
       Did we need this functionality?
     

@@ -31,7 +31,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar side="right"
-      className="fixed top-0 right-0 h-screen w-[16rem] z-[9998] shadow-lg bg-background transition-transform duration-300"
+      className="fixed top-0 right-0 h-screen w-[20rem] z-[9998] shadow-lg bg-background transition-transform duration-300"
     >
       <SidebarHeader>
         <div className="px-2 py-2">
@@ -56,8 +56,12 @@ export function AppSidebar() {
                 {[...shoppingList].sort((a, b) =>
                   a.item.localeCompare(b.item)
                 ).map((item, index) => (
-                  <SidebarMenuItem key={index} className="w-full flex flex-row justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-700">
-                    <div className="flex gap-2">
+                  <SidebarMenuItem
+                    key={index}
+                    className="w-full flex flex-row justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-700"
+                  >
+                    {/* Left side: image + name */}
+                    <div className="flex items-center gap-2 flex-1">
                       <Image
                         src={item.imgSrc}
                         alt={item.item}
@@ -65,12 +69,19 @@ export function AppSidebar() {
                         height={24}
                         className="rounded-md object-cover"
                       />
-                      <span className="flex-1 text-left truncate">{item.item}</span>
-                      <QuantityMenu product={item} removeItem={removeItem} />
+                      <span className="pl-1 truncate">{item.item}</span>
                     </div>
-                    <button className="justify-end hover:scale:110 hover:brightness-80" onClick={() => removeItem(item)}>
-                      <Image src="/stop-transparent.png" alt="Delete" width={30} height={30}/>
-                    </button>
+
+                    {/* Right side: quantity + delete button */}
+                    <div className="flex items-center gap-2 ml-auto">
+                      <QuantityMenu product={item} removeItem={removeItem} />
+                      <button
+                        className="pl-3 hover:scale-110 hover:brightness-90 cursor-pointer"
+                        onClick={() => removeItem(item)}
+                      >
+                        <Image src="/stop-transparent.png" alt="Delete" width={30} height={30} />
+                      </button>
+                    </div>
                   </SidebarMenuItem>
                 ))}
               </SidebarMenu>
@@ -87,7 +98,7 @@ export function AppSidebar() {
               <SidebarMenuItem>
                 <SidebarMenuButton
                   onClick={() => setShoppingList([])}
-                  className="w-full text-destructive hover:text-destructive"
+                  className="w-full text-destructive hover:text-destructive cursor-pointer"
                 >
                   <Trash2 className="h-4 w-4" />
                   <span>Clear Cart</span>
@@ -95,7 +106,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <Link href="/results" className="w-full">
-                  <SidebarMenuButton className="w-full">
+                  <SidebarMenuButton className="w-full cursor-pointer">
                     <Search className="h-4 w-4" />
                     <span>Search Prices</span>
                   </SidebarMenuButton>
