@@ -42,7 +42,7 @@ export default function ResultsPage() {
 
   return (
     <section className="flex flex-col items-center justify-center h-screen w-screen">
-    <div className="p-5 text-lg font-medium">Results for basket:</div>
+      <div className="p-5 text-lg font-medium">Results for basket:</div>
       <Accordion
         type="single"
         collapsible

@@ -36,7 +36,7 @@ export default function RootLayout({
       >
         <GlobalProvider>
           <SidebarProvider>
-            <main>
+            <main className="p-10">
               <div className="flex flex-row justify-between p-10 fixed top-0 left-0 z-50">
                 <LogoLink/>
                 <DarkModeToggle/>

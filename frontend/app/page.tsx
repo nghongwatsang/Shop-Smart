@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -18,18 +18,9 @@ export default function Home() {
   }
   
   const categories = [
-    {
-      id: 1,
-      logo_path: "/WalmartLogo.png",
-    },
-    {
-      id: 2,
-      logo_path: "/hannafords.svg",
-    },
-    {
-      id: 3,
-      logo_path: "/Market_32.png",
-    },
+    {id: 1, logo_path: "/WalmartLogo.png"},
+    {id: 2, logo_path: "/hannafords.svg"},
+    {id: 3, logo_path: "/Market_32.png"},
   ];
   
   return(
