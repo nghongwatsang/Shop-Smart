@@ -34,7 +34,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         return () => {
             const exists = shoppingList.find(item => item.item === product.itemName && item.imgSrc === product.imgSrc);
             if (!exists) {
-                setShoppingList([...shoppingList, {item: product.itemName, imgSrc: product.imgSrc}]);
+                setShoppingList([...shoppingList, {item: product.itemName, imgSrc: product.imgSrc, quantity:1}]);
             }
             console.log(product.imgSrc);
         }
@@ -69,7 +69,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             {/* Search Bar */}
             <form
                 onSubmit={handleSubmit}
-                className="w-1/2 flex flex-row items-center bg-white dark:bg-input/30 rounded-md shadow-xs border-1"
+                className="w-3/10 flex flex-row items-center bg-white dark:bg-input/30 rounded-md shadow-xs border-1"
                 >
                 <Search className="mx-2" />
                 <Input
@@ -87,7 +87,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 </Button>
             </form>
 
-            <div className="pt-10 pb-4 w-1/2 flex items-center justify-center">
+            <div className="pt-10 pb-4 w-3/10 flex items-center justify-center">
                 <Card className="flex items-center justify-center w-full bg-gray-50">
                     <CardContent className="font-medium">Results:</CardContent>
                 </Card>
@@ -96,14 +96,16 @@ export default function ProductPage({ params }: ProductPageProps) {
             {/* Results */}
             {results &&
                 results.map((result,index) =>
-                    <Card className="flex items-center justify-center w-3/5 bg-gray-50 hover:brightness-90" key={index} onClick={changeCart(result)}>
-                        <section className="flex flex-row items-center justify-between w-full">
-                            <CardContent className="w-1/4 text-center"><Image src={`${result.imgSrc}`} alt={"Img"} width={10} height={10}/></CardContent>
-                            <CardContent className="w-1/4 text-center">{result.itemName}</CardContent>
-                            <CardContent className="w-1/4 text-center italic">{result.brandName}</CardContent>
-                            <CardContent className="w-1/4 text-center">${result.lowestPrice}</CardContent>
-                        </section>
-                    </Card>
+                    <div className="pt-1 w-3/5" key={index}>
+                        <Card className="flex items-center justify-center w-full bg-gray-50 hover:brightness-90" onClick={changeCart(result)}>
+                            <section className="flex flex-row items-center justify-between w-full">
+                                <CardContent className="w-1/4 text-center"><Image src={`${result.imgSrc}`} alt={"Img"} width={10} height={10}/></CardContent>
+                                <CardContent className="w-1/4 text-center">{result.itemName}</CardContent>
+                                <CardContent className="w-1/4 text-center italic">{result.brandName}</CardContent>
+                                <CardContent className="w-1/4 text-center">${result.lowestPrice}</CardContent>
+                            </section>
+                        </Card>
+                    </div>
                 )
             }
 

@@ -16,16 +16,17 @@ import { useGlobal } from "@/app/context/GlobalContext"
 import Image from "next/image"
 import Link from "next/link"
 import { Trash2, Search } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu } from "@radix-ui/react-dropdown-menu"
+import QuantityMenu from "@/components/QuantityMenu"
 
 export function AppSidebar() {
   const { shoppingList, setShoppingList } = useGlobal()
 
-  function removeItem(product: {item: string, imgSrc: string}) {
-    return () => {
-      setShoppingList(shoppingList.filter((item) => item.item !== product.item || item.imgSrc !== product.imgSrc));
-    }
+  function removeItem(product: { item: string; imgSrc: string; quantity: number }) {
+    setShoppingList((prevList) =>
+      prevList.filter(
+        (item) => item.item !== product.item || item.imgSrc !== product.imgSrc
+      )
+    );
   }
 
   return (
@@ -36,7 +37,7 @@ export function AppSidebar() {
         <div className="px-2 py-2">
           <h2 className="text-lg font-semibold">Shopping Cart</h2>
           <p className="text-sm text-muted-foreground">
-            {shoppingList.length} {shoppingList.length === 1 ? 'item' : 'items'}
+            {shoppingList.length} {shoppingList.length === 1 ? 'product' : 'products'}
           </p>
         </div>
       </SidebarHeader>
@@ -52,7 +53,9 @@ export function AppSidebar() {
               </div>
             ) : (
               <SidebarMenu>
-                {shoppingList.map((item, index) => (
+                {[...shoppingList].sort((a, b) =>
+                  a.item.localeCompare(b.item)
+                ).map((item, index) => (
                   <SidebarMenuItem key={index} className="w-full flex flex-row justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-700">
                     <div className="flex gap-2">
                       <Image
@@ -63,9 +66,9 @@ export function AppSidebar() {
                         className="rounded-md object-cover"
                       />
                       <span className="flex-1 text-left truncate">{item.item}</span>
-                      <DropdownMenu />
+                      <QuantityMenu product={item} removeItem={removeItem} />
                     </div>
-                    <button className="justify-end hover:scale:110 hover:brightness-80" onClick={removeItem(item)}>
+                    <button className="justify-end hover:scale:110 hover:brightness-80" onClick={() => removeItem(item)}>
                       <Image src="/stop-transparent.png" alt="Delete" width={30} height={30}/>
                     </button>
                   </SidebarMenuItem>

@@ -1,15 +1,21 @@
 "use client";
 import { createContext, useContext, useState, ReactNode } from "react";
 
+type Product = {
+  item: string;
+  imgSrc: string;
+  quantity: number;
+};
+
 type GlobalContextType = {
-  shoppingList: { item: string; imgSrc: string; }[];
-  setShoppingList: (list: { item: string; imgSrc: string; }[]) => void;
+  shoppingList: Product[];
+  setShoppingList: React.Dispatch<React.SetStateAction<Product[]>>;
 };
 
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 export function GlobalProvider({ children }: { children: ReactNode }) {
-  const [shoppingList, setShoppingList] = useState<{ item: string; imgSrc: string; }[]>([]);
+  const [shoppingList, setShoppingList] = useState<Product[]>([]);
 
   return (
     <GlobalContext.Provider value={{ shoppingList, setShoppingList }}>
