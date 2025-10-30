@@ -1,19 +1,55 @@
+"use client";
+import React, { useState } from "react";
 import { Card, CardContent} from "@/components/ui/card";
 import Image from "next/image";
+import GoBackButton from "@/components/back-button";
+import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MoveRight } from "lucide-react";
+import { useGlobal } from "@/app/context/GlobalContext";
 
 interface ProductPageProps {
-  params: { query: string };
+  params: Promise<{ query: string }>;
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
-    const { query } = params; // Access the 'query' from the URL
+    const { query } = React.use(params); 
+    const router = useRouter();
+    const [newQuery, setNewQuery] = useState("");
+
+    const {shoppingList, setShoppingList} = useGlobal();
+
+    {/* Search field submit router*/}
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        console.log("Test")
+        e.preventDefault();
+        if (!newQuery.trim()) return; // avoid empty search
+        router.push(`/search/${encodeURIComponent(newQuery.trim())}`);
+    }
+
+    {/* Add to cart function */}
+    function changeCart (product: {itemName: string, brandName: string, lowestPrice: number, imgSrc: string, source: string}) {
+        return () => {
+            const exists = shoppingList.find(item => item.item === product.itemName && item.imgSrc === product.imgSrc);
+            if (!exists) {
+                setShoppingList([...shoppingList, {item: product.itemName, imgSrc: product.imgSrc}]);
+            }
+            console.log(product.imgSrc);
+        }
+    }
+
+
+
+
     {/*img, itemname, brandname, lowest_price, source*/}
     function fetchQueryResults () {
         return query == "Apples" ? 
         [
-            {img:"/sample.png", itemName:"Granny Smith", brandName:"Hannaford", lowest_price:1.09, source:'hannaford'},
-            {img:"/sample.png", itemName:"Granny Smith", brandName:"Hannaford", lowest_price:1.09, source:'hannaford'},
-            {img:"/sample.png", itemName:"Granny Smith", brandName:"Hannaford", lowest_price:1.09, source:'hannaford'}
+            {imgSrc:"/file.svg", itemName:"Granny Smith Apples", brandName:"Generic", lowestPrice:1.09, source:'hannaford'},
+            {imgSrc:"/file.svg", itemName:"Honeycrisp Apples", brandName:"BigApple", lowestPrice:1.89, source:'hannaford'},
+            {imgSrc:"/file.svg", itemName:"iPhone 17 Pro Max", brandName:"Apple", lowestPrice:1500, source:'hannaford'}
         ]
         :
         false;
@@ -27,26 +63,52 @@ export default function ProductPage({ params }: ProductPageProps) {
     ]
 
     return (
-        <section className="flex flex-col items-center justify-center w-screen">
-            <Card className="flex items-center justify-center w-3/5">
-                <CardContent className="font-medium">Results:</CardContent>
-            </Card>
+        <section className="flex flex-col items-center justify-center w-screen p-10">
+            <GoBackButton router={router} />
 
+            {/* Search Bar */}
+            <form
+                onSubmit={handleSubmit}
+                className="w-1/2 flex flex-row items-center bg-white dark:bg-input/30 rounded-md shadow-xs border-1"
+                >
+                <Search className="mx-2" />
+                <Input
+                    type="search"
+                    placeholder="Search"
+                    className="bg-white px-0 border-none focus-visible:ring-0 focus-visible:outline-none"
+                    value={newQuery}
+                    onChange={(e) => setNewQuery(e.target.value)}
+                />
+                <Button
+                    type="submit"
+                    className="rounded-l-none bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                    <MoveRight />
+                </Button>
+            </form>
+
+            <div className="pt-10 pb-4 w-1/2 flex items-center justify-center">
+                <Card className="flex items-center justify-center w-full bg-gray-50">
+                    <CardContent className="font-medium">Results:</CardContent>
+                </Card>
+            </div>
+
+            {/* Results */}
             {results &&
                 results.map((result,index) =>
-                    <Card className="flex items-center justify-center w-3/5" key={index}>
-                        <section className="flex flex-row justify-between">
-                            <CardContent><Image src={`${result.img}`} alt={"Img"} width={10} height={10}/></CardContent>
-                            <CardContent>{result.itemName}</CardContent>
-                            <CardContent>{result.brandName}</CardContent>
-                            <CardContent>${result.lowest_price}</CardContent>
+                    <Card className="flex items-center justify-center w-3/5 bg-gray-50 hover:brightness-90" key={index} onClick={changeCart(result)}>
+                        <section className="flex flex-row items-center justify-between w-full">
+                            <CardContent className="w-1/4 text-center"><Image src={`${result.imgSrc}`} alt={"Img"} width={10} height={10}/></CardContent>
+                            <CardContent className="w-1/4 text-center">{result.itemName}</CardContent>
+                            <CardContent className="w-1/4 text-center italic">{result.brandName}</CardContent>
+                            <CardContent className="w-1/4 text-center">${result.lowestPrice}</CardContent>
                         </section>
                     </Card>
                 )
             }
 
             {!results &&
-                <div>No results found</div>
+                <div className="pt-10 font-medium text-large">No results found</div>
             }
         </section>
     );

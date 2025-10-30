@@ -7,12 +7,20 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
+import GoBackButton from "@/components/back-button";
 
 import { useRouter } from "next/navigation";
 
 export default function SearchPage() {
     const router = useRouter();
     const [query, setQuery] = useState("");
+
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        console.log("Test")
+        e.preventDefault();
+        if (!query.trim()) return; // avoid empty search
+        router.push(`/search/${encodeURIComponent(query.trim())}`);
+    }
 
     function fetchCategories() {
         // fetch categories from backend once setup, dummy data for now
@@ -25,17 +33,10 @@ export default function SearchPage() {
         ];
     }
     const categories = fetchCategories();
-
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        console.log("Test")
-        e.preventDefault();
-        if (!query.trim()) return; // avoid empty search
-        router.push(`/search/${encodeURIComponent(query.trim())}`);
-    }
     
-
     return(
         <section>
+            <GoBackButton router={router} />
             <section className="flex flex-row items-center justify-center w-screen h-screen p-10">
                 <section className="flex flex-col w-3/5 h-full items-center gap-2">
                     <form

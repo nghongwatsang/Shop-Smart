@@ -16,9 +16,17 @@ import { useGlobal } from "@/app/context/GlobalContext"
 import Image from "next/image"
 import Link from "next/link"
 import { Trash2, Search } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { DropdownMenu } from "@radix-ui/react-dropdown-menu"
 
 export function AppSidebar() {
   const { shoppingList, setShoppingList } = useGlobal()
+
+  function removeItem(product: {item: string, imgSrc: string}) {
+    return () => {
+      setShoppingList(shoppingList.filter((item) => item.item !== product.item || item.imgSrc !== product.imgSrc));
+    }
+  }
 
   return (
     <Sidebar side="right"
@@ -45,19 +53,21 @@ export function AppSidebar() {
             ) : (
               <SidebarMenu>
                 {shoppingList.map((item, index) => (
-                  <SidebarMenuItem key={index}>
-                    <SidebarMenuButton className="w-full justify-start">
-                      <div className="flex items-center gap-2 w-full">
-                        <Image
-                          src={item.imgSrc}
-                          alt={item.item}
-                          width={24}
-                          height={24}
-                          className="rounded-md object-cover"
-                        />
-                        <span className="flex-1 text-left truncate">{item.item}</span>
-                      </div>
-                    </SidebarMenuButton>
+                  <SidebarMenuItem key={index} className="w-full flex flex-row justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-700">
+                    <div className="flex gap-2">
+                      <Image
+                        src={item.imgSrc}
+                        alt={item.item}
+                        width={24}
+                        height={24}
+                        className="rounded-md object-cover"
+                      />
+                      <span className="flex-1 text-left truncate">{item.item}</span>
+                      <DropdownMenu />
+                    </div>
+                    <button className="justify-end hover:scale:110 hover:brightness-80" onClick={removeItem(item)}>
+                      <Image src="/stop-transparent.png" alt="Delete" width={30} height={30}/>
+                    </button>
                   </SidebarMenuItem>
                 ))}
               </SidebarMenu>

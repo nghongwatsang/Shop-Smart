@@ -9,7 +9,7 @@ type GlobalContextType = {
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 export function GlobalProvider({ children }: { children: ReactNode }) {
-  const [shoppingList, setShoppingList] = useState<{ item: string; imgSrc: string; }[]>([{ item: "Sample Item", imgSrc: "/sample.png" }]);
+  const [shoppingList, setShoppingList] = useState<{ item: string; imgSrc: string; }[]>([]);
 
   return (
     <GlobalContext.Provider value={{ shoppingList, setShoppingList }}>
