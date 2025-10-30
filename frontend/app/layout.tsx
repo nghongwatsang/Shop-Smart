@@ -35,13 +35,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <GlobalProvider>
-          <SidebarProvider>
+          <SidebarProvider defaultOpen={false}>
             <main>
               <div className="flex flex-row justify-between p-10 fixed top-0 left-0 z-50">
                 <LogoLink/>
                 <DarkModeToggle/>
               </div>
-              
               {children}
               <CartTrigger />
             </main>
