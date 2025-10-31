@@ -15,7 +15,7 @@ import {
 import { useGlobal } from "@/app/context/GlobalContext"
 import Image from "next/image"
 import Link from "next/link"
-import { Trash2, Search } from "lucide-react"
+import { Trash2, Banknote } from "lucide-react"
 import QuantityMenu from "@/components/QuantityMenu"
 
 export function AppSidebar() {
@@ -106,9 +106,9 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <Link href="/results" className="w-full">
-                  <SidebarMenuButton className="w-full cursor-pointer">
-                    <Search className="h-4 w-4" />
-                    <span>Search Prices</span>
+                  <SidebarMenuButton className="w-full cursor-pointer text-green-700 dark:text-">
+                    <Banknote className="h-4 w-4" />
+                    <span>Calculate Savings</span>
                   </SidebarMenuButton>
                 </Link>
               </SidebarMenuItem>

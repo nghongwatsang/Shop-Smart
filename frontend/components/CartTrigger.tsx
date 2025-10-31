@@ -8,6 +8,7 @@ export function CartTrigger() {
 
   return (
     <div className="relative">
+      <div className="fixed right-7 top-7 z-[10000] w-4 h-4 rounded-full bg-green-700 text-white flex text-center items-center justify-center">{shoppingList.length}</div>
       <SidebarTrigger className="fixed right-8 top-8 z-[9999] cursor-pointer" />
       {/* 
       Did we need this functionality?

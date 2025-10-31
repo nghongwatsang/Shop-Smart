@@ -4,10 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useSidebar } from "@/components/ui/sidebar";
+import { setSourceMapsEnabled } from "process";
 
 export default function Home() {
 
-  const [stores, setStores] = useState([1,2,3]);
+  const [stores, setStores] = useState<Number[]>([]);
+  const { setOpen } = useSidebar()
 
   function changeStore(category: {id: number, logo_path: string}) {
     if (stores.includes(category.id)) {
@@ -39,7 +42,7 @@ export default function Home() {
 
       <div className="flex flex-row items-center">
         <Card className="flex flex-col items-center justify-center p-5 gap-5 font-medium">
-          Preferred Stores:
+          Select preferred stores:
           <div className="flex flex-row items-center justify-center">
             {categories.map((category) => (
               <div key={category.id} className="px-10">
@@ -54,11 +57,13 @@ export default function Home() {
         </Card>
       </div>
 
-      <div className="pt-10">
-        <Link href="/search">
-          <Button>Start Saving!</Button>
-        </Link>
-      </div>
+      {stores.length > 0 && 
+        <div className="pt-10">
+          <Link href="/search">
+            <Button onClick={() => setOpen(true)}>Start Saving!</Button>
+          </Link>
+        </div>
+      }
     </div>
   );
 }

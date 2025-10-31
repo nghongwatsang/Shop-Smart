@@ -23,7 +23,6 @@ export default function ProductPage({ params }: ProductPageProps) {
 
     {/* Search field submit router*/}
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        console.log("Test")
         e.preventDefault();
         if (!newQuery.trim()) return; // avoid empty search
         router.push(`/search/${encodeURIComponent(newQuery.trim())}`);
@@ -64,7 +63,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     ]
 
     function inCart (product: {itemName: string, imgSrc: string}) {
-        return shoppingList.find(item => item.item === product.itemName && item.imgSrc === product.imgSrc) ? 'bg-gray-300 dark:bg-gray-800' : '';
+        return shoppingList.find(item => item.item === product.itemName && item.imgSrc === product.imgSrc) ? 'bg-green-400 dark:bg-green-700' : '';
     }
 
     return (
@@ -93,7 +92,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             </form>
 
             <div className="pt-10 pb-4 w-3/10 flex items-center justify-center">
-                <Card className="flex items-center justify-center w-full bg-gray-50">
+                <Card className="flex items-center justify-center w-full bg-white dark:bg-gray-400">
                     <CardContent className="font-medium">Results:</CardContent>
                 </Card>
             </div>
@@ -102,7 +101,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             {results &&
                 results.map((result,index) =>
                     <div className="pt-1 w-3/5" key={index}>
-                        <Card className={`flex items-center justify-center w-full bg-gray-50 hover:brightness-90 ${inCart(result)}`} onClick={changeCart(result)}>
+                        <Card className={`flex items-center justify-center w-full bg-gray-100 dark:bg-gray-700 hover:brightness-90 ${inCart(result)}`} onClick={changeCart(result)}>
                             <section className="flex flex-row items-center justify-between w-full cursor-pointer">
                                 <CardContent className="w-1/4 text-center"><Image src={`${result.imgSrc}`} alt={"Img"} width={10} height={10}/></CardContent>
                                 <CardContent className="w-1/4 text-center">{result.itemName}</CardContent>

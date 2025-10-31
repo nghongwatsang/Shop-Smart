@@ -61,7 +61,7 @@ export default function SearchPage() {
                     <div className="flex flex-wrap gap-2 w-1/2 justify-center">
                         {categories.map((category) => (
                             <Link href={`/search/${category.name}`} key={category.id}>
-                                <Card className="w-30 h-10 hover:scale-110 transition-all cursor-pointer bg-gray-50">
+                                <Card className="w-30 h-10 hover:scale-110 transition-all cursor-pointer bg-gray-50 dark:bg-gray-700">
                                     <CardContent className="flex h-full items-center justify-center">
                                         <div>{category.name}</div>
                                     </CardContent>
