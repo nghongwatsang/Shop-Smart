@@ -74,7 +74,7 @@ export function AppSidebar() {
 
                     {/* Right side: quantity + delete button */}
                     <div className="flex items-center gap-2 ml-auto">
-                      <QuantityMenu product={item} removeItem={removeItem} />
+                      <QuantityMenu product={item} />
                       <button
                         className="pl-3 hover:scale-110 hover:brightness-90 cursor-pointer"
                         onClick={() => removeItem(item)}

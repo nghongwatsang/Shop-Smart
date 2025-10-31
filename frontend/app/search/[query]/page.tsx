@@ -35,8 +35,9 @@ export default function ProductPage({ params }: ProductPageProps) {
             const exists = shoppingList.find(item => item.item === product.itemName && item.imgSrc === product.imgSrc);
             if (!exists) {
                 setShoppingList([...shoppingList, {item: product.itemName, imgSrc: product.imgSrc, quantity:1}]);
+            } else {
+                setShoppingList(shoppingList.filter(item => !(item.item === product.itemName && item.imgSrc === product.imgSrc)));
             }
-            console.log(product.imgSrc);
         }
     }
 
@@ -61,6 +62,10 @@ export default function ProductPage({ params }: ProductPageProps) {
         {name: "hannaford", logo_path: "/hannafords.svg"},
         {name: "market32", logo_path: "/Market_32.png"}
     ]
+
+    function inCart (product: {itemName: string, imgSrc: string}) {
+        return shoppingList.find(item => item.item === product.itemName && item.imgSrc === product.imgSrc) ? 'bg-gray-300 dark:bg-gray-800' : '';
+    }
 
     return (
         <section className="flex flex-col items-center justify-center w-screen p-10">
@@ -97,7 +102,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             {results &&
                 results.map((result,index) =>
                     <div className="pt-1 w-3/5" key={index}>
-                        <Card className="flex items-center justify-center w-full bg-gray-50 hover:brightness-90" onClick={changeCart(result)}>
+                        <Card className={`flex items-center justify-center w-full bg-gray-50 hover:brightness-90 ${inCart(result)}`} onClick={changeCart(result)}>
                             <section className="flex flex-row items-center justify-between w-full cursor-pointer">
                                 <CardContent className="w-1/4 text-center"><Image src={`${result.imgSrc}`} alt={"Img"} width={10} height={10}/></CardContent>
                                 <CardContent className="w-1/4 text-center">{result.itemName}</CardContent>

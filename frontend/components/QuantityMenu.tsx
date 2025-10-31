@@ -3,10 +3,9 @@ import { useGlobal } from "@/app/context/GlobalContext";
 
 type QuantityMenuProps = {
   product: { item: string; imgSrc: string; quantity: number }
-  removeItem: (product: { item: string; imgSrc: string; quantity: number }) => void;
 };
 
-export default function QuantityMenu({product, removeItem}: QuantityMenuProps) {
+export default function QuantityMenu({product}: QuantityMenuProps) {
     const {shoppingList, setShoppingList} = useGlobal();
 
     return (
