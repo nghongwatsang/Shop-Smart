@@ -37,8 +37,8 @@ def scrape_hannaford_products(url):
 
 if __name__ == "__main__":
     URL = (
-        "https://www.hannaford.com/"
-        "departments/meat/bacon-hot-dogs-sausage?displayAll=true"
+        "https://hannaford.com/"
+        "browse-aisles/categories/1/categories/1563/categories/2853-beef"
     )
     items = scrape_hannaford_products(URL)
     for item in items:
