@@ -26,7 +26,7 @@ def create_app():
     CORS(app)
     
     # Register blueprints
-    from src.interfaces.api.v1.routes import api_bp
-    app.register_blueprint(api_bp, url_prefix=os.getenv('API_PREFIX', '/api/v1'))
+    from src.interfaces.api.v1 import api_v1_bp
+    app.register_blueprint(api_v1_bp, url_prefix=os.getenv('API_PREFIX', '/api/v1'))
     
     return app
