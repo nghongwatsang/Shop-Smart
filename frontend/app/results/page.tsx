@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobal } from "../context/GlobalContext";
 import {
   Accordion,
@@ -7,41 +7,114 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import {useRouter} from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 import GoBackButton from "@/components/back-button";
 
 export default function ResultsPage() {
   const { shoppingList } = useGlobal();
   const router = useRouter();
-  function fetchResults() {
-    // fetch results from backend using the shoppingList
-    return [
+
+  const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  // 🧭 Ask for location on mount
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      setError("Geolocation is not supported by your browser.");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setLocation({ lat: pos.coords.latitude, lon: pos.coords.longitude });
+      },
+      (err) => {
+        if (err.code === err.PERMISSION_DENIED) setError("Location access denied.");
+        else setError("Unable to retrieve location.");
+      }
+    );
+  }, []);
+
+  async function getDistance(lat1: number, lon1: number, lat2: number, lon2: number){
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
+    return await fetch(`${baseUrl}/api/v1/route?start_lat=${lat1}&start_lng=${lon1}&end_lat=${lat2}&end_lng=${lon2}`)
+    .then(res => res.json());
+  }
+
+  async function fetchResults() {
+
+    const stores = 
+    [
+      {
+        name: "Walmart",
+        latitude: 42.7457318,
+        longitude: -73.6387872,
+      },
+      {
+        name: "Hannaford",
+        latitude: 42.7438908,
+        longitude: -73.6519795,
+      },
+      {
+        name: "Market32",
+        latitude: 42.7421706,
+        longitude: -73.643382,
+      }
+    ]
+
+    let results = [
       {
         id: 1,
         name: "Walmart",
-        distance: "2.1mi",
+        distance: "N/A",
         cost: 1,
         basket: [{ item: "Sample Item", cost: 1 }],
       },
       {
         id: 2,
         name: "Hannaford",
-        distance: "1.5mi",
+        distance: "N/A",
         cost: 2,
         basket: [{ item: "Sample Item", cost: 2 }],
       },
       {
         id: 3,
         name: "Market32",
-        distance: "2.6mi",
+        distance: "N/A",
         cost: 3,
         basket: [{ item: "Sample Item", cost: 3 }],
       },
     ];
+    if (!location){
+      return results;
+    }
+    for (let i = 0; i < stores.length; i++) {
+      const store = stores[i];
+      const distance = await getDistance(location.lat, location.lon, store.latitude, store.longitude);
+      console.log(distance);
+      results[i].distance = distance.data.distance_miles + " mi";
+    }
+
+    return results
   }
 
-  const results = fetchResults();
+  const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<{item: string, cost: number}>}>>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadResults = async () => {
+      try {
+        const data = await fetchResults();
+        setResults(data);
+      } catch (error) {
+        console.error('Error fetching results:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadResults();
+  }, [location]); // Re-run when location changes
 
   return (
     <section className="flex flex-col items-center justify-center h-screen w-screen pt-24">
