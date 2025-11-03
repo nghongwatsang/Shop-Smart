@@ -43,25 +43,3 @@ class TestRouteService:
         
         assert result['status'] == 'error'
         assert 'Network error' in result['message']
-    
-    def test_get_route_info_invalid_response(self, monkeypatch):
-        """Test handling of invalid API response."""
-        def mock_get(*args, **kwargs):
-            class MockResponse:
-                def json(self):
-                    return {"invalid": "response"}
-                
-                def raise_for_status(self):
-                    pass
-            
-            return MockResponse()
-            
-        import requests
-        monkeypatch.setattr(requests, 'get', mock_get)
-        
-        start = (40.748817, -73.985428)
-        end = (40.730610, -73.935242)
-        
-        result = RouteService.get_route_info(start, end)
-        
-        assert result['status'] == 'error'

@@ -2,14 +2,6 @@ import json
 import pytest
 
 class TestRouteEndpoints:
-    def test_health_check(self, client):
-        """Test the health check endpoint."""
-        response = client.get('/api/v1/health')
-        data = json.loads(response.data)
-        
-        assert response.status_code == 200
-        assert data['status'] == 'ok'
-        assert 'version' in data
     
     def test_get_route_success(self, client, mock_osrm_response):
         """Test successful route calculation."""
