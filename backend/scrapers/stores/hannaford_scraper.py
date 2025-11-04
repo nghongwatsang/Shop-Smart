@@ -55,8 +55,8 @@ class HannafordSeleniumScraper:
         """Initialize the scraper with Selenium"""
         self.headless = headless
         self.delay = delay
-        self.driver = None
-        self.wait = None
+        self.driver: Optional[webdriver.Chrome] = None
+        self.wait: Optional[WebDriverWait] = None
         self.setup_driver()
     
     def setup_driver(self) -> None:
@@ -107,6 +107,10 @@ class HannafordSeleniumScraper:
     def scrape_category_page(self, url: str) -> List[Product]:
         """Scrape all products from a category page"""
         products = []
+        
+        if not self.driver:
+            print("❌ Driver not initialized")
+            return products
         
         print(f"🔍 Scraping category page: {url}")
         
@@ -161,6 +165,10 @@ class HannafordSeleniumScraper:
     
     def scroll_to_load_products(self):
         """Scroll down to load more products dynamically"""
+        if not self.driver:
+            print("❌ Driver not initialized")
+            return
+            
         print("📜 Scrolling to load all products...")
         
         last_height = self.driver.execute_script("return document.body.scrollHeight")
@@ -187,6 +195,10 @@ class HannafordSeleniumScraper:
     
     def find_product_links(self) -> List[str]:
         """Find all product links on the category page"""
+        if not self.driver:
+            print("❌ Driver not initialized")
+            return []
+            
         links = []
         
         # Multiple selectors to try
@@ -224,6 +236,10 @@ class HannafordSeleniumScraper:
         Returns:
             Product object or None if scraping failed
         """
+        if not self.driver or not self.wait:
+            print("❌ Driver or wait not initialized")
+            return None
+            
         try:
             print(f"🔍 Scraping product from: {url}")
             
@@ -416,8 +432,10 @@ class HannafordSeleniumScraper:
             for meta in meta_tags:
                 if meta.get('property') == 'og:title' or meta.get('name') == 'title':
                     content = meta.get('content', '')
-                    if content and 'hannaford' not in content.lower():
-                        return content
+                    # Ensure content is a string
+                    content_str = str(content) if content else ''
+                    if content_str and 'hannaford' not in content_str.lower():
+                        return content_str
             
             return None
             
@@ -544,10 +562,11 @@ class HannafordSeleniumScraper:
         price_like = soup.find_all(text=re.compile(r'\$\d'))
         print(f"Found {len(price_like)} price-like texts:")
         for price_text in price_like[:3]:
-            if price_text and hasattr(price_text, 'strip'):
-                print(f"  Price: {price_text.strip()}")
+            price_str = str(price_text) if price_text else ''
+            if price_str.strip():
+                print(f"  Price: {price_str.strip()}")
             else:
-                print(f"  Price: {str(price_text)}")
+                print(f"  Price: {price_str}")
     
     def save_to_json(self, products: List[Product], filename: str) -> None:
         """Save products to JSON file"""

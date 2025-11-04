@@ -20,14 +20,10 @@ This directory contains a well-structured, object-oriented web scraping system f
 
 3. **Factory Pattern (`scraper_factory.py`)**
 
-   - Creates appropriate scraper instances
+   - Creates appropriate scraper instances for static HTTP scrapers
    - Manages store registration
    - Provides clean API for scraper creation
-
-4. **Service Layer (`scraping_service.py`)**
-   - High-level interface for the frontend
-   - Handles data aggregation, filtering, and export
-   - Provides statistics and search functionality
+   - Note: Selenium scrapers (like Hannaford) are used directly due to different lifecycle requirements
 
 ## 🛠️ Key Features
 
@@ -72,40 +68,67 @@ scraper = ScraperFactory.create_scraper('aldi', delay=0.5)
 products = scraper.scrape_products(limit=10)
 ```
 
-### Service Layer (Recommended)
+## Usage Examples
+
+### Static HTTP Scrapers (Aldi)
 
 ```python
-from scraping_service import ScrapingService
+from scraper_factory import ScraperFactory
 
-service = ScrapingService()
+# Create Aldi scraper
+aldi_scraper = ScraperFactory.create_scraper('aldi', delay=0.5)
 
-# Scrape from specific store
-result = service.scrape_store('aldi', limit=20)
+# Scrape products
+products = aldi_scraper.scrape_products(limit=20)
 
-# Get products by category
-chips = service.get_products_by_category('Chips, Crackers & Popcorn')
+# Save to JSON
+import json
+with open('aldi_products.json', 'w') as f:
+    json.dump([p.to_dict() for p in products], f, indent=2)
+```
 
-# Export data
-service.save_to_json('products.json')
+### Selenium Scrapers (Hannaford)
+
+```python
+from stores.hannaford_scraper import HannafordSeleniumScraper
+
+# Create Hannaford scraper
+scraper = HannafordSeleniumScraper()
+
+try:
+    # Scrape category page
+    url = "https://hannaford.com/browse-aisles/categories/1/categories/2098-produce"
+    products = scraper.scrape_category_page(url)
+
+    # Save results
+    scraper.save_to_json(products, 'hannaford_products.json')
+
+finally:
+    # Always cleanup Selenium
+    scraper.cleanup()
+```
+
 service.save_to_csv('products.csv')
+
 ```
 
 ## 📁 File Structure
 
 ```
+
 backend/scrapers/
-├── base.py                 # Abstract base class + Product dataclass
-├── scraper_factory.py      # Factory pattern for scraper creation
-├── scraping_service.py     # Service layer for business logic
+├── base.py # Abstract base class + Product dataclass  
+├── scraper_factory.py # Factory pattern for static HTTP scrapers
 ├── stores/
-│   ├── aldi_scraper.py     # Aldi implementation (complete)
-│   └── hannaford_scraper.py # Template for other stores
-└── README.md              # This file
-```
+│ ├── aldi_scraper.py # Aldi implementation (static HTTP)
+│ └── hannaford_scraper.py # Hannaford implementation (Selenium)
+└── README.md # This file
+
+````
 
 ## 🎯 Current Capabilities
 
-### Aldi Scraper (Fully Implemented)
+### Aldi Scraper (Static HTTP - Fully Implemented)
 
 - ✅ **Product Discovery**: Finds products on main product pages
 - ✅ **Data Extraction**: Name, price, size, units
@@ -126,22 +149,43 @@ backend/scrapers/
 - Healthy Food & Snacks
 - And many more...
 
+### Hannaford Scraper (Selenium - Fully Implemented)
+
+- ✅ **JavaScript Support**: Uses Selenium WebDriver for dynamic content
+- ✅ **Category Scraping**: Scrapes entire produce category pages
+- ✅ **Product Details**: Extracts brand, name, price, size, category
+- ✅ **Smart Parsing**: Handles multi-word brands and size extraction
+- ✅ **Dynamic Loading**: Scrolls and waits for content to load
+- ✅ **Robust Selectors**: Multiple selector strategies for reliability
+
+**Sample Categories Available**:
+- Produce (fully tested)
+- All other categories accessible via similar URLs
+
 ## 🔧 Adding New Stores
 
-To add a new store scraper:
+### For Static HTTP Sites (like Aldi):
 
 1. **Create new scraper class** inheriting from `BaseWebScraper`
 2. **Implement required methods**:
-
    - `get_product_pages()` - Return list of URLs to scrape
    - `extract_products_from_page()` - Find product elements on page
    - `extract_product_info()` - Extract data from individual product elements
-
 3. **Register in factory**:
 
 ```python
 ScraperFactory.register_scraper('store_name', YourScraperClass)
-```
+````
+
+### For JavaScript-Heavy Sites (like Hannaford):
+
+1. **Create standalone Selenium scraper** (don't inherit from BaseWebScraper)
+2. **Implement core methods**:
+   - `__init__()` - Set up WebDriver with appropriate options
+   - `scrape_category_page()` - Navigate and extract product links
+   - `scrape_product()` - Extract individual product details
+   - `cleanup()` - Properly close WebDriver
+3. **Use directly** (not through factory due to different lifecycle)
 
 ## 📊 Data Export Formats
 

@@ -114,11 +114,11 @@
     "name": "Cinnamon Raisin Bagels",
     "price": "$2.19",
     "category": "Back to School Breakfast",
-    "size": "18",
+    "size": "20",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/l-oven-fresh-cinnamon-raisin-bagels-6-count-0000000000000025",
-    "raw_name": "L'oven FreshCinnamon Raisin Bagels, 6 count18 oz$2.19"
+    "raw_name": "L'oven FreshCinnamon Raisin Bagels, 6 count20 oz$2.19"
   },
   {
     "brand": "Stonemill",
@@ -411,11 +411,11 @@
     "name": "Pre Sliced Hot Dog Buns",
     "price": "$1.55",
     "category": "Cookout Essentials",
-    "size": "12",
+    "size": "11",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/l-oven-fresh-pre-sliced-hot-dog-buns-8-count-0000000000000071",
-    "raw_name": "L'oven FreshPre  Sliced Hot Dog Buns, 8 count12 oz$1.55"
+    "raw_name": "L'oven FreshPre  Sliced Hot Dog Buns, 8 count11 oz$1.55"
   },
   {
     "brand": "Season's Choice",
@@ -728,24 +728,24 @@
   {
     "brand": "ChoceurMilk",
     "name": "Mini Chocolate Bars",
-    "price": "$3.29",
+    "price": "$3.55",
     "category": "Cookies & Sweets",
     "size": "1.4",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/choceur-milk-mini-chocolate-bars-0000000000000134",
-    "raw_name": "ChoceurMilk Mini Chocolate Bars, 5 count5 x 1.4 oz.$3.29"
+    "raw_name": "ChoceurMilk Mini Chocolate Bars, 5 count5 x 1.4 oz.$3.55"
   },
   {
     "brand": "Bake Shop",
     "name": "Chocolate Chunk Cookies",
-    "price": "$4.29",
+    "price": "$4.39",
     "category": "Halloween Themed Food",
     "size": "14",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/bake-shop-chocolate-chunk-cookies-14-oz-0000000000000135",
-    "raw_name": "Bake ShopChocolate  Chunk Cookies, 14 oz14 oz$4.29"
+    "raw_name": "Bake ShopChocolate  Chunk Cookies, 14 oz14 oz$4.39"
   },
   {
     "brand": "Simply Nature",
@@ -902,6 +902,17 @@
     "raw_name": "Chef's CupboardFat Free Vegetable Cooking Stock, 32 oz32 oz$1.89"
   },
   {
+    "brand": "Burman's",
+    "name": "Teriyaki Stir Fry Sauce",
+    "price": "$2.35",
+    "category": "Sauces & Salsa",
+    "size": "14.5",
+    "unit": "oz",
+    "source": "aldi",
+    "product_url": "https://www.aldi.us/product/burman-s-teriyaki-stir-fry-sauce-14-5-oz-0000000000000170",
+    "raw_name": "Burman'sTeriyaki Stir Fry Sauce, 14.5 oz14.5 oz$2.35"
+  },
+  {
     "brand": "Earthly Grains",
     "name": "New Orleans Style Jambalaya Rice Mix",
     "price": "$1.75",
@@ -1047,57 +1058,57 @@
   {
     "brand": "Lunch Mate",
     "name": "Family Size Smoked Ham",
-    "price": "$5.85",
+    "price": "$6.29",
     "category": "Dorm Room Meals & Snacks",
     "size": "16",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/lunch-mate-family-size-smoked-ham-16-oz-0000000000000193",
-    "raw_name": "Lunch MateFamily Size  Smoked Ham, 16 oz16 oz$5.85"
+    "raw_name": "Lunch MateFamily Size  Smoked Ham, 16 oz16 oz$6.29"
   },
   {
     "brand": "Lunch Mate",
     "name": "Honey Ham",
-    "price": "$5.85",
+    "price": "$6.29",
     "category": "Dorm Room Meals & Snacks",
     "size": "16",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/lunch-mate-honey-ham-16-oz-0000000000000194",
-    "raw_name": "Lunch MateHoney Ham,  16 oz16 oz$5.85"
+    "raw_name": "Lunch MateHoney Ham,  16 oz16 oz$6.29"
   },
   {
     "brand": "Lunch Mate",
     "name": "Family Size Roast Beef",
-    "price": "$5.85",
+    "price": "$6.29",
     "category": "Lunch Meat",
     "size": "14",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/lunch-mate-family-size-roast-beef-14-oz-0000000000000195",
-    "raw_name": "Lunch MateFamily  Size Roast Beef, 14 oz14 oz$5.85"
+    "raw_name": "Lunch MateFamily  Size Roast Beef, 14 oz14 oz$6.29"
   },
   {
     "brand": "Lunch Mate",
     "name": "Family Size Rotisserie Chicken Breast",
-    "price": "$5.85",
+    "price": "$6.29",
     "category": "Lunch Meat",
     "size": "1",
     "unit": "lb",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/lunch-mate-family-size-rotisserie-chicken-breast-1-lb-0000000000000196",
-    "raw_name": "Lunch MateFamily  Size Rotisserie Chicken Breast, 1 lb16 oz$5.85"
+    "raw_name": "Lunch MateFamily  Size Rotisserie Chicken Breast, 1 lb16 oz$6.29"
   },
   {
     "brand": "Lunch Mate",
     "name": "Family Size Lower Sodium Smoked Honey Ham in Lunch Meat Tub",
-    "price": "$5.85",
+    "price": "$6.29",
     "category": "Healthy Food & Snacks",
     "size": "15",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/lunch-mate-family-size-lower-sodium-smoked-honey-ham-in-lunch-meat-tub-15-oz-0000000000000197",
-    "raw_name": "Lunch MateFamily Size Lower Sodium Smoked Honey Ham in Lunch Meat Tub, 15 oz15 oz$5.85"
+    "raw_name": "Lunch MateFamily Size Lower Sodium Smoked Honey Ham in Lunch Meat Tub, 15 oz15 oz$6.29"
   },
   {
     "brand": "Burman's",
@@ -1113,13 +1124,13 @@
   {
     "brand": "Lunch Buddies",
     "name": "Cinnamon Applesauce Cups",
-    "price": "$2.19",
+    "price": "$2.15",
     "category": "Canned Foods",
     "size": "4",
     "unit": "oz",
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/lunch-buddies-cinnamon-applesauce-cups-6-count-0000000000000199",
-    "raw_name": "Lunch BuddiesCinnamon  Applesauce Cups, 6 count6 x 4 oz$2.19"
+    "raw_name": "Lunch BuddiesCinnamon  Applesauce Cups, 6 count6 x 4 oz$2.15"
   },
   {
     "brand": "Millville",
@@ -1307,16 +1318,5 @@
     "source": "aldi",
     "product_url": "https://www.aldi.us/product/l-oven-fresh-blueberry-bagels-20-oz-0000000000000228",
     "raw_name": "L'oven FreshBlueberry Bagels, 20 oz20 oz$2.19"
-  },
-  {
-    "brand": "Baker's Corner",
-    "name": "Marshmallows",
-    "price": "$1.09",
-    "category": "Baking Supplies & Ingredients",
-    "size": "10",
-    "unit": "oz",
-    "source": "aldi",
-    "product_url": "https://www.aldi.us/product/baker-s-corner-marshmallows-10-oz-0000000000000234",
-    "raw_name": "Baker's CornerMarshmallows, 10 oz10 oz$1.09"
   }
 ]
