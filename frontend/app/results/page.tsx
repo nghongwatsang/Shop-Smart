@@ -115,7 +115,7 @@ export default function ResultsPage() {
 
     loadResults();
   }, [location]); // Re-run when location changes
-
+  
   return (
     <section className="flex flex-col items-center justify-center h-screen w-screen pt-24">
       <div className="flex flex-col items-center w-full">
