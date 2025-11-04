@@ -3,10 +3,10 @@ name: Lint
 on:
   pull_request:
     paths:
-      - "src/**/*.js"
-      - "src/**/*.jsx"
-      - "src/**/*.ts"
-      - "src/**/*.tsx"
+      - "frontend/**/*.js"
+      - "frontend/**/*.jsx"
+      - "frontend/**/*.ts"
+      - "frontend/**/*.tsx"
 
 permissions:
   contents: read
