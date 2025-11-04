@@ -40,9 +40,6 @@ export default function ProductPage({ params }: ProductPageProps) {
         }
     }
 
-
-
-
     {/*img, itemname, brandname, lowest_price, source*/}
     function fetchQueryResults () {
         return query == "Apples" ? 
@@ -55,12 +52,6 @@ export default function ProductPage({ params }: ProductPageProps) {
         false;
     }
     const results = fetchQueryResults();
-
-    const stores = [
-        {name: "walmart", logo_path: "/WalmartLogo.png"},
-        {name: "hannaford", logo_path: "/hannafords.svg"},
-        {name: "market32", logo_path: "/Market_32.png"}
-    ]
 
     function inCart (product: {itemName: string, imgSrc: string}) {
         return shoppingList.find(item => item.item === product.itemName && item.imgSrc === product.imgSrc) ? 'bg-green-400 dark:bg-green-700' : '';

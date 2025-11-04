@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { useGlobal } from "../context/GlobalContext";
 import {
   Accordion,
   AccordionItem,
@@ -8,14 +7,18 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import {useRouter} from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 import GoBackButton from "@/components/back-button";
+{/* 
+  import { useGlobal } from "../context/GlobalContext"; 
+*/}
 
 export default function ResultsPage() {
-  const { shoppingList } = useGlobal();
+  {/* 
+    const { shoppingList } = useGlobal(); 
+  */}
   const router = useRouter();
   function fetchResults() {
-    // fetch results from backend using the shoppingList
+    // fetch results from backend using the shoppingList, dummy data for now
     return [
       {
         id: 1,

@@ -5,11 +5,10 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
-import { setSourceMapsEnabled } from "process";
 
 export default function Home() {
 
-  const [stores, setStores] = useState<Number[]>([]);
+  const [stores, setStores] = useState<number[]>([]);
   const { setOpen } = useSidebar()
 
   function changeStore(category: {id: number, logo_path: string}) {
