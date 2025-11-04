@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { useGlobal } from "../context/GlobalContext";
 import {
   Accordion,
   AccordionItem,
@@ -8,14 +7,18 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import {useRouter} from "next/navigation";
-import { ArrowLeft } from "lucide-react";
 import GoBackButton from "@/components/back-button";
+{/* 
+  import { useGlobal } from "../context/GlobalContext"; 
+*/}
 
 export default function ResultsPage() {
-  const { shoppingList } = useGlobal();
+  {/* 
+    const { shoppingList } = useGlobal(); 
+  */}
   const router = useRouter();
   function fetchResults() {
-    // fetch results from backend using the shoppingList
+    // fetch results from backend using the shoppingList, dummy data for now
     return [
       {
         id: 1,
@@ -44,17 +47,14 @@ export default function ResultsPage() {
   const results = fetchResults();
 
   return (
-    <section className="flex flex-col items-center justify-center h-screen w-screen pt-24">
-      <div className="flex flex-col items-center w-full">
-        {/* Go Back Button */}
-        <GoBackButton router={router} />
-
-        <div className="p-5 text-lg font-medium">Results for basket:</div>
+    <section className="flex flex-col items-center justify-center h-screen w-screen">
+      <div className="p-5 text-lg font-medium">Results for basket:</div>
+      {/* Go Back Button */}
+      <GoBackButton router={router} />
 
         {/* Accordion */}
         <Accordion
           type="multiple"
-          defaultValue={results.map((_, index) => String(index))}
           className="w-full max-w-md flex flex-col space-y-2"
         >
           {results.map((element, index) => (
@@ -83,7 +83,6 @@ export default function ResultsPage() {
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
     </section>
   );
 }
