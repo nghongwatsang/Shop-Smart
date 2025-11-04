@@ -9,27 +9,26 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from base import BaseWebScraper
 from stores.aldi_scraper import AldiScraper
-from stores.hannaford_scraper import HannafordScraper
 
 
 class ScraperFactory:
     """
-    Factory class to create store-specific scrapers
+    Factory class to create static HTTP-based scrapers.
+    Note: Selenium-based scrapers like Hannaford are standalone due to different lifecycle requirements.
     """
     
     _scrapers: Dict[str, Type[BaseWebScraper]] = {
         'aldi': AldiScraper,
-        'hannaford': HannafordScraper,
-        # Add more stores here as they're implemented
+        # Add more static HTTP scrapers here
     }
     
     @classmethod
     def create_scraper(cls, store_name: str, **kwargs) -> Optional[BaseWebScraper]:
         """
-        Create a scraper for the specified store
+        Create a static HTTP scraper for the specified store
         
         Args:
-            store_name: Name of the store (e.g., 'aldi', 'hannaford')
+            store_name: Name of the store (e.g., 'aldi')
             **kwargs: Additional arguments to pass to the scraper constructor
             
         Returns:
@@ -46,7 +45,7 @@ class ScraperFactory:
     @classmethod
     def get_available_stores(cls) -> list:
         """
-        Get list of available store scrapers
+        Get list of available static HTTP store scrapers
         
         Returns:
             List of available store names
@@ -66,13 +65,14 @@ class ScraperFactory:
 
 
 def main():
-    """Demonstrate the scraper factory"""
-    print("🛒 Shop-Smart Scraper Factory")
-    print("=" * 40)
+    """Demonstrate the scraper factory for static HTTP scrapers"""
+    print("🛒 Shop-Smart Static HTTP Scraper Factory")
+    print("=" * 45)
     
     # Show available stores
     available_stores = ScraperFactory.get_available_stores()
-    print(f"Available stores: {', '.join(available_stores)}")
+    print(f"Available static HTTP stores: {', '.join(available_stores)}")
+    print("Note: Selenium scrapers (Hannaford) are standalone")
     
     # Test Aldi scraper
     print("\n🏪 Testing Aldi Scraper:")
@@ -88,7 +88,7 @@ def main():
             if products:
                 product = products[0]
                 print(f"\nExample product:")
-                print(f"  📦 {product.name}")
+                print(f"  📦 {product.brand} {product.name}")
                 print(f"  💰 {product.price}")
                 print(f"  🏷️  {product.category}")
         else:
@@ -96,16 +96,11 @@ def main():
     else:
         print("Failed to create Aldi scraper")
     
-    # Test Hannaford scraper (will fail connection but shows structure)
-    print("\n🏪 Testing Hannaford Scraper (Template):")
-    print("-" * 40)
-    
-    hannaford_scraper = ScraperFactory.create_scraper('hannaford')
-    if hannaford_scraper:
-        print(f"Created {hannaford_scraper.store_name} scraper successfully")
-        print("(This is a template - would need real implementation)")
-    
-    print("\n✅ Scraper factory demonstration complete!")
+    print("\n✅ Static HTTP scraper factory demonstration complete!")
+    print("\n📝 For Selenium scrapers:")
+    print("   - Import HannafordSeleniumScraper directly")
+    print("   - Use: scraper = HannafordSeleniumScraper()")
+    print("   - Remember: scraper.cleanup() when done")
 
 
 if __name__ == "__main__":

@@ -1,84 +1,280 @@
-#!/usr/bin/env python3
-
-import json
-import csv
-from datetime import datetime
-from typing import List, Dict, Any, Optional
-from dataclasses import asdict
-import sys
-import os
-
-# Add the current directory to the Python path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-from scraper_factory import ScraperFactory
-from base import Product
+#!/usr/bin/env python3#!/usr/bin/env python3
 
 
-class ScrapingService:
-    """
-    Service layer for managing product scraping operations
-    """
-    
-    def __init__(self):
-        """Initialize the scraping service"""
-        self.scraped_data: List[Product] = []
-        self.last_scrape_time: Optional[datetime] = None
-    
-    def scrape_store(self, store_name: str, limit: Optional[int] = None, **kwargs) -> Dict[str, Any]:
-        """
-        Scrape products from a specific store
+
+import jsonimport json
+
+from datetime import datetimefrom datetime import datetime
+
+from typing import List, Dict, Any, Optionalfrom typing import List, Dict, Any, Optional
+
+import sysimport sys
+
+import osimport os
+
+
+
+# Add the current directory to the Python path# Add the current directory to the Python path
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+
+
+from scraper_factory import ScraperFactoryfrom scraper_factory import ScraperFactory
+
+from base import Productfrom base import Product
+
+
+
+
+
+class ScrapingService:class ScrapingService:
+
+    """    """
+
+    Simple service layer for static HTTP scrapers only.    Simple service layer for static HTTP scrapers only.
+
+    For Selenium scrapers, use them directly.    For Selenium scrapers, use them directly.
+
+    """    """
+
         
-        Args:
-            store_name: Name of the store to scrape
-            limit: Maximum number of products to scrape
-            **kwargs: Additional arguments for the scraper
-            
-        Returns:
-            Dictionary with scraping results
-        """
-        try:
-            # Create scraper
-            scraper = ScraperFactory.create_scraper(store_name, **kwargs)
-            if not scraper:
-                return {
-                    'success': False,
-                    'error': f'Unknown store: {store_name}',
-                    'products': [],
-                    'count': 0
-                }
-            
-            # Test connectivity
-            if not scraper.test_connectivity():
-                return {
-                    'success': False,
-                    'error': f'Cannot connect to {store_name}',
-                    'products': [],
-                    'count': 0
-                }
-            
-            # Scrape products
-            products = scraper.scrape_products(limit=limit)
-            
-            # Store results
-            self.scraped_data.extend(products)
-            self.last_scrape_time = datetime.now()
-            
-            return {
-                'success': True,
-                'store': scraper.store_name,
-                'products': [product.to_dict() for product in products],
-                'count': len(products),
-                'scraped_at': self.last_scrape_time.isoformat()
-            }
-            
-        except Exception as e:
-            return {
-                'success': False,
-                'error': str(e),
-                'products': [],
-                'count': 0
-            }
+
+    def __init__(self):    def __init__(self):
+
+        """Initialize the scraping service"""        """Initialize the scraping service"""
+
+        self.scraped_data: List[Product] = []        self.scraped_data: List[Product] = []
+
+        self.last_scrape_time: Optional[datetime] = None        self.last_scrape_time: Optional[datetime] = None
+
+        
+
+    def scrape_store(self, store_name: str, limit: Optional[int] = None, **kwargs) -> Dict[str, Any]:    def scrape_store(self, store_name: str, limit: Optional[int] = None, **kwargs) -> Dict[str, Any]:
+
+        """        """
+
+        Scrape products from a static HTTP store        Scrape products from a static HTTP store
+
+                
+
+        Args:        Args:
+
+            store_name: Name of the store to scrape (must be in ScraperFactory)            store_name: Name of the store to scrape (must be in ScraperFactory)
+
+            limit: Maximum number of products to scrape            limit: Maximum number of products to scrape
+
+            **kwargs: Additional arguments for the scraper            **kwargs: Additional arguments for the scraper
+
+                        
+
+        Returns:        Returns:
+
+            Dictionary with scraping results            Dictionary with scraping results
+
+        """        """
+
+        try:        try:
+
+            # Create scraper (only works for static HTTP scrapers)            # Create scraper (only works for static HTTP scrapers)
+
+            scraper = ScraperFactory.create_scraper(store_name, **kwargs)            scraper = ScraperFactory.create_scraper(store_name, **kwargs)
+
+            if not scraper:            if not scraper:
+
+                return {                return {
+
+                    'success': False,                    'success': False,
+
+                    'error': f'Unknown static HTTP store: {store_name}. Use Selenium scrapers directly.',                    'error': f'Unknown static HTTP store: {store_name}. Use Selenium scrapers directly.',
+
+                    'products': [],                    'products': [],
+
+                    'count': 0                    'count': 0
+
+                }                }
+
+                        
+
+            # Test connectivity            # Test connectivity
+
+            if not scraper.test_connectivity():            if not scraper.test_connectivity():
+
+                return {                return {
+
+                    'success': False,                    'success': False,
+
+                    'error': f'Cannot connect to {store_name}',                    'error': f'Cannot connect to {store_name}',
+
+                    'products': [],                    'products': [],
+
+                    'count': 0                    'count': 0
+
+                }                }
+
+                        
+
+            # Scrape products            # Scrape products
+
+            products = scraper.scrape_products(limit=limit)            products = scraper.scrape_products(limit=limit)
+
+                        
+
+            # Store results            # Store results
+
+            self.scraped_data.extend(products)            self.scraped_data.extend(products)
+
+            self.last_scrape_time = datetime.now()            self.last_scrape_time = datetime.now()
+
+                        
+
+            return {            return {
+
+                'success': True,                'success': True,
+
+                'store': scraper.store_name,                'store': scraper.store_name,
+
+                'products': [product.to_dict() for product in products],                'products': [product.to_dict() for product in products],
+
+                'count': len(products),                'count': len(products),
+
+                'scraped_at': self.last_scrape_time.isoformat()                'scraped_at': self.last_scrape_time.isoformat()
+
+            }            }
+
+                        
+
+        except Exception as e:        except Exception as e:
+
+            return {            return {
+
+                'success': False,                'success': False,
+
+                'error': str(e),                'error': str(e),
+
+                'products': [],                'products': [],
+
+                'count': 0                'count': 0
+
+            }            }
+
+        
+
+    def get_available_stores(self) -> List[str]:    def get_available_stores(self) -> List[str]:
+
+        """Get list of stores available through this service (static HTTP only)"""        """Get list of stores available through this service (static HTTP only)"""
+
+        return ScraperFactory.get_available_stores()        return ScraperFactory.get_available_stores()
+
+        
+
+    def save_to_json(self, filename: str) -> None:    def save_to_json(self, filename: str) -> None:
+
+        """Save scraped data to JSON file"""        """Save scraped data to JSON file"""
+
+        if not self.scraped_data:        if not self.scraped_data:
+
+            print("No data to save")            print("No data to save")
+
+            return            return
+
+                        
+
+        data = {        data = {
+
+            'scraped_at': self.last_scrape_time.isoformat() if self.last_scrape_time else None,            'scraped_at': self.last_scrape_time.isoformat() if self.last_scrape_time else None,
+
+            'products': [product.to_dict() for product in self.scraped_data],            'products': [product.to_dict() for product in self.scraped_data],
+
+            'count': len(self.scraped_data)            'count': len(self.scraped_data)
+
+        }        }
+
+                
+
+        with open(filename, 'w', encoding='utf-8') as f:        with open(filename, 'w', encoding='utf-8') as f:
+
+            json.dump(data, f, indent=2, ensure_ascii=False)            json.dump(data, f, indent=2, ensure_ascii=False)
+
+                
+
+        print(f"Saved {len(self.scraped_data)} products to {filename}")        print(f"Saved {len(self.scraped_data)} products to {filename}")
+
+
+
+
+
+def main():def main():
+
+    """Demonstrate the simplified scraping service"""    """Demonstrate the simplified scraping service"""
+
+    print("🛒 Shop-Smart Simple Scraping Service")    print("🛒 Shop-Smart Simple Scraping Service")
+
+    print("=" * 40)    print("=" * 40)
+
+    print("Note: This service only works with static HTTP scrapers.")    print("Note: This service only works with static HTTP scrapers.")
+
+    print("For Selenium scrapers (Hannaford), import and use directly.\n")    print("For Selenium scrapers (Hannaford), import and use directly.\n")
+
+        
+
+    service = ScrapingService()    service = ScrapingService()
+
+        
+
+    # Show available stores    # Show available stores
+
+    stores = service.get_available_stores()    stores = service.get_available_stores()
+
+    print(f"Available stores: {', '.join(stores)}")    print(f"Available stores: {', '.join(stores)}")
+
+        
+
+    # Test scraping Aldi    # Test scraping Aldi
+
+    if 'aldi' in stores:    if 'aldi' in stores:
+
+        print(f"\n🏪 Testing Aldi scraping...")        print(f"\n🏪 Testing Aldi scraping...")
+
+        result = service.scrape_store('aldi', limit=5)        result = service.scrape_store('aldi', limit=5)
+
+                
+
+        if result['success']:        if result['success']:
+
+            print(f"✅ Successfully scraped {result['count']} products from {result['store']}")            print(f"✅ Successfully scraped {result['count']} products from {result['store']}")
+
+            if result['products']:            if result['products']:
+
+                print("\nSample products:")                print("\nSample products:")
+
+                for i, product in enumerate(result['products'][:3]):                for i, product in enumerate(result['products'][:3]):
+
+                    print(f"  {i+1}. {product['brand']} {product['name']} - {product['price']}")                    print(f"  {i+1}. {product['brand']} {product['name']} - {product['price']}")
+
+        else:        else:
+
+            print(f"❌ Failed: {result['error']}")            print(f"❌ Failed: {result['error']}")
+
+        
+
+    print("\n📝 For Selenium-based stores:")    print("\n📝 For Selenium-based stores:")
+
+    print("   from stores.hannaford_scraper import HannafordSeleniumScraper")    print("   from stores.hannaford_scraper import HannafordSeleniumScraper")
+
+    print("   scraper = HannafordSeleniumScraper()")    print("   scraper = HannafordSeleniumScraper()")
+
+    print("   products = scraper.scrape_category_page(url)")    print("   products = scraper.scrape_category_page(url)")
+
+    print("   scraper.cleanup()  # Important!")    print("   scraper.cleanup()  # Important!")
+
+
+
+
+
+if __name__ == "__main__":if __name__ == "__main__":
+
+    main()    main()
     
     def scrape_all_stores(self, limit: Optional[int] = None, **kwargs) -> Dict[str, Any]:
         """
