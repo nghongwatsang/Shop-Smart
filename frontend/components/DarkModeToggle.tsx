@@ -17,7 +17,7 @@ export default function DarkModeToggle() {
     return (
         <button
             onClick={() => setIsDarkMode((prev) => !prev)}
-            className="p-2 rounded-full transition delay-150 duration-5000"
+            className="p-2 rounded-full transition delay-150 duration-5000 cursor-pointer"
             aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
             {isDarkMode ? (

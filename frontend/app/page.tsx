@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useSidebar } from "@/components/ui/sidebar";
 
 export default function Home() {
 
-  const [stores, setStores] = useState([1,2,3]);
+  const [stores, setStores] = useState<number[]>([]);
+  const { setOpen } = useSidebar()
 
   function changeStore(category: {id: number, logo_path: string}) {
     if (stores.includes(category.id)) {
@@ -18,18 +20,9 @@ export default function Home() {
   }
   
   const categories = [
-    {
-      id: 1,
-      logo_path: "/WalmartLogo.png",
-    },
-    {
-      id: 2,
-      logo_path: "/hannafords.svg",
-    },
-    {
-      id: 3,
-      logo_path: "/Market_32.png",
-    },
+    {id: 1, logo_path: "/Aldi-logo.png"},
+    {id: 2, logo_path: "/hannafords.svg"},
+    {id: 3, logo_path: "/Market_32.png"},
   ];
   
   return(
@@ -47,22 +40,35 @@ export default function Home() {
       </div>
 
       <div className="flex flex-row items-center">
-        {categories.map((category) => (
-          <div key={category.id} className="px-10">
-            <Card className={`w-30 h-30 hover:scale-110 transition-all cursor-pointer ${!stores.includes(category.id) ? 'saturate-0 brightness-85' : ''}`} onClick={() => changeStore(category)}>
-              <CardContent className="w-30 h-30 flex items-center justify-center">
-                <Image src={category.logo_path} alt="Logo" width={100} height={100} />
-              </CardContent>
-            </Card>
+        <Card className="flex flex-col items-center justify-center p-5 gap-5 font-medium">
+          Select preferred stores:
+          <div className="flex flex-row items-center justify-center">
+            {categories.map((category) => (
+              <div key={category.id} className="px-10">
+                <Card className={`w-30 h-30 bg-gray-50 dark:bg-gray-700 hover:scale-110 transition-all cursor-pointer ${!stores.includes(category.id) ? 'saturate-0 brightness-85' : ''}`} onClick={() => changeStore(category)}>
+                  <CardContent className="w-30 h-30 flex items-center justify-center">
+                    <Image src={category.logo_path} alt="Logo" width={100} height={100} />
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
           </div>
-      ))}
+        </Card>
       </div>
 
-      <div className="pt-10">
-        <Link href="/search">
-          <Button>Start Saving!</Button>
-        </Link>
-      </div>
+      {stores.length > 0 && 
+        <div className="pt-10">
+          <Link href="/search">
+            <Button onClick={() => setOpen(true)}>Start Saving!</Button>
+          </Link>
+        </div>
+      }
+
+      {stores.length == 0 && 
+        <div className="pt-10">
+          <Button className="bg-gray-500" variant={"ghost"}>Start Saving!</Button>
+        </div>
+      }
     </div>
   );
 }
