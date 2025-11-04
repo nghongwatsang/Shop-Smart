@@ -2,11 +2,10 @@ name: Lint
 
 on:
   pull_request:
-    paths:
-      - "frontend/**/*.js"
-      - "frontend/**/*.jsx"
-      - "frontend/**/*.ts"
-      - "frontend/**/*.tsx"
+    branches:
+      - main
+      - develop
+      - staging
 
 permissions:
   contents: read
@@ -17,24 +16,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Check out the repo so the runner has access to your code
+      # 1️⃣ Checkout repo
       - name: Checkout code
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@v4
 
-      # 2️⃣ Set up Node.js (version 22)
-      - name: Set up Node.js
-        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903
+      # 2️⃣ Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
-      # 3️⃣ Install dependencies *inside frontend/*
+      # 3️⃣ Install dependencies inside frontend
       - name: Install dependencies
         working-directory: ./frontend
         run: npm ci
 
-      # 4️⃣ Run ESLint only in the frontend directory
+      # 4️⃣ Run ESLint on all TS/TSX files in frontend
       - name: Run ESLint
-        uses: sibiraj-s/action-eslint@c24ff92cabb3ad38994c99f5583c59125ea040b0
+        uses: sibiraj-s/action-eslint@v4
         with:
           working-directory: frontend
           eslint-args: "**/*.{ts,tsx} --max-warnings=0"
