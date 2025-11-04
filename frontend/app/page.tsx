@@ -20,7 +20,7 @@ export default function Home() {
   }
   
   const categories = [
-    {id: 1, logo_path: "/WalmartLogo.png"},
+    {id: 1, logo_path: "/Aldi-logo.png"},
     {id: 2, logo_path: "/hannafords.svg"},
     {id: 3, logo_path: "/Market_32.png"},
   ];
@@ -61,6 +61,12 @@ export default function Home() {
           <Link href="/search">
             <Button onClick={() => setOpen(true)}>Start Saving!</Button>
           </Link>
+        </div>
+      }
+
+      {stores.length == 0 && 
+        <div className="pt-10">
+          <Button className="bg-gray-500" variant={"ghost"}>Start Saving!</Button>
         </div>
       }
     </div>
