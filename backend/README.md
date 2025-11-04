@@ -3,7 +3,7 @@
 A Flask application following clean architecture principles.
 
 ## Project Structure
-
+  
 ```
 backend/
 ├── src/
