@@ -8,7 +8,9 @@ import {
 } from "@/components/ui/accordion";
 import {useRouter} from "next/navigation";
 import GoBackButton from "@/components/back-button";
-import { useGlobal } from "../context/GlobalContext"; 
+{/* 
+  import { useGlobal } from "../context/GlobalContext"; 
+*/}
 
 export default function ResultsPage() {
   {/* 
