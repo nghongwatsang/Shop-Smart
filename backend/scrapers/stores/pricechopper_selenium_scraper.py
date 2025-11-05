@@ -370,7 +370,7 @@ class PriceChopperSeleniumScraper:
                 brand=brand_info['brand'],
                 name=brand_info['name'],
                 price=clean_price,
-                category="Produce",
+                category="Frozen Foods",
                 size=size_info.get('size', 'Not specified'),
                 unit=size_info.get('unit', 'Not specified'),
                 product_url=product_url,
@@ -395,14 +395,14 @@ class PriceChopperSeleniumScraper:
                 cleaned_name = cleaned_name.split(separator)[0].strip()
                 break
         
-        # Common patterns for produce
-        produce_patterns = [
-            r'^(Organic|Fresh|Premium|Select|Market 32)\s+(.+)',
-            r'^(.+?)\s+(Apples?|Oranges?|Bananas?|Potatoes?|Onions?|Carrots?|Peppers?|Tomatoes?)',
+        # Common patterns for frozen foods
+        frozen_patterns = [
+            r'^(Organic|Premium|Select|Market 32|Stouffer\'s|Lean Cuisine|Birds Eye|Green Giant|Healthy Choice|Amy\'s)\s+(.+)',
+            r'^(.+?)\s+(Pizza|Ice Cream|Frozen|Entree|Meal)',
         ]
         
-        # Try produce patterns first
-        for pattern in produce_patterns:
+        # Try frozen food patterns first
+        for pattern in frozen_patterns:
             match = re.match(pattern, cleaned_name, re.IGNORECASE)
             if match:
                 if pattern.startswith('^(Organic'):  # Multi-word brand
@@ -412,7 +412,7 @@ class PriceChopperSeleniumScraper:
                     }
                 else:  # Product type at end
                     return {
-                        'brand': 'Fresh',
+                        'brand': 'Frozen',
                         'name': cleaned_name
                     }
         
@@ -521,25 +521,25 @@ class PriceChopperSeleniumScraper:
 
 def main():
     """Main function to run the scraper"""
-    print("🛒 Scraping Price Chopper Produce with Selenium")
+    print("🛒 Scraping Price Chopper Frozen Foods with Selenium")
     print("=" * 60)
     
     # Use headless for efficiency, set to False for debugging
     scraper = PriceChopperSeleniumScraper(headless=True, delay=3.0)
     
     try:
-        # Use the provided URL
-        pricechopper_url = "https://shop.pricechopper.com/store/price-chopper-ny/collections/n-produce-61?_gl=1*nkbst7*_gcl_au*MTM3MzM3NTk4OS4xNzYyMjc4OTky*_ga*MTgyOTY0NjU2LjE3NjIyNzg5OTM.*_ga_4B5RTNL54S*czE3NjIyNzg5OTMkbzEkZzAkdDE3NjIyNzg5OTMkajYwJGwwJGgw"
+        # Use the frozen foods URL
+        pricechopper_url = "https://shop.pricechopper.com/store/price-chopper-ny/collections/n-frozen-89"
         print(f"🎯 Price Chopper URL: {pricechopper_url}")
         
         products = scraper.scrape_category_page(pricechopper_url)
         
         if products:
-            print(f"\n✅ Successfully scraped {len(products)} product(s) from Price Chopper produce!")
+            print(f"\n✅ Successfully scraped {len(products)} product(s) from Price Chopper frozen foods!")
             
             # Save results
-            scraper.save_to_json(products, 'pricechopper_produce_results.json')
-            print(f"💾 Saved {len(products)} product(s) to pricechopper_produce_results.json")
+            scraper.save_to_json(products, 'pricechopper_frozen_results.json')
+            print(f"💾 Saved {len(products)} product(s) to pricechopper_frozen_results.json")
             
             # Show first few products
             print("\n🔍 Sample products:")
