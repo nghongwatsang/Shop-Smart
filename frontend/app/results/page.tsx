@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useGlobal } from "../context/GlobalContext";
 import {
   Accordion,
   AccordionItem,
@@ -9,20 +8,17 @@ import {
 } from "@/components/ui/accordion";
 import { useRouter } from "next/navigation";
 import GoBackButton from "@/components/back-button";
-{/* 
-  import { useGlobal } from "../context/GlobalContext"; 
-*/}
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AlertCircle } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+
 
 export default function ResultsPage() {
-  {/* 
-    const { shoppingList } = useGlobal(); 
-  */}
   const router = useRouter();
 
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  // 🧭 Ask for location on mount
   useEffect(() => {
     if (!navigator.geolocation) {
       setError("Geolocation is not supported by your browser.");
@@ -46,10 +42,12 @@ export default function ResultsPage() {
     .then(res => res.json());
   }
 
-  async function fetchResults() {
 
-    const stores = 
-    [
+  const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<{item: string, cost: number}>}>>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const fetchResults = React.useCallback(async () => {
+    const stores = [
       {
         name: "Walmart",
         latitude: 42.7457318,
@@ -65,9 +63,9 @@ export default function ResultsPage() {
         latitude: 42.7421706,
         longitude: -73.643382,
       }
-    ]
+    ];
 
-    let results = [
+    const results = [
       {
         id: 1,
         name: "Walmart",
@@ -90,9 +88,11 @@ export default function ResultsPage() {
         basket: [{ item: "Sample Item", cost: 3 }],
       },
     ];
-    if (!location){
+
+    if (!location) {
       return results;
     }
+
     for (let i = 0; i < stores.length; i++) {
       const store = stores[i];
       const distance = await getDistance(location.lat, location.lon, store.latitude, store.longitude);
@@ -100,11 +100,8 @@ export default function ResultsPage() {
       results[i].distance = distance.data.distance_miles + " mi";
     }
 
-    return results
-  }
-
-  const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<{item: string, cost: number}>}>>([]);
-  const [isLoading, setIsLoading] = useState(true);
+    return results;
+  }, [location]);
 
   useEffect(() => {
     const loadResults = async () => {
@@ -119,45 +116,98 @@ export default function ResultsPage() {
     };
 
     loadResults();
-  }, [location]); // Re-run when location changes
+  }, [location, fetchResults]); // Re-run when location or fetchResults changes
   
-  return (
-    <section className="flex flex-col items-center justify-center h-screen w-screen">
-      <div className="p-5 text-lg font-medium">Results for basket:</div>
-      {/* Go Back Button */}
-      <GoBackButton router={router} />
-
-        {/* Accordion */}
-        <Accordion
-          type="multiple"
-          className="w-full max-w-md flex flex-col space-y-2"
-        >
-          {results.map((element, index) => (
-            <AccordionItem
-              value={String(index)}
-              key={index}
-              className="border rounded-lg shadow-sm bg-gray-50 dark:bg-gray-800"
-            >
-              <AccordionTrigger className="flex flex-row justify-between items-center px-6 py-3 text-lg font-medium text-center">
-                <div className="flex-1 text-left">{element.name}</div>
-                <div className="flex-1 text-center">{element.distance}</div>
-                <div className="flex-1 text-right">${element.cost}</div>
-              </AccordionTrigger>
-
-              <AccordionContent className="flex flex-col px-6 pb-3">
-                {element.basket.map((sub_element, sub_index) => (
-                  <div
-                    className="flex flex-row justify-between py-1 text-sm"
-                    key={sub_index}
-                  >
-                    <div>{sub_element.item}</div>
-                    <div>${sub_element.cost}</div>
-                  </div>
-                ))}
-              </AccordionContent>
-            </AccordionItem>
+  // Loading state
+  if (isLoading) {
+    return (
+      <section className="flex flex-col items-center justify-center h-screen w-screen p-4">
+        <div className="w-full max-w-md space-y-4">
+          <div className="flex items-center justify-between">
+            <Skeleton className="h-8 w-32" />
+            <Skeleton className="h-10 w-24" />
+          </div>
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="space-y-2 p-4 border rounded-lg">
+              <div className="flex justify-between">
+                <Skeleton className="h-6 w-24" />
+                <Skeleton className="h-6 w-16" />
+                <Skeleton className="h-6 w-12" />
+              </div>
+              <div className="space-y-2 mt-2">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-3/4" />
+              </div>
+            </div>
           ))}
-        </Accordion>
+        </div>
+      </section>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <section className="flex flex-col items-center justify-center h-screen w-screen p-4">
+        <div className="w-full max-w-md">
+          <Alert variant="destructive">
+            <AlertCircle className="h-4 w-4" />
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>
+              {error}
+            </AlertDescription>
+          </Alert>
+          <div className="mt-4">
+            <GoBackButton router={router} />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Results state
+  return (
+    <section className="flex flex-col items-center justify-center min-h-screen w-screen p-4">
+      <div className="w-full max-w-md space-y-4">
+        <div className="flex items-center justify-between">
+          <h1 className="text-lg font-medium">Results for basket:</h1>
+          <GoBackButton router={router} />
+        </div>
+        
+        {results.length === 0 ? (
+          <div className="text-center py-8 text-muted-foreground">
+            No results found. Try adjusting your search.
+          </div>
+        ) : (
+          <Accordion type="multiple" className="space-y-2">
+            {results.map((element, index) => (
+              <AccordionItem
+                value={String(index)}
+                key={index}
+                className="border rounded-lg shadow-sm bg-card"
+              >
+                <AccordionTrigger className="flex flex-row justify-between items-center px-6 py-3 text-lg font-medium">
+                  <div className="flex-1 text-left">{element.name}</div>
+                  <div className="flex-1 text-center">{element.distance}</div>
+                  <div className="flex-1 text-right">${element.cost}</div>
+                </AccordionTrigger>
+
+                <AccordionContent className="flex flex-col px-6 pb-3">
+                  {element.basket.map((sub_element, sub_index) => (
+                    <div
+                      className="flex flex-row justify-between py-1 text-sm"
+                      key={sub_index}
+                    >
+                      <div>{sub_element.item}</div>
+                      <div>${sub_element.cost}</div>
+                    </div>
+                  ))}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        )}
+      </div>
     </section>
   );
 }
