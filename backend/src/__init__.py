@@ -17,13 +17,35 @@ def create_app():
     
     # Configuration
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev')
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///shop_smart.db')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://shopuser:shoppass@localhost:5432/shopdb')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     # Initialize extensions
     db.init_app(app)
     migrate.init_app(app, db)
     CORS(app)
+    
+    # Import models to ensure they are registered with SQLAlchemy
+    from src.domain.entities.address import Address
+    from src.domain.entities.store import Store
+    from src.domain.entities.item import Item
+    from src.domain.entities.item_price import ItemPrice
+    
+    # Initialize repository registry
+    from src.infrastructure.database.repository_registry import RepositoryRegistry
+    
+    @app.before_request
+    def before_request():
+        # Initialize repository registry with a new session for each request
+        from src.infrastructure.database.database import SessionLocal
+        session = SessionLocal()
+        RepositoryRegistry.initialize(session)
+    
+    @app.teardown_request
+    def teardown_request(exception=None):
+        # Close the session at the end of each request
+        from src.infrastructure.database.database import ScopedSession
+        ScopedSession.remove()
     
     # Register blueprints
     from src.interfaces.api.v1 import api_v1_bp
