@@ -54,7 +54,7 @@ class AldiScraper(BaseWebScraper):
         
         # Generate URLs for pages 2-5 (can be adjusted based on needs)
         # Page 1 is the default products page without ?page= parameter
-        for page_num in range(2, 6):  # Pages 2, 3, 4, 5
+        for page_num in range(2, 5):  # Pages 2, 3, 4, 5
             page_url = f"{base_products_url}?page={page_num}"
             pagination_urls.append(page_url)
         
@@ -114,7 +114,7 @@ class AldiScraper(BaseWebScraper):
         
         # Process pagination pages
         for page_num, pagination_url in enumerate(pagination_urls, 2):
-            print(f"\n📄 Moving to page {page_num}: {pagination_url}")
+            print(f"\n Moving to page {page_num}: {pagination_url}")
             
             response = self.make_request(pagination_url)
             if not response:
@@ -471,7 +471,7 @@ def main():
         return
     
     # Scrape more products to test pagination
-    print("🛒 Starting enhanced Aldi scraper with pagination support...")
+    print("Starting enhanced Aldi scraper with pagination support...")
     products = scraper.scrape_products(limit=120)  # Increased limit to ensure we hit second page
     
     # Display results
@@ -502,20 +502,20 @@ def main():
             brands[product.brand] = brands.get(product.brand, 0) + 1
             categories[product.category] = categories.get(product.category, 0) + 1
         
-        print(f"\n📊 Scraping Summary:")
+        print(f"\n Scraping Summary:")
         print(f"Total products: {len(products)}")
         print(f"Unique brands: {len(brands)}")
         print(f"Unique categories: {len(categories)}")
         
-        print(f"\n🏭 Top Brands:")
+        print(f"\n Top Brands:")
         for brand, count in sorted(brands.items(), key=lambda x: x[1], reverse=True)[:5]:
             print(f"  • {brand}: {count} products")
         
-        print(f"\n🏷️ Top Categories:")
+        print(f"\n Top Categories:")
         for category, count in sorted(categories.items(), key=lambda x: x[1], reverse=True)[:5]:
             print(f"  • {category}: {count} products")
     
-    print(f"\n✅ Summary: Successfully scraped {len(products)} products from {scraper.store_name}")
+    print(f"\n Summary: Successfully scraped {len(products)} products from {scraper.store_name}")
 
 
 if __name__ == "__main__":
