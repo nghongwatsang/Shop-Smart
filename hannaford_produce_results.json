@@ -1,0 +1,222 @@
+[
+  {
+    "brand": "Green",
+    "name": "Bell Peppers",
+    "price": "$0.79",
+    "category": "Produce",
+    "size": "1",
+    "unit": "ea",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/green-bell-peppers-1-ea/118615",
+    "raw_name": "Green Bell Peppers - 1 ea"
+  },
+  {
+    "brand": "Seedless",
+    "name": "Green Grapes",
+    "price": "$4.48",
+    "category": "Produce",
+    "size": "2.25",
+    "unit": "lb",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/seedless-green-grapes-apx-2.25-lb/333413",
+    "raw_name": "Seedless Green Grapes - apx 2.25 lb"
+  },
+  {
+    "brand": "Sweet",
+    "name": "Potatoes",
+    "price": "$0.71",
+    "category": "Produce",
+    "size": "1",
+    "unit": "ea",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/sweet-potatoes-1-ea/386983",
+    "raw_name": "Sweet Potatoes - 1 ea"
+  },
+  {
+    "brand": "Seedless",
+    "name": "Red Grapes",
+    "price": "$4.48",
+    "category": "Produce",
+    "size": "2.25",
+    "unit": "lb",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/seedless-red-grapes-apx-2.25-lb/333414",
+    "raw_name": "Seedless Red Grapes - apx 2.25 lb"
+  },
+  {
+    "brand": "Hot House",
+    "name": "Seedless Cucumber",
+    "price": "$1.29",
+    "category": "Produce",
+    "size": "1",
+    "unit": "ea",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/hot-house-seedless-cucumber-1-ea/118598",
+    "raw_name": "Hot House Seedless Cucumber - 1 ea"
+  },
+  {
+    "brand": "Hannaford",
+    "name": "Lemons",
+    "price": "$0.50",
+    "category": "Produce",
+    "size": "1",
+    "unit": "ea",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/lemons-1-ea/118609",
+    "raw_name": "Lemons - 1 ea"
+  },
+  {
+    "brand": "Fresh",
+    "name": "Nature's Promise Greenhouse Grown Crunchy Green Leaf Lettuce",
+    "price": "$2.50",
+    "category": "Produce",
+    "size": "4",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/natures-promise-greenhouse-grown-crunchy-green-leaf-lettuce-4-oz-pkg/383375",
+    "raw_name": "Nature's Promise Greenhouse Grown Crunchy Green Leaf Lettuce - 4 oz pkg"
+  },
+  {
+    "brand": "Brussels",
+    "name": "Sprouts",
+    "price": "$2.49",
+    "category": "Produce",
+    "size": "1",
+    "unit": "lb",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/brussels-sprouts-apx-1-lb/118677",
+    "raw_name": "Brussels Sprouts - apx 1 lb"
+  },
+  {
+    "brand": "Red",
+    "name": "Onions",
+    "price": "$0.71",
+    "category": "Produce",
+    "size": "1",
+    "unit": "ea",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/red-onions-1-ea/386976",
+    "raw_name": "Red Onions - 1 ea"
+  },
+  {
+    "brand": "Hannaford",
+    "name": "Mandarins",
+    "price": "$4.99",
+    "category": "Produce",
+    "size": "3",
+    "unit": "lb",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/mandarins-3-lb-bag/199577",
+    "raw_name": "Mandarins - 3 lb bag"
+  },
+  {
+    "brand": "Fresh",
+    "name": "Taste of Inspirations Cold Pressed Apple Cider Fresh",
+    "price": "$3.99",
+    "category": "Produce",
+    "size": "2",
+    "unit": "g",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/taste-of-inspirations-cold-pressed-apple-cider-fresh-1-2-gallon/356074",
+    "raw_name": "Taste of Inspirations Cold Pressed Apple Cider Fresh - 1/2 gallon"
+  },
+  {
+    "brand": "Small",
+    "name": "Berry Medley",
+    "price": "$5.24",
+    "category": "Produce",
+    "size": "4",
+    "unit": "lb",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/small-berry-medley-apx-3-4-lb/371320",
+    "raw_name": "Small Berry Medley - apx 3/4 lb"
+  },
+  {
+    "brand": "Hannaford",
+    "name": "Chef Salad",
+    "price": "$5.00",
+    "category": "Deli & Prepared Food",
+    "size": "7",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/hannaford-chef-salad-7-oz-pkg/381025",
+    "raw_name": "Hannaford Chef Salad - 7 oz pkg"
+  },
+  {
+    "brand": "Driscoll's",
+    "name": "Sweetest Batch Blueberries",
+    "price": "$6.99",
+    "category": "Produce",
+    "size": "11",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/driscolls-sweetest-batch-blueberries-11-oz-pkg/270787",
+    "raw_name": "Driscoll's Sweetest Batch Blueberries - 11 oz pkg"
+  },
+  {
+    "brand": "Fresh",
+    "name": "Nature's Promise Greenhouse Grown Sweet Baby Butter Lettuce",
+    "price": "$2.50",
+    "category": "Produce",
+    "size": "4",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/natures-promise-greenhouse-grown-sweet-baby-butter-lettuce-4-oz-pkg/383381",
+    "raw_name": "Nature's Promise Greenhouse Grown Sweet Baby Butter Lettuce - 4 oz pkg"
+  },
+  {
+    "brand": "Hannaford",
+    "name": "Sugar Snap Peas Microwaveable Bag",
+    "price": "$3.49",
+    "category": "Produce",
+    "size": "8",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/hannaford-sugar-snap-peas-microwaveable-bag-8-oz-bag/351626",
+    "raw_name": "Hannaford Sugar Snap Peas Microwaveable Bag - 8 oz bag"
+  },
+  {
+    "brand": "Hannaford",
+    "name": "Chicken Caesar Salad",
+    "price": "$5.00",
+    "category": "Deli & Prepared Food",
+    "size": "5",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/hannaford-chicken-caesar-salad-5-oz-pkg/380152",
+    "raw_name": "Hannaford Chicken Caesar Salad - 5 oz pkg"
+  },
+  {
+    "brand": "Fresh",
+    "name": "Nature's Promise Greenhouse Grown Spring Mix Lettuce",
+    "price": "$2.50",
+    "category": "Produce",
+    "size": "4",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/natures-promise-greenhouse-grown-spring-mix-lettuce-4-oz-pkg/383379",
+    "raw_name": "Nature's Promise Greenhouse Grown Spring Mix Lettuce - 4 oz pkg"
+  },
+  {
+    "brand": "Fresh",
+    "name": "Nature's Promise Greenhouse Grown Red & Green Leaf Lettuce",
+    "price": "$2.50",
+    "category": "Produce",
+    "size": "4",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/natures-promise-greenhouse-grown-red-green-leaf-lettuce-4-oz-pkg/383377",
+    "raw_name": "Nature's Promise Greenhouse Grown Red & Green Leaf Lettuce - 4 oz pkg"
+  },
+  {
+    "brand": "Hannaford",
+    "name": "Whole Mushrooms",
+    "price": "$2.50",
+    "category": "Produce",
+    "size": "12",
+    "unit": "oz",
+    "source": "hannaford",
+    "product_url": "https://hannaford.com/product/hannaford-whole-mushrooms-12-oz-pkg/363961",
+    "raw_name": "Hannaford Whole Mushrooms - 12 oz pkg"
+  }
+]
