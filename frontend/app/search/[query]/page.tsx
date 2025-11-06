@@ -107,9 +107,15 @@ export default function ProductPage({ params }: ProductPageProps) {
                 </Button>
             </form>
 
-            <div className="pt-10 pb-4 w-3/10 flex items-center justify-center">
-                <Card className="flex items-center justify-center w-full bg-white dark:bg-gray-400">
-                    <CardContent className="font-medium">Results:</CardContent>
+            <div className="pt-10 pb-4 w-3/5 flex items-center justify-center">
+                <Card className="flex flex-col items-center justify-center w-full bg-white dark:bg-gray-400">
+                    <CardContent className="text-xl font-bold">Results:</CardContent>
+                    <CardContent className="font-semibold flex flex-row justify-between w-full">
+                        <CardContent className="w-1/4 text-center">Name(Size)</CardContent>
+                        <CardContent className="w-1/4 text-center  italic">Brand</CardContent>
+                        <CardContent className="w-1/4 text-center">Cheapest Store</CardContent>
+                        <CardContent className="w-1/4 text-center">Cheapest Price</CardContent>
+                    </CardContent>
                 </Card>
             </div>
 
@@ -121,7 +127,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                             <section className="flex flex-row items-center justify-between w-full cursor-pointer">
                                 <CardContent className="w-1/4 text-center">{result.name} ({result.size}{result.unit})</CardContent>
                                 <CardContent className="w-1/4 text-center italic">{result.brand}</CardContent>
-                                <CardContent className="w-1/4 text-center">{getImage(result.store)}</CardContent>
+                                <CardContent className="w-1/4 flex justify-center items-center">{getImage(result.store)}</CardContent>
                                 <CardContent className="w-1/4 text-center">${result.price}</CardContent>
                             </section>
                         </Card>

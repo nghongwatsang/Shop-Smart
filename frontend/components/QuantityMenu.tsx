@@ -18,15 +18,16 @@ export default function QuantityMenu({product}: {product: CartItem}) {
 
     return (
         <select
-        value={product.quantity}
-        onChange={(e) => changeQuantity(e, product)}
-        className="border border-gray-300 rounded-md p-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            value={product.quantity}
+            onChange={(e) => changeQuantity(e, product)}
+            size={1} // shows 10 options at a time
+            className="border border-gray-300 rounded-md p-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 overflow-auto"
         >
-            {[...Array(10)].map((_, i) => (
-                <option key={i + 1} value={i + 1}>
-                {i + 1}
-                </option>
-            ))}
+        {[...Array(20)].map((_, i) => (
+            <option key={i + 1} value={i + 1}>
+            {i + 1}
+            </option>
+        ))}
         </select>
     );
 }
