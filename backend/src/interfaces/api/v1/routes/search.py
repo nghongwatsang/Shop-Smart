@@ -23,7 +23,7 @@ def search_items():
         pattern = f"%{query}%"
         
         base_query = (
-            db.query(Item.name, Item.brand, ItemPrice.price, Store.name.label("store_name"))
+            db.query(Item.name, Item.brand, Item.size, Item.unit, ItemPrice.price, Store.name.label("store_name"))
             .join(ItemPrice, Item.id == ItemPrice.itemid)
             .join(Store, Store.id == ItemPrice.storeid)
             .filter(
@@ -33,14 +33,14 @@ def search_items():
                     Item.brand.ilike(pattern.strip("\""))
                 )
             )
+            .order_by(ItemPrice.price.asc())
         )
-
-        print(str(base_query.statement.compile(compile_kwargs={"literal_binds": True})))
 
 
         # Pagination
         results = (
             base_query
+            .distinct()
             .order_by(Item.name.asc())
             .offset((page - 1) * per_page)
             .limit(per_page)
@@ -49,13 +49,14 @@ def search_items():
 
         # Count for pagination
         total = base_query.count()
-        print(results)
         return jsonify({
             "items": [
                 {
                     "name": row.name,
                     "brand": row.brand,
                     "price": row.price,
+                    "size": row.size,
+                    "unit": row.unit,
                     "store": row.store_name
                 }
                 for row in results

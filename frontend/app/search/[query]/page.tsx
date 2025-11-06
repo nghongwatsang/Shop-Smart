@@ -36,7 +36,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         return () => {
             const exists = shoppingList.find(item => item.name === product.name && item.brand === product.brand);
             if (!exists) {
-                setShoppingList([...shoppingList, {name: product.name, brand: product.brand, store: product.store, price: product.price, quantity:1}]);
+                setShoppingList([...shoppingList, {name: product.name, brand: product.brand, store: product.store, size: product.size, unit: product.unit, price: product.price, quantity:1}]);
             } else {
                 setShoppingList(shoppingList.filter(item => !(item.name === product.name && item.brand === product.brand)));
             }
@@ -119,7 +119,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                     <div className="pt-1 w-3/5" key={index}>
                         <Card className={`flex items-center justify-center w-full bg-gray-100 dark:bg-gray-700 hover:brightness-90 ${inCart(result)}`} onClick={changeCart(result)}>
                             <section className="flex flex-row items-center justify-between w-full cursor-pointer">
-                                <CardContent className="w-1/4 text-center">{result.name}</CardContent>
+                                <CardContent className="w-1/4 text-center">{result.name} ({result.size}{result.unit})</CardContent>
                                 <CardContent className="w-1/4 text-center italic">{result.brand}</CardContent>
                                 <CardContent className="w-1/4 text-center">{getImage(result.store)}</CardContent>
                                 <CardContent className="w-1/4 text-center">${result.price}</CardContent>

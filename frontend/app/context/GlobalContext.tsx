@@ -13,9 +13,9 @@ const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 export function GlobalProvider({ children }: { children: ReactNode }) {
   const [shoppingList, setShoppingList] = useState<CartItem[]>([]);
   const [stores, setStores] = useState<Store[]>([
-    {id: 1, name: "aldi",logo_path: "/Aldi-logo.png", active: false},
-    {id: 2, name: "hannafords", logo_path: "/hannafords.svg", active: false},
-    {id: 3, name: "target",logo_path: "/target.png", active: false},
+    {id: 1, name: "Aldi",logo_path: "/Aldi-logo.png", active: false},
+    {id: 2, name: "Hannafords", logo_path: "/hannafords.svg", active: false},
+    {id: 3, name: "Target",logo_path: "/target.png", active: false},
   ]);
 
   return (
