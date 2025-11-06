@@ -86,3 +86,4 @@ def get_item(item_id: str):
         return jsonify({'error': str(e)}), 500
     finally:
         db.close()
+
