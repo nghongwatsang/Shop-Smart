@@ -11,10 +11,16 @@ import GoBackButton from "@/components/back-button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
+/*import { useGlobal } from "@/app/context/GlobalContext";*/
 
 
 export default function ResultsPage() {
   const router = useRouter();
+
+  /* 
+    Distance fetch should get rewritten with stores
+    const { shoppingList, setShoppingList, stores, setStores } = useGlobal(); 
+  */
 
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
   const [error, setError] = useState<string | null>(null);

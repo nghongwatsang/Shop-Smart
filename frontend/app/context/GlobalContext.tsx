@@ -1,24 +1,25 @@
 "use client";
 import { createContext, useContext, useState, ReactNode } from "react";
 
-type Product = {
-  item: string;
-  imgSrc: string;
-  quantity: number;
-};
-
 type GlobalContextType = {
-  shoppingList: Product[];
-  setShoppingList: React.Dispatch<React.SetStateAction<Product[]>>;
+  shoppingList: CartItem[];
+  setShoppingList: React.Dispatch<React.SetStateAction<CartItem[]>>;
+  stores: Store[];
+  setStores: React.Dispatch<React.SetStateAction<Store[]>>;
 };
 
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 export function GlobalProvider({ children }: { children: ReactNode }) {
-  const [shoppingList, setShoppingList] = useState<Product[]>([]);
+  const [shoppingList, setShoppingList] = useState<CartItem[]>([]);
+  const [stores, setStores] = useState<Store[]>([
+    {id: 1, name: "aldi",logo_path: "/Aldi-logo.png", active: false},
+    {id: 2, name: "hannafords", logo_path: "/hannafords.svg", active: false},
+    {id: 3, name: "target",logo_path: "/target.png", active: false},
+  ]);
 
   return (
-    <GlobalContext.Provider value={{ shoppingList, setShoppingList }}>
+    <GlobalContext.Provider value={{ shoppingList, setShoppingList, stores, setStores }}>
       {children}
     </GlobalContext.Provider>
   );

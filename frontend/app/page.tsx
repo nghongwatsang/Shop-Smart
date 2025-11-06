@@ -5,25 +5,25 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
+import { useGlobal } from "./context/GlobalContext";
 
 export default function Home() {
 
-  const [stores, setStores] = useState<number[]>([]);
+  const {stores, setStores} = useGlobal();
   const { setOpen } = useSidebar()
 
-  function changeStore(category: {id: number, logo_path: string}) {
-    if (stores.includes(category.id)) {
-      setStores(stores.filter(id => id !== category.id));
-    } else {
-      setStores([...stores, category.id])
-    }
+  function changeStore(store: Store) {
+    const newActivity = store.active ? false : true;
+    setStores((prev) =>
+      prev.map((item) =>
+        item.id === store.id ? { ...item, active: newActivity } : item
+      )
+    );
   }
-  
-  const categories = [
-    {id: 1, logo_path: "/Aldi-logo.png"},
-    {id: 2, logo_path: "/hannafords.svg"},
-    {id: 3, logo_path: "/Market_32.png"},
-  ];
+
+  function activeStores() {
+    return stores.filter((store) => store.active);
+  }
   
   return(
     <div className="flex flex-col w-screen h-screen items-center justify-center p-10">
@@ -43,11 +43,11 @@ export default function Home() {
         <Card className="flex flex-col items-center justify-center p-5 gap-5 font-medium">
           Select preferred stores:
           <div className="flex flex-row items-center justify-center">
-            {categories.map((category) => (
-              <div key={category.id} className="px-10">
-                <Card className={`w-30 h-30 bg-gray-50 dark:bg-gray-700 hover:scale-110 transition-all cursor-pointer ${!stores.includes(category.id) ? 'saturate-0 brightness-85' : ''}`} onClick={() => changeStore(category)}>
+            {stores.map((store: Store) => (
+              <div key={store.id} className="px-10">
+                <Card className={`w-30 h-30 bg-gray-50 dark:bg-gray-700 hover:scale-110 transition-all cursor-pointer ${!activeStores().includes(store) ? 'saturate-0 brightness-85' : ''}`} onClick={() => changeStore(store)}>
                   <CardContent className="w-30 h-30 flex items-center justify-center">
-                    <Image src={category.logo_path} alt="Logo" width={100} height={100} />
+                    <Image src={store.logo_path} alt="Logo" width={100} height={100} />
                   </CardContent>
                 </Card>
               </div>
@@ -56,7 +56,7 @@ export default function Home() {
         </Card>
       </div>
 
-      {stores.length > 0 && 
+      {activeStores().length > 0 && 
         <div className="pt-10">
           <Link href="/search">
             <Button onClick={() => setOpen(true)}>Start Saving!</Button>
@@ -64,7 +64,7 @@ export default function Home() {
         </div>
       }
 
-      {stores.length == 0 && 
+      {activeStores().length == 0 && 
         <div className="pt-10">
           <Button className="bg-gray-500" variant={"ghost"}>Start Saving!</Button>
         </div>
