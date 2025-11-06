@@ -1,0 +1,76 @@
+from flask import Blueprint, jsonify, request
+from sqlalchemy.orm import Session
+from sqlalchemy import or_, select
+from src.infrastructure.database.database import get_db
+from src.domain.entities.item import Item
+from src.domain.entities.item_price import ItemPrice
+from src.domain.entities.store import Store
+
+bp = Blueprint('search', __name__, url_prefix='/search')
+
+@bp.route('/', methods=['GET'], endpoint="search_items")
+def search_items():
+    db: Session = next(get_db())
+    try:
+        query = request.args.get('query')
+        if not query:
+            query = ""
+
+        
+
+        page = max(1, int(request.args.get('page', 1)))
+        per_page = min(100, max(1, int(request.args.get('per_page', 20))))
+        pattern = f"%{query.strip('"')}%"
+        
+        base_query = (
+            db.query(Item.name, Item.brand, ItemPrice.price, Store.name.label("store_name"))
+            .join(ItemPrice, Item.id == ItemPrice.itemid)
+            .join(Store, Store.id == ItemPrice.storeid)
+            .filter(
+                or_(
+                    Item.name.ilike(pattern.strip("\"")),
+                    Item.category.ilike(pattern.strip("\"")),
+                    Item.brand.ilike(pattern.strip("\""))
+                )
+            )
+        )
+
+        print(str(base_query.statement.compile(compile_kwargs={"literal_binds": True})))
+
+
+        # Pagination
+        results = (
+            base_query
+            .order_by(Item.name.asc())
+            .offset((page - 1) * per_page)
+            .limit(per_page)
+            .all()
+        )
+
+        # Count for pagination
+        total = base_query.count()
+
+        return jsonify({
+            "items": [
+                {
+                    "name": row.name,
+                    "brand": row.brand,
+                    "price": row.price,
+                    "store": row.store_name
+                }
+                for row in results
+            ],
+            "pagination": {
+                "page": page,
+                "per_page": per_page,
+                "total_items": total,
+                "total_pages": (total + per_page - 1) // per_page
+            }
+        }), 200
+
+    except Exception as e:
+        db.rollback()
+        return jsonify({"error": str(e)}), 500
+
+    finally:
+        db.close()

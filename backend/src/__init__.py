@@ -17,13 +17,19 @@ def create_app():
     
     # Configuration
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev')
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///shop_smart.db')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://shopuser:shoppass@localhost:5432/shopdb')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     # Initialize extensions
     db.init_app(app)
     migrate.init_app(app, db)
     CORS(app)
+    
+    # Import models to ensure they are registered with SQLAlchemy
+    from src.domain.entities.address import Address
+    from src.domain.entities.store import Store
+    from src.domain.entities.item import Item
+    from src.domain.entities.item_price import ItemPrice
     
     # Register blueprints
     from src.interfaces.api.v1 import api_v1_bp
