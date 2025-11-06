@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify
 from src.infrastructure.database.database import get_db
 from src.domain.entities.item import Item
-from src.infrastructure.database.repository_registry import get_repository
+from src.infrastructure.database.repository_factory import get_repository
 from sqlalchemy.orm import Session
 
 bp = Blueprint('items', __name__, url_prefix='/items')
@@ -24,7 +24,8 @@ def get_items():
         brand = request.args.get('brand')
         page = max(1, int(request.args.get('page', 1)))
         per_page = min(100, max(1, int(request.args.get('per_page', 20))))
-        
+
+
         # Create filter dictionary
         filters = {}
         if category:
@@ -33,8 +34,9 @@ def get_items():
             filters['brand'] = brand
         
         # Get repository and query items
-        repo = get_repository(Item)
-        
+        repo = get_repository(Item, session=db)
+        print("Route session:", db)
+        print("Repo session:", repo.session)
         # Get paginated results
         items = repo.get_paginated(
             page=page,
@@ -61,7 +63,9 @@ def get_items():
         return jsonify(response), 200
         
     except Exception as e:
+        db.rollback()  # <<< Prevent aborted transaction issues
         return jsonify({'error': str(e)}), 500
+
     finally:
         db.close()
 

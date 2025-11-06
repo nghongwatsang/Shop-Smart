@@ -31,22 +31,6 @@ def create_app():
     from src.domain.entities.item import Item
     from src.domain.entities.item_price import ItemPrice
     
-    # Initialize repository registry
-    from src.infrastructure.database.repository_registry import RepositoryRegistry
-    
-    @app.before_request
-    def before_request():
-        # Initialize repository registry with a new session for each request
-        from src.infrastructure.database.database import SessionLocal
-        session = SessionLocal()
-        RepositoryRegistry.initialize(session)
-    
-    @app.teardown_request
-    def teardown_request(exception=None):
-        # Close the session at the end of each request
-        from src.infrastructure.database.database import ScopedSession
-        ScopedSession.remove()
-    
     # Register blueprints
     from src.interfaces.api.v1 import api_v1_bp
     app.register_blueprint(api_v1_bp, url_prefix=os.getenv('API_PREFIX', '/api/v1'))
