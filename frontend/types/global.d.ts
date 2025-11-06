@@ -1,17 +1,17 @@
 declare global {
     type CartItem = {
-        itemName: string;
-        brandName: string;
-        storeName: string;
-        lowestPrice: number;
+        name: string;
+        brand: string;
+        store: string;
+        price: number;
         quantity: number;
     };
 
     type Product = {
-        itemName: string;
-        brandName: string;
-        storeName: string;
-        lowestPrice: number;
+        name: string;
+        brand: string;
+        store: string;
+        price: number;
     };
 
     type Store = {

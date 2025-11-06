@@ -19,7 +19,8 @@ export default function ProductPage({ params }: ProductPageProps) {
     const { stores } = useGlobal(); 
     const router = useRouter();
     const [newQuery, setNewQuery] = useState("");
-    const [results, setResults] = useState([]);
+    const [results, setResults] = useState<Product[]>([]);
+    const [loading, setLoading] = useState(true);
 
     const {shoppingList, setShoppingList} = useGlobal();
 
@@ -33,40 +34,47 @@ export default function ProductPage({ params }: ProductPageProps) {
     {/* Add to cart function */}
     function changeCart (product: Product) {
         return () => {
-            const exists = shoppingList.find(item => item.itemName === product.itemName && item.brandName === product.brandName);
+            const exists = shoppingList.find(item => item.name === product.name && item.brand === product.brand);
             if (!exists) {
-                setShoppingList([...shoppingList, {itemName: product.itemName, brandName: product.brandName, storeName: product.storeName, lowestPrice: product.lowestPrice, quantity:1}]);
+                setShoppingList([...shoppingList, {name: product.name, brand: product.brand, store: product.store, price: product.price, quantity:1}]);
             } else {
-                setShoppingList(shoppingList.filter(item => !(item.itemName === product.itemName && item.brandName === product.brandName)));
+                setShoppingList(shoppingList.filter(item => !(item.name === product.name && item.brand === product.brand)));
             }
         }
     }
 
     {/*img, itemname, brandname, lowest_price, source*/}
     useEffect(() => {
-    async function getResults() {
+        async function getResults() {
+            setLoading(true);
             try {
                 const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-                const res = await fetch(`${baseUrl}/api/v1/search?${query}`);
+                const res = await fetch(`${baseUrl}/api/v1/search?query=${query}`);
+                console.log(res);
                 if (!res.ok) {
                     console.error("Error fetching query results:", res.statusText);
                     setResults([]);
                     return;
                 }
 
-                const data = await res.json(); // <- important
-                setResults(data);
+                const data = await res.json();
+                setResults(data.items.length > 0 ? data.items : []);
             } catch (error) {
                 console.error("Error fetching query results:", error);
                 setResults([]);
             }
+            setLoading(false);
         }
-
         getResults();
+        console.log(results);
     }, [query]);
 
-    function inCart (product: {itemName: string, brandName: string}) {
-        return shoppingList.find(item => item.itemName === product.itemName && item.brandName === product.brandName) ? 'bg-green-400 dark:bg-green-700' : '';
+    useEffect(() => {
+    console.log("Updated results:", results);
+    }, [results]);
+
+    function inCart (product: {name: string, brand: string}) {
+        return shoppingList.find(item => item.name === product.name && item.brand === product.brand) ? 'bg-green-400 dark:bg-green-700' : '';
     }
 
     function getImage(store: string) {
@@ -106,7 +114,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             </div>
 
             {/* Results */}
-            {results.length > 0 &&
+            {!loading && results.length > 0 &&
                 results.map((result: Product,index) =>
                     <div className="pt-1 w-3/5" key={index}>
                         <Card className={`flex items-center justify-center w-full bg-gray-100 dark:bg-gray-700 hover:brightness-90 ${inCart(result)}`} onClick={changeCart(result)}>
@@ -121,7 +129,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                 )
             }
 
-            {results.length === 0 &&
+            {!loading && results.length === 0 &&
                 <div className="pt-10 font-medium text-large">No results found</div>
             }
         </section>

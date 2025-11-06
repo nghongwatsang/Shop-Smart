@@ -21,10 +21,10 @@ import QuantityMenu from "@/components/QuantityMenu"
 export function AppSidebar() {
   const { shoppingList, setShoppingList } = useGlobal()
 
-  function removeItem(product: { item: string; imgSrc: string; quantity: number }) {
+  function removeItem(product: CartItem) {
     setShoppingList((prevList) =>
       prevList.filter(
-        (item) => item.item !== product.item || item.imgSrc !== product.imgSrc
+        (item) => item.name !== product.name || item.brand !== product.brand
       )
     );
   }
@@ -54,7 +54,7 @@ export function AppSidebar() {
             ) : (
               <SidebarMenu>
                 {[...shoppingList].sort((a, b) =>
-                  a.item.localeCompare(b.item)
+                  a.name.localeCompare(b.name)
                 ).map((item, index) => (
                   <SidebarMenuItem
                     key={index}
@@ -62,14 +62,7 @@ export function AppSidebar() {
                   >
                     {/* Left side: image + name */}
                     <div className="flex items-center gap-2 flex-1">
-                      <Image
-                        src={item.imgSrc}
-                        alt={item.item}
-                        width={24}
-                        height={24}
-                        className="rounded-md object-cover"
-                      />
-                      <span className="pl-1 truncate">{item.item}</span>
+                      <span className="pl-1 truncate">{item.name}</span>
                     </div>
 
                     {/* Right side: quantity + delete button */}

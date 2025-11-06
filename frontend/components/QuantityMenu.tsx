@@ -1,18 +1,14 @@
 import React from "react";
 import { useGlobal } from "@/app/context/GlobalContext";
 
-type QuantityMenuProps = {
-  product: { item: string; imgSrc: string; quantity: number }
-};
-
-export default function QuantityMenu({product}: QuantityMenuProps) {
+export default function QuantityMenu({product}: {product: CartItem}) {
     const {shoppingList, setShoppingList} = useGlobal();
 
-    function changeQuantity(e: React.ChangeEvent<HTMLSelectElement>, product: Product) {
+    function changeQuantity(e: React.ChangeEvent<HTMLSelectElement>, product: CartItem) {
         const newQuantity = Number(e.target.value);
         setShoppingList((prev) =>
             prev.map((item) =>
-            item.item === product.item && item.imgSrc === product.imgSrc
+            item.name === product.name && item.brand === product.brand
                 ? { ...item, quantity: newQuantity }
                 : item
             )

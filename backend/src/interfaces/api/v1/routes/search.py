@@ -15,12 +15,12 @@ def search_items():
         query = request.args.get('query')
         if not query:
             query = ""
-
+        query = query.strip()
         
 
         page = max(1, int(request.args.get('page', 1)))
         per_page = min(100, max(1, int(request.args.get('per_page', 20))))
-        pattern = f"%{query.strip('"')}%"
+        pattern = f"%{query}%"
         
         base_query = (
             db.query(Item.name, Item.brand, ItemPrice.price, Store.name.label("store_name"))
@@ -49,7 +49,7 @@ def search_items():
 
         # Count for pagination
         total = base_query.count()
-
+        print(results)
         return jsonify({
             "items": [
                 {
