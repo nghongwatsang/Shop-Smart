@@ -1,0 +1,394 @@
+CRC Cards for Shop-Smart Project (Backend & Frontend)
+
+===============================================================================
+
+BACKEND CLASSES
+
+===============================================================================
+
+Class: Item (Domain Entity)
+
+Responsibilities:
+- Represent product data in the database
+- Store item attributes (name, brand, category, product_url, size, unit)
+- Provide unique identification via UUID
+- Maintain relationships with ItemPrice entities
+- Serialize item data to dictionary format
+
+Collaborators:
+- ItemPrice (one-to-many relationship) - Data coupling (1): exchanges simple ID references
+- SQLAlchemy Base (inherits from) - Data coupling (1): inherits database mapping functionality
+- Database session (managed by) - Data coupling (1): simple CRUD operations with basic data types
+
+Cohesion: Functional cohesion (6) - All methods work together to represent a single item
+
+===============================================================================
+
+Class: Store (Domain Entity)
+
+Responsibilities:
+- Represent grocery store information
+- Store store name and location reference
+- Maintain relationship with Address entity
+- Maintain relationships with ItemPrice entities
+- Serialize store data to dictionary format
+
+Collaborators:
+- Address (many-to-one relationship) - Data coupling (1): exchanges simple foreign key references
+- ItemPrice (one-to-many relationship) - Data coupling (1): exchanges ID references for price relationships
+- SQLAlchemy Base (inherits from) - Data coupling (1): inherits database mapping functionality
+- Database session (managed by) - Data coupling (1): simple CRUD operations
+
+Cohesion: Functional cohesion (6) - All operations focus on store representation
+
+===============================================================================
+
+Class: ItemPrice (Domain Entity)
+
+Responsibilities:
+- Link items with stores and their prices
+- Store price information for specific item-store combinations
+- Provide price comparison data structure
+- Maintain foreign key relationships
+- Serialize price data with item and store details
+
+Collaborators:
+- Item (many-to-one relationship) - Data coupling (1): exchanges simple ID and basic item data
+- Store (many-to-one relationship) - Data coupling (1): exchanges simple ID and basic store data
+- SQLAlchemy Base (inherits from) - Data coupling (1): inherits database mapping functionality
+- Database session (managed by) - Data coupling (1): simple CRUD operations
+
+Cohesion: Functional cohesion (6) - Focused on price relationship management
+
+===============================================================================
+
+Class: Address (Domain Entity)
+
+Responsibilities:
+- Store location information for stores
+- Maintain geographic coordinates
+- Support multiple stores at same address
+- Provide address serialization
+- Support location-based queries
+
+Collaborators:
+- Store (one-to-many relationship) - Data coupling (1): exchanges simple ID references and address data
+- SQLAlchemy Base (inherits from) - Data coupling (1): inherits database mapping functionality
+- Database session (managed by) - Data coupling (1): simple CRUD operations with geographic data
+
+Cohesion: Functional cohesion (6) - All methods serve address representation
+
+===============================================================================
+
+Class: RouteService (Application Service)
+
+Responsibilities:
+- Calculate routes between geographic points
+- Interface with external OSRM routing service
+- Convert distance and time units
+- Handle routing API errors and timeouts
+- Provide route calculation abstraction
+
+Collaborators:
+- requests library (HTTP client) - Data coupling (1): exchanges simple HTTP request/response data
+- OSRM API (external service) - Data coupling (1): exchanges coordinate and route data via HTTP
+- Geographic coordinate data (input/output) - Data coupling (1): simple tuple coordinate parameters
+
+Cohesion: Functional cohesion (6) - All methods serve route calculation purpose
+
+===============================================================================
+
+Class: Product (Scraper Data Class)
+
+Responsibilities:
+- Store scraped product information temporarily
+- Standardize product data format across scrapers
+- Convert product data to dictionary format
+- Maintain scraping metadata (source, raw_name)
+- Support data validation and serialization
+
+Collaborators:
+- BaseWebScraper (created by) - Data coupling (1): simple instantiation with basic data parameters
+- AldiScraper (created by) - Data coupling (1): simple instantiation with product data
+- PriceChopperSeleniumScraper (created by) - Data coupling (1): simple instantiation with product data
+- JSON serialization (consumed by) - Data coupling (1): simple dictionary conversion
+
+Cohesion: Functional cohesion (6) - Focused on product data representation
+
+===============================================================================
+
+Class: BaseWebScraper (Abstract Base Class)
+
+Responsibilities:
+- Define scraping interface template
+- Manage HTTP session configuration
+- Implement request handling with retries
+- Provide HTML parsing utilities
+- Handle rate limiting and delays
+- Parse brand and product names
+- Orchestrate scraping workflow
+- Provide error handling patterns
+
+Collaborators:
+- Product (creates) - Data coupling (1): instantiates with simple product parameters
+- requests.Session (uses) - Data coupling (1): exchanges HTTP request/response data
+- BeautifulSoup (uses) - Stamp coupling (2): passes complex HTML document structures
+- AldiScraper (extended by) - Data coupling (1): provides interface inheritance
+- ScraperFactory (registered with) - Data coupling (1): simple class registration
+
+Cohesion: Communication cohesion (5) - Methods work on same data but serve different aspects
+
+===============================================================================
+
+Class: ScraperFactory (Factory Pattern)
+
+Responsibilities:
+- Create scraper instances dynamically
+- Maintain scraper registry
+- Validate store names
+- Provide available store listings
+- Support scraper registration
+
+Collaborators:
+- BaseWebScraper (creates subclasses) - Data coupling (1): simple class instantiation with parameters
+- AldiScraper (instantiates) - Data coupling (1): creates instances with basic configuration
+- Client code (used by) - Data coupling (1): exchanges simple store name strings and object references
+
+Cohesion: Functional cohesion (6) - Single responsibility of object creation
+
+===============================================================================
+
+Class: AldiScraper (Concrete Implementation)
+
+Responsibilities:
+- Implement Aldi-specific scraping logic
+- Handle Aldi URL patterns and pagination
+- Extract product information from Aldi pages
+- Parse Aldi-specific HTML structures
+- Handle Aldi brand patterns
+- Extract category information from breadcrumbs
+
+Collaborators:
+- BaseWebScraper (inherits from) - Data coupling (1): inherits interface and utility methods
+- Product (creates) - Data coupling (1): instantiates with simple product data parameters
+- BeautifulSoup (uses for parsing) - Stamp coupling (2): manipulates complex HTML document objects
+- Tag (manipulates HTML elements) - Stamp coupling (2): works with complex HTML element structures
+
+Cohesion: Functional cohesion (6) - All methods serve Aldi scraping purpose
+
+===============================================================================
+
+Class: PriceChopperSeleniumScraper (Selenium Implementation)
+
+Responsibilities:
+- Setup and manage Selenium WebDriver
+- Handle JavaScript-heavy websites
+- Implement stealth browsing techniques
+- Navigate dynamic content and AJAX
+- Extract product data from rendered pages
+- Manage WebDriver lifecycle
+- Handle location-based store selection
+
+Collaborators:
+- Product (creates) - Data coupling (1): instantiates with simple product data
+- webdriver.Chrome (manages) - Control coupling (3): passes control flags and configuration options
+- WebDriverWait (uses) - Data coupling (1): simple timeout and condition parameters
+- ChromeDriverManager (uses) - Data coupling (1): simple driver path management
+- BeautifulSoup (uses for parsing) - Stamp coupling (2): processes complex HTML document structures
+
+Cohesion: Communication cohesion (5) - Multiple related but distinct responsibilities
+
+===============================================================================
+
+FRONTEND COMPONENTS & FUNCTIONS
+
+===============================================================================
+
+Function: GlobalProvider (React Context Provider Function)
+
+Responsibilities:
+- Manage global application state
+- Provide shopping cart state management
+- Manage store selection state
+- Provide context to child components
+- Initialize default store data
+- Expose state update functions
+
+Collaborators:
+- React.createContext (uses) - Data coupling (1): creates context with simple state objects
+- useGlobal hook (provides data to) - Stamp coupling (2): provides complex state objects and setter functions
+- Child components (provides context to) - Stamp coupling (2): passes complex context value with multiple state pieces
+- CartItem type (manages) - Data coupling (1): works with simple cart item data structures
+- Store type (manages) - Data coupling (1): works with simple store data structures
+
+Cohesion: Logical cohesion (2) - Groups related but different state management functions
+
+===============================================================================
+
+Function: useGlobal (Custom Hook Function)
+
+Responsibilities:
+- Provide access to global context
+- Validate context availability
+- Abstract context consumption
+- Throw errors for invalid usage
+- Type-safe context access
+
+Collaborators:
+- GlobalContext (consumes) - Stamp coupling (2): receives complex context object with multiple state values
+- React components (used by) - Data coupling (1): returns context data to components
+- useContext hook (uses) - Data coupling (1): simple hook usage for context access
+
+Cohesion: Functional cohesion (6) - Single purpose of context access
+
+===============================================================================
+
+Component: RootLayout (Layout Function Component)
+
+Responsibilities:
+- Define application layout structure
+- Integrate global providers
+- Set up font configuration
+- Provide consistent UI structure
+- Configure sidebar and navigation
+- Define metadata for SEO
+
+Collaborators:
+- GlobalProvider (wraps children) - Control coupling (3): controls provider initialization and wrapping behavior
+- SidebarProvider (UI structure) - Control coupling (3): controls sidebar behavior with configuration flags
+- AppSidebar (navigation) - Data coupling (1): simple component composition
+- LogoLink (header component) - Data coupling (1): simple component composition
+- DarkModeToggle (theme component) - Data coupling (1): simple component composition
+- CartTrigger (cart component) - Data coupling (1): simple component composition
+
+Cohesion: Logical cohesion (2) - Groups various layout concerns
+
+===============================================================================
+
+Component: CartTrigger (UI Function Component)
+
+Responsibilities:
+- Display cart item count
+- Trigger sidebar visibility
+- Provide visual cart indicator
+- Handle cart interaction
+- Show shopping list length
+
+Collaborators:
+- useGlobal hook (gets cart state) - Data coupling (1): receives simple cart length data
+- SidebarTrigger (UI interaction) - Data coupling (1): simple component composition for UI trigger
+- shoppingList state (displays count) - Data coupling (1): accesses simple array length property
+
+Cohesion: Functional cohesion (6) - Focused on cart trigger functionality
+
+===============================================================================
+
+Component: AppSidebar (Sidebar Function Component)
+
+Responsibilities:
+- Display shopping cart contents
+- Manage cart item removal
+- Show item quantities and controls
+- Calculate total prices
+- Provide cart navigation
+- Handle empty cart state
+
+Collaborators:
+- useGlobal hook (cart state management) - Stamp coupling (2): receives complex shopping list array and setter function
+- QuantityMenu (quantity controls) - Data coupling (1): passes simple quantity data and update handlers
+- Sidebar UI components (structure) - Data coupling (1): simple component composition
+- CartItem type (manages items) - Stamp coupling (2): manipulates complex cart item objects
+- Image component (item display) - Data coupling (1): simple image source and alt text
+
+Cohesion: Functional cohesion (6) - All methods serve shopping cart display
+
+===============================================================================
+
+Component: QuantityMenu (UI Function Component)
+
+Responsibilities:
+- Provide quantity selection interface
+- Handle quantity updates
+- Validate quantity limits
+- Provide user-friendly controls
+- Update cart state
+
+Collaborators:
+- Parent components (receives props) - Data coupling (1): receives simple quantity values and update callbacks
+- Cart state management (updates quantities) - Data coupling (1): sends simple numeric quantity updates
+- UI interaction handlers - Data coupling (1): simple event handling with numeric values
+
+Cohesion: Functional cohesion (6) - Single purpose of quantity management
+
+===============================================================================
+
+Component: DarkModeToggle (UI Function Component)
+
+Responsibilities:
+- Toggle between light and dark themes
+- Persist theme preference
+- Provide visual theme indicator
+- Handle theme state management
+- Update UI appearance
+
+Collaborators:
+- Theme system (updates) - Data coupling (1): simple boolean theme state changes
+- Local storage (persistence) - Data coupling (1): simple string/boolean storage operations
+- UI styling system - Data coupling (1): simple CSS class toggles
+
+Cohesion: Functional cohesion (6) - Focused on theme management
+
+===============================================================================
+
+Component: LogoLink (UI Function Component)
+
+Responsibilities:
+- Display application logo
+- Provide navigation to home page
+- Maintain brand consistency
+- Handle logo click interaction
+
+Collaborators:
+- Next.js Link component (navigation) - Data coupling (1): simple href string and navigation props
+- Image assets (logo display) - Data coupling (1): simple image source and styling properties
+- Routing system - Data coupling (1): simple route navigation with string paths
+
+Cohesion: Functional cohesion (6) - Single purpose of logo/navigation
+
+===============================================================================
+
+SYSTEM ANALYSIS
+
+Overall Backend Assessment:
+- Coupling: Primarily Data (1) and Stamp (2) coupling - well designed
+- Cohesion: Mostly Functional (6) with some Communication (5) - excellent focus
+- Architecture follows Domain-Driven Design with clear separation of concerns
+
+Overall Frontend Assessment:
+- Coupling: Mix of Data (1), Stamp (2), and Control (3) coupling - typical React functional patterns
+- Cohesion: Primarily Functional (6) with some Logical (2) grouping - good component design
+- Component architecture follows React best practices with hooks and functional components
+
+Design Strengths:
+1. Clear separation between domain entities and application services in backend
+2. Proper use of design patterns (Factory, Repository, Context Provider)
+3. Good abstraction layers between scraping implementations
+4. Type-safe interfaces with TypeScript
+5. Functional cohesion in most classes and components
+6. Minimal coupling between most components
+7. Modern React functional component architecture with hooks
+
+Areas for Improvement:
+1. GlobalProvider function has logical cohesion - could split into multiple contexts
+2. RootLayout mixes multiple concerns - could extract layout logic
+3. PriceChopperSeleniumScraper has communication cohesion - could separate driver management
+4. Some stamp coupling in scrapers - unavoidable due to HTML parsing requirements
+
+Recommended Enhancements:
+1. Extract theme management into separate context
+2. Create dedicated driver management class for Selenium scrapers
+3. Implement observer pattern for scraping progress
+4. Add command pattern for cart operations
+5. Consider state management library for complex frontend state
+
+Note: Frontend uses functional components and hooks rather than object-oriented classes, which is the modern React development pattern. The CRC analysis still applies to understand component responsibilities and dependencies.
