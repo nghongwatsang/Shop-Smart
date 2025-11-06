@@ -67,6 +67,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             setLoading(false);
         }
         getResults();
+        console.log(results);
     }, [query]);
 
     function inCart (product: {name: string, brand: string}) {
