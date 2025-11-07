@@ -36,7 +36,7 @@ export default function RootLayout({
       >
         <GlobalProvider>
           <SidebarProvider defaultOpen={false}>
-            <main>
+            <main className="flex overflow-hidden box-border">
               <div className="flex flex-row justify-between fixed top-8 left-8 z-50">
                 <LogoLink/>
                 <DarkModeToggle/>

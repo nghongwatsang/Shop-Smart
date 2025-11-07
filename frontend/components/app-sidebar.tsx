@@ -31,7 +31,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar side="right"
-      className="fixed top-0 right-0 h-screen w-[20rem] z-[9998] shadow-lg bg-background transition-transform duration-300"
+      className="fixed top-0 right-0 h-screen w-1/5 min-w-[14rem] z-[9998] shadow-lg bg-background transition-transform duration-300"
     >
       <SidebarHeader>
         <div className="px-2 py-2">

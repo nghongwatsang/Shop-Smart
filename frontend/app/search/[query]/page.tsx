@@ -66,12 +66,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             setLoading(false);
         }
         getResults();
-        console.log(results);
     }, [query]);
-
-    useEffect(() => {
-    console.log("Updated results:", results);
-    }, [results]);
 
     function inCart (product: {name: string, brand: string}) {
         return shoppingList.find(item => item.name === product.name && item.brand === product.brand) ? 'bg-green-400 dark:bg-green-700' : '';
@@ -83,7 +78,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     }
 
     return (
-        <section className="flex flex-col items-center justify-center w-screen p-10">
+        <section className="flex flex-col items-center w-screen p-10">
             <GoBackButton router={router} />
 
             {/* Search Bar */}
@@ -107,36 +102,37 @@ export default function ProductPage({ params }: ProductPageProps) {
                 </Button>
             </form>
 
-            <div className="pt-10 pb-4 w-3/5 flex items-center justify-center">
-                <Card className="flex flex-col items-center justify-center w-full bg-white dark:bg-gray-400">
-                    <CardContent className="text-xl font-bold">Results:</CardContent>
-                    <CardContent className="font-semibold flex flex-row justify-between w-full">
-                        <CardContent className="w-1/4 text-center">Name(Size)</CardContent>
-                        <CardContent className="w-1/4 text-center  italic">Brand</CardContent>
-                        <CardContent className="w-1/4 text-center">Cheapest Store</CardContent>
-                        <CardContent className="w-1/4 text-center">Cheapest Price</CardContent>
-                    </CardContent>
-                </Card>
+            <div className="pt-14 pb-9 w-3/5 flex items-center justify-center">
+                <div className="flex flex-col items-center justify-center w-full">
+                    <h1 className="text-xl font-bold pb-6">Results:</h1>
+                    <div className="font-semibold flex flex-row justify-between w-full">
+                        <div className="w-1/4 text-center text-lg">Name(Size)</div>
+                        <div className="w-1/4 text-center text-lg">Brand</div>
+                        <div className="w-1/4 text-center text-lg">Cheapest Store</div>
+                        <div className="w-1/4 text-center text-lg">Cheapest Price</div>
+                    </div>
+                </div>
             </div>
 
             {/* Results */}
-            {!loading && results.length > 0 &&
-                results.map((result: Product,index) =>
-                    <div className="pt-1 w-3/5" key={index}>
-                        <Card className={`flex items-center justify-center w-full bg-gray-100 dark:bg-gray-700 hover:brightness-90 ${inCart(result)}`} onClick={changeCart(result)}>
-                            <section className="flex flex-row items-center justify-between w-full cursor-pointer">
-                                <CardContent className="w-1/4 text-center">{result.name} ({result.size}{result.unit})</CardContent>
-                                <CardContent className="w-1/4 text-center italic">{result.brand}</CardContent>
-                                <CardContent className="w-1/4 flex justify-center items-center">{getImage(result.store)}</CardContent>
-                                <CardContent className="w-1/4 text-center">${result.price}</CardContent>
-                            </section>
-                        </Card>
-                    </div>
+            {!loading ?
+                results.length > 0 ? (
+                    results.map((result: Product,index) =>
+                        <div className="pt-1 w-3/5" key={index}>
+                            <Card className={`flex items-center justify-center w-full bg-gray-100 dark:bg-gray-700 hover:brightness-90 ${inCart(result)}`} onClick={changeCart(result)}>
+                                <section className="flex flex-row items-center justify-between w-full cursor-pointer">
+                                    <CardContent className="w-1/4 text-center">{result.name} ({result.size}{result.unit})</CardContent>
+                                    <CardContent className="w-1/4 text-center italic">{result.brand}</CardContent>
+                                    <CardContent className="w-1/4 flex justify-center items-center">{getImage(result.store)}</CardContent>
+                                    <CardContent className="w-1/4 text-center">${result.price}</CardContent>
+                                </section>
+                            </Card>
+                        </div>
+                    )) : (
+                    <div className="pt-10 font-medium text-large text-muted-foreground">No results found</div>
                 )
-            }
-
-            {!loading && results.length === 0 &&
-                <div className="pt-10 font-medium text-large">No results found</div>
+            : 
+                <div className="pt-10 font-medium text-large text-muted-foreground">Loading...</div>
             }
         </section>
     );

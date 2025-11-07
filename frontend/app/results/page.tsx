@@ -11,16 +11,13 @@ import GoBackButton from "@/components/back-button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
-/*import { useGlobal } from "@/app/context/GlobalContext";*/
+import { useGlobal } from "@/app/context/GlobalContext";
 
 
 export default function ResultsPage() {
   const router = useRouter();
 
-  /* 
-    Distance fetch should get rewritten with stores
-    const { shoppingList, setShoppingList, stores, setStores } = useGlobal(); 
-  */
+    const { shoppingList } = useGlobal(); 
 
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -176,44 +173,49 @@ export default function ResultsPage() {
     <section className="flex flex-col items-center justify-center min-h-screen w-screen p-4">
       <div className="w-full max-w-md space-y-4">
         <div className="flex items-center justify-between">
-          <h1 className="text-lg font-medium">Results for basket:</h1>
+          <h1 className="text-lg font-medium text-center w-full">Results for basket:</h1>
           <GoBackButton router={router} />
         </div>
-        
-        {results.length === 0 ? (
-          <div className="text-center py-8 text-muted-foreground">
-            No results found. Try adjusting your search.
-          </div>
-        ) : (
-          <Accordion type="multiple" className="space-y-2">
-            {results.map((element, index) => (
-              <AccordionItem
-                value={String(index)}
-                key={index}
-                className="border rounded-lg shadow-sm bg-card"
-              >
-                <AccordionTrigger className="flex flex-row justify-between items-center px-6 py-3 text-lg font-medium">
-                  <div className="flex-1 text-left">{element.name}</div>
-                  <div className="flex-1 text-center">{element.distance}</div>
-                  <div className="flex-1 text-right">${element.cost}</div>
-                </AccordionTrigger>
 
-                <AccordionContent className="flex flex-col px-6 pb-3">
-                  {element.basket.map((sub_element, sub_index) => (
-                    <div
-                      className="flex flex-row justify-between py-1 text-sm"
-                      key={sub_index}
-                    >
-                      <div>{sub_element.item}</div>
-                      <div>${sub_element.cost}</div>
-                    </div>
-                  ))}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        {shoppingList.length !== 0 ? (
+          results.length === 0 ? (
+            <div className="text-center py-8 text-muted-foreground">
+              No results found. Try adjusting your search.
+            </div>
+          ) : (
+            <Accordion type="multiple" className="space-y-2">
+              {results.map((element, index) => (
+                <AccordionItem
+                  value={String(index)}
+                  key={index}
+                  className="border rounded-lg shadow-sm bg-card"
+                >
+                  <AccordionTrigger className="flex flex-row justify-between items-center px-6 py-3 text-lg font-medium">
+                    <div className="flex-1 text-left">{element.name}</div>
+                    <div className="flex-1 text-center">{element.distance}</div>
+                    <div className="flex-1 text-right">${element.cost}</div>
+                  </AccordionTrigger>
+
+                  <AccordionContent className="flex flex-col px-6 pb-3">
+                    {element.basket.map((sub_element, sub_index) => (
+                      <div
+                        className="flex flex-row justify-between py-1 text-sm"
+                        key={sub_index}
+                      >
+                        <div>{sub_element.item}</div>
+                        <div>${sub_element.cost}</div>
+                      </div>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          )) : (
+          <div className="text-center py-8 text-muted-foreground">
+            Your shopping cart is empty. Please add items to see results.
+          </div>
         )}
-      </div>
-    </section>
+        </div>
+      </section>
   );
 }
