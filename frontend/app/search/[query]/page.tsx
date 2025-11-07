@@ -27,7 +27,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     {/* Search field submit router*/}
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        if (!newQuery.trim()) return; // avoid empty search
+        if (!newQuery.trim()) return;
         router.push(`/search/${encodeURIComponent(newQuery.trim())}`);
     }
 
