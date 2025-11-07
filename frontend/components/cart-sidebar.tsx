@@ -18,7 +18,7 @@ import Link from "next/link"
 import { Trash2, Banknote } from "lucide-react"
 import QuantityMenu from "@/components/QuantityMenu"
 
-export function AppSidebar() {
+export function CartSidebar() {
   const { shoppingList, setShoppingList } = useGlobal()
 
   function removeItem(product: CartItem) {

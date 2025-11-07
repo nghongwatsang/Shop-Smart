@@ -6,7 +6,7 @@ import "./globals.css";
 import LogoLink from "@/components/LogoLink";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
+import { CartSidebar } from "@/components/cart-sidebar";
 import { CartTrigger } from "@/components/CartTrigger";
 
 const geistSans = Geist({
@@ -44,7 +44,7 @@ export default function RootLayout({
               {children}
               <CartTrigger />
             </main>
-            <AppSidebar />
+            <CartSidebar />
           </SidebarProvider>
         </GlobalProvider>
       </body>
