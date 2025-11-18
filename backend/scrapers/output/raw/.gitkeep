@@ -1,0 +1,13 @@
+# Raw Scraper Output
+
+This directory contains raw JSON files from individual store scrapers.
+
+Each scraper writes its output here in the format: `{store_name}_products.json`
+
+Example files:
+
+- `aldi_products.json`
+- `hannaford_products.json`
+- `target_products.json`
+
+These files are then read by `process_products.py` for transformation and loading to the database.

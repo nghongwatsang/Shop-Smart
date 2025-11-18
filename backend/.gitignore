@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Output files (keep structure, ignore content)
+scrapers/output/raw/*.json
+scrapers/output/processed/*.json
+!scrapers/output/raw/.gitkeep
+!scrapers/output/processed/.gitkeep
+
+# Debug files
+*.html
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
