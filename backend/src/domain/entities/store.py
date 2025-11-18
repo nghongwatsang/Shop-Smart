@@ -8,7 +8,7 @@ class Store(Base):
     
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
     name = Column(String, nullable=False)
-    address_id = Column(String, ForeignKey('address.id'))
+    address_id = Column("addressid", String, ForeignKey('address.id'))
     
     # Relationships
     address = relationship("Address", back_populates="stores")
