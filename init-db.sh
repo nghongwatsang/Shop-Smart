@@ -11,6 +11,7 @@ echo -e "\nPostgreSQL is ready!"
 # Create tables
 echo "Creating database tables..."
 docker exec -i shop-smart-db-1 psql -U shopuser -d shopdb -c "
+TRUNCATE TABLE itemprice, item, store, address RESTART IDENTITY CASCADE;
 CREATE TABLE IF NOT EXISTS address (
   id UUID PRIMARY KEY,
   street TEXT,

@@ -33,10 +33,8 @@ def search_items():
                     Item.brand.ilike(pattern.strip("\""))
                 )
             )
+            .order_by(ItemPrice.price.asc())
         )
-
-        print(str(base_query.statement.compile(compile_kwargs={"literal_binds": True})))
-
 
         # Pagination
         results = (
