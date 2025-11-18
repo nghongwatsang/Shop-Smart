@@ -1,45 +1,65 @@
+# Flask API
 Flask==2.3.3
-python-dotenv==1.0.0
-# Database
 flask-sqlalchemy==3.1.1
 flask-migrate==4.0.5
 flask-cors==4.0.0
+gunicorn>=21.2.0
+
+# Authentication
 python-jose==3.3.0
 passlib==1.7.4
-requests==2.31.0
+
+# Core Dependencies
+python-dotenv==1.2.1
+requests==2.32.5
+certifi==2025.11.12
+urllib3==2.5.0
 
 # Web Scraping
 beautifulsoup4==4.14.2
 lxml==6.0.2
-gunicorn>=21.2.0
+soupsieve==2.8
 
-# Utils
-PySocks==1.7.1
-pytweening==1.2.0
-schedule==1.2.2
+# Selenium (for dynamic content scraping)
+selenium==4.38.0
+webdriver-manager==4.0.2
+selenium-wire==5.1.0
 
-# Note: The following packages are macOS-specific and have been removed for Docker compatibility:
-# - pyobjc-framework-Cocoa
-# - pyobjc-framework-Quartz
-# - pyperclip
-# - PyRect
-# - PyScreeze
-# - rubicon-objc
-selenium==4.36.0
+# Selenium Dependencies
+trio==0.32.0
+trio-websocket==0.12.2
 sniffio==1.3.1
 sortedcontainers==2.4.0
-soupsieve==2.8
-trio==0.31.0
 attrs==25.4.0
-certifi==2025.10.5
-charset-normalizer==3.4.4
 h11==0.16.0
-idna==3.11
-MouseInfo==0.1.3
+h2==4.3.0
+hpack==4.1.0
+hyperframe==6.1.0
 outcome==1.3.0.post0
-PyAutoGUI==0.9.54
-PyGetWindow==0.0.9
-PyMsgBox==2.0.1
+websocket-client==1.9.0
+wsproto==1.3.1
+
+# Compression & Networking
+brotli==1.2.0
+zstandard==0.25.0
+PySocks==1.7.1
+
+# Parsing & Encoding
+pyparsing==3.2.5
+kaitaistruct==0.11
+charset-normalizer==3.4.4
+idna==3.11
+
+# Cryptography (for HTTPS)
+cryptography==46.0.3
+pyOpenSSL==25.3.0
+cffi==2.0.0
+pycparser==2.23
+pyasn1==0.6.1
+
+# Build Tools
+packaging==25.0
+setuptools==80.9.0
 typing_extensions==4.15.0
 urllib3==2.5.0
 websocket-client==1.9.0

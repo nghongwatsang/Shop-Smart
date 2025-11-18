@@ -1,177 +1,193 @@
 #!/usr/bin/env python3
+"""
+Aldi Scraper - Refactored to use core infrastructure.
+
+Uses HTTPClient for requests and utils for data processing.
+"""
 
 import re
-from typing import List, Optional, Union
-from bs4 import BeautifulSoup, Tag
-import sys
-import os
+import time
+from typing import List, Optional, Dict, Any
+from bs4 import BeautifulSoup
+from datetime import datetime
 
-# Add the parent directory to the Python path to import base
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from base import BaseWebScraper, Product
+from scrapers.core import Product, ScraperResult, HTTPClient
+from scrapers.core.exceptions import ConnectionError, ParseError
+from scrapers.utils import (
+    parse_price, parse_size, clean_text,
+    validate_product, clean_product_data,
+    save_scraper_result, parse_brand_and_name
+)
 
 
-class AldiScraper(BaseWebScraper):
+class AldiScraper:
     """
-    Aldi-specific web scraper implementation
+    Aldi-specific web scraper using static HTTP requests.
+    
+    Scrapes product data from Aldi's website using BeautifulSoup for parsing.
     """
     
-    def __init__(self, delay: float = 0.5):
-        """Initialize Aldi scraper"""
-        super().__init__(
-            store_name="Aldi",
-            base_url="https://www.aldi.us",
-            delay=delay
-        )
+    # Known Aldi store brands
+    KNOWN_BRANDS = [
+        "Simply Nature", "Specially Selected", "Friendly Farms", "Millville",
+        "Clancy's", "Southern Grove", "Park Street Deli", "Season's Choice",
+        "L'oven Fresh", "Kirkwood", "Fremont Fish Market", "Baker's Corner",
+        "Benton's", "Sundae Shoppe", "PurAqua", "Chef's Cupboard",
+        "Happy Farms", "Pueblo Lindo", "Stonemill", "Earthly Grains",
+        "Burman's", "Lunch Mate", "Priano", "Reggano", "Carlini",
+        "Tuscan Garden", "Elevation", "Fit & Active", "Choceur",
+        "Deutsche Küche", "Boulder", "Tandil", "Savoritz", "Sweet Harvest",
+        "Little Journey", "Barissimo", "Beaumont", "Emporium Selection",
+        "Brookdale", "Casa Mamita", "Appleton Farms", "Parkview",
+        "Bremer", "Lunch Buddies", "Northern Cast", "Never Any!",
+        "Bake Shop", "Simms", "Winking Owl", "Scarlet Path",
+        "Heart to Tail", "Benner"
+    ]
     
-    def get_product_pages(self) -> List[str]:
+    def __init__(self, requests_per_second: float = 2.0):
         """
-        Get list of Aldi product page URLs to scrape
-        
-        Returns:
-            List of product page URLs
-        """
-        return [
-            "https://www.aldi.us/products",
-            "https://www.aldi.us/weekly-specials"
-        ]
-    
-    def get_pagination_urls(self, soup: BeautifulSoup, current_url: str) -> List[str]:
-        """
-        Generate pagination URLs for Aldi using their known URL pattern
-        Aldi uses: https://www.aldi.us/products?page=2, page=3, etc.
-        They show 60 products per page
+        Initialize Aldi scraper.
         
         Args:
-            soup: BeautifulSoup object of current page (not used for Aldi)
-            current_url: Current page URL
+            requests_per_second: Rate limit for requests (default: 2.0)
+        """
+        self.store_name = "aldi"
+        self.base_url = "https://www.aldi.us"
+        self.requests_per_second = requests_per_second
+        self.http_client = None
+    
+    def scrape(self, max_pages: int = 60) -> ScraperResult:
+        """
+        Scrape products from Aldi website.
+        
+        Args:
+            max_pages: Maximum number of pages to scrape (default: 3)
             
         Returns:
-            List of pagination URLs to scrape
+            ScraperResult with products and metadata
         """
-        pagination_urls = []
-        base_products_url = "https://www.aldi.us/products"
+        start_time = time.time()
+        all_products = []
+        errors = []
         
-        # Generate URLs for pages 2-5 (can be adjusted based on needs)
-        # Page 1 is the default products page without ?page= parameter
-        for page_num in range(2, 5):  # Pages 2, 3, 4, 5
-            page_url = f"{base_products_url}?page={page_num}"
-            pagination_urls.append(page_url)
+        print(f"\n{'='*60}")
+        print(f"Starting Aldi Scraper")
+        print(f"{'='*60}\n")
         
-        print(f"Generated {len(pagination_urls)} pagination URLs for pages 2-5")
-        return pagination_urls
+        try:
+            with HTTPClient(requests_per_second=self.requests_per_second) as http:
+                self.http_client = http
+                
+                # Scrape main products page and paginated pages
+                pages_to_scrape = [f"{self.base_url}/products"]
+                
+                # Add pagination pages
+                for page_num in range(2, max_pages + 1):
+                    pages_to_scrape.append(f"{self.base_url}/products?page={page_num}")
+                
+                for page_num, url in enumerate(pages_to_scrape, 1):
+                    print(f"\n📄 Scraping page {page_num}/{len(pages_to_scrape)}: {url}")
+                    
+                    try:
+                        products = self._scrape_page(url)
+                        all_products.extend(products)
+                        print(f"   ✓ Found {len(products)} products")
+                    except Exception as e:
+                        error_msg = f"Error scraping page {page_num}: {str(e)}"
+                        print(f"   ✗ {error_msg}")
+                        errors.append(error_msg)
+        
+        except Exception as e:
+            error_msg = f"Fatal error during scraping: {str(e)}"
+            print(f"\n✗ {error_msg}")
+            errors.append(error_msg)
+        
+        duration = time.time() - start_time
+        
+        # Create result
+        result = ScraperResult(
+            store=self.store_name,
+            products=all_products,
+            errors=errors,
+            duration_seconds=round(duration, 2),
+            success=len(all_products) > 0
+        )
+        
+        self._print_summary(result)
+        
+        return result
     
-    def extract_products_from_page(self, soup: BeautifulSoup, page_url: str) -> List[Product]:
+    def _scrape_page(self, url: str) -> List[Product]:
         """
-        Extract products from an Aldi page
+        Scrape products from a single page.
+        
+        Args:
+            url: Page URL to scrape
+            
+        Returns:
+            List of Product objects
+        """
+        # Fetch page
+        response = self.http_client.get(url)
+        
+        if response.status_code != 200:
+            raise ConnectionError(f"Failed to fetch page: {response.status_code}")
+        
+        # Parse HTML
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Extract products
+        products = self._extract_products(soup)
+        
+        return products
+    
+    def _extract_products(self, soup: BeautifulSoup) -> List[Product]:
+        """
+        Extract products from page HTML.
         
         Args:
             soup: BeautifulSoup object of the page
-            page_url: URL of the page being scraped
             
         Returns:
             List of Product objects
         """
         products = []
         
-        # Common product selectors for Aldi
+        # Try multiple selectors to find product containers
         product_selectors = [
-            '.product-tile', 
-            '.product',
+            '.product-tile',
             '.product-card',
-            '.item',
+            '.product',
             '[data-testid*="product"]',
-            '.weekly-special',
-            '.product-container'
+            '.item'
         ]
         
-        print("Looking for product containers...")
-        
+        product_elements = []
         for selector in product_selectors:
             product_elements = soup.select(selector)
             if product_elements:
-                print(f"Found {len(product_elements)} products using selector: {selector}")
-                
-                # Process all products on the page (removed artificial limit)
-                for i, element in enumerate(product_elements):
-                    if (i + 1) % 10 == 0:  # Progress indicator every 10 products
-                        print(f"Processing product {i+1}/{len(product_elements)}...")
-                    
-                    product_info = self.extract_product_info(element)
-                    if product_info:
-                        products.append(product_info)
-                    
-                    # Add delay between requests for category extraction
-                    self.delay_request()
-                
-                print(f"Successfully extracted {len(products)} products")
-                
-                if products:  # Only break if we actually got product data
-                    break
-        
-        # Look for pagination links
-        pagination_urls = self.get_pagination_urls(soup, page_url)
-        
-        # Process pagination pages
-        for page_num, pagination_url in enumerate(pagination_urls, 2):
-            print(f"\n Moving to page {page_num}: {pagination_url}")
-            
-            response = self.make_request(pagination_url)
-            if not response:
-                print(f"Failed to access page {page_num}")
-                continue
-            
-            pagination_soup = self.parse_html(response.text)
-            pagination_products = self._extract_products_from_single_page(pagination_soup)
-            
-            if pagination_products:
-                print(f"Found {len(pagination_products)} products on page {page_num}")
-                products.extend(pagination_products)
-            else:
-                print(f"No products found on page {page_num}")
-            
-            # Add delay between page requests
-            self.delay_request()
-        
-        return products
-    
-    def _extract_products_from_single_page(self, soup: BeautifulSoup) -> List[Product]:
-        """
-        Extract products from a single page (helper method for pagination)
-        
-        Args:
-            soup: BeautifulSoup object of the page
-            
-        Returns:
-            List of Product objects from this page
-        """
-        products = []
-        
-        product_selectors = [
-            '.product-tile', 
-            '.product',
-            '.product-card',
-            '.item',
-            '[data-testid*="product"]',
-            '.weekly-special',
-            '.product-container'
-        ]
-        
-        for selector in product_selectors:
-            product_elements = soup.select(selector)
-            if product_elements:
-                for element in product_elements:
-                    product_info = self.extract_product_info(element)
-                    if product_info:
-                        products.append(product_info)
-                    self.delay_request()
+                print(f"   Found {len(product_elements)} product elements with selector: {selector}")
                 break
         
+        if not product_elements:
+            print("   ⚠️  No product elements found")
+            return products
+        
+        # Extract each product
+        for i, element in enumerate(product_elements, 1):
+            try:
+                product = self._extract_product_info(element)
+                if product:
+                    products.append(product)
+            except Exception as e:
+                print(f"   ⚠️  Error extracting product {i}: {str(e)}")
+                continue
+        
         return products
     
-    def extract_product_info(self, element: Union[BeautifulSoup, Tag]) -> Optional[Product]:
+    def _extract_product_info(self, element) -> Optional[Product]:
         """
-        Extract product information from a product element
+        Extract product information from a product element.
         
         Args:
             element: BeautifulSoup element containing product data
@@ -180,342 +196,227 @@ class AldiScraper(BaseWebScraper):
             Product object or None if extraction failed
         """
         try:
-            # Extract product name
-            name_selectors = [
-                'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-                '.name', '.title', '.product-name', '.product-title',
-                '[data-testid*="name"]', '[data-testid*="title"]',
-                'a', 'span', 'p'
-            ]
-            
-            name = self.find_text_by_selectors(element, name_selectors)
-            
-            # If no name found, try getting any text from the element
-            if not name:
-                all_text = element.get_text(strip=True)
-                if all_text and len(all_text) < 200:
-                    name = all_text.split('\n')[0]
-            
-            if not name or len(name.strip()) < 2:
+            # Extract full name (contains brand + product name)
+            full_name = self._extract_name(element)
+            if not full_name:
                 return None
             
-            # Clean up the raw name - remove duplicate text and pricing
-            cleaned_raw_name = self._clean_raw_product_name(name)
-            
             # Parse brand and product name
-            brand_info = self.parse_brand_and_name(cleaned_raw_name)
+            brand, product_name = parse_brand_and_name(full_name, self.KNOWN_BRANDS)
+            
+            # If no brand was found, use "Generic"
+            if not brand:
+                brand = "Generic"
+                product_name = full_name
             
             # Extract price
-            price_selectors = [
-                '.price', '.cost', '.amount',
-                '[class*="price"]', '[class*="cost"]',
-                '[data-testid*="price"]',
-                'span', 'div'
-            ]
+            price = self._extract_price(element)
+            if not price:
+                return None
             
-            price_text = self.find_text_by_selectors(element, price_selectors)
+            # Extract size and unit (from full_name before cleaning)
+            size, unit = self._extract_size_and_unit(element, full_name)
             
-            # Also look for price in the general text
-            if not price_text:
-                all_text = element.get_text()
-                price_match = re.search(r'\$\d+\.?\d*', all_text)
-                if price_match:
-                    price_text = price_match.group()
+            # Clean product name: remove size/price info that was extracted
+            product_name = self._clean_product_name(product_name, size, unit, price)
             
-            price = self._extract_price_from_text(price_text) if price_text else "Not found"
+            # Extract category (try from element or default)
+            category = self._extract_category(element)
             
-            # Extract size/unit information
-            size_info = self._extract_size_info(element, name)
+            # Build raw product data
+            raw_data = {
+                'brand': brand,
+                'name': product_name,
+                'price': price,
+                'category': category,
+                'size': size,
+                'unit': unit,
+                'source': self.store_name
+            }
             
-            # Extract category by visiting the product detail page
-            product_url = self._get_product_url(element)
-            category = self._extract_category_from_detail_page(product_url) if product_url else "General"
+            # Clean and validate
+            cleaned = clean_product_data(raw_data)
+            product = Product(**cleaned)
             
-            return Product(
-                brand=brand_info['brand'],
-                name=brand_info['name'],
-                price=price,
-                category=category,
-                size=size_info['size'],
-                unit=size_info['unit'],
-                source=self.store_name.lower(),
-                product_url=product_url,
-                raw_name=name.strip()
-            )
+            # Validate
+            errors = validate_product(product)
+            if errors:
+                print(f"   ⚠️  Validation errors: {errors}")
+                return None
+            
+            return product
             
         except Exception as e:
-            print(f"Error extracting product info: {e}")
-            return None
+            raise ParseError(f"Failed to extract product info: {str(e)}")
     
-    def _get_product_url(self, element: Union[BeautifulSoup, Tag]) -> Optional[str]:
-        """
-        Extract the product detail page URL from a product element
+    def _extract_name(self, element) -> Optional[str]:
+        """Extract product name from element."""
+        name_selectors = [
+            'h1', 'h2', 'h3', 'h4',
+            '.product-title', '.product-name', '.name', '.title',
+            '[data-testid*="name"]', '[data-testid*="title"]',
+            'a'
+        ]
         
-        Args:
-            element: BeautifulSoup element containing product data
-            
-        Returns:
-            Product URL or None if not found
-        """
-        # Look for links in the product element
-        link_selectors = ['a', '[href]']
-        
-        for selector in link_selectors:
-            link = element.select_one(selector)
-            if link and link.get('href'):
-                href = link.get('href')
-                # Make sure href is a string and it's a full URL
-                if isinstance(href, str):
-                    if href.startswith('/'):
-                        return f"{self.base_url}{href}"
-                    elif href.startswith('http'):
-                        return href
+        for selector in name_selectors:
+            elem = element.select_one(selector)
+            if elem:
+                text = clean_text(elem.get_text())
+                if text and len(text) > 2:
+                    # Clean up duplicate patterns in names
+                    text = self._clean_duplicate_patterns(text)
+                    return text
         
         return None
     
-    def _extract_category_from_detail_page(self, product_url: str) -> str:
-        """
-        Visit the product detail page and extract category from breadcrumbs
+    def _clean_duplicate_patterns(self, text: str) -> str:
+        """Remove duplicate patterns like '8 oz8 oz' or '14 fl oz14 oz' -> '8 oz' or '14 fl oz'."""
+        # Pattern 1: number + unit immediately repeated (no space): "8 oz8 oz"
+        text = re.sub(r'(\d+\.?\d*\s*(?:oz|lb|lbs|ml|l|g|kg|ct|count|pack))\1', r'\1', text, flags=re.IGNORECASE)
         
-        Args:
-            product_url: URL of the product detail page
-            
-        Returns:
-            Category name or "General" if not found
-        """
-        if not product_url:
-            return "General"
+        # Pattern 2: number + fl + unit repeated: "14 fl oz14 oz" or "14 fl oz14 fl oz"
+        text = re.sub(r'(\d+\.?\d*\s+fl\s+oz)\d+\.?\d*(?:\s+fl)?\s+oz', r'\1', text, flags=re.IGNORECASE)
         
-        try:
-            response = self.make_request(product_url)
-            if not response:
-                return "General"
-            
-            soup = self.parse_html(response.text)
-            
-            # Look for breadcrumb navigation
-            breadcrumb_selectors = [
-                '.breadcrumb',
-                '.breadcrumbs', 
-                '[class*="breadcrumb"]',
-                '.navigation',
-                '.nav-path',
-                'nav ol',
-                'nav ul',
-                '.category-path'
-            ]
-            
-            for selector in breadcrumb_selectors:
-                breadcrumb = soup.select_one(selector)
-                if breadcrumb:
-                    # Get all breadcrumb items
-                    breadcrumb_items = breadcrumb.find_all(['a', 'span', 'li'])
-                    
-                    # Skip "Home" and get the actual product category
-                    categories = []
-                    for item in breadcrumb_items:
-                        text = item.get_text(strip=True)
-                        if text and text.lower() not in ['home', 'products', '>', '']:
-                            categories.append(text)
-                    
-                    if categories:
-                        # Return the most specific category (usually the last one before product name)
-                        category = categories[-1] if len(categories) > 1 else categories[0]
-                        return category
-            
-            # Fallback: look for category in meta tags or other elements
-            meta_category = soup.select_one('meta[name*="category"]')
-            if meta_category:
-                content = meta_category.get('content')
-                if isinstance(content, str):
-                    return content
-                return 'General'
-            
-            # Look for category in data attributes
-            category_data = soup.select_one('[data-category]')
-            if category_data:
-                data_category = category_data.get('data-category')
-                if isinstance(data_category, str):
-                    return data_category
-                return 'General'
+        # Pattern 3: spaced repetition: "16 oz 16 oz"
+        text = re.sub(r'(\d+\.?\d*)\s+(oz|lb|lbs|ml|l|g|kg|ct|count|pack)\s+\1\s+\2', r'\1 \2', text, flags=re.IGNORECASE)
         
-        except Exception as e:
-            print(f"Error getting category: {e}")
-        
-        return "General"
+        return text
     
-    def _extract_price_from_text(self, price_text: str) -> str:
+    def _clean_product_name(self, name: str, size: Optional[str], unit: Optional[str], price: Optional[str]) -> str:
         """
-        Extract numeric price from text
+        Remove size and price information from product name.
         
         Args:
-            price_text: Raw price text
+            name: Product name that may contain size/price
+            size: Extracted size value
+            unit: Extracted unit value
+            price: Extracted price value
             
         Returns:
-            Formatted price string
+            Cleaned product name without size/price
         """
-        if not price_text:
-            return "Not found"
+        cleaned = name
         
-        # Look for price patterns like $1.99, 1.99, $12.50, etc.
-        price_pattern = r'\$?(\d+\.?\d*)'
-        match = re.search(price_pattern, price_text.replace(',', ''))
+        # Remove price patterns like "$2.15" or "$12.99"
+        cleaned = re.sub(r'\$\d+\.?\d*', '', cleaned)
         
-        if match:
-            return f"${match.group(1)}"
+        # Remove size patterns like "8 oz", "14 fl oz", "12 count", "6 pack", etc.
+        # This is more aggressive to catch various formats
+        cleaned = re.sub(r',?\s*\d+\.?\d*\s*(oz|fl oz|lb|lbs|ml|l|g|kg|ct|count|pack|can|box|bottle|jar|bag|gallon|quart|pint|cup|fluid ounce|ounce|pound|gram|kilogram|liter|milliliter|feet|ft|inch|in)\b', '', cleaned, flags=re.IGNORECASE)
         
-        return price_text  # Return original if no pattern found
+        # Remove "x count" patterns like "6 count20 oz" -> after first removal becomes "6 count"
+        cleaned = re.sub(r'\d+\s*(count|ct|pack)\d*', '', cleaned, flags=re.IGNORECASE)
+        
+        # Remove standalone numbers that might be left over
+        cleaned = re.sub(r'\s+\d+\.?\d*\s*$', '', cleaned)
+        
+        # Clean up extra spaces and commas
+        cleaned = re.sub(r'\s*,\s*,\s*', ', ', cleaned)  # Multiple commas
+        cleaned = re.sub(r',\s*$', '', cleaned)  # Trailing comma
+        cleaned = re.sub(r'^\s*,\s*', '', cleaned)  # Leading comma
+        cleaned = re.sub(r'\s+', ' ', cleaned)  # Multiple spaces
+        
+        return cleaned.strip()
     
-    def _extract_size_info(self, element: Union[BeautifulSoup, Tag], product_name: str) -> dict:
-        """
-        Extract size and unit information
-        
-        Args:
-            element: BeautifulSoup element containing product data
-            product_name: Product name text
-            
-        Returns:
-            Dictionary with 'size' and 'unit' keys
-        """
-        size_info = {'size': 'Not specified', 'unit': 'Not specified'}
-        
-        # Look for size in the product name first
-        size_patterns = [
-            r'(\d+\.?\d*)\s*(oz|lb|lbs|pounds|ounces|kg|g|ml|l|liters?)',
-            r'(\d+\.?\d*)\s*(ct|count|pack|pcs?|pieces?)',
-            r'(\d+\.?\d*)\s*-?\s*(oz|lb|lbs)',
-            r'(\d+)\s*(pack|ct)'
+    def _extract_price(self, element) -> Optional[str]:
+        """Extract price from element."""
+        price_selectors = [
+            '.price', '.cost', '[class*="price"]',
+            '[data-testid*="price"]', '.amount'
         ]
         
-        text_to_search = product_name.lower()
+        for selector in price_selectors:
+            elem = element.select_one(selector)
+            if elem:
+                text = elem.get_text()
+                parsed_price = parse_price(text)
+                if parsed_price:
+                    return str(parsed_price)
         
-        # Also look for size in other elements
-        size_elements = element.select('.size, .weight, .quantity, [class*="size"], [class*="weight"]')
-        for elem in size_elements:
-            text_to_search += " " + elem.get_text().lower()
+        # Try to find price in all text
+        all_text = element.get_text()
+        parsed_price = parse_price(all_text)
+        if parsed_price:
+            return str(parsed_price)
         
-        for pattern in size_patterns:
-            match = re.search(pattern, text_to_search, re.IGNORECASE)
-            if match:
-                size_info['size'] = match.group(1)
-                size_info['unit'] = match.group(2)
-                break
-        
-        return size_info
+        return None
     
-    def _clean_raw_product_name(self, raw_name: str) -> str:
-        """
-        Clean up the raw product name by removing duplicate text and pricing
+    def _extract_size_and_unit(self, element, name: str) -> tuple:
+        """Extract size and unit from element or name."""
+        # Look in element first
+        size_selectors = ['.size', '.weight', '.quantity', '[class*="size"]']
         
-        Args:
-            raw_name: Raw product name from the website
-            
-        Returns:
-            Cleaned product name
-        """
-        if not raw_name:
-            return ""
+        for selector in size_selectors:
+            elem = element.select_one(selector)
+            if elem:
+                text = elem.get_text()
+                quantity, unit = parse_size(text)
+                if quantity and unit:
+                    return (str(quantity), unit)
         
-        # Remove price information that often gets concatenated
-        cleaned = re.sub(r'\$\d+\.?\d*', '', raw_name)
+        # Try parsing from name
+        quantity, unit = parse_size(name)
+        if quantity and unit:
+            return (str(quantity), unit)
         
-        # Remove duplicate size information (like "8 oz8 oz")
-        # This handles cases where size appears twice
-        size_pattern = r'(\d+\.?\d*\s*(?:oz|lb|lbs|pounds|ounces|kg|g|ml|l|liters?|ct|count|pack|pcs?|pieces?))\1+'
-        cleaned = re.sub(size_pattern, r'\1', cleaned, flags=re.IGNORECASE)
-        
-        # Remove extra whitespace and normalize spacing
-        cleaned = re.sub(r'\s+', ' ', cleaned)
-        
-        # Remove trailing commas and periods that might be left over
-        cleaned = cleaned.strip(' ,.;-')
-        
-        return cleaned
+        return ('', '')
     
-    def display_products(self, products: List[Product]) -> None:
-        """
-        Display products in a nice format
+    def _extract_category(self, element) -> str:
+        """Extract category from element."""
+        category_selectors = [
+            '.category', '[data-category]', '.department',
+            '[class*="category"]'
+        ]
         
-        Args:
-            products: List of Product objects to display
-        """
-        if not products:
-            print("No products found to display")
-            return
+        for selector in category_selectors:
+            elem = element.select_one(selector)
+            if elem:
+                text = clean_text(elem.get_text())
+                if text:
+                    return text
         
-        print(f"\nFound {len(products)} products:")
-        print("-" * 60)
+        return 'Grocery'  # Default category
+    
+    def _print_summary(self, result: ScraperResult) -> None:
+        """Print scraping summary."""
+        print(f"\n{'='*60}")
+        print(f"Scraping Complete")
+        print(f"{'='*60}")
+        print(f"Store: {result.store}")
+        print(f"Products scraped: {len(result.products)}")
+        print(f"Errors: {len(result.errors)}")
+        print(f"Duration: {result.duration_seconds}s")
+        print(f"Success: {'✓' if result.success else '✗'}")
         
-        for i, product in enumerate(products, 1):
-            print(f"\nProduct {i}:")
-            print(f"  Brand: {product.brand}")
-            print(f"  Name: {product.name}")
-            print(f"  Price: {product.price}")
-            print(f"  Category: {product.category}")
-            print(f"  Size: {product.size} {product.unit}")
-            if product.product_url:
-                print(f"  URL: {product.product_url}")
-            if product.raw_name:
-                print(f"  Raw Name: {product.raw_name}")
+        if result.errors:
+            print(f"\nErrors encountered:")
+            for error in result.errors[:5]:  # Show first 5 errors
+                print(f"  • {error}")
+        
+        # Show sample products
+        if result.products:
+            print(f"\nSample products:")
+            for product in result.products[:3]:
+                print(f"  • {product.brand} - {product.name} (${product.price})")
+        
+        print(f"{'='*60}\n")
 
 
 def main():
-    """Main function to run the Aldi scraper"""
-    import json
-    import os
+    """Main function to run the Aldi scraper."""
+    scraper = AldiScraper(requests_per_second=2.0)
     
-    scraper = AldiScraper(delay=0.3)  # Slightly faster for more products
+    # Scrape products
+    result = scraper.scrape(max_pages=60)
     
-    # Test connectivity
-    if not scraper.test_connectivity():
-        return
-    
-    # Scrape more products to test pagination
-    print("Starting enhanced Aldi scraper with pagination support...")
-    products = scraper.scrape_products(limit=120)  # Increased limit to ensure we hit second page
-    
-    # Display results
-    scraper.display_products(products)
-    
-    # Save to JSON file
-    if products:
-        # Convert products to dictionaries
-        products_data = [product.to_dict() for product in products]
+    # Save results
+    if result.products:
+        output_path = 'scrapers/output/raw/aldi_scraped_products.json'
         
-        # Get the project root directory (3 levels up from this file)
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
-        json_file_path = os.path.join(project_root, "aldi_results.json")
-        
-        # Save to JSON file
-        with open(json_file_path, 'w', encoding='utf-8') as f:
-            json.dump(products_data, f, indent=2, ensure_ascii=False)
-        
-        print(f"\n💾 Saved {len(products)} products to {json_file_path}")
-    
-    # Show summary statistics
-    if products:
-        brands = {}
-        categories = {}
-        
-        for product in products:
-            brands[product.brand] = brands.get(product.brand, 0) + 1
-            categories[product.category] = categories.get(product.category, 0) + 1
-        
-        print(f"\n Scraping Summary:")
-        print(f"Total products: {len(products)}")
-        print(f"Unique brands: {len(brands)}")
-        print(f"Unique categories: {len(categories)}")
-        
-        print(f"\n Top Brands:")
-        for brand, count in sorted(brands.items(), key=lambda x: x[1], reverse=True)[:5]:
-            print(f"  • {brand}: {count} products")
-        
-        print(f"\n Top Categories:")
-        for category, count in sorted(categories.items(), key=lambda x: x[1], reverse=True)[:5]:
-            print(f"  • {category}: {count} products")
-    
-    print(f"\n Summary: Successfully scraped {len(products)} products from {scraper.store_name}")
+        save_scraper_result(result, output_path)
+        print(f"💾 Saved results to {output_path}")
+    else:
+        print("⚠️  No products scraped, skipping save")
 
 
 if __name__ == "__main__":
