@@ -1,6 +1,7 @@
 from src.domain.entities.item import Item
 from src.domain.entities.item_price import ItemPrice
 from src.domain.entities.store import Store
+from sqlalchemy import func
 
 class CartPricingService:
     def __init__(self, db):
@@ -46,10 +47,10 @@ class CartPricingService:
             "quantity": quantity
         }, None
 
-    def get_prices_for_cart(self, cart_items):
+    def get_prices_for_cart(self, cart_items, allowed_stores=None):
         results_by_store = {}
         errors = {}
-
+        
         for idx, cart in enumerate(cart_items, start=1):
             # ---- Validate ----
             valid_item, err = self.validate_cart_item(cart, idx)
@@ -97,11 +98,17 @@ class CartPricingService:
                 self.db.query(ItemPrice, Store)
                 .join(Store, ItemPrice.storeid == Store.id)
                 .filter(ItemPrice.itemid == db_item.id)
-                .all()
             )
+            
+            if allowed_stores:
+                lowercase_stores = [s.lower() for s in allowed_stores]
+                prices = prices.filter(func.lower(Store.name).in_(lowercase_stores))
+
+                
+            prices = prices.all()
 
             if not prices:
-                errors[idx] = f"{idx}: No prices found across stores"
+                errors[idx] = f"No prices found across stores"
                 continue
 
             for price_row, store in prices:
