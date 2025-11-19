@@ -99,7 +99,7 @@ export function CartSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <Link href="/results" className="w-full">
-                  <SidebarMenuButton className="w-full cursor-pointer text-green-700 dark:text-">
+                  <SidebarMenuButton className="w-full cursor-pointer text-green-700 dark:text-white">
                     <Banknote className="h-4 w-4" />
                     <span>Calculate Savings</span>
                   </SidebarMenuButton>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -17,7 +17,7 @@ import { useGlobal } from "@/app/context/GlobalContext";
 export default function ResultsPage() {
   const router = useRouter();
 
-    const { shoppingList } = useGlobal(); 
+  const { shoppingList, activeStores } = useGlobal(); 
 
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -39,9 +39,15 @@ export default function ResultsPage() {
     );
   }, []);
 
-  async function getDistance(lat1: number, lon1: number, lat2: number, lon2: number){
+  async function getDistance(lat1: number, lon1: number, storeName: string) {
     const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-    return await fetch(`${baseUrl}/api/v1/route?start_lat=${lat1}&start_lng=${lon1}&end_lat=${lat2}&end_lng=${lon2}`)
+    return await fetch(`${baseUrl}/api/v1/route?start_lat=${lat1}&start_lng=${lon1}&store_name=${storeName}`)
+    .then(res => res.json());
+  }
+
+  async function getResults(shoppingList: CartItem[], activeStores: Store[]) {
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
+    return await fetch(`${baseUrl}/api/v1/results`)
     .then(res => res.json());
   }
 
@@ -49,56 +55,22 @@ export default function ResultsPage() {
   const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<{item: string, cost: number}>}>>([]);
   const [isLoading, setIsLoading] = useState(true);
   
-  const fetchResults = React.useCallback(async () => {
-    const stores = [
-      {
-        name: "Walmart",
-        latitude: 42.7457318,
-        longitude: -73.6387872,
-      },
-      {
-        name: "Hannaford",
-        latitude: 42.7438908,
-        longitude: -73.6519795,
-      },
-      {
-        name: "Market32",
-        latitude: 42.7421706,
-        longitude: -73.643382,
-      }
-    ];
+  const fetchResults = useCallback(async () => {
+    
+    
 
-    const results = [
-      {
-        id: 1,
-        name: "Walmart",
-        distance: "N/A",
-        cost: 1,
-        basket: [{ item: "Sample Item", cost: 1 }],
-      },
-      {
-        id: 2,
-        name: "Hannaford",
-        distance: "N/A",
-        cost: 2,
-        basket: [{ item: "Sample Item", cost: 2 }],
-      },
-      {
-        id: 3,
-        name: "Market32",
-        distance: "N/A",
-        cost: 3,
-        basket: [{ item: "Sample Item", cost: 3 }],
-      },
-    ];
+    const listResults = await getResults(shoppingList, activeStores);
+    for (let i = 0; i < activeStores.length; i++) {
+
+    }
 
     if (!location) {
       return results;
     }
 
-    for (let i = 0; i < stores.length; i++) {
-      const store = stores[i];
-      const distance = await getDistance(location.lat, location.lon, store.latitude, store.longitude);
+    for (let i = 0; i < activeStores.length; i++) {
+      const store = activeStores[i];
+      const distance = await getDistance(location.lat, location.lon, store.name);
       console.log(distance);
       results[i].distance = distance.data.distance_miles + " mi";
     }
