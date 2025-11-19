@@ -47,8 +47,16 @@ export default function ResultsPage() {
 
   async function getResults(shoppingList: CartItem[], activeStores: Store[]) {
     const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-    return await fetch(`${baseUrl}/api/v1/results`)
-    .then(res => res.json());
+    return await fetch(`${baseUrl}/api/v1/get-results`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        items: shoppingList,
+        allowedStores: activeStores
+      })
+    });
   }
 
 
@@ -57,12 +65,7 @@ export default function ResultsPage() {
   
   const fetchResults = useCallback(async () => {
     
-    
-
     const listResults = await getResults(shoppingList, activeStores);
-    for (let i = 0; i < activeStores.length; i++) {
-
-    }
 
     if (!location) {
       return results;
@@ -73,6 +76,8 @@ export default function ResultsPage() {
       const distance = await getDistance(location.lat, location.lon, store.name);
       console.log(distance);
       results[i].distance = distance.data.distance_miles + " mi";
+      console.log(distance);
+      setResults([...results, {id: store.id, name: store.name, distance: distance.data.distance_miles + " mi", cost: listResults.cost, basket: listResults.baskets[i]}]);
     }
 
     return results;
