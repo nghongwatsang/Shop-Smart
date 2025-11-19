@@ -10,12 +10,22 @@ def get_results():
     db = next(db_gen)
 
     try:
-        items = request.get_json()
-        if not isinstance(items, list):
-            return jsonify({"error": "Expected list"}), 400
+        payload = request.get_json()
 
+        if not payload:
+            return jsonify({"error": "Missing JSON body"}), 400
+
+        items = payload.get("items", [])
+        if not isinstance(items, list):
+            return jsonify({"error": "items must be a list"}), 400
+            
+        allowed_stores = payload.get("allowedStores", [])
+        if not isinstance(allowed_stores, list):
+            return jsonify({"error": "allowedStores must be a list"}), 400
+            
         service = CartPricingService(db)
-        result = service.get_prices_for_cart(items)
+    
+        result = service.get_prices_for_cart(items, allowed_stores=allowed_stores)
 
         return jsonify(result), 200
 
@@ -24,3 +34,34 @@ def get_results():
             next(db_gen)
         except StopIteration:
             pass
+
+# try:
+#         payload = request.get_json()
+
+#         if not payload:
+#             return jsonify({"error": "Missing JSON body"}), 400
+
+#         # --- Extract allowedStores list ---
+#         allowed_stores = payload.get("allowedStores", [])
+#         if not isinstance(allowed_stores, list):
+#             return jsonify({"error": "allowedStores must be a list"}), 400
+
+#         # --- Extract items list ---
+#         items = payload.get("items")
+#         if not isinstance(items, list):
+#             return jsonify({"error": "items must be a list"}), 400
+
+#         # --- Process ---
+#         service = CartPricingService(db)
+#         result = service.get_prices_for_cart(
+#             items,
+#             allowed_stores=allowed_stores
+#         )
+
+#         return jsonify(result), 200
+
+#     finally:
+#         try:
+#             next(db_gen)
+#         except StopIteration:
+#             pass
