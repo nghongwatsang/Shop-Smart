@@ -23,7 +23,8 @@ def get_route():
         # Get coordinates from query parameters
         start_lat = float(request.args.get('start_lat'))
         start_lng = float(request.args.get('start_lng'))
-        storeName = request.args.get('store_name')
+        end_lat = float(request.args.get('end_lat'))
+        end_lng = float(request.args.get('end_lng'))
         
         # Validate coordinates
         if not (-90 <= start_lat <= 90) or not (-180 <= start_lng <= 180):
