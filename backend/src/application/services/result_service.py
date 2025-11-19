@@ -64,14 +64,29 @@ class CartPricingService:
             quantity = valid_item["quantity"]
 
             # ---- Database lookup ----
-            db_item = (
-                self.db.query(Item)
-                .filter(
-                    Item.name.ilike(name),
-                    Item.brand.ilike(brand) if brand else True
-                )
-                .first()
-            )
+            filters = []
+
+            # name must be partial match
+            filters.append(Item.name.ilike(f"%{name}%"))
+
+            if brand:
+                clean_brand = brand.replace("%", "")
+                filters.append(Item.brand.ilike(f"%{clean_brand}%"))
+
+            if unit:
+                filters.append(Item.unit.ilike(unit))   # case-insensitive
+
+            if size:
+                # try to cast to int if DB stores size numerically
+                try:
+                    filters.append(Item.size == int(size))
+                except:
+                    filters.append(Item.size == size)
+
+            print("Filters:", filters)
+
+            query = self.db.query(Item).filter(*filters)
+            db_item = query.first()
 
             if not db_item:
                 errors[idx] = "No matching item found in database"
@@ -95,7 +110,9 @@ class CartPricingService:
                     "brandName": db_item.brand,
                     "storeName": store.name,
                     "lowestPrice": float(price_row.price),
-                    "quantity": quantity,
+                    "size": size,
+                    "unit": unit,
+                    "quantity": quantity
                 }
 
                 results_by_store.setdefault(store.name, []).append(entry)
