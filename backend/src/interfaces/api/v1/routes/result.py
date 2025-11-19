@@ -2,7 +2,7 @@ from flask import Blueprint, jsonify, request
 from src.infrastructure.database.database import get_db
 from src.application.services.result_service import CartPricingService
 
-bp = Blueprint('result', __name__, url_prefix='/result')
+bp = Blueprint('result', __name__, url_prefix='/results')
 
 @bp.route('/', methods=['POST'], endpoint='get_results')
 def get_results():
