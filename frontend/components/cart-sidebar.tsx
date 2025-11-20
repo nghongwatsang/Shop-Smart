@@ -17,6 +17,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Trash2, Banknote } from "lucide-react"
 import QuantityMenu from "@/components/QuantityMenu"
+import { CartItem } from "@/types/CartItem"
 
 export function CartSidebar() {
   const { shoppingList, setShoppingList } = useGlobal()

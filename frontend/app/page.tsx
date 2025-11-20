@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
 import { useGlobal } from "./context/GlobalContext";
 import { Check } from "lucide-react";
+import { Store } from "@/types/Store";
 
 export default function Home() {
 

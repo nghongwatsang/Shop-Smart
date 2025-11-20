@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobal } from "@/app/context/GlobalContext";
+import { CartItem } from "@/types/CartItem";
 
 export default function QuantityMenu({product}: {product: CartItem}) {
     const {shoppingList, setShoppingList} = useGlobal();

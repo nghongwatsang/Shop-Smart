@@ -9,6 +9,7 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import { useGlobal } from "@/app/context/GlobalContext";
+import { Product } from "@/types/Product";
 
 interface ProductPageProps {
   params: Promise<{ query: string }>;

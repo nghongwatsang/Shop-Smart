@@ -1,5 +1,7 @@
 "use client";
 import { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import { CartItem } from "@/types/CartItem";
+import { Store } from "@/types/Store";
 
 type GlobalContextType = {
   shoppingList: CartItem[];
