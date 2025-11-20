@@ -1,9 +1,3 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
 
 # Virtual Environment
 .venv/
@@ -11,11 +5,7 @@ venv/
 ENV/
 env/
 
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-*.cover
+
 
 # Environment variables
 .env
@@ -32,10 +22,5 @@ htmlcov/
 !scrapers/output/raw/.gitkeep
 !scrapers/output/processed/.gitkeep
 
-# Debug files
-*.html
-*.log
 
-# OS
-.DS_Store
-Thumbs.db
+
