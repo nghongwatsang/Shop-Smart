@@ -12,6 +12,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGlobal } from "@/app/context/GlobalContext";
+import { CartItem } from "@/types/CartItem";
+import { Store } from "@/types/Store";
 
 
 export default function ResultsPage() {
@@ -47,56 +49,68 @@ export default function ResultsPage() {
 
   async function getResults(shoppingList: CartItem[], activeStores: Store[]) {
     const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-    return await fetch(`${baseUrl}/api/v1/get-results`, {
+    return await fetch(`${baseUrl}/api/v1/results/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
         items: shoppingList,
-        allowedStores: activeStores
+        allowedStores: activeStores.map(store => store.name)
       })
-    });
+    }).then(res => res.json());
   }
 
 
-  const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<{item: string, cost: number}>}>>([]);
+  const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<CartItem>}>>([]);
   const [isLoading, setIsLoading] = useState(true);
   
+  // Fetch results based on location, shopping list, and active stores
   const fetchResults = useCallback(async () => {
-    
+
     const listResults = await getResults(shoppingList, activeStores);
+    console.log("List Results:", listResults);
+    const newResults = [];
+    for (const store of activeStores) {
 
-    if (!location) {
-      return results;
+      let distance = "N/A";
+      if (location) {
+        const data = await getDistance(location.lat, location.lon, store.name);
+        distance = data.data.distance_miles + " mi";
+      }
+
+      const cost = listResults.results[store.name]?.reduce(
+        (acc: number, item: CartItem) => acc + item.price * item.quantity,
+        0
+      ) ?? -1;
+      newResults.push({
+        id: store.id,
+        name: store.name,
+        distance: distance,
+        cost,
+        basket: listResults.results[store.name] || [],
+      });
     }
 
-    for (let i = 0; i < activeStores.length; i++) {
-      const store = activeStores[i];
-      const distance = await getDistance(location.lat, location.lon, store.name);
-      console.log(distance);
-      results[i].distance = distance.data.distance_miles + " mi";
-      console.log(distance);
-      setResults([...results, {id: store.id, name: store.name, distance: distance.data.distance_miles + " mi", cost: listResults.cost, basket: listResults.baskets[i]}]);
-    }
+    return newResults;
+  }, [location, shoppingList, activeStores]);
 
-    return results;
-  }, [location]);
 
   useEffect(() => {
     const loadResults = async () => {
       try {
+        setIsLoading(true);
         const data = await fetchResults();
         setResults(data);
-      } catch (error) {
-        console.error('Error fetching results:', error);
+      } catch (err) {
+        console.error(err);
       } finally {
         setIsLoading(false);
       }
     };
-
     loadResults();
-  }, [location, fetchResults]); // Re-run when location or fetchResults changes
+  }, [location, fetchResults]);
+  // Re-run when location or fetchResults changes
   
   // Loading state
   if (isLoading) {
@@ -147,6 +161,7 @@ export default function ResultsPage() {
 
   // Results state
   return (
+    
     <section className="flex flex-col items-center justify-center min-h-screen w-screen p-4">
       <div className="w-full max-w-md space-y-4">
         <div className="flex items-center justify-between">
@@ -170,7 +185,10 @@ export default function ResultsPage() {
                   <AccordionTrigger className="flex flex-row justify-between items-center px-6 py-3 text-lg font-medium">
                     <div className="flex-1 text-left">{element.name}</div>
                     <div className="flex-1 text-center">{element.distance}</div>
-                    <div className="flex-1 text-right">${element.cost}</div>
+                    {element.cost !== -1 ? 
+                      <div className="flex-1 text-right">${element.cost}</div> :
+                      <div className="flex-1 text-right">N/A</div>
+                    }
                   </AccordionTrigger>
 
                   <AccordionContent className="flex flex-col px-6 pb-3">
@@ -179,8 +197,8 @@ export default function ResultsPage() {
                         className="flex flex-row justify-between py-1 text-sm"
                         key={sub_index}
                       >
-                        <div>{sub_element.item}</div>
-                        <div>${sub_element.cost}</div>
+                        <div>{sub_element.name}</div>
+                        <div>${sub_element.price}</div>
                       </div>
                     ))}
                   </AccordionContent>
