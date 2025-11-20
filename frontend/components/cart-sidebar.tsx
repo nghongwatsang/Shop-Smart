@@ -62,7 +62,7 @@ export function CartSidebar() {
                     className="w-full flex flex-row justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-700"
                   >
                     {/* Left side: image + name */}
-                    <div className="flex items-center gap-2 flex-1">
+                    <div className="flex items-center gap-2 flex-1 overflow-hidden">
                       <span className="pl-1 truncate">{item.name}</span>
                     </div>
 

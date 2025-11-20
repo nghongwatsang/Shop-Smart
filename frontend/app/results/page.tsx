@@ -19,7 +19,8 @@ import { Store } from "@/types/Store";
 export default function ResultsPage() {
   const router = useRouter();
 
-  const { shoppingList, activeStores } = useGlobal(); 
+  const { shoppingList, activeStores } = useGlobal();
+  const itemCount = shoppingList.length; 
 
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -176,7 +177,17 @@ export default function ResultsPage() {
             </div>
           ) : (
             <Accordion type="multiple" className="space-y-2">
-              {results.map((element, index) => (
+              {[...results]
+                .sort((a, b) => {
+                  // Primary: basket length DESC
+                  if (b.basket.length !== a.basket.length) {
+                    return b.basket.length - a.basket.length;
+                  }
+
+                  // Secondary: cost ASC
+                  return a.cost - b.cost;
+                })
+                .map((element, index) => (
                 <AccordionItem
                   value={String(index)}
                   key={index}

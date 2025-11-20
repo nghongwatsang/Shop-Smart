@@ -1,1722 +1,2677 @@
 -- Addresses
 INSERT INTO Address (id, street, city, state, postal_code, country, latitude, longitude)
-VALUES ('8d0b0056-78b1-435b-9fbd-0a96cf9e1336', '662 Hoosick Rd', 'Troy', 'NY', 
+VALUES ('8040dba8-a7f4-45f2-bc98-c725099dbda4', '662 Hoosick Rd', 'Troy', 'NY', 
         '12180', 'USA', 42.7415351, -73.6495478);
 INSERT INTO Address (id, street, city, state, postal_code, country, latitude, longitude)
-VALUES ('95330617-4726-40e5-9471-8a6b872a5a9c', '9 Lord Ave', 'Troy', 'NY', 
+VALUES ('484452b7-dfb1-4acb-b64a-2a4db02e24fe', '9 Lord Ave', 'Troy', 'NY', 
         '12180', 'USA', 42.7438908, -73.6519795);
 INSERT INTO Address (id, street, city, state, postal_code, country, latitude, longitude)
-VALUES ('fd81a815-ea95-4241-a6ad-13b4efc0c48a', '675 Troy-Schenectady Rd', 'Latham', 'NY', 
+VALUES ('9d91a547-8ef1-438e-86b2-a7b26bf09a5f', '675 Troy-Schenectady Rd', 'Latham', 'NY', 
         '12110', 'USA', 42.74909, -73.770139);
 
 -- Stores
 INSERT INTO Store (id, name, addressid)
-VALUES ('cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 'Aldi', '8d0b0056-78b1-435b-9fbd-0a96cf9e1336');
+VALUES ('2b05b779-8779-4bd5-b3b9-97a6cf193f66', 'Aldi', '8040dba8-a7f4-45f2-bc98-c725099dbda4');
 INSERT INTO Store (id, name, addressid)
-VALUES ('b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 'Hannafords', '95330617-4726-40e5-9471-8a6b872a5a9c');
+VALUES ('4d58504f-2d00-457e-8340-150635883ce0', 'Hannafords', '484452b7-dfb1-4acb-b64a-2a4db02e24fe');
 INSERT INTO Store (id, name, addressid)
-VALUES ('9eb82af8-1eae-4846-9c73-3f27432d1591', 'Target', 'fd81a815-ea95-4241-a6ad-13b4efc0c48a');
+VALUES ('169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 'Target', '9d91a547-8ef1-438e-86b2-a7b26bf09a5f');
 
 -- Items
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3dc3f440-bc82-43fa-9447-a5a220277397', 'Original Kettle Chips', 'Clancy''s', 
-        'Chips, Crackers & Popcorn', 'https://www.aldi.us/product/clancy-s-original-kettle-chips-8-oz-0000000000000005', 8.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c397076c-d504-4c78-a1df-505aaac15af8', 'Blueberry Breakfast Biscuits', 'Benton''s', 
-        'Cookies & Sweets', 'https://www.aldi.us/product/benton-s-blueberry-breakfast-biscuits-8-8-oz-0000000000000006', 8.8, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('55c5480e-7acd-45da-9f7d-32189300e66d', 'Organic Unrefined Coconut Oil', 'Simply Nature', 
-        'Oils & Vinegars', 'https://www.aldi.us/product/simply-nature-organic-unrefined-coconut-oil-14-fl-oz-0000000000000008', 14.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9502e916-4bbe-41c9-b521-cb3ba75583c6', 'Plain Whole Milk Greek Yogurt', 'Friendly Farms', 
-        'Yogurt & Sour Cream', 'https://www.aldi.us/product/friendly-farms-plain-whole-milk-greek-yogurt-32-oz-0000000000000009', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('407aa82a-0541-42c1-a7c8-3fa7fbcd0167', 'Wild Caught Frozen Pink Salmon', 'Fremont Fish Market', 
-        'Frozen Meat, Poultry & Seafood', 'https://www.aldi.us/product/fremont-fish-market-wild-caught-frozen-pink-salmon-16-oz-0000000000000010', 16.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0211cbeb-e511-48b5-9e0e-8442e13f3c4e', 'Parsley Flakes', 'Stonemill', 
-        'Spices', 'https://www.aldi.us/product/stonemill-parsley-flakes-0-25-oz-0000000000000011', 0.25, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('acc338ba-4cc1-4410-aa08-f954841bbbf4', 'Italian Meatballs', 'Bremer', 
-        'Mother''s Day Meal Ideas', 'https://www.aldi.us/product/bremer-italian-meatballs-32-oz-0000000000000012', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('4a8aed54-033d-4520-b263-39b78ec98a88', 'Garlic Powder', 'Stonemill', 
-        'Spices', 'https://www.aldi.us/product/stonemill-garlic-powder-0000000000000018', 3.12, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9fa862ed-d435-43d2-9953-c0b2c6df2cf2', 'Nonfat Plain Greek Yogurt', 'Friendly Farms', 
-        'Healthy Food & Snacks', 'https://www.aldi.us/product/friendly-farms-nonfat-plain-greek-yogurt-32-oz-0000000000000020', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('20666f06-2bb7-4f87-8e16-15f556ebf97d', 'Organic Whole Wheat Spaghetti', 'Simply Nature', 
-        'Pasta, Rice & Grains', 'https://www.aldi.us/product/simply-nature-organic-whole-wheat-spaghetti-1-lb-0000000000000024', 16.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c5cbc567-11a0-47ca-bbbe-c6cde9bdddc0', 'Cinnamon Raisin Bagels', 'L''oven Fresh', 
-        'Back to School Breakfast', 'https://www.aldi.us/product/l-oven-fresh-cinnamon-raisin-bagels-6-count-0000000000000025', 20.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b378e4aa-1e3d-4c9c-a008-d0a1df87346a', 'Brown Gravy Mix', 'Stonemill', 
-        'Sauces & Salsa', 'https://www.aldi.us/product/stonemill-brown-gravy-mix-0-87-oz-0000000000000026', 0.87, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('115081fb-35ed-433f-8f93-a1e2e270174c', 'Reduced Sodium Taco Seasoning Mix', 'Casa Mamita', 
-        'Spices', 'https://www.aldi.us/product/casa-mamita-reduced-sodium-taco-seasoning-mix-1-oz-0000000000000027', 1.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ccd7e80d-5511-435a-9497-7da4d7c08e41', 'Crispy Rice Cereal', 'Millville', 
-        'Cereal & Oatmeal', 'https://www.aldi.us/product/millville-crispy-rice-cereal-12-oz-0000000000000030', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d54dc4ef-289d-4e64-8858-b8692df2f5f3', 'Roasted Garlic Balsamic Vinaigrette Dressing', 'Specially Selected', 
-        'Condiments & Dressings', 'https://www.aldi.us/product/specially-selected-roasted-garlic-balsamic-vinaigrette-dressing-12-fl-oz-0000000000000031', NULL, 'Not specified');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f2f2c703-d8b7-44b0-92a5-6911182ad11d', 'French Dark Roast Coffee Pods', 'Barissimo', 
-        'Coffee', 'https://www.aldi.us/product/barissimo-french-dark-roast-coffee-pods-12-count-0000000000000032', 12.0, 'count');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5b60f777-a2ef-4bf5-a9b7-5e6a7e0d40b4', 'Ranch Salad Dressing and Seasoning Mix', 'Tuscan Garden', 
-        'Spices', 'https://www.aldi.us/product/tuscan-garden-ranch-salad-dressing-and-seasoning-mix-1-oz-0000000000000038', 1.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('360df962-0cc6-4885-a204-6115cf85b725', 'Chocolate Chip Cookies', 'Benton''s', 
-        'Cookies & Sweets', 'https://www.aldi.us/product/benton-s-chocolate-chip-cookies-13-oz-0000000000000039', 13.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ebbafa30-90ff-42ee-8fff-8af09e84d86c', 'Roasted Red Pepper Topped Hummus', 'Park Street Deli', 
-        'Healthy Food & Snacks', 'https://www.aldi.us/product/park-street-deli-roasted-red-pepper-topped-hummus-10oz-0000000000000041', 10.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('737b311d-d30a-4d6e-960b-aaac37719340', 'Bratwurst', 'Beer', 
-        'Fresh Sausage', 'https://www.aldi.us/product/beer-bratwurst-0000000000000042', 19.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0c474083-9f16-46be-accd-6a710a1a958f', 'Raspberry Strip Danish', 'Bake Shop', 
-        'Easter Brunch', 'https://www.aldi.us/product/bake-shop-raspberry-danish-0000000000000045', 14.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('e4b93beb-d0ee-4b4b-b746-843f6936fe95', 'Italian Salad Dressing and Seasoning Mix', 'Tuscan Garden', 
-        'Spices', 'https://www.aldi.us/product/tuscan-garden-italian-salad-dressing-and-seasoning-mix-0-7-oz-0000000000000047', 0.7, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('8d30ef9b-37dc-4102-aced-c46fafcc5ea9', 'Spaghetti', 'Reggano', 
-        'Pasta, Rice & Grains', 'https://www.aldi.us/product/reggano-spaghetti-32-oz-0000000000000048', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ff46b1aa-da1d-4a94-9655-ae9ac93dcfd8', 'Medium Cooked in Shell Shrimp', 'Fremont Fish Market', 
-        'Frozen Meat, Poultry & Seafood', 'https://www.aldi.us/product/fremont-fish-market-medium-cooked-in-shell-shrimp-12oz-0000000000000049', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('524eae0e-c607-4f82-902c-1c50990cbf69', 'Ultimate Cheeseburger Cheesy Skillet Dinner Kit', 'Reggano', 
-        'Boxed Meals & Side Dishes', 'https://www.aldi.us/product/reggano-ultimate-cheeseburger-cheesy-skillet-dinner-kit-12-8-oz-0000000000000058', 12.8, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('1f40dd44-902e-4551-ace9-bf273f6f0cd2', 'Large Cooked Shrimp', 'Fremont Fish Market', 
-        'Chefs Best Excellence Award', 'https://www.aldi.us/product/fremont-fish-market-large-cooked-shrimp-12-oz-0000000000000059', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('212d434a-c607-46c7-9bd1-d082a664e65c', 'Value Pack Cod Fillets', 'Fremont Fish Market', 
-        'Frozen Meat, Poultry & Seafood', 'https://www.aldi.us/product/fremont-fish-market-value-pack-cod-fillets-32-oz-0000000000000060', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ef8daa8d-bc10-455c-ba71-03ce01b4befc', 'Flounder Fillets', 'Fremont Fish Market', 
-        'St. Patrick''s Day', 'https://www.aldi.us/product/fremont-fish-market-flounder-fillets-16-oz-0000000000000061', 16.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0165b519-e73e-471c-8f62-1f57fd992b91', 'Spicy Hummus', 'Park Street Deli', 
-        'Healthy Food & Snacks', 'https://www.aldi.us/product/park-street-deli-spicy-hummus-0000000000000062', 10.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a59659e9-5274-4c1a-84ea-ac37b86cf341', 'Olive Tapenade Hummus', 'Park Street Deli', 
-        'Healthy Food & Snacks', 'https://www.aldi.us/product/park-street-deli-olive-tapenade-hummus-10-oz-0000000000000063', 10.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5ce6d9ad-ac7d-4c19-8be0-96dd2d93d4d7', 'Spinach Parmesan Tzatziki Dip', 'Park Street Deli', 
-        'Dorm Room Meals & Snacks', 'https://www.aldi.us/product/park-street-deli-spinach-parmesan-tzatziki-dip-10-oz-0000000000000064', 10.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3c5b56da-96da-443f-9a8e-08c4f6659957', 'Cucumber Dill Tzatziki Dip', 'Park Street Deli', 
-        'Dorm Room Meals & Snacks', 'https://www.aldi.us/product/park-street-deli-cucumber-dill-tzatziki-dip-10-oz-0000000000000065', 10.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9f862ce7-f1fb-4038-b16b-7a34be70d874', 'Swiss Almond Spreadable Cheese Cup', 'Happy Farms', 
-        'Seasonal', 'https://www.aldi.us/product/happy-farms-swiss-almond-spreadable-cheese-cup-12-9-oz-0000000000000066', 12.9, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('fb3faee7-3e23-491a-b64b-733676be86bd', 'Milk Chocolate Butter Cookies', 'Specially Selected', 
-        'Cookies & Sweets', 'https://www.aldi.us/product/specially-selected-milk-chocolate-butter-cookies-4-41-oz-0000000000000067', 4.41, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('37bca2c5-2238-4137-8dd8-6f9dec8ac3f1', 'Sharp Cheddar Cheese Spread', 'Emporium Selection', 
-        'Mother''s Day Meal Ideas', 'https://www.aldi.us/product/emporium-selection-sharp-cheddar-cheese-spread-6-5-oz-0000000000000068', 6.5, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('675fee50-7f7a-4f83-abbd-a312fbbcc944', 'Garlic & Herb Gourmet Spreadable Cheese', 'Emporium Selection', 
-        'Mother''s Day Meal Ideas', 'https://www.aldi.us/product/emporium-selection-garlic-herb-gourmet-spreadable-cheese-6-5-oz-0000000000000069', 6.5, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('28833ebf-45ac-4e10-9bc4-e8b6c32ddc2a', 'Peppercorn Parmesan Cheese Spread', 'Emporium Selection', 
-        'Mother''s Day Meal Ideas', 'https://www.aldi.us/product/emporium-selection-peppercorn-parmesan-cheese-spread-6-5-oz-0000000000000070', 6.5, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('8eed47b5-2e71-4a50-ad7d-52ebf7b935d9', 'Pre Sliced Hot Dog Buns', 'L''oven Fresh', 
-        'Cookout Essentials', 'https://www.aldi.us/product/l-oven-fresh-pre-sliced-hot-dog-buns-8-count-0000000000000071', 11.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0c95dfe8-3206-4c08-b09d-0d19ba8c7b5b', 'Steamable Frozen Asparagus Spears', 'Season''s Choice', 
-        'Frozen Vegetables', 'https://www.aldi.us/product/season-s-choice-steamable-frozen-asparagus-spears-8-oz-0000000000000072', 8.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a2eb384e-2b1f-415a-80d6-1ed5b0534ec3', 'Mint Chocolate Chip Ice Cream', 'Sundae Shoppe', 
-        'Frozen Ice Cream & Desserts', 'https://www.aldi.us/product/sundae-shoppe-mint-chocolate-chip-ice-cream-48-fl-oz-0000000000000076', NULL, 'Not specified');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ffdc4cb1-91cf-4942-8dfe-b93f2adc04c6', 'Classic Hummus Single Serve Mini Cups', 'Park Street Deli', 
-        'Dips & Hummus', 'https://www.aldi.us/product/park-street-deli-classic-hummus-single-serve-mini-cups-6-pack-0000000000000077', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('892a42c0-c319-4f7a-821c-4be20a918235', 'Uncured Beef Franks', 'Parkview', 
-        'Grilled Meat & Seafood', 'https://www.aldi.us/product/parkview-uncured-beef-franks-15-oz-0000000000000081', 15.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c669a815-750a-4d38-b6ba-a233b6373629', 'Honey Graham Squares', 'Millville', 
-        'Cereal & Oatmeal', 'https://www.aldi.us/product/millville-honey-graham-squares-0000000000000082', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f58a1d73-6590-434e-acd3-c6e693f9530f', 'Organic Apple Cider Vinegar', 'Simply Nature', 
-        'Oils & Vinegars', 'https://www.aldi.us/product/simply-nature-organic-apple-cider-vinegar-33-8-fl-oz-0000000000000086', NULL, 'Not specified');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('341c9802-d8a5-4cca-8ec1-3c6f9ae1404b', 'Condensed Cream of Chicken Soup', 'Chef''s Cupboard', 
-        'Soups & Broth', 'https://www.aldi.us/product/chef-s-cupboard-condensed-cream-of-chicken-soup-10-5-oz-0000000000000088', 10.5, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5ff8bd9d-2ea1-40ad-b8a3-3cd49f2c9f33', 'Fat Free Beef Broth', 'Chef''s Cupboard', 
-        'Soups & Broth', 'https://www.aldi.us/product/chef-s-cupboard-fat-free-beef-broth-32-oz-0000000000000092', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2dfee28a-345d-4464-befb-7068ed442845', 'Fat Free Beef Cooking Stock', 'Chef''s Cupboard', 
-        'Soups & Broth', 'https://www.aldi.us/product/chef-s-cupboard-beef-cooking-stock-32-oz-0000000000000093', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('62087d45-3e62-4f17-81e1-94dc53f7f58c', 'Organic Low Sodium Chicken Broth', 'Simply Nature', 
-        'Soups & Broth', 'https://www.aldi.us/product/simply-nature-organic-low-sodium-chicken-broth-32-oz-0000000000000094', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('afa69eee-6c4f-4806-8d86-2f6d9b5da999', 'Almond', 'Southern Grove', 
-        'Trail Mix', 'https://www.aldi.us/product/southern-grove-retreat-trail-mix-15-oz-0000000000000095', 15.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('e7fd9e0d-d354-463c-bb50-e8caae9c71ca', 'Sweet & Salty Trail Mix', 'Southern Grove', 
-        'Trail Mix', 'https://www.aldi.us/product/southern-grove-sweet-salty-trail-mix-8-count-0000000000000097', 8.0, 'count');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('7d03acc5-959f-4b0c-9f85-a9e36627e46e', 'Chicken Breast Nuggets', 'Kirkwood', 
-        'Halloween Themed Food', 'https://www.aldi.us/product/kirkwood-chicken-breast-nuggets-29-oz-0000000000000098', 29.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('04295c98-c992-4e48-b30c-447ac96fa5a4', 'Frozen Steam Cut Green Beans', 'Season''s Choice', 
-        'Frozen Vegetables', 'https://www.aldi.us/product/season-s-choice-frozen-steam-cut-green-beans-12-oz-0000000000000106', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5dddb408-a1f6-4485-b041-785d535c63b4', 'Steamable Frozen Mixed Vegetable', 'Season''s Choice', 
-        'Frozen Vegetables', 'https://www.aldi.us/product/season-s-choice-steamable-frozen-mixed-vegetable-12-oz-0000000000000107', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5ba8896a-7e32-448c-9a55-e880156cfd96', 'Steamable Frozen Sweet Garden Peas', 'Season''s Choice', 
-        'Frozen Vegetables', 'https://www.aldi.us/product/season-s-choice-steamable-frozen-sweet-garden-peas-12-oz-0000000000000108', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('755d5853-9278-4e85-9f80-b611155c0763', 'Jumbo EZ Peel Raw Shrimp', 'Fremont Fish Market', 
-        'Frozen Meat, Poultry & Seafood', 'https://www.aldi.us/product/fremont-fish-market-jumbo-ez-peel-raw-shrimp-12-oz-0000000000000113', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('37f8d804-6dd7-4fed-ad44-627f3b5ee697', 'Jumbo Cooked Shrimp', 'Fremont Fish Market', 
-        'Chefs Best Excellence Award', 'https://www.aldi.us/product/fremont-fish-market-jumbo-cooked-shrimp-12-oz-0000000000000114', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5ae19222-eeaa-4b54-8183-704e4a443c7d', 'Organic Garlic Powder', 'Simply Nature', 
-        'Spices', 'https://www.aldi.us/product/simply-nature-organic-garlic-powder-2-5-oz-0000000000000115', 2.5, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5e95a163-55f8-43ef-8c3d-a5eee29bf1f7', 'Classic Single Guacamole - 6 Mini Cups', 'Park Street Deli', 
-        'Dorm Room Meals & Snacks', 'https://www.aldi.us/product/park-street-deli-classic-single-guacamole-6-mini-cups-12-oz-0000000000000121', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('bee9bf80-920c-4307-b64e-1dfa63bb640f', 'Red Pepper Hummus Single Serve Mini Cups', 'Park Street Deli', 
-        'Dips & Hummus', 'https://www.aldi.us/product/park-street-deli-red-pepper-hummus-single-serve-mini-cups-6-count-0000000000000122', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ecf33dd9-4630-4bd5-90ff-4f6924a6760d', 'Fair Trade Organic Guatemalan Light Roast Coffee Pods', 'Simply Nature', 
-        'Good Housekeeping Nutritionist Approved Emblem', 'https://www.aldi.us/product/simply-nature-fair-trade-organic-guatemalan-light-roast-coffee-pods-12-count-0000000000000126', 12.0, 'count');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3e33473b-1153-445f-851b-3af01397ac03', 'Original Sloppy Joe Sauce', 'Brookdale', 
-        'Sauces & Salsa', 'https://www.aldi.us/product/brookdale-original-sloppy-joe-sauce-15-oz-0000000000000127', 15.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('07bfca91-df4b-43b1-8570-8fe900f868a0', 'Casera Amarillas Tostadas', 'Pueblo Lindo', 
-        'Tortillas & Flatbread', 'https://www.aldi.us/product/pueblo-lindo-casera-amarillas-tostadas-12-8-oz-0000000000000128', 12.8, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('e50c645d-1564-4025-a16f-17ce0e83a91e', 'Flour Tortillas', 'Pueblo Lindo', 
-        'Back to School Lunches', 'https://www.aldi.us/product/pueblo-lindo-flour-tortillas-17-5-oz-0000000000000129', 17.5, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('8e5d0831-d66b-4e23-b965-86cdb2dfa4e3', 'USDA Organic Black Beans', 'Simply Nature', 
-        'Canned Foods', 'https://www.aldi.us/product/simply-nature-usda-organic-black-beans-15-oz-can-0000000000000130', 15.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b3ae25a3-281c-4f65-9df4-a091897ab707', 'Fajita Flour Tortillas', 'Pueblo Lindo', 
-        'Tortillas & Flatbread', 'https://www.aldi.us/product/pueblo-lindo-fajita-flour-tortillas-20-count-0000000000000131', 23.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('6963305c-fb8e-49f9-b8e4-66b205c6a07a', 'Vitality Cereal Vanilla Almond', 'Fit & Active', 
-        'Cereal & Oatmeal', 'https://www.aldi.us/product/fit-active-vitality-vanilla-almond-0000000000000133', 12.4, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c941c2f1-9c2b-4219-a0e9-05a9311c215f', 'Mini Chocolate Bars', 'ChoceurMilk', 
-        'Cookies & Sweets', 'https://www.aldi.us/product/choceur-milk-mini-chocolate-bars-0000000000000134', 1.4, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d4371086-2827-4b1d-9717-38b02c66a277', 'Chocolate Chunk Cookies', 'Bake Shop', 
-        'Halloween Themed Food', 'https://www.aldi.us/product/bake-shop-chocolate-chunk-cookies-14-oz-0000000000000135', 14.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('375fca09-cfdc-42ab-a40c-313ae497b21b', 'Organic Blue Corn Tortilla Chips', 'Simply Nature', 
-        'Chips, Crackers & Popcorn', 'https://www.aldi.us/product/simply-nature-organic-blue-corn-tortilla-chips-8-25-oz-0000000000000136', 8.25, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('627ebcad-b75b-4c6d-af26-a895cafbf72e', 'German Style Sauerkraut', 'Deutsche Küche', 
-        'Condiments & Dressings', 'https://www.aldi.us/product/deutsche-kuche-german-style-sauerkraut-24-oz-0000000000000137', 24.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('19d80af4-ac49-4ba3-b552-4fc26a3ddd1e', 'Aluminum Foil', 'BoulderRegular', 
-        'Paper & Plastic Products', 'https://www.aldi.us/product/boulder-regular-aluminum-foil-75-ft-0000000000000139', NULL, 'Not specified');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('531e3542-10ae-4058-afec-bddbede948e7', 'Mini Bear Chocolate Grahams Snack Packs', 'Benton''s', 
-        'Cookies & Sweets', 'https://www.aldi.us/product/benton-s-mini-bear-chocolate-grahams-snack-packs-12-oz-0000000000000142', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('191eba71-0f66-4850-8e45-2580180d9825', 'Cranberry Almond Chicken Salad Mini Cups', 'Park Street Deli', 
-        'Dorm Room Meals & Snacks', 'https://www.aldi.us/product/park-street-deli-cranberry-almond-chicken-salad-mini-cups-4-packs-12-oz-0000000000000143', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('96e1aafb-1b30-4501-b59a-bccb6c84b95d', 'Cranberry Almond Chicken Salad', 'Park Street Deli', 
-        'Cookout Essentials', 'https://www.aldi.us/product/park-street-deli-cranberry-almond-chicken-salad-16-oz-0000000000000144', 16.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5258f652-bebc-40f5-a3cd-54bc4cf3d2b0', 'Medium Fresh Cut Salsa', 'Park Street Deli', 
-        'Sauces & Salsa', 'https://www.aldi.us/product/park-street-deli-medium-fresh-cut-salsa-16-oz-0000000000000146', 16.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('30a2760c-c822-40f7-80ec-d6983f2e2576', 'Jubilee Assortment Olives', 'Park Street Deli', 
-        'Charcuterie', 'https://www.aldi.us/product/park-street-deli-jubilee-assortment-olives-7-oz-0000000000000147', 7.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b55fd09f-beb5-41d4-8898-fe833a70f032', 'HE Liquid Laundry Detergent', 'TandilOriginal', 
-        'Laundry', 'https://www.aldi.us/product/tandil-original-he-liquid-laundry-detergent-100-fl-oz-0000000000000149', NULL, 'Not specified');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('44154572-2bb3-4700-9603-7b7145115abf', 'Chocolate Protein Meal Bars', 'ElevationDouble', 
-        'Protein, Granola & Snack Bars', 'https://www.aldi.us/product/elevation-double-chocolate-protein-meal-bars-6-count-0000000000000153', 6.0, 'count');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('78552278-d4be-4fd2-b2bf-dbd0737de8a5', 'Low Sodium Sprouted 7 Grain Bread', 'Simply Nature', 
-        'Healthy Food & Snacks', 'https://www.aldi.us/product/simply-nature-low-sodium-sprouted-7-grain-bread-16-oz-0000000000000154', 7.0, 'g');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c17f2321-525f-4b9e-90d0-ef736faef719', 'Nonfat Vanilla Yogurt', 'Friendly Farms', 
-        'Yogurt & Sour Cream', 'https://www.aldi.us/product/friendly-farms-nonfat-vanilla-yogurt-32-oz-0000000000000156', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('32703546-686b-4654-9165-761583407c81', 'Drawstring Kitchen Bags', 'BoulderTall', 
-        'Paper & Plastic Products', 'https://www.aldi.us/product/boulder-tall-drawstring-kitchen-bags-45-count-0000000000000159', 45.0, 'count');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ca0fa904-5e3b-4f0d-829c-0c9a081e946c', 'Fat Free Vegetable Cooking Stock', 'Chef''s Cupboard', 
-        'Soups & Broth', 'https://www.aldi.us/product/chef-s-cupboard-vegetable-cooking-stock-32-oz-0000000000000161', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b51fbfc1-3801-468e-bad1-8c7160e39a45', 'Teriyaki Stir Fry Sauce', 'Burman''s', 
-        'Sauces & Salsa', 'https://www.aldi.us/product/burman-s-teriyaki-stir-fry-sauce-14-5-oz-0000000000000170', 14.5, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('82194d95-bb91-4d96-ad3e-73b40041b670', 'New Orleans Style Jambalaya Rice Mix', 'Earthly Grains', 
-        'Boxed Meals & Side Dishes', 'https://www.aldi.us/product/earthly-grains-new-orleans-style-jambalaya-rice-mix-8-oz-0000000000000172', 8.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('6fa23113-fd5b-4e17-bb21-9bc097bc5a86', 'Pineapple Chunks in 100% Pineapple Juice', 'Sweet Harvest', 
-        'Canned Foods', 'https://www.aldi.us/product/sweet-harvest-pineapple-chunks-in-100-pineapple-juice-20-oz-can-0000000000000173', 20.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5b6e3814-9e9a-4f16-a633-2327456b19e2', 'Organics Apple Sweet Potato Baby Food Puree', 'Little Journey', 
-        'Baby Food & Snacks', 'https://www.aldi.us/product/little-journey-apple-sweet-potato-baby-food-puree-4-oz-0000000000000177', 4.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0c900102-1c76-4528-9468-2fad31ce578d', 'Apple Broccoli Pear Baby Food Puree', 'Little Journey', 
-        'Baby Food & Snacks', 'https://www.aldi.us/product/little-journey-apple-broccoli-pear-baby-food-puree-4-oz-0000000000000179', 4.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3614aaea-d34c-43ab-9626-fc1cb8852d12', 'Pineapple Slices', 'Sweet Harvest', 
-        'Canned Foods', 'https://www.aldi.us/product/sweet-harvest-pineapple-slices-20-oz-can-0000000000000180', 20.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3b48665c-cc61-416a-b5f1-806d08c86a0c', 'Dry Black Beans', 'Pueblo Lindo', 
-        'Pasta, Rice & Grains', 'https://www.aldi.us/product/pueblo-lindo-dry-black-beans-32-oz-0000000000000181', 32.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0220cb50-b6b0-4f56-8b73-ac5dbf70b5ab', 'Organic Multigrain Tortilla Chips', 'Simply Nature', 
-        'Chips, Crackers & Popcorn', 'https://www.aldi.us/product/simply-nature-organic-multigrain-tortilla-chips-8-25-oz-0000000000000182', 8.25, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('095a196b-b114-45c5-af6c-73cb7ba8202d', 'Butter Flavored Pancake Syrup', 'Millville', 
-        'Condiments & Dressings', 'https://www.aldi.us/product/millville-butter-flavored-pancake-syrup-24-oz-0000000000000183', 24.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ce93c23c-78ba-4266-943a-b830ae8f7afa', 'Oregano Leaves', 'Stonemill', 
-        'Spices', 'https://www.aldi.us/product/stonemill-oregano-leaves-0-75-oz-0000000000000184', 0.75, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2f26a62f-3bef-4950-9c1d-b74f08ab5f3d', 'Organic Ground Cumin', 'Simply Nature', 
-        'Spices', 'https://www.aldi.us/product/simply-nature-organic-ground-cumin-1-5-oz-0000000000000186', 1.5, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2517c5bc-4afc-412c-87c1-2637cd91295a', 'Apple Cider Donuts', 'Bake Shop', 
-        'Fall Food', 'https://www.aldi.us/product/bake-shop-apple-cider-donuts-10-oz-0000000000000189', 10.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('db239f1b-efda-4ec6-9dbd-f444293a3483', 'Organic Oats and Flax Instant Oatmeal Packets', 'Simply Nature', 
-        'Cereal & Oatmeal', 'https://www.aldi.us/product/simply-nature-organic-oats-and-flax-instant-oatmeal-packets-8-count-0000000000000190', 11.29, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d1515f47-0a4e-4a96-a6d5-bf27fccbffe9', 'Pure Olive Oil', 'Carlini', 
-        'Oils & Vinegars', 'https://www.aldi.us/product/carlini-pure-olive-oil-16-9-fl-oz-0000000000000192', NULL, 'Not specified');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f569faf3-969f-4883-87e4-8ed3c7cb1bff', 'Family Size Smoked Ham', 'Lunch Mate', 
-        'Dorm Room Meals & Snacks', 'https://www.aldi.us/product/lunch-mate-family-size-smoked-ham-16-oz-0000000000000193', 16.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('fd626217-f484-4a76-8ed5-b8a184d5cce2', 'Honey Ham', 'Lunch Mate', 
-        'Dorm Room Meals & Snacks', 'https://www.aldi.us/product/lunch-mate-honey-ham-16-oz-0000000000000194', 16.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('95bebf41-978b-45f4-933f-41f22abd9dcc', 'Family Size Roast Beef', 'Lunch Mate', 
-        'Lunch Meat', 'https://www.aldi.us/product/lunch-mate-family-size-roast-beef-14-oz-0000000000000195', 14.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('8429ff5c-e365-4807-aa7b-2451ecc29376', 'Family Size Rotisserie Chicken Breast', 'Lunch Mate', 
-        'Lunch Meat', 'https://www.aldi.us/product/lunch-mate-family-size-rotisserie-chicken-breast-1-lb-0000000000000196', 1.0, 'lb');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('8454918b-7d4e-4ae1-8423-8a20f47e3f4d', 'Family Size Lower Sodium Smoked Honey Ham in Lunch Meat Tub', 'Lunch Mate', 
-        'Healthy Food & Snacks', 'https://www.aldi.us/product/lunch-mate-family-size-lower-sodium-smoked-honey-ham-in-lunch-meat-tub-15-oz-0000000000000197', 15.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('30fbae08-2d76-49e6-8855-53feed88da9e', 'Korma Curry Sauce', 'Burman''s', 
-        'Sauces & Salsa', 'https://www.aldi.us/product/burman-s-korma-curry-sauce-15-oz-0000000000000198', 15.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('76e6c16d-751b-44fc-b9b3-8e814db77df4', 'Cinnamon Applesauce Cups', 'Lunch Buddies', 
-        'Canned Foods', 'https://www.aldi.us/product/lunch-buddies-cinnamon-applesauce-cups-6-count-0000000000000199', 4.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('6baa9176-c882-41fa-af7d-bc161dd71e02', 'Quick Oats', 'Millville', 
-        'Cereal & Oatmeal', 'https://www.aldi.us/product/millville-quick-oats-42-oz-0000000000000200', 42.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5c28e8ba-1a02-4ee7-9db9-e4d07fa057d2', 'Roasted Garlic Alfredo Sauce', 'Priano', 
-        'Sauces & Salsa', 'https://www.aldi.us/product/priano-roasted-garlic-alfredo-sauce-15-oz-0000000000000201', 15.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a9f101d7-8016-478e-8bfc-1376d4a756cc', 'California Raisins', 'Southern Grove', 
-        'Nuts & Dried Fruit', 'https://www.aldi.us/product/southern-grove-california-raisins-20-oz-0000000000000203', 20.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('513352b2-9fbc-431e-bdd1-b0eee2a9feb6', 'Herb Chicken Tortelloni', 'Priano', 
-        'Valentine''s Day Dinner', 'https://www.aldi.us/product/priano-herb-chicken-tortelloni-20-oz-0000000000000206', 20.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f857511e-68ee-440b-a5ce-29968ab1fae4', 'Pretzel Mini Twists', 'Clancy''s', 
-        'Chips, Crackers & Popcorn', 'https://www.aldi.us/product/clancy-s-pretzel-mini-twists-1-lb-0000000000000208', 1.0, 'lb');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b61e71d2-f4f7-4f84-b7ce-9452b2809fdd', 'Mesquite Barbecue Kettle Chips', 'Clancy''s', 
-        'Chips, Crackers & Popcorn', 'https://www.aldi.us/product/clancy-s-mesquite-barbecue-kettle-chips-8-oz-0000000000000210', 8.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('647bace7-42cb-4d8d-b18c-acc0bfba71ea', 'Sardines in Mustard Sauce', 'Northern Catch', 
-        'Canned Foods', 'https://www.aldi.us/product/northern-catch-sardines-in-mustard-sauce-3-75-oz-0000000000000211', 3.75, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f2c2c9c6-b1d7-403a-937b-2282856d0493', 'Jalapeño Kettle Chips', 'Clancy''s', 
-        'Chips, Crackers & Popcorn', 'https://www.aldi.us/product/clancy-s-jalapeno-kettle-chips-8-oz-0000000000000212', 8.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f5c10396-bcf1-416a-8a5d-8070cdaaba18', 'Beer Battered Cod Fillets', 'Fremont Fish Market', 
-        'St. Patrick''s Day', 'https://www.aldi.us/product/fremont-fish-market-beer-battered-cod-fillets-13-1-oz-0000000000000215', 13.1, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('54579222-e76d-48db-a1f1-2b28b5552b1f', 'Italian Seasoning', 'Stonemill', 
-        'Spices', 'https://www.aldi.us/product/stonemill-italian-seasoning-0-75-oz-0000000000000216', 0.75, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('39923d8d-5dfc-488e-859c-dc7f8cc0b086', 'Ground Cinnamon', 'Stonemill', 
-        'Spices', 'https://www.aldi.us/product/stonemill-ground-cinnamon-2-37-oz-0000000000000217', 2.37, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b473b2b1-3407-4fca-befb-fb67003398a5', 'Champagne Cheddar Cheese', 'Emporium Selection', 
-        'Seasonal', 'https://www.aldi.us/product/emporium-selection-champagne-cheddar-0000000000000219', 5.3, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5847c0da-f27c-4523-88a7-007e1517694b', 'Sea Salt and Vinegar Kettle Chips', 'Clancy''s', 
-        'Chips, Crackers & Popcorn', 'https://www.aldi.us/product/clancy-s-sea-salt-and-vinegar-kettle-chips-8-oz-0000000000000220', 8.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a68c46a9-94c1-4cbe-a94f-5088795fdf0e', 'Four Cheese Homestyle Instant Mashed Potatoes', 'Chef''s Cupboard', 
-        'Boxed Meals & Side Dishes', 'https://www.aldi.us/product/chef-s-cupboard-four-cheese-homestyle-instant-mashed-potatoes-4-oz-0000000000000221', 4.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('128a00bc-efdf-4929-9a29-22c14e9f4891', 'Low-fat Strawberry Yogurt', 'Friendly Farms', 
-        'Yogurt & Sour Cream', 'https://www.aldi.us/product/friendly-farms-low-fat-strawberry-yogurt-6-oz-0000000000000222', 6.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('af56a398-40d4-4c42-8cd4-755d2993e8b1', 'Apple Chicken Sausage', 'Never Any!', 
-        'Grilled Meat & Seafood', 'https://www.aldi.us/product/never-any-apple-chicken-sausage-4-count-0000000000000227', 12.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('972daf33-97b1-48d9-9a83-23716564e8af', 'Blueberry Bagels', 'L''oven Fresh', 
-        'Back to School Breakfast', 'https://www.aldi.us/product/l-oven-fresh-blueberry-bagels-20-oz-0000000000000228', 20.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('04051020-aabc-44c0-9bb5-4a3ab07b42f5', 'Organic Gala Apples', 'Nature''s Promise', 
-        'Produce', '', 2.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('22d7f48f-c344-4ad3-97fa-2b85d1a4ef38', 'Organic Fuji Apples', 'Nature''s Promise', 
-        'Produce', '', 2.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9a29d6c3-7968-4faf-b240-8a2f4a219c63', 'Organic Honeycrisp Apples', 'Nature''s Promise', 
-        'Produce', '', 2.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a831fa93-aa61-4b74-b790-f4bcf9d24716', 'Organic Granny Smith Apples', 'Nature''s Promise', 
-        'Produce', '', 2.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('7fde71f3-635b-40f5-99ce-251b51512f3d', 'Honeycrisp Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('208d5037-3ea4-49e9-8723-90f639a1353e', 'Cereal', 'Apple Jacks', 
-        'Breakfast', '', 8.9, 'OZ BOX');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('18668659-de01-496f-8ac6-fbe83ee4c54d', 'Granny Smith Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('bd020128-ad2a-433f-a55f-4c0079657334', 'Creations Apple Pie a La Mode Greek Yogurt Cup', 'Chobani', 
-        'Dairy & Eggs', '', 5.3, 'OZ CUP');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('cbd0616c-fd79-49f4-9d38-d06d970eb333', 'Mcintosh Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('bbb9ef48-ab1a-4c50-9a14-2d388f212cc0', 'Pink Lady Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3988a5f0-8f41-4448-823b-358f60f7a879', 'Gala Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c7ac9135-6bf6-4bc2-968d-49e02390075e', 'Fuji Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('4fe45097-9cd4-4a2a-afe2-c54a4c2c7b23', 'Cortland Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2b14842a-6a88-4c28-a68e-270882115450', 'Red Delicious Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('4b4ada6a-ddd2-4e0b-b857-e855748c1efd', 'Cortland Apple Tote Bag', 'USDA Produce', 
-        'Produce', '', NULL, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('75bb99ac-de08-44ec-b920-70be643a0714', 'Macintosh Apple Tote Bag', 'USDA Produce', 
-        'Produce', '', NULL, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('983f85d5-01eb-437d-b72b-843beae4a8f5', 'Mcintosh Apples', 'USDA Produce', 
-        'Produce', '', 3.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('71fec5bb-e85c-436f-942a-9c26e8693305', 'Honeycrisp Apples', 'USDA Produce', 
-        'Produce', '', 3.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0d9c2650-39a8-447c-bf4d-3aaab0e3811f', 'Gala Apple Tote Bag', 'USDA Produce', 
-        'Produce', '', NULL, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c14738f0-794b-4144-825b-b76355968ad3', 'Granny Smith Apples', 'Hannaford', 
-        'Produce', '', 3.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('af53f363-099c-4956-8c2e-7206d7f97232', 'Gala Apples', 'Hannaford', 
-        'Produce', '', 3.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b6505036-b941-4e94-8e35-12c6c49dd29f', 'Gala Apples', 'USDA Produce', 
-        'Produce', '', 3.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5f49afdf-3cb0-4d96-bd7d-6d15f82fa260', 'Empire Apple Tote Bag', 'USDA Produce', 
-        'Produce', '', NULL, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9c579f30-4417-4eb5-8f4d-19989f593800', 'Pink Lady Apples', 'USDA Produce', 
-        'Produce', '', 3.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('8419e25b-1282-4712-b80b-001e3e2a7935', 'Granny Smith Apples', 'USDA Produce', 
-        'Produce', '', 3.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5bb7ef4e-bef2-4d76-9c1e-e20561814c1a', 'Fuji Apples', 'USDA Produce', 
-        'Produce', '', 3.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5dca55a8-a124-4b25-9574-c4d4134552a6', 'Envy Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('38d9dfe3-95fd-4ac5-bd7c-443e01d1830b', 'Cosmic Crisp Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('acc5b10f-4369-4aea-b975-ce7cfccdd14c', 'Macoun Apple Tote Bag', 'USDA Produce', 
-        'Produce', '', NULL, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('14ea8774-a234-4b68-a266-51cbed8fd70d', 'SugarBee Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('bdffdeab-2dfc-4851-bcf7-9029b7e66236', 'Macoun Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('fbf8ef1f-fcf0-474f-8a86-afeedab24d2b', 'SweeTango Apples', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c9c57699-4225-4f19-be07-10a01322e1e5', 'Kanzi Apple', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('edefa4a3-9956-4a3a-992b-5301b4b29420', 'Kanzi Apples', 'USDA Produce', 
-        'Produce', '', 2.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('088cdfb8-fd00-4eb8-8656-9261347eec83', 'SweeTango Apples', 'USDA Produce', 
-        'Produce', '', 2.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0c8a1edc-23b6-4cd2-9308-627661ef9f4e', 'Early Red Apple Tote Bag', 'USDA Produce', 
-        'Produce', '', NULL, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b836c75b-56c3-4203-90a7-5f389b2092fa', '100% Apple Juice', 'Hannaford', 
-        'Beverages', '', 64.0, 'OZ BTL');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f2b161e0-ba75-4955-9a8a-c45134fdcdfa', '100% Apple Juice', 'Mott''s', 
-        'Beverages', '', 64.0, 'OZ BTL');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('004202a8-7dea-4bd6-85da-380cd0050406', '100% Apple Juice Fresh Pressed No Sugar Added Natural', 'Mott''s', 
-        'Beverages', '', 64.0, 'OZ BTL');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a52ab18d-db3d-495f-8374-f64688149016', '100% Apple Juice', 'Hannaford', 
-        'Beverages', '', 96.0, 'OZ BTL');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2666daff-6529-4de7-9e4c-b59dc534c0eb', 'Original Almondmilk Unsweetened Non-Refrigerated', 'Almond Breeze', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2c90cc13-4910-4d68-b794-bd69821d4cb0', 'Reduced Fat Milk', 'Battenkill Valley', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5cc6ea2b-681a-4a06-9d49-dc3b27afe777', 'Chocolate Almondmilk', 'Almond Breeze', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d8bac475-6605-4b81-9c9e-289d4f63e81b', 'Lactose Free Whole Milk', 'Lactaid', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('44d2f8ad-ed51-4a21-8bd5-1155eff26c55', 'Vitamin C & D Whole Milk', 'Hannaford', 
-        'Dairy & Eggs', '', 1.0, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5340784f-6be1-42d3-abcb-2d0adb33c3b0', '2% Reduced Fat Milk', 'Hannaford', 
-        'Dairy & Eggs', '', 1.0, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2562cdbd-00b7-421e-9411-47bd82bdbbe4', 'Lactose Free Protein 2% Reduced Fat Milk', 'Lactaid', 
-        'Dairy & Eggs', '', 52.0, 'OZ CTN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ec73330b-53c8-4f6c-8d8e-d815f2e8d327', 'Vitamin D Whole Milk', 'Hannaford', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('79a3b8c6-9d67-4002-b755-f01f106654df', 'Lactose Free Calcium Enriched 2% Reduced Fat Milk', 'Lactaid', 
-        'Dairy & Eggs', '', 96.0, 'OZ JUG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f672f604-5c1b-4509-ab4e-c845cf227276', '1% Low Fat Milk', 'Hannaford', 
-        'Dairy & Eggs', '', 1.0, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d7c0ba13-00c7-438c-9d07-c93af28a3ea8', 'Vanilla Almondmilk Unrefrigerated', 'Almond Breeze', 
-        'Dairy & Eggs', '', 1.0, 'QUART');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9cb6c2dd-c5c0-4760-b5be-444ca676d3ee', '2% Reduced Fat Milk', 'Hannaford', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c1f2b9d0-368e-4884-8291-16cb27ca5036', 'Vanilla Almondmilk Unsweetened Non-Refrigerated', 'Almond Breeze', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c9296990-185b-48d7-b345-c1ef129b140b', '1% Low Fat Milk', 'Hannaford', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('fa228764-6bd1-4a48-8a72-afc5cd615688', 'Vitamin D Whole Milk', 'Hannaford', 
-        'Dairy & Eggs', '', 1.0, 'QUART');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('1daa2063-9675-4b7a-8793-67fd4e87bd29', 'Organic Vitamin D Whole Milk', 'Nature''s Promise', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('58219166-e72f-445f-ac0d-d1b4dbf125c9', 'Lactose Free Vitamin D Milk', 'Lactaid', 
-        'Dairy & Eggs', '', 96.0, 'OZ JUG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a36c5ab0-f406-4096-b470-024d72b8e878', 'Fat Free Skim Milk', 'Hannaford', 
-        'Dairy & Eggs', '', 1.0, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('57641b97-9c2c-4460-9c9f-11ec9b2bbbe0', 'Lactose Free Calcium Enriched Vitamin D Milk', 'Lactaid', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9cd66007-d842-4216-a0df-7d50f612e90a', 'Organic 2% Reduced Fat Milk', 'Nature''s Promise', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('db24dc3e-af9e-408e-8129-8f214e98de42', 'Unsweetened Original Almondmilk Unrefrigerated', 'Almond Breeze', 
-        'Dairy & Eggs', '', 1.0, 'QUART');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('bd779803-1918-441a-8fb3-a14b93486cbf', 'Organic Vitamin D Whole Milk', 'Nature''s Promise', 
-        'Dairy & Eggs', '', 1.0, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('1fbf613a-1241-4251-9062-b02f2234551d', 'Fat Free Skim Milk', 'Hannaford', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('dde287ae-4044-429d-bb3b-469cfcb90b5a', 'Organic 1% Low Fat Milk', 'Nature''s Promise', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('7d92f34a-994f-4b3f-a300-10cb2d76dea5', 'Organic Vitamin D Whole Milk', 'Stonyfield', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2feb7b66-fabc-4eb5-a362-72455e29dd8d', 'Organic 2% Reduced Fat Milk', 'Nature''s Promise', 
-        'Dairy & Eggs', '', 1.0, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2774f7cd-bc47-4280-b859-66f168905de9', 'Organic Fat Free Skim Milk', 'Nature''s Promise', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('82cfdf1d-138d-42c4-bf0c-68cfc70da99a', 'Fat Free Skim Milk', 'Hannaford', 
-        'Dairy & Eggs', '', 1.0, 'QUART');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('364ad617-8382-447b-9bf8-6e67c1b3cc37', 'Grass-fed Whole Milk', 'Organic Valley', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('08309d92-663c-4eb2-bdb1-26b574a8c099', 'Vitamin D Whole Milk', 'Organic Valley', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f204f4c8-ff85-4cb2-918c-681c81cd9fe7', 'Organic 2% Reduced Fat Milk', 'Stonyfield', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d58ddd94-8b01-4e22-a0ea-c045a8af5271', 'Organic 1% Low Fat Milk', 'Nature''s Promise', 
-        'Dairy & Eggs', '', 1.0, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('6ec22fd2-4d09-4bcd-894b-274f7d4e92ea', 'Organic Grass-fed Whole Milk', 'Maple Hill', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0062086f-bd49-4de9-9d9a-145fabd89c20', 'Whole Milk', 'Battenkill Valley', 
-        'Dairy & Eggs', '', 1.0, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('84671b6f-8959-4823-9d87-e4ed1ba6346a', 'Whole Milk', 'Battenkill Valley', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ef763312-8d5b-41d2-9fae-aaaf982a7b6f', '2% Reduced Fat Milk', 'Organic Valley', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3c3428c6-c4e0-4531-b2e6-42959fab1d50', 'Organic Fat Free Skim Milk', 'Stonyfield', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('6c3e599c-fb3c-4a91-9565-9bf582e618dd', 'Organic 1% Low Fat Milk', 'Stonyfield', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('1a056e4f-22dc-4871-9fb4-fd3b0697cc40', 'Vitamin D Whole Milk DHA Omega-3', 'Horizon Organic', 
-        'Dairy & Eggs', '', NULL, 'GALLON');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('07fb5fac-0250-4f28-b349-a74c7c0b1d2f', '2% Reduced Fat Milk', 'Crowley', 
-        'Dairy & Eggs', '', 1.0, 'QUART');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('67569645-916d-46a6-8a86-e30595620b2d', 'Yellow Bananas', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('505762a3-fe87-4ebe-a9b1-cdc31a678901', 'Green Bananas', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('45aa35f1-159e-4c65-9d19-675aa9240326', 'Organic Bananas apx 4-7 ct', 'USDA Produce', 
-        'Produce', '', 1.0, 'BUNCH');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('073b3551-faea-4542-9fad-79fb591a1f0e', 'Green Plantains', 'USDA Produce', 
-        'Produce', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c6549f1f-c4c0-4d3a-a31c-81f230facc78', 'Fresh Pack Mild Banana Pepper Rings', 'Hannaford', 
-        'Condiments & Sauces', '', 16.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('49d8087a-4901-404d-8a0a-178ef0787e29', 'Low Fat Strawberry Banana on the Bottom Greek Yogurt Cup - 4 ct', 'Chobani', 
-        'Dairy & Eggs', '', 21.2, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('1119775b-0eb3-4a0d-8835-3579361a608a', 'Banana Chips', 'USDA Produce', 
-        'Snacks', '', 10.0, 'OZ TUB');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('35cb4c4b-d8cd-4e22-8990-08c1fa032f56', 'Fresh Pack Mild Banana Pepper Rings', 'Mezzetta', 
-        'Condiments & Sauces', '', 16.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c7f2dc3d-f814-4047-9d2b-ce62fb37651e', 'Banana Chocolate Chunk Ice Cream', 'Hannaford', 
-        'Frozen', '', 1.0, 'PINT');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('179993d0-f48d-41d8-b16b-677459718059', 'Fresh Pack Hot Banana Pepper Rings', 'Hannaford', 
-        'Condiments & Sauces', '', 16.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c55ee3da-423e-4193-8e8b-ddffebb1777f', 'Mild Banana Pepper Rings', 'Mt. Olive', 
-        'Condiments & Sauces', '', 12.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('055afe22-3e93-4b87-bba8-05c0d0d8b4c5', 'Delicatessen Style Mild Banana Pepper Rings', 'Mt. Olive', 
-        'Condiments & Sauces', '', 32.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('29bcb2c1-66ff-4e09-ad84-d00a53c473da', 'No Sugar Added Dried Fruit Banana Bites', 'Good Sense', 
-        'Snacks', '', 6.0, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0510dc6a-4b9e-48ff-be55-6ef01ab41788', 'Fresh Pack Hot Banana Pepper Rings', 'Mezzetta', 
-        'Condiments & Sauces', '', 16.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('e0ac4560-8b3c-419a-968b-fae13ca3c5a4', 'Banana Caramel Coconut HomeMaine Ice Cream', 'Gifford''s', 
-        'Frozen', '', 1.0, 'PINT');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3822db89-8697-4b6e-b245-a1b4bdcfe18f', 'Bakery Sliced Banana Bread', 'Hannaford', 
-        'Bread & Bakery', '', 14.0, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('35984c39-9e71-466c-bc12-d2f324188eca', 'Non Fat Strawberry Banana Yogurt Cup', 'Hannaford', 
-        'Dairy & Eggs', '', 6.0, 'OZ CUP');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('e64e3501-9e11-48af-972e-2d0e5750ebee', 'PRO 20g Protein Banana Cultured Ultra-Filtered Milk Yogurt Cup', 'Oikos', 
-        'Dairy & Eggs', '', 5.3, 'OZ CUP');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3a523cc0-d518-41e4-afd3-76a4e3d50d9f', 'Low Fat Strawberry Banana Greek Yogurt Drink', 'Chobani', 
-        'Dairy & Eggs', '', 7.0, 'OZ BTL');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('7a61b8b8-6d4f-45e8-9d87-2543d90d4276', 'Organic Kids Low Fat Strawberry Banana Yogurt Pouch - 4 ct', 'Stonyfield', 
-        'Dairy & Eggs', '', 14.0, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('1e02a684-f541-4a9f-bb36-2ac6224ccde6', 'Non Fat Strawberry Banana Greek Yogurt Cup', 'Hannaford', 
-        'Dairy & Eggs', '', 5.3, 'OZ CUP');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f2fc8ef5-04f2-4541-a435-2019b251bed0', 'Original Low Fat Strawberry Banana Yogurt Cup', 'Yoplait', 
-        'Dairy & Eggs', '', 6.0, 'OZ CUP');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('175e24c4-2e6b-4a97-bdaf-34499d7862d3', 'Kids Low Fat Strawberry & Banana Yogurt Pouch - 4 ct', 'Siggi''s', 
-        'Dairy & Eggs', '', 14.0, 'OZ BOX');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b64052e9-6fc0-4d80-80d7-b37e7f976f1b', 'Gluten Free Peanut Butter Banana Dark Choc Breakfast Protein Bars 6ct', 'KIND', 
-        'Breakfast', '', 10.56, 'OZ BOX');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('26fdbdfa-7612-4dc3-b7e0-beb47a82f88c', 'Extra Creamy Salted Caramel Banana Whole Milk Yogurt', 'Icelandic Provisions', 
-        'Dairy & Eggs', '', 4.4, 'OZ CUP');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('09537b7a-ecee-41be-99b0-2048b5d3b28c', 'Organic Banana Apple Berry & Pomegranate Gut Health Snack Squeeze', 'gutzy', 
-        'Soups & Canned Goods', '', 3.9, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('15a8d534-4f1b-4306-88fd-3f8cf237c7f7', 'Organic Kids Low Fat Strawberry Banana Yogurt Smoothies - 6 ct', 'Stonyfield', 
-        'Dairy & Eggs', '', 3.1, 'OZ BTL');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0a1e5018-0449-4f4b-af6d-72490483fee2', 'Organics 2 Baby Food Bananas Raspberries & Oats', 'Happy Baby', 
-        'Baby', '', 4.0, 'OZ SQZ');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f716ad1c-922f-4a01-b2cc-1ac8553707dd', 'Dairy Free Vegan Strawberry Banana Coconutmilk Yogurt Cup', 'So Delicious', 
-        'Dairy & Eggs', '', 5.3, 'OZ CUP');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ff69a320-b368-4d93-82cb-ea2014e6a69f', 'PRO 23g Protein Strawberry Banana Cultured Dairy Drink', 'Oikos', 
-        'Dairy & Eggs', '', 7.0, 'OZ BTL');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('eb10c1e0-7caa-427e-be75-ffd62b0dad60', 'Organic 2 Baby Food Banana & Pumpkin', 'Nature''s Promise', 
-        'Baby', '', 3.5, 'OZ SQZ');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('cf4a06fd-4d57-44d0-bb4f-78b37f6c0a76', 'Low Fat Strawberry Banana Skyr Yogurt', 'Siggi''s', 
-        'Dairy & Eggs', '', 5.3, 'OZ CUP');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9cc045a5-b0e2-476e-9799-0b933d8104b4', 'Organic Dairy Free Strawberry Banana Swirl Smoothie', 'Once Upon a Farm', 
-        'Baby', '', 4.0, 'OZ SQZ');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('79d7fa6e-fa83-45d8-97d2-0615c8a035f5', 'Organics Stage 4 Super Morning Bananas Blueberries Yogurt & Oats', 'Happy Tot', 
-        'Baby', '', 4.0, 'OZ SQZ');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a2b43dad-09fb-4b78-b772-25a761256fc5', 'Organics Stage 4 Super Bellies Bananas Spinach & Blueberries', 'Happy Tot', 
-        'Baby', '', 4.0, 'OZ SQZ');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('939ecfad-33c6-48f5-bdd5-0c3d3a1222cb', 'Organics Love My Veggies Carrot Banana Mango & Sweet Potato', 'Happy Tot', 
-        'Baby', '', 4.22, 'OZ SQZ');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('38e55ad1-72ee-4f91-8af7-753d0a670157', 'Picked Fresh Sliced Bananas Frozen', 'Hannaford', 
-        'Frozen', '', 16.0, 'OZ BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('10a30a6c-3724-4289-a632-bae1749e4915', 'Organic YoBaby Whole Milk Banana & Oat Yogurt Pouch - 4 ct', 'Stonyfield', 
-        'Dairy & Eggs', '', 13.6, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2940cf94-13b5-4639-b5c9-f9de5d2fff41', 'Veggies Stage 2 Baby Food Zucchini Spinach & Banana', 'Beech-Nut', 
-        'Baby', '', 3.5, 'OZ SQZ');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d9f001df-1c6a-44bc-bfe0-2bd1ed607e0c', 'Strawberry Banana Finest Yoghurt', 'Noosa', 
-        'Dairy & Eggs', '', 8.0, 'OZ TUB');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('8ea8622a-74ea-40a9-a374-93459566115d', 'Natural Grain Free Stews Variety Pack Wet Dog Food - 6 ct', 'Blue Buffalo', 
-        'Pets', '', 4.69, 'LB BOX');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f0794625-8f03-46f2-8dc0-cd9de2b1c8e7', 'IncrediBites Small Dogs Variety Adult Wet Dog Food - 12 ct', 'Purina Beneful', 
-        'Pets', '', 2.25, 'LB BOX');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('6422c459-24cf-4514-b5ca-9ffbf3854683', 'Natural Small Breed Chicken & Brown Rice Adult Dry Dog Food', 'Blue Buffalo', 
-        'Pets', '', 5.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d5414522-b78c-4902-a836-6cb71fd405bf', 'Natural Life Protection Chicken/Brown Rice Recipe Adult Dry Dog Food', 'Blue Buffalo', 
-        'Pets', '', 5.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0ba76e57-4399-4050-b9bf-b347e64dae9c', 'IncrediBITES Small Dogs Chicken Adult Dry Dog Food', 'Purina Beneful', 
-        'Pets', '', 3.5, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('56fe7dcb-d475-41ed-ac31-6acc1af1159f', 'with Tender Bites Small Dogs Chicken & Steak Adult Dry Dog Food', 'PEDIGREE', 
-        'Pets', '', 3.5, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('05e6a83a-a098-4083-80c1-c064f7e9e69c', 'Natural Life Protection Chicken/Brown Rice Recipe Adult Dry Dog Food', 'Blue Buffalo', 
-        'Pets', '', 24.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d422cb42-ed68-4477-87fe-fbee579b0f29', 'IncrediBites Small Dogs Beef/Veggies Adult Wet Dog Food', 'Purina Beneful', 
-        'Pets', '', 3.0, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('70bb4f38-bfa9-4838-99d4-1f3217c184da', 'Wilderness Natural Hi-Protein Chicken Small Dry Dog Food', 'Blue Buffalo', 
-        'Pets', '', 4.5, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('975ceee0-01c6-4992-96ef-3d09be29a694', 'IncrediBITES Small Dogs Farm-Raised Beef Adult Dry Dog Food', 'Purina Beneful', 
-        'Pets', '', 3.5, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('56677c0e-81f1-4b8f-bc78-a9bea873b7f1', 'Healthy Weight Chicken & Brown Rice Adult Dry Dog Food', 'Blue Buffalo', 
-        'Pets', '', 15.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('fb412699-ea55-45e3-95f7-06154000fc05', 'IncrediBITES Small Dogs Farm-Raised Beef Adult Dry Dog Food', 'Purina Beneful', 
-        'Pets', '', 14.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5897a5c6-fa02-454c-9063-eb782784b562', 'Life Protection Puppy Chicken & Brown Rice Dry Dog Food', 'Blue Buffalo', 
-        'Pets', '', 5.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('18e83478-1ec3-4c19-92ad-bba8409d9286', 'IncrediBITES Small Dogs Chicken Adult Dry Dog Food', 'Purina Beneful', 
-        'Pets', '', 14.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('7f894b24-6240-4223-9c17-8c271c0b7e4e', 'IncrediBites Small Dogs Beef/Wild Rice Adult Wet Dog Food', 'Purina Beneful', 
-        'Pets', '', 3.0, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('032b39d6-41f3-4d28-b0a9-f5a3dc772323', 'Complete Essentials Chicken & Rice Adult Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('d0f865ec-43e4-4ac9-b36e-d8ccc625052f', 'Natural Homestyle Beef Dinner with Vegetables Adult Wet Dog Food', 'Blue Buffalo', 
-        'Pets', '', 12.5, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9c33cc2c-b25b-4755-a6f0-54d15dec2c3c', 'Grain Free Chicken Turkey & Salmon Adult Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('e5502f00-9070-4d1a-a08f-bcb47cefb5c1', 'Natural Homestyle Turkey Meatloaf with Vegetables Wet Dog Food', 'Blue Buffalo', 
-        'Pets', '', 12.5, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b957217d-c931-4a6f-9542-334e4aadd942', 'Complete Chicken Turkey & Duck Adult Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('76afd239-bd4a-45d9-8e98-a66adc84ddc0', 'Natural Large Breed Chicken & Brown Rice Adult Dry Dog Food', 'Blue Buffalo', 
-        'Pets', '', 24.0, 'LB BAG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f1a0ee1f-79af-4f45-bde5-0bc6cf808334', 'Grain Free Chicken Beef Vegetable in Gravy Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('4f79dc77-067b-486a-9263-9d1e3da60f2e', 'Grain Free Turkey & Chicken Adult Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3fee2b7f-4e88-4023-bdfa-6791ae1ee36b', 'Grain Free Turkey & Sweet Potato Stew Adult Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0aae69f4-64d2-475f-b84e-b64774721bbb', 'Grain Free Chicken & Vegetable in Gravy Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('eeda86f7-b06f-4734-9e27-c80bd11c863f', 'Tender Cuts in Gravy Chicken & Brown Rice Adult Wet Dog Food', 'Purina ONE', 
-        'Pets', '', 13.0, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('119bcea3-e985-4bfc-bdb2-d02f07d0dcdf', 'Grain Free Chicken & Fish Dinner Adult Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('09b6e762-962e-43c8-b08a-36d9dd1148c9', 'Grain Free Turkey & Potato Dinner Adult Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('733cfc43-40e6-4425-a19d-f0eaa88644cb', 'Classic Ground Chicken & Brown Rice Adult Wet Dog Food', 'Purina ONE', 
-        'Pets', '', 13.0, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5a73858e-047c-467c-88fc-6e071dc8fd25', 'Grain Free Chicken Dinner with Gravy Wet Dog Food', 'Nature''s Promise', 
-        'Pets', '', 3.5, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5a2dcfcd-b237-4bce-a910-53e54559e8ef', 'Classic Ground Beef & Brown Rice Adult Wet Dog Food', 'Purina ONE', 
-        'Pets', '', 13.0, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a802178f-2de7-4b5e-8fb1-09bf3088bd42', 'Chopped Blends Salmon Sweet Potato Rice Adult Wet Dog Food', 'Purina Beneful', 
-        'Pets', '', 10.0, 'OZ TUB');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f3564cab-33d2-4a1d-a629-f9961542e957', 'True Instinct Tender Cuts Beef & Salmon Adult Wet Dog Food', 'Purina ONE', 
-        'Pets', '', 13.0, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('6a15f295-cdb5-48cd-95e8-5e7f255612f3', 'Chopped Blends Turkey Sweet Potato Rice Adult Wet Dog Food', 'Purina Beneful', 
-        'Pets', '', 10.0, 'OZ TUB');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b77afd51-a343-4564-8f37-ab4fc79ab04e', 'Filets in Gravy Prime Rib Flavor Adult Wet Dog Food', 'CESAR', 
-        'Pets', '', 3.5, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('40a12f7d-c8cf-470b-a5c4-1b293e2d9e8b', 'Tender Cuts in Gravy Healthy Weight Lamb Adult Wet Dog Food', 'Purina ONE', 
-        'Pets', '', 13.0, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0458c3a1-5a75-46f5-8ce6-68e10f114c07', 'Chopped Ground Dinner Filet Mignon Adult Wet Dog Food', 'PEDIGREE', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('51bdf451-3377-4b07-8840-02c40e466427', 'Choice Cuts in Gravy Country Stew Adult Wet Dog Food', 'PEDIGREE', 
-        'Pets', '', 13.2, 'OZ CAN');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('7305bbba-6207-4e24-b617-31423c232b9d', 'Top That Boost Wet Dog Food Topper Duck Recipe in Gravy', 'I and Love and You', 
-        'Pets', '', 3.0, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('56967b60-14d2-4fbc-9bc8-e1291e2591b9', 'Nutrish Natural Chicken Muttballs Wet Dog Food', 'Rachael Ray', 
-        'Pets', '', 8.0, 'OZ TUB');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('017e9c2f-4394-405c-a328-166bb4935fb3', 'Balsam & Cedar', 'Yankee Candle', 
-        'Home & Office', '', 14.25, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2542ec36-c25c-48f3-b901-21ed8f5f758d', 'Balsam & Cedar', 'Yankee Candle', 
-        'Home & Office', '', 10.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('84db3571-05ff-4aac-bf76-c367583e2092', 'Kitchen Spice', 'Yankee Candle', 
-        'Home & Office', '', 14.25, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('dc857137-684b-4c7b-8c40-74acdea29121', 'Welcoming Apple Cinnamon 3 Wick Candle', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 6.8, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('4dc295f3-e61c-4da2-95e2-6e67edaa10ff', 'Lemon Lavender with Essential Oils', 'Yankee Candle', 
-        'Home & Office', '', 10.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('54ec5884-d4bf-4b27-9eda-712e17120396', 'Midsummer''s Night with Essential Oils', 'Yankee Candle', 
-        'Home & Office', '', 10.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2922f4ee-8b42-4baf-a119-91c9f8838155', 'Pink Sand with Essential Oils', 'Yankee Candle', 
-        'Home & Office', '', 10.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f4693d66-9f71-44c8-804a-4647e1b895ec', 'Macintosh', 'Yankee Candle', 
-        'Home & Office', '', 14.25, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('27fdba28-cbf6-4894-9212-031da15ad667', 'Sage & Citrus', 'Yankee Candle', 
-        'Home & Office', '', 14.25, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('bff39b92-b636-4a9e-8bfc-c5a9bf753062', 'Apple Cinnamon Candle', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 4.08, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('4c0bf1ce-02c6-401a-87fe-b1fd4d96c2ab', 'Scented Apple Pumpkin', 'Village Candle', 
-        'Home & Office', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('7d8ba39f-2a1c-46bd-a5ee-810ffc20f275', 'Scented Balsam Fir', 'Village Candle', 
-        'Home & Office', '', 14.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('1983a281-d1ec-4a40-9753-76ff440fee94', 'Bayside Cedar', 'Yankee Candle', 
-        'Home & Office', '', 14.25, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('90ed1b12-5a3e-4cc7-afba-7a792174f1b0', 'Harvest Pumpkin', 'Tuscany Candle', 
-        'Home & Office', '', 18.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2b377d30-f917-4309-8c27-acc41236e03b', 'Clean Linen Candle', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 4.08, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('439c2733-84a9-4283-a346-2cb8c4ad22f7', 'Maple Butter', 'Village Candle', 
-        'Home & Office', '', 16.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('bf38cf49-e426-4f42-b466-51cb2f40e838', '2-in-1 Vanilla Passion Fruit + Hawaiian Breeze Candles - 2 ct', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 8.16, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('8ddf102d-bd21-4956-8503-9c476f520505', 'Cashmere Woods Candle', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 4.08, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ab847a9a-206b-41af-aa8f-7dbb6a943612', 'Scented Warm Apple Pie', 'Village Candle', 
-        'Home & Office', '', 26.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('fac1331b-b145-42da-8ddc-e2aefb991310', 'Spiced Pumpkin', 'Village Candle', 
-        'Home & Office', '', 16.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('861f4546-a858-44ea-8b20-b888a0b54b5c', 'Scented Mulled Cider', 'Village Candle', 
-        'Home & Office', '', 21.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('86dde04a-eeb1-4497-809f-07fcccab2bdf', 'Scented Spiced Pumpkin', 'Village Candle', 
-        'Home & Office', '', 21.2, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('5a0b25a2-ed59-4ec1-aa17-f8bc45d759c3', 'Scented Balsam Fir', 'Village Candle', 
-        'Home & Office', '', 26.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f694b945-b92e-4214-80d7-9ae4b7a99047', 'Comforting Cashmere Woods 3 Wick Candle', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 6.8, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('579b3803-927b-4717-ad40-17c8b3e23467', 'Midsummer''s Night', 'Yankee Candle', 
-        'Home & Office', '', 14.25, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('2cf429fd-7189-475f-a7fc-0a8c2a393a69', 'Sky & Sea Salt Single Wick Candle - 2 ct', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 8.16, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a3691a19-eb2c-4a28-a010-34099eff7b85', 'Tranquil Lavender & Aloe Candle - 2 ct', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 8.16, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('78878459-2cbd-421d-9e56-06da1dfd364a', 'Scented Mulled Cider', 'Village Candle', 
-        'Home & Office', '', 13.7, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('42658bca-5583-43ce-a462-a116b5de173b', 'Scented Apple Pumpkin', 'Village Candle', 
-        'Laundry, Paper & Cleaning', '', 1.0, 'EA');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('e96d8889-c79b-4e87-8245-a553a59cce45', 'Gentlemen''s Collection Scented Bergamot & Amber', 'Village Candle', 
-        'Home & Office', '', 14.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('f91e2b40-36d1-4c51-8321-bbd4ffcbcb29', 'Scented Apples & Evergreen', 'Village Candle', 
-        'Home & Office', '', 19.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('738682ab-fc80-4afe-a80a-7340ff9dcfa3', 'Gentlemen''s Collection Spiced Tobac & Honey Scented', 'Village Candle', 
-        'Home & Office', '', 14.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ed7f79c4-2d1a-4da8-b128-9ff651628ae1', 'Mind & Body Dream + Inspire Raspberry Coconut Candle', 'Chesapeake Bay', 
-        'Laundry, Paper & Cleaning', '', 8.8, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('b41ea99a-6c59-4a6e-a752-f47434b7394a', 'Mind & Body Balance + Harmony Water Lily Pear Candle', 'Chesapeake Bay', 
-        'Home & Office', '', 8.8, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('32eb0899-5972-4e5b-8f8b-b9ca74e7295a', 'Mind & Body Relax + Restore Sage Peppermint Candle', 'Chesapeake Bay', 
-        'Home & Office', '', 8.8, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('82d5ae5a-c9d8-4f63-83ae-e3594e7cb8b2', 'Fresh Collection Juniper & Teak 3 Wick Scented Candle - 2 ct', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 6.8, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('599d9351-f054-4e66-90a4-e1e0692a42c8', 'Signature Collection Vanilla Creme Brulee', 'Yankee Candle', 
-        'Home & Office', '', 4.3, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('e5626f88-6ad7-40ff-a55f-0a606106b68f', '2-in-1 Sheer Vanilla Embrace & Apple Cinnamon Candle', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 4.08, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('4745287e-748f-40e9-9e7a-bb85ed40263e', 'Soy Blend Vanilla Cream', 'Tuscany Candle', 
-        'Home & Office', '', 14.0, 'OZ JAR');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3cdc7538-465c-4d4f-b86c-4f643207021d', 'Smooth Bourbon & Oak Candles - 2 ct', 'Glade', 
-        'Laundry, Paper & Cleaning', '', 8.16, 'OZ PKG');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3e2374bc-cb7c-457e-970f-3c7eaf041b6f', 'Bell Peppers', 'Green', 
-        'Produce', 'https://hannaford.com/product/green-bell-peppers-1-ea/118615', 1.0, 'ea');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('1e7997b8-2300-4d8f-a069-5cf2f3cc0be7', 'Green Grapes', 'Seedless', 
-        'Produce', 'https://hannaford.com/product/seedless-green-grapes-apx-2.25-lb/333413', 2.25, 'lb');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('3be34829-8430-4421-8827-4153700fea99', 'Potatoes', 'Sweet', 
-        'Produce', 'https://hannaford.com/product/sweet-potatoes-1-ea/386983', 1.0, 'ea');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('67a804e1-92c0-4fa2-85bc-685f0c62f487', 'Red Grapes', 'Seedless', 
-        'Produce', 'https://hannaford.com/product/seedless-red-grapes-apx-2.25-lb/333414', 2.25, 'lb');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('c76aba3f-c4c4-4c72-98c2-ee7618b7f7e4', 'Seedless Cucumber', 'Hot House', 
-        'Produce', 'https://hannaford.com/product/hot-house-seedless-cucumber-1-ea/118598', 1.0, 'ea');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('208ddf6a-94ec-4959-8f71-6449af6f43d0', 'Lemons', 'Hannaford', 
-        'Produce', 'https://hannaford.com/product/lemons-1-ea/118609', 1.0, 'ea');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('04678e8b-a188-4301-ab11-37669fb7f0fe', 'Nature''s Promise Greenhouse Grown Crunchy Green Leaf Lettuce', 'Fresh', 
-        'Produce', 'https://hannaford.com/product/natures-promise-greenhouse-grown-crunchy-green-leaf-lettuce-4-oz-pkg/383375', 4.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0ca4cb2d-7c19-475e-88b6-f2cc8309afd4', 'Sprouts', 'Brussels', 
-        'Produce', 'https://hannaford.com/product/brussels-sprouts-apx-1-lb/118677', 1.0, 'lb');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('43827ca7-083a-4fa9-a3a0-437d4004ad7c', 'Onions', 'Red', 
-        'Produce', 'https://hannaford.com/product/red-onions-1-ea/386976', 1.0, 'ea');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('0d5937f2-d17e-4a92-a21e-c6a2498450c1', 'Mandarins', 'Hannaford', 
-        'Produce', 'https://hannaford.com/product/mandarins-3-lb-bag/199577', 3.0, 'lb');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9d0cec18-70c6-4c32-96b4-ad832f1d1ba2', 'Taste of Inspirations Cold Pressed Apple Cider Fresh', 'Fresh', 
-        'Produce', 'https://hannaford.com/product/taste-of-inspirations-cold-pressed-apple-cider-fresh-1-2-gallon/356074', 2.0, 'g');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('662c7132-0581-4988-bb6f-35849fa3eac3', 'Berry Medley', 'Small', 
-        'Produce', 'https://hannaford.com/product/small-berry-medley-apx-3-4-lb/371320', 4.0, 'lb');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('94abe264-ad83-404c-bc4b-4207aaa9e74d', 'Chef Salad', 'Hannaford', 
-        'Deli & Prepared Food', 'https://hannaford.com/product/hannaford-chef-salad-7-oz-pkg/381025', 7.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('78e7bf35-7242-4509-9bd5-ea7123abf296', 'Sweetest Batch Blueberries', 'Driscoll''s', 
-        'Produce', 'https://hannaford.com/product/driscolls-sweetest-batch-blueberries-11-oz-pkg/270787', 11.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('a7dbd5cb-1a60-4c89-89b1-f279db27f889', 'Nature''s Promise Greenhouse Grown Sweet Baby Butter Lettuce', 'Fresh', 
-        'Produce', 'https://hannaford.com/product/natures-promise-greenhouse-grown-sweet-baby-butter-lettuce-4-oz-pkg/383381', 4.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('ec6e5526-0071-41f7-9ed0-f2e2409f2e0e', 'Sugar Snap Peas Microwaveable Bag', 'Hannaford', 
-        'Produce', 'https://hannaford.com/product/hannaford-sugar-snap-peas-microwaveable-bag-8-oz-bag/351626', 8.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('9ed5b76a-9188-4a46-9718-626c1e816d91', 'Chicken Caesar Salad', 'Hannaford', 
-        'Deli & Prepared Food', 'https://hannaford.com/product/hannaford-chicken-caesar-salad-5-oz-pkg/380152', 5.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('212bdb89-137f-461c-8281-f160e1120ff0', 'Nature''s Promise Greenhouse Grown Spring Mix Lettuce', 'Fresh', 
-        'Produce', 'https://hannaford.com/product/natures-promise-greenhouse-grown-spring-mix-lettuce-4-oz-pkg/383379', 4.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('fb6f96fa-3cf6-435d-b485-04a96cb219ed', 'Nature''s Promise Greenhouse Grown Red & Green Leaf Lettuce', 'Fresh', 
-        'Produce', 'https://hannaford.com/product/natures-promise-greenhouse-grown-red-green-leaf-lettuce-4-oz-pkg/383377', 4.0, 'oz');
-INSERT INTO Item (id, name, brand, category, product_url, size, unit)
-VALUES ('4ab759b0-5f3d-4455-a46d-25ac5ca4746b', 'Whole Mushrooms', 'Hannaford', 
-        'Produce', 'https://hannaford.com/product/hannaford-whole-mushrooms-12-oz-pkg/363961', 12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('db177b0c-cd54-4460-bb80-1377db92c2f2', 'Original Kettle Chips', 'Clancy''s', 
+        'Chips, Crackers & Popcorn',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e6760b34-66d5-4c60-8dbe-68758cd7e80d', 'Blueberry Breakfast Biscuits', 'Benton''s', 
+        'Cookies & Sweets',  8.8, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e41f5a58-849d-4f15-ba87-e4083998b6f3', 'Organic Unrefined Coconut Oil', 'Simply Nature', 
+        'Oils & Vinegars',  14.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('617cb80c-96e2-4961-bec6-f3264e0eb561', 'Plain Whole Milk Greek Yogurt', 'Friendly Farms', 
+        'Yogurt & Sour Cream',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('efbc4488-f03c-4b71-a757-802054b85513', 'Wild Caught Frozen Pink Salmon', 'Fremont Fish Market', 
+        'Frozen Meat, Poultry & Seafood',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('27e1fc35-d335-4f8b-8d52-d9da47ba7ff5', 'Parsley Flakes', 'Stonemill', 
+        'Spices',  0.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('092bfaa3-bd2e-4dcc-a96b-489c4e4546f3', 'Italian Meatballs', 'Bremer', 
+        'Mother''s Day Meal Ideas',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('705fc9f9-d173-4beb-9723-39bd674b8dea', 'Garlic Powder', 'Stonemill', 
+        'Spices',  3.12, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a3fe9f2d-2a9f-489a-8050-166983349f9f', 'Nonfat Plain Greek Yogurt', 'Friendly Farms', 
+        'Healthy Food & Snacks',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4e031df5-e44f-4e06-a88c-9d898bc6b889', 'Organic Whole Wheat Spaghetti', 'Simply Nature', 
+        'Pasta, Rice & Grains',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fedcdbe0-4511-4cbc-9211-5333773581b8', 'Cinnamon Raisin Bagels', 'L''oven Fresh', 
+        'Back to School Breakfast',  20.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('48bcfb22-4334-4cc6-99a7-eae1245fbe36', 'Brown Gravy Mix', 'Stonemill', 
+        'Sauces & Salsa',  0.87, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('68f34a63-b028-4a63-8824-e9ea9769c41f', 'Reduced Sodium Taco Seasoning Mix', 'Casa Mamita', 
+        'Spices',  1.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8da3eff1-57a3-4b06-b679-7cf570215bf3', 'Crispy Rice Cereal', 'Millville', 
+        'Cereal & Oatmeal',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b08b2071-ffe9-4da9-8f82-f98489984ac3', 'Roasted Garlic Balsamic Vinaigrette Dressing', 'Specially Selected', 
+        'Condiments & Dressings',  NULL, 'Not specified');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d8744e20-629c-49ce-8228-26c627c228dc', 'French Dark Roast Coffee Pods', 'Barissimo', 
+        'Coffee',  12.0, 'count');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7ab895e0-21c1-4ea1-8bee-3041aece4848', 'Ranch Salad Dressing and Seasoning Mix', 'Tuscan Garden', 
+        'Spices',  1.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0258ebd1-4d1c-4d89-8d2a-7bb7bf1ab784', 'Chocolate Chip Cookies', 'Benton''s', 
+        'Cookies & Sweets',  13.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3ce5561c-1283-45f7-ad27-a35959188a80', 'Roasted Red Pepper Topped Hummus', 'Park Street Deli', 
+        'Healthy Food & Snacks',  10.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0c4cb5c1-6a00-4c53-8782-323bcec8f91b', 'Bratwurst', 'Beer', 
+        'Fresh Sausage',  19.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b2680c55-e6d1-451f-81aa-4eec05996632', 'Raspberry Strip Danish', 'Bake Shop', 
+        'Easter Brunch',  14.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('44812c68-4e4d-405e-b2df-c4c2a13bb30f', 'Italian Salad Dressing and Seasoning Mix', 'Tuscan Garden', 
+        'Spices',  0.7, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ddce0a30-721f-422e-a654-65ed72c7809f', 'Spaghetti', 'Reggano', 
+        'Pasta, Rice & Grains',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('059acf73-ac6e-4e49-993a-ce5ecf3fcc08', 'Medium Cooked in Shell Shrimp', 'Fremont Fish Market', 
+        'Frozen Meat, Poultry & Seafood',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('cb719244-040a-4436-a7b6-3092507c202b', 'Ultimate Cheeseburger Cheesy Skillet Dinner Kit', 'Reggano', 
+        'Boxed Meals & Side Dishes',  12.8, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('11f4c695-13c8-4907-a397-198c333d7a3d', 'Large Cooked Shrimp', 'Fremont Fish Market', 
+        'Chefs Best Excellence Award',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ebbc4cf6-359e-4897-a256-1bd0b710ad16', 'Value Pack Cod Fillets', 'Fremont Fish Market', 
+        'Frozen Meat, Poultry & Seafood',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9d1a7a14-c1f0-44da-bd7e-33cb5680936d', 'Flounder Fillets', 'Fremont Fish Market', 
+        'St. Patrick''s Day',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f09c517d-101e-4f29-8aec-e720b3eafb37', 'Spicy Hummus', 'Park Street Deli', 
+        'Healthy Food & Snacks',  10.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('80897074-8a48-4436-b1fb-c1e2635e208f', 'Olive Tapenade Hummus', 'Park Street Deli', 
+        'Healthy Food & Snacks',  10.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4e5193e8-1453-4aac-bd7e-4c5f79d5971a', 'Spinach Parmesan Tzatziki Dip', 'Park Street Deli', 
+        'Dorm Room Meals & Snacks',  10.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('25640b66-5678-4cbd-8244-5e16d3cd4bb1', 'Cucumber Dill Tzatziki Dip', 'Park Street Deli', 
+        'Dorm Room Meals & Snacks',  10.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('44a8d109-bc1b-499f-82f6-5184d3c60f14', 'Swiss Almond Spreadable Cheese Cup', 'Happy Farms', 
+        'Seasonal',  12.9, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('66d00708-2847-4847-ba4a-698b272c728e', 'Milk Chocolate Butter Cookies', 'Specially Selected', 
+        'Cookies & Sweets',  4.41, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('814b5bd5-81d2-488d-8d4e-9360988759be', 'Sharp Cheddar Cheese Spread', 'Emporium Selection', 
+        'Mother''s Day Meal Ideas',  6.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f689c25a-7cc7-44ea-bfe6-6e0c4c5093ea', 'Garlic & Herb Gourmet Spreadable Cheese', 'Emporium Selection', 
+        'Mother''s Day Meal Ideas',  6.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2c02a9fa-77c0-495f-a096-af61d88b9d16', 'Peppercorn Parmesan Cheese Spread', 'Emporium Selection', 
+        'Mother''s Day Meal Ideas',  6.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('23c2571e-f29a-47b6-8ee5-191c4929e909', 'Pre Sliced Hot Dog Buns', 'L''oven Fresh', 
+        'Cookout Essentials',  11.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fd7d519b-e74e-41c6-afbe-d90c484bdf8c', 'Steamable Frozen Asparagus Spears', 'Season''s Choice', 
+        'Frozen Vegetables',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('42413112-5be5-472b-8ffc-a2b5b739d433', 'Mint Chocolate Chip Ice Cream', 'Sundae Shoppe', 
+        'Frozen Ice Cream & Desserts',  NULL, 'Not specified');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ed2218e6-841f-46f9-a26e-0fd462173ebe', 'Classic Hummus Single Serve Mini Cups', 'Park Street Deli', 
+        'Dips & Hummus',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('201c4da9-a6d5-455d-9440-65d3ab0c1f77', 'Uncured Beef Franks', 'Parkview', 
+        'Grilled Meat & Seafood',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5e2a6983-fb76-4497-9692-411d68f2db44', 'Honey Graham Squares', 'Millville', 
+        'Cereal & Oatmeal',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('427fe77c-f2d2-43f0-a779-0b9b3abe0c3f', 'Organic Apple Cider Vinegar', 'Simply Nature', 
+        'Oils & Vinegars',  NULL, 'Not specified');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f15d4a7e-e5f2-4027-9a36-c40e0c9ad078', 'Condensed Cream of Chicken Soup', 'Chef''s Cupboard', 
+        'Soups & Broth',  10.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e70da2c3-6f73-460d-9a0c-0df05391d961', 'Fat Free Beef Broth', 'Chef''s Cupboard', 
+        'Soups & Broth',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('31962d72-497c-4382-abd3-b278d22ad642', 'Fat Free Beef Cooking Stock', 'Chef''s Cupboard', 
+        'Soups & Broth',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7c8657cd-7cbb-4b02-a005-143fd3ead9fe', 'Organic Low Sodium Chicken Broth', 'Simply Nature', 
+        'Soups & Broth',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('dc639576-f8fe-4757-86f8-4d9917a924ea', 'Almond', 'Southern Grove', 
+        'Trail Mix',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('42e4b4cb-3bf7-46ce-803e-878b685bf3bd', 'Sweet & Salty Trail Mix', 'Southern Grove', 
+        'Trail Mix',  8.0, 'count');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a7e4d05c-75c0-47aa-96c3-dd4f6d6cf1cd', 'Chicken Breast Nuggets', 'Kirkwood', 
+        'Halloween Themed Food',  29.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('98074393-af6d-49d5-b15f-e14a50ba9d9b', 'Frozen Steam Cut Green Beans', 'Season''s Choice', 
+        'Frozen Vegetables',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('48a7b61b-fba8-4bbb-916d-70884c349010', 'Steamable Frozen Mixed Vegetable', 'Season''s Choice', 
+        'Frozen Vegetables',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b6b6c563-c798-43d0-ad82-8d6c56181ee9', 'Steamable Frozen Sweet Garden Peas', 'Season''s Choice', 
+        'Frozen Vegetables',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('10de16c7-21f0-4c4b-8618-7991d4fd9207', 'Jumbo EZ Peel Raw Shrimp', 'Fremont Fish Market', 
+        'Frozen Meat, Poultry & Seafood',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('38afe0ee-c83d-456f-8bde-b7007e08cedb', 'Jumbo Cooked Shrimp', 'Fremont Fish Market', 
+        'Chefs Best Excellence Award',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('187c8126-5fe4-48ce-8c41-550c91033f38', 'Organic Garlic Powder', 'Simply Nature', 
+        'Spices',  2.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8a9ae54a-6c7c-42bd-adb3-83cbebd07997', 'Classic Single Guacamole - 6 Mini Cups', 'Park Street Deli', 
+        'Dorm Room Meals & Snacks',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4c10d690-1b0c-43e2-9417-5484463ab1fd', 'Red Pepper Hummus Single Serve Mini Cups', 'Park Street Deli', 
+        'Dips & Hummus',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3910a284-52c6-427d-9807-b1ab49855e09', 'Fair Trade Organic Guatemalan Light Roast Coffee Pods', 'Simply Nature', 
+        'Good Housekeeping Nutritionist Approved Emblem',  12.0, 'count');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('84623346-aa5d-483b-b351-38968bb02e3b', 'Original Sloppy Joe Sauce', 'Brookdale', 
+        'Sauces & Salsa',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8a22ce7b-5c71-439c-bea0-6b58e5ed38b0', 'Casera Amarillas Tostadas', 'Pueblo Lindo', 
+        'Tortillas & Flatbread',  12.8, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ed448d61-fe5e-4fa3-afaf-da6dc6c1258f', 'Flour Tortillas', 'Pueblo Lindo', 
+        'Back to School Lunches',  17.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c0d47e13-dbc7-4363-bcc4-d726f9a4593b', 'USDA Organic Black Beans', 'Simply Nature', 
+        'Canned Foods',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('101c2330-fbe1-40c6-b0c3-24e1dd6b811e', 'Fajita Flour Tortillas', 'Pueblo Lindo', 
+        'Tortillas & Flatbread',  23.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f574b259-c79f-406a-b8a5-91280605f94d', 'Vitality Cereal Vanilla Almond', 'Fit & Active', 
+        'Cereal & Oatmeal',  12.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6c5d4a0a-f1cc-4e47-aa74-6b5ea3189804', 'Mini Chocolate Bars', 'ChoceurMilk', 
+        'Cookies & Sweets',  1.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ed0d51a5-6823-4d45-bca1-0f236de06051', 'Chocolate Chunk Cookies', 'Bake Shop', 
+        'Halloween Themed Food',  14.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('154d4e07-4b19-4c5d-be77-8cc6c0c193fa', 'Organic Blue Corn Tortilla Chips', 'Simply Nature', 
+        'Chips, Crackers & Popcorn',  8.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('980d765c-e132-4d9d-80a2-10ae847c7f4c', 'German Style Sauerkraut', 'Deutsche Küche', 
+        'Condiments & Dressings',  24.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f1ae711b-916a-4e4b-ba24-f206bd2ac261', 'Aluminum Foil', 'BoulderRegular', 
+        'Paper & Plastic Products',  NULL, 'Not specified');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('021bab26-de59-4e68-95f9-efe147de3d25', 'Mini Bear Chocolate Grahams Snack Packs', 'Benton''s', 
+        'Cookies & Sweets',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e65dd5bb-d76c-47fd-bacb-403f32ba9935', 'Cranberry Almond Chicken Salad Mini Cups', 'Park Street Deli', 
+        'Dorm Room Meals & Snacks',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f5bdddf8-00be-4b9c-a5e3-3f1817132dec', 'Cranberry Almond Chicken Salad', 'Park Street Deli', 
+        'Cookout Essentials',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('39fcfbcb-e162-4f97-a699-ff0b2fab27d1', 'Medium Fresh Cut Salsa', 'Park Street Deli', 
+        'Sauces & Salsa',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9b1802a4-1ee4-498f-b740-91685bd5241e', 'Jubilee Assortment Olives', 'Park Street Deli', 
+        'Charcuterie',  7.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4a9f7454-ed4d-4c82-b89d-74ee11374171', 'HE Liquid Laundry Detergent', 'TandilOriginal', 
+        'Laundry',  NULL, 'Not specified');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2a221741-7ac4-41dc-9ce5-18e7afdaeb36', 'Chocolate Protein Meal Bars', 'ElevationDouble', 
+        'Protein, Granola & Snack Bars',  6.0, 'count');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('566b404c-3e41-408e-ad83-a85a7a502266', 'Low Sodium Sprouted 7 Grain Bread', 'Simply Nature', 
+        'Healthy Food & Snacks',  7.0, 'g');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('458aee5a-974a-4af1-9de5-0305b54cb414', 'Nonfat Vanilla Yogurt', 'Friendly Farms', 
+        'Yogurt & Sour Cream',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c57349c1-40b2-4c0d-90fd-ffe1d459967e', 'Drawstring Kitchen Bags', 'BoulderTall', 
+        'Paper & Plastic Products',  45.0, 'count');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('71bfc40b-a199-49c9-b379-e6ade63a9c12', 'Fat Free Vegetable Cooking Stock', 'Chef''s Cupboard', 
+        'Soups & Broth',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c4878a17-990d-472c-bff7-30843bfdeb1e', 'Teriyaki Stir Fry Sauce', 'Burman''s', 
+        'Sauces & Salsa',  14.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('03b39184-89b7-4d77-be80-1ae88d4a7191', 'New Orleans Style Jambalaya Rice Mix', 'Earthly Grains', 
+        'Boxed Meals & Side Dishes',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3802f1cb-9e66-43ff-9640-7e3ba43bbd42', 'Pineapple Chunks in 100% Pineapple Juice', 'Sweet Harvest', 
+        'Canned Foods',  20.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6aca59a0-5ace-4d7c-93c2-2b486dc5d129', 'Organics Apple Sweet Potato Baby Food Puree', 'Little Journey', 
+        'Baby Food & Snacks',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('329ee0e3-6326-4e76-b1d9-27e994b3f40f', 'Apple Broccoli Pear Baby Food Puree', 'Little Journey', 
+        'Baby Food & Snacks',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f1191ef1-196e-4bab-b468-f169da9d67cc', 'Pineapple Slices', 'Sweet Harvest', 
+        'Canned Foods',  20.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f06fb7f6-0051-43f9-b852-3d385f3edc3d', 'Dry Black Beans', 'Pueblo Lindo', 
+        'Pasta, Rice & Grains',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('45a8965b-85b9-4a5b-90fe-93097725a4da', 'Organic Multigrain Tortilla Chips', 'Simply Nature', 
+        'Chips, Crackers & Popcorn',  8.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1d38382e-d516-418f-ba56-fa95cee734cb', 'Butter Flavored Pancake Syrup', 'Millville', 
+        'Condiments & Dressings',  24.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ee8fcda7-352d-4e03-a19e-e9a41372a545', 'Oregano Leaves', 'Stonemill', 
+        'Spices',  0.75, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('be9ab4ba-181e-4e95-a013-bb622b144731', 'Organic Ground Cumin', 'Simply Nature', 
+        'Spices',  1.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a8f8deaf-703c-4fa0-9150-2934c2c84924', 'Apple Cider Donuts', 'Bake Shop', 
+        'Fall Food',  10.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('80691dbc-d340-4b51-9e65-ef114e9a7fbd', 'Organic Oats and Flax Instant Oatmeal Packets', 'Simply Nature', 
+        'Cereal & Oatmeal',  11.29, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d5780ab9-d422-4089-b029-aaadcb23ae53', 'Pure Olive Oil', 'Carlini', 
+        'Oils & Vinegars',  NULL, 'Not specified');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('cdee97f1-77c8-4676-86a2-a8a31edbd475', 'Family Size Smoked Ham', 'Lunch Mate', 
+        'Dorm Room Meals & Snacks',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f3c8984c-aa42-4ecd-b3ba-d2fc82095ce1', 'Honey Ham', 'Lunch Mate', 
+        'Dorm Room Meals & Snacks',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('59b7ba68-69ac-42a6-9b15-43621ea62747', 'Family Size Roast Beef', 'Lunch Mate', 
+        'Lunch Meat',  14.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('27ffbfb0-1086-4800-9f55-43e4365ab51e', 'Family Size Rotisserie Chicken Breast', 'Lunch Mate', 
+        'Lunch Meat',  1.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8ba70f5c-f826-43f2-b026-ccef09e8a61c', 'Family Size Lower Sodium Smoked Honey Ham in Lunch Meat Tub', 'Lunch Mate', 
+        'Healthy Food & Snacks',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0008f541-3ed8-4f88-acde-fd86bec0c878', 'Korma Curry Sauce', 'Burman''s', 
+        'Sauces & Salsa',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7960d317-8533-43d2-bd11-d95c799aa0ac', 'Cinnamon Applesauce Cups', 'Lunch Buddies', 
+        'Canned Foods',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('04c2205e-9074-4f8e-aad5-8a8bab2db5ce', 'Quick Oats', 'Millville', 
+        'Cereal & Oatmeal',  42.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('59fb3ce7-6296-4312-acb6-649fb2ce3f4a', 'Roasted Garlic Alfredo Sauce', 'Priano', 
+        'Sauces & Salsa',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('22c2cf56-123e-422b-a0c1-9f5ac9261870', 'California Raisins', 'Southern Grove', 
+        'Nuts & Dried Fruit',  20.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9d151ac8-44de-47d9-bd42-b6c7455fc9c9', 'Herb Chicken Tortelloni', 'Priano', 
+        'Valentine''s Day Dinner',  20.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b74cc794-1ab4-44f4-857d-0c030e19e48e', 'Pretzel Mini Twists', 'Clancy''s', 
+        'Chips, Crackers & Popcorn',  1.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('954afb22-74d5-4a4b-8118-d1414a2e0537', 'Mesquite Barbecue Kettle Chips', 'Clancy''s', 
+        'Chips, Crackers & Popcorn',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3b2528d8-a84b-4ed8-89e8-6e81b893efbc', 'Sardines in Mustard Sauce', 'Northern Catch', 
+        'Canned Foods',  3.75, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0ed15f0f-3d42-4561-aacb-f4c9c9d73cf9', 'Jalapeño Kettle Chips', 'Clancy''s', 
+        'Chips, Crackers & Popcorn',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('155dec2d-4b49-4330-88b7-8f5e5ee985b7', 'Beer Battered Cod Fillets', 'Fremont Fish Market', 
+        'St. Patrick''s Day',  13.1, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8c563430-f170-4d29-bd2b-5563d18a750e', 'Italian Seasoning', 'Stonemill', 
+        'Spices',  0.75, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0bb08794-180f-4619-a30a-4cdcec1c9354', 'Ground Cinnamon', 'Stonemill', 
+        'Spices',  2.37, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('840ce2ac-310b-4cc8-b674-0061d35fb5b9', 'Champagne Cheddar Cheese', 'Emporium Selection', 
+        'Seasonal',  5.3, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('eba3ef07-d0e6-413d-a798-d04c08158fa5', 'Sea Salt and Vinegar Kettle Chips', 'Clancy''s', 
+        'Chips, Crackers & Popcorn',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4dc049b5-8c2a-4091-a829-187b07c2442b', 'Four Cheese Homestyle Instant Mashed Potatoes', 'Chef''s Cupboard', 
+        'Boxed Meals & Side Dishes',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b7f6593a-5427-4144-a0b6-2ca1baf37232', 'Low-fat Strawberry Yogurt', 'Friendly Farms', 
+        'Yogurt & Sour Cream',  6.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('33ff66ec-e465-48ed-9c03-afd85fa23863', 'Apple Chicken Sausage', 'Never Any!', 
+        'Grilled Meat & Seafood',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7d8a96a7-acf1-4ea6-bcc7-704a1fd5a0ec', 'Blueberry Bagels', 'L''oven Fresh', 
+        'Back to School Breakfast',  20.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4f958e95-bcf6-4fd3-87d7-b6ea8b76a194', 'Organic Gala Apples', 'Nature''s Promise', 
+        'Produce',  2.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f19c9a71-35a4-48e4-9365-202952bfa8e3', 'Organic Fuji Apples', 'Nature''s Promise', 
+        'Produce',  2.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8cece01d-d302-4c83-b707-f4fa4acf5cbf', 'Organic Honeycrisp Apples', 'Nature''s Promise', 
+        'Produce',  2.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('20d675cd-be77-49ec-b080-517a2792b6db', 'Organic Granny Smith Apples', 'Nature''s Promise', 
+        'Produce',  2.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('11936f32-f439-40f7-a866-984769311705', 'Honeycrisp Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0ef69879-3a3e-4bfd-ace4-ba4e73d6a8e7', 'Cereal', 'Apple Jacks', 
+        'Breakfast',  8.9, 'OZ BOX');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ed4fa2da-b4cf-44c8-a456-3984b6a61eca', 'Granny Smith Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('906f6f8e-63c0-43ec-bd97-83cafaf61d93', 'Creations Apple Pie a La Mode Greek Yogurt Cup', 'Chobani', 
+        'Dairy & Eggs',  5.3, 'OZ CUP');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('af3103cb-855c-4612-822a-0f37b96757c0', 'Mcintosh Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d4f964a1-8097-4ce9-88ac-56d46a0b4d84', 'Pink Lady Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ba25f3d4-1144-40fe-857b-bbb7bc4cb991', 'Gala Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a83073e8-bb44-4863-986a-5784553c18d5', 'Fuji Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f94f39c0-557e-4484-98c5-6c6255d46096', 'Cortland Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('410d325d-18e6-4dd1-a97d-a36a76ddca0f', 'Red Delicious Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2f8eb569-e504-48d1-bd09-15876940c5e3', 'Cortland Apple Tote Bag', 'USDA Produce', 
+        'Produce',  NULL, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ed80d0a1-a465-42b6-888a-2b5688e26fbe', 'Macintosh Apple Tote Bag', 'USDA Produce', 
+        'Produce',  NULL, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('81022f0f-77f7-45c6-8e4f-d5e4eeaa37a4', 'Mcintosh Apples', 'USDA Produce', 
+        'Produce',  3.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a977c8df-0db4-45c7-89e2-3a1448d7970b', 'Honeycrisp Apples', 'USDA Produce', 
+        'Produce',  3.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('86aa8ea4-4e2e-4b6b-ade0-9db601876043', 'Gala Apple Tote Bag', 'USDA Produce', 
+        'Produce',  NULL, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c5411aa1-f5ac-4657-9ae1-bdb5acf8df6e', 'Granny Smith Apples', 'Hannaford', 
+        'Produce',  3.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9fa7b287-275b-4584-9936-044272f12484', 'Gala Apples', 'Hannaford', 
+        'Produce',  3.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4e78bd98-8734-4706-8d58-b7c56524956c', 'Gala Apples', 'USDA Produce', 
+        'Produce',  3.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e3f98019-ce32-4386-8e85-068c6b4e197f', 'Empire Apple Tote Bag', 'USDA Produce', 
+        'Produce',  NULL, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('596d762d-7f8a-4111-b42f-dba108405dc2', 'Pink Lady Apples', 'USDA Produce', 
+        'Produce',  3.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8f1bb711-2e6c-497b-b28b-da35c385e239', 'Granny Smith Apples', 'USDA Produce', 
+        'Produce',  3.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c5c51c9b-e3d3-45be-bc2a-8a9506cf8c0b', 'Fuji Apples', 'USDA Produce', 
+        'Produce',  3.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b538e983-e5f6-4631-acc1-96afef8e4c6d', 'Envy Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1c0fc96f-89e7-4ae5-8e0c-c7666eb26ce1', 'Cosmic Crisp Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0452f96b-119b-41a8-bea3-c1e08d48a80d', 'Macoun Apple Tote Bag', 'USDA Produce', 
+        'Produce',  NULL, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('27356132-adbf-4463-8d81-6240840cc7b3', 'SugarBee Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f30030bf-e10d-4e07-9b25-b9f8e1346701', 'Macoun Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('648c391e-318f-47b9-a337-21bf1bcd46b3', 'SweeTango Apples', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e071996c-2efb-4782-9637-eac9ca8eeb55', 'Kanzi Apple', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('039af4da-7c96-44b7-b44d-ad4f61ef9946', 'Kanzi Apples', 'USDA Produce', 
+        'Produce',  2.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1e95ee3d-c946-4af7-b9c7-e4f7620147ca', 'SweeTango Apples', 'USDA Produce', 
+        'Produce',  2.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ed715cb5-6e36-4f05-8517-8dc6a8e387a3', 'Early Red Apple Tote Bag', 'USDA Produce', 
+        'Produce',  NULL, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8e74f511-5744-4cf7-9f0b-e1c0c37e33ab', '100% Apple Juice', 'Hannaford', 
+        'Beverages',  64.0, 'OZ BTL');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e87752f2-d872-4efe-b47f-8aec02dd9385', '100% Apple Juice', 'Mott''s', 
+        'Beverages',  64.0, 'OZ BTL');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ea25bee6-9c37-4782-81f2-a402fefd3773', '100% Apple Juice Fresh Pressed No Sugar Added Natural', 'Mott''s', 
+        'Beverages',  64.0, 'OZ BTL');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fc73e1c3-b5d9-4fc8-9307-d62f40d2c004', '100% Apple Juice', 'Hannaford', 
+        'Beverages',  96.0, 'OZ BTL');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f914128c-d125-4c4d-81fb-93bd2c887cc0', 'Original Almondmilk Unsweetened Non-Refrigerated', 'Almond Breeze', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('36b15daf-af82-484d-91dd-5019690f080b', 'Reduced Fat Milk', 'Battenkill Valley', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6038d3f2-fe12-4816-96a9-686fe00f676b', 'Chocolate Almondmilk', 'Almond Breeze', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('75af8531-d3e4-4dee-b7d3-cf7c2ec3eb28', 'Lactose Free Whole Milk', 'Lactaid', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('62534056-a140-42cd-9305-dce17abaa8df', 'Vitamin C & D Whole Milk', 'Hannaford', 
+        'Dairy & Eggs',  1.0, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('88f38743-4a80-4f54-bcab-b908dbd673a7', '2% Reduced Fat Milk', 'Hannaford', 
+        'Dairy & Eggs',  1.0, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0c020083-54da-4ad7-83fc-8d3ad792aa48', 'Lactose Free Protein 2% Reduced Fat Milk', 'Lactaid', 
+        'Dairy & Eggs',  52.0, 'OZ CTN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fec29886-6234-4c97-9130-4e9af61f3a1b', 'Vitamin D Whole Milk', 'Hannaford', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7fa0c31d-2e19-418c-8eda-910ff5048f44', 'Lactose Free Calcium Enriched 2% Reduced Fat Milk', 'Lactaid', 
+        'Dairy & Eggs',  96.0, 'OZ JUG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a1c929b2-917d-4141-9405-1782100107b2', '1% Low Fat Milk', 'Hannaford', 
+        'Dairy & Eggs',  1.0, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3931ddcf-d3a8-46f6-8241-6975bb9427ec', 'Vanilla Almondmilk Unrefrigerated', 'Almond Breeze', 
+        'Dairy & Eggs',  1.0, 'QUART');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8be97469-c624-4ff1-8d07-bda7ab9995c1', '2% Reduced Fat Milk', 'Hannaford', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('14d39044-711d-462e-9eb0-6c3440fc8a74', 'Vanilla Almondmilk Unsweetened Non-Refrigerated', 'Almond Breeze', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('376eec7c-2349-4f6c-a3c3-8f315ea79cc3', '1% Low Fat Milk', 'Hannaford', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('28020589-31ac-4d2d-99f4-609e130eb127', 'Vitamin D Whole Milk', 'Hannaford', 
+        'Dairy & Eggs',  1.0, 'QUART');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d47e9470-18fb-4c55-a57b-76e67b7bd39a', 'Organic Vitamin D Whole Milk', 'Nature''s Promise', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b8a30f37-82c2-4a7c-a5d8-e5f986be2db6', 'Lactose Free Vitamin D Milk', 'Lactaid', 
+        'Dairy & Eggs',  96.0, 'OZ JUG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5aee7906-5549-4350-b75d-bc49e1996532', 'Fat Free Skim Milk', 'Hannaford', 
+        'Dairy & Eggs',  1.0, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('93d5b03e-bbee-41b2-8e96-c6608b3e23b3', 'Lactose Free Calcium Enriched Vitamin D Milk', 'Lactaid', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('093e2570-178d-424f-9039-6cc8a4c04822', 'Organic 2% Reduced Fat Milk', 'Nature''s Promise', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('67541d56-c0b3-422e-b710-9e9afda867c4', 'Unsweetened Original Almondmilk Unrefrigerated', 'Almond Breeze', 
+        'Dairy & Eggs',  1.0, 'QUART');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0ac250a7-823a-4e20-9576-7404f7b08a7e', 'Organic Vitamin D Whole Milk', 'Nature''s Promise', 
+        'Dairy & Eggs',  1.0, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('72fc67d8-7af1-4b10-a97b-3517ae364c27', 'Fat Free Skim Milk', 'Hannaford', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9f2961e2-250f-4a92-8cd6-c5e90fbd0e0f', 'Organic 1% Low Fat Milk', 'Nature''s Promise', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fd329336-0ddb-4e73-af5a-3637bcb5c4ba', 'Organic Vitamin D Whole Milk', 'Stonyfield', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('78299a95-be56-484e-a627-7b2d27a0a230', 'Organic 2% Reduced Fat Milk', 'Nature''s Promise', 
+        'Dairy & Eggs',  1.0, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7ad9eb0f-f77c-4ad0-beae-afc21561ecdf', 'Organic Fat Free Skim Milk', 'Nature''s Promise', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('47731937-5dc1-4c06-8694-b057508765d4', 'Fat Free Skim Milk', 'Hannaford', 
+        'Dairy & Eggs',  1.0, 'QUART');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4ef70e82-b264-4b38-b2e7-cd2623268fee', 'Grass-fed Whole Milk', 'Organic Valley', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0a9d75ac-67a6-4900-a2ac-b439ac589609', 'Vitamin D Whole Milk', 'Organic Valley', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c8ded2bf-00f7-4b00-a5e7-c6ae06db4046', 'Organic 2% Reduced Fat Milk', 'Stonyfield', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a4f82609-af26-4231-a11e-000986c534bb', 'Organic 1% Low Fat Milk', 'Nature''s Promise', 
+        'Dairy & Eggs',  1.0, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('360e13fb-27df-46cc-a30d-a5f2c361f623', 'Organic Grass-fed Whole Milk', 'Maple Hill', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c162f4d5-0665-4786-8371-b32761a6020f', 'Whole Milk', 'Battenkill Valley', 
+        'Dairy & Eggs',  1.0, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1706c170-9cd3-4571-a493-4a1b575339d8', 'Whole Milk', 'Battenkill Valley', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b472f6cf-2021-45e8-b267-6a8cc77953bb', '2% Reduced Fat Milk', 'Organic Valley', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('cbef4766-a291-4d11-b20b-15c25ed5bdb8', 'Organic Fat Free Skim Milk', 'Stonyfield', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f855421f-faf9-4ab9-b988-0bcc3110624d', 'Organic 1% Low Fat Milk', 'Stonyfield', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fbdbbec1-fc09-49c3-8bbd-9cc7f8f4b3cc', 'Vitamin D Whole Milk DHA Omega-3', 'Horizon Organic', 
+        'Dairy & Eggs',  NULL, 'GALLON');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('81ba61e5-3a29-4737-971d-80ab96d77869', '2% Reduced Fat Milk', 'Crowley', 
+        'Dairy & Eggs',  1.0, 'QUART');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fa615e59-21b1-4e8e-a867-06d85d8a087d', 'Yellow Bananas', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ec7debd3-e52c-4d63-b3ac-4f9281445e21', 'Green Bananas', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('05b40ba5-f05b-41fa-a2c1-ba845e3ae8e0', 'Organic Bananas apx 4-7 ct', 'USDA Produce', 
+        'Produce',  1.0, 'BUNCH');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('eb1aba67-e931-44f1-88a6-e058b42771b8', 'Green Plantains', 'USDA Produce', 
+        'Produce',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fb6f7df1-3f58-49e0-986d-69333b31e472', 'Fresh Pack Mild Banana Pepper Rings', 'Hannaford', 
+        'Condiments & Sauces',  16.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1b560b63-9eec-4197-a630-cda946cfe6d5', 'Low Fat Strawberry Banana on the Bottom Greek Yogurt Cup - 4 ct', 'Chobani', 
+        'Dairy & Eggs',  21.2, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6c4019ba-8a4f-4e4c-8b69-78ef49b39ebd', 'Banana Chips', 'USDA Produce', 
+        'Snacks',  10.0, 'OZ TUB');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c16d8e5f-4d48-451a-8f61-027c69acd24e', 'Fresh Pack Mild Banana Pepper Rings', 'Mezzetta', 
+        'Condiments & Sauces',  16.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5bf2cacd-29ea-4e48-9a0b-24d99516324f', 'Banana Chocolate Chunk Ice Cream', 'Hannaford', 
+        'Frozen',  1.0, 'PINT');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('51d792db-d4b3-4e7b-be9f-b7496f8b591c', 'Fresh Pack Hot Banana Pepper Rings', 'Hannaford', 
+        'Condiments & Sauces',  16.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1428b34b-7011-4c24-bd20-695154163d64', 'Mild Banana Pepper Rings', 'Mt. Olive', 
+        'Condiments & Sauces',  12.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0507095c-c47b-4bea-9fed-28430a270971', 'Delicatessen Style Mild Banana Pepper Rings', 'Mt. Olive', 
+        'Condiments & Sauces',  32.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d16d1ed1-4d00-4b02-89e2-16650e621f94', 'No Sugar Added Dried Fruit Banana Bites', 'Good Sense', 
+        'Snacks',  6.0, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('42dbe726-4879-44e8-bddd-6f08d2086a5d', 'Fresh Pack Hot Banana Pepper Rings', 'Mezzetta', 
+        'Condiments & Sauces',  16.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ab546775-93d7-41e2-a2d7-1ff2a857b57b', 'Banana Caramel Coconut HomeMaine Ice Cream', 'Gifford''s', 
+        'Frozen',  1.0, 'PINT');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1598ceca-07ef-4d6b-bd50-aaa2631b5a3d', 'Bakery Sliced Banana Bread', 'Hannaford', 
+        'Bread & Bakery',  14.0, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6b596c75-a9e1-454a-a396-d93a895fe098', 'Non Fat Strawberry Banana Yogurt Cup', 'Hannaford', 
+        'Dairy & Eggs',  6.0, 'OZ CUP');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5985d9e3-15b9-4098-85b3-1b40deb7df17', 'PRO 20g Protein Banana Cultured Ultra-Filtered Milk Yogurt Cup', 'Oikos', 
+        'Dairy & Eggs',  5.3, 'OZ CUP');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8ccf2d27-5f19-46f6-89d8-63914a80dc59', 'Low Fat Strawberry Banana Greek Yogurt Drink', 'Chobani', 
+        'Dairy & Eggs',  7.0, 'OZ BTL');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6b2e907f-7b75-4590-bb79-54735ac494fe', 'Organic Kids Low Fat Strawberry Banana Yogurt Pouch - 4 ct', 'Stonyfield', 
+        'Dairy & Eggs',  14.0, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a04f3df5-3ef0-4b76-ad9f-13330bcca10d', 'Non Fat Strawberry Banana Greek Yogurt Cup', 'Hannaford', 
+        'Dairy & Eggs',  5.3, 'OZ CUP');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('48260c5e-7b13-4a0b-8f42-ad663b6fc392', 'Original Low Fat Strawberry Banana Yogurt Cup', 'Yoplait', 
+        'Dairy & Eggs',  6.0, 'OZ CUP');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('45cf4f25-ee1a-4c47-8b48-2eb7ad326c01', 'Kids Low Fat Strawberry & Banana Yogurt Pouch - 4 ct', 'Siggi''s', 
+        'Dairy & Eggs',  14.0, 'OZ BOX');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('082f2d54-28e4-4764-aad2-58036c29e928', 'Gluten Free Peanut Butter Banana Dark Choc Breakfast Protein Bars 6ct', 'KIND', 
+        'Breakfast',  10.56, 'OZ BOX');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2f8b425d-baa4-42c5-9053-86bc3263298d', 'Extra Creamy Salted Caramel Banana Whole Milk Yogurt', 'Icelandic Provisions', 
+        'Dairy & Eggs',  4.4, 'OZ CUP');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9ecd741c-8046-4bfb-b26c-12ffe90880e1', 'Organic Banana Apple Berry & Pomegranate Gut Health Snack Squeeze', 'gutzy', 
+        'Soups & Canned Goods',  3.9, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('163e126d-3e96-4a23-a2d1-3639262a76f8', 'Organic Kids Low Fat Strawberry Banana Yogurt Smoothies - 6 ct', 'Stonyfield', 
+        'Dairy & Eggs',  3.1, 'OZ BTL');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('60ed1a7c-9d20-46e8-977d-26970366c5f3', 'Organics 2 Baby Food Bananas Raspberries & Oats', 'Happy Baby', 
+        'Baby',  4.0, 'OZ SQZ');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('31557c77-c640-4778-babb-9bda972704a9', 'Dairy Free Vegan Strawberry Banana Coconutmilk Yogurt Cup', 'So Delicious', 
+        'Dairy & Eggs',  5.3, 'OZ CUP');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c21551ce-06c4-4fb0-87bf-ad2d00eaaeb5', 'PRO 23g Protein Strawberry Banana Cultured Dairy Drink', 'Oikos', 
+        'Dairy & Eggs',  7.0, 'OZ BTL');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7a4c0442-068a-48e8-bc9c-c6a6f1a9011b', 'Organic 2 Baby Food Banana & Pumpkin', 'Nature''s Promise', 
+        'Baby',  3.5, 'OZ SQZ');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d90ea925-33c9-4d86-8ec9-d039f6f93480', 'Low Fat Strawberry Banana Skyr Yogurt', 'Siggi''s', 
+        'Dairy & Eggs',  5.3, 'OZ CUP');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fa1a1501-cebb-40f5-b639-b92a923669aa', 'Organic Dairy Free Strawberry Banana Swirl Smoothie', 'Once Upon a Farm', 
+        'Baby',  4.0, 'OZ SQZ');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ed1c0864-1cb5-4869-a508-8024e0a7e696', 'Organics Stage 4 Super Morning Bananas Blueberries Yogurt & Oats', 'Happy Tot', 
+        'Baby',  4.0, 'OZ SQZ');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('14af5eaf-d843-4c3a-ade8-7fcfb84e15d8', 'Organics Stage 4 Super Bellies Bananas Spinach & Blueberries', 'Happy Tot', 
+        'Baby',  4.0, 'OZ SQZ');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f5b6bea3-a598-40b2-a3c5-24682a55dfbc', 'Organics Love My Veggies Carrot Banana Mango & Sweet Potato', 'Happy Tot', 
+        'Baby',  4.22, 'OZ SQZ');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('66e13c95-7003-4d5c-866c-b600b3bd5ebc', 'Picked Fresh Sliced Bananas Frozen', 'Hannaford', 
+        'Frozen',  16.0, 'OZ BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9aeba663-7731-4903-97e3-564cd994e82a', 'Organic YoBaby Whole Milk Banana & Oat Yogurt Pouch - 4 ct', 'Stonyfield', 
+        'Dairy & Eggs',  13.6, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d045f3f6-c50c-4994-a672-c77d434a2066', 'Veggies Stage 2 Baby Food Zucchini Spinach & Banana', 'Beech-Nut', 
+        'Baby',  3.5, 'OZ SQZ');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9bb78705-691a-4466-a85c-67fdb684e761', 'Strawberry Banana Finest Yoghurt', 'Noosa', 
+        'Dairy & Eggs',  8.0, 'OZ TUB');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('99775ab5-b796-4033-a756-f92d1f2c74ea', 'Natural Grain Free Stews Variety Pack Wet Dog Food - 6 ct', 'Blue Buffalo', 
+        'Pets',  4.69, 'LB BOX');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9de4288c-bcd6-4a3e-80a5-fb6e3bbc2f95', 'IncrediBites Small Dogs Variety Adult Wet Dog Food - 12 ct', 'Purina Beneful', 
+        'Pets',  2.25, 'LB BOX');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e3d830fa-98bf-4bbe-85c3-9cc918657df0', 'Natural Small Breed Chicken & Brown Rice Adult Dry Dog Food', 'Blue Buffalo', 
+        'Pets',  5.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0a9c426a-e038-4dce-903f-34685858182d', 'Natural Life Protection Chicken/Brown Rice Recipe Adult Dry Dog Food', 'Blue Buffalo', 
+        'Pets',  5.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3a81d70a-6896-4b17-8554-e1d9ee50bf63', 'IncrediBITES Small Dogs Chicken Adult Dry Dog Food', 'Purina Beneful', 
+        'Pets',  3.5, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1cba349c-177a-4d3c-a09a-3d8575d93a6c', 'with Tender Bites Small Dogs Chicken & Steak Adult Dry Dog Food', 'PEDIGREE', 
+        'Pets',  3.5, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7de9352e-a5d9-4214-9b7b-b80141a30828', 'Natural Life Protection Chicken/Brown Rice Recipe Adult Dry Dog Food', 'Blue Buffalo', 
+        'Pets',  24.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1ece00e7-59b2-4596-afb9-cfc0ff7d80c7', 'IncrediBites Small Dogs Beef/Veggies Adult Wet Dog Food', 'Purina Beneful', 
+        'Pets',  3.0, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7ec111a3-bd25-47bc-bdb1-5794167e6074', 'Wilderness Natural Hi-Protein Chicken Small Dry Dog Food', 'Blue Buffalo', 
+        'Pets',  4.5, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('bf6ee340-1567-4d05-96b2-e54e225092ba', 'IncrediBITES Small Dogs Farm-Raised Beef Adult Dry Dog Food', 'Purina Beneful', 
+        'Pets',  3.5, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('eb25a78b-dbb6-46cc-b3f5-6823702b056e', 'Healthy Weight Chicken & Brown Rice Adult Dry Dog Food', 'Blue Buffalo', 
+        'Pets',  15.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8d1bf213-ae35-4cab-a9ac-f40cb07f820e', 'IncrediBITES Small Dogs Farm-Raised Beef Adult Dry Dog Food', 'Purina Beneful', 
+        'Pets',  14.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('28ad2171-f824-4da7-8a4e-08af0d368d7f', 'Life Protection Puppy Chicken & Brown Rice Dry Dog Food', 'Blue Buffalo', 
+        'Pets',  5.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('174b58c8-67ed-4828-9e10-0d665e00de49', 'IncrediBITES Small Dogs Chicken Adult Dry Dog Food', 'Purina Beneful', 
+        'Pets',  14.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('48b90a24-36eb-4ba4-aad1-dbd091bc4bf7', 'IncrediBites Small Dogs Beef/Wild Rice Adult Wet Dog Food', 'Purina Beneful', 
+        'Pets',  3.0, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('358c4650-def1-468f-8096-29033f60c6f5', 'Complete Essentials Chicken & Rice Adult Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('bd9ea01a-710d-4720-89d5-542835d77c69', 'Natural Homestyle Beef Dinner with Vegetables Adult Wet Dog Food', 'Blue Buffalo', 
+        'Pets',  12.5, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('df4b846e-905f-44fe-a036-d248697803ef', 'Grain Free Chicken Turkey & Salmon Adult Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7fc85be8-7199-4690-8992-c0c41c1c112f', 'Natural Homestyle Turkey Meatloaf with Vegetables Wet Dog Food', 'Blue Buffalo', 
+        'Pets',  12.5, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('60f701e8-6c45-484e-b579-9d4111f5d23a', 'Complete Chicken Turkey & Duck Adult Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('dc836a27-5bb2-43a9-955b-777d8ddce04c', 'Natural Large Breed Chicken & Brown Rice Adult Dry Dog Food', 'Blue Buffalo', 
+        'Pets',  24.0, 'LB BAG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('02ab48db-dbf9-4414-910c-2944b5aca1b6', 'Grain Free Chicken Beef Vegetable in Gravy Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6d388085-fb80-4a8d-a70a-f2434cd33ffd', 'Grain Free Turkey & Chicken Adult Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fb8858a6-cc50-40f7-9082-7a2770719b9c', 'Grain Free Turkey & Sweet Potato Stew Adult Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5cf73bae-49ca-4941-9424-68134554896e', 'Grain Free Chicken & Vegetable in Gravy Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('56b3e2a3-528e-45c3-8e62-53b5388cb25b', 'Tender Cuts in Gravy Chicken & Brown Rice Adult Wet Dog Food', 'Purina ONE', 
+        'Pets',  13.0, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('40a75523-3ed7-4f19-9474-fc7d70039343', 'Grain Free Chicken & Fish Dinner Adult Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d735df4a-b50e-4e26-bd9d-c585830a59dd', 'Grain Free Turkey & Potato Dinner Adult Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f440829d-ee0d-4fbb-9051-996a0feef7ab', 'Classic Ground Chicken & Brown Rice Adult Wet Dog Food', 'Purina ONE', 
+        'Pets',  13.0, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7ba7007c-844a-4561-be57-4d1bc645792f', 'Grain Free Chicken Dinner with Gravy Wet Dog Food', 'Nature''s Promise', 
+        'Pets',  3.5, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('20c19689-c5a3-42db-8504-2db1f9010dc4', 'Classic Ground Beef & Brown Rice Adult Wet Dog Food', 'Purina ONE', 
+        'Pets',  13.0, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a3f9f393-5bec-48e8-b1ea-96b0ceedaddb', 'Chopped Blends Salmon Sweet Potato Rice Adult Wet Dog Food', 'Purina Beneful', 
+        'Pets',  10.0, 'OZ TUB');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('93817bfe-4766-4959-a843-43c3d263408a', 'True Instinct Tender Cuts Beef & Salmon Adult Wet Dog Food', 'Purina ONE', 
+        'Pets',  13.0, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2c0c8e13-95a2-4cc7-9f56-52fe8072c109', 'Chopped Blends Turkey Sweet Potato Rice Adult Wet Dog Food', 'Purina Beneful', 
+        'Pets',  10.0, 'OZ TUB');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6b609065-82bf-43a3-9000-0c76887e535d', 'Filets in Gravy Prime Rib Flavor Adult Wet Dog Food', 'CESAR', 
+        'Pets',  3.5, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c17aec6d-92aa-4c5d-a478-17b0e65b83c2', 'Tender Cuts in Gravy Healthy Weight Lamb Adult Wet Dog Food', 'Purina ONE', 
+        'Pets',  13.0, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9938a5fd-d989-414e-bab8-5666890b7b72', 'Chopped Ground Dinner Filet Mignon Adult Wet Dog Food', 'PEDIGREE', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2651517f-4983-404d-9649-2d12c1d32322', 'Choice Cuts in Gravy Country Stew Adult Wet Dog Food', 'PEDIGREE', 
+        'Pets',  13.2, 'OZ CAN');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4d1fff01-1b5d-4970-8a5e-599de828c887', 'Top That Boost Wet Dog Food Topper Duck Recipe in Gravy', 'I and Love and You', 
+        'Pets',  3.0, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f6db5619-54e8-4bf9-81f6-7ea8b1090e5f', 'Nutrish Natural Chicken Muttballs Wet Dog Food', 'Rachael Ray', 
+        'Pets',  8.0, 'OZ TUB');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d849e6ca-eb0f-4112-b61d-10770e425263', 'Balsam & Cedar', 'Yankee Candle', 
+        'Home & Office',  14.25, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('97ded5a9-3f29-4f96-9218-51c75d53aabb', 'Balsam & Cedar', 'Yankee Candle', 
+        'Home & Office',  10.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2f736794-7dd1-437a-84a6-78f9b46bc5ce', 'Kitchen Spice', 'Yankee Candle', 
+        'Home & Office',  14.25, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8eb5c845-8fa5-4785-93cf-15b2fab7f58c', 'Welcoming Apple Cinnamon 3 Wick Candle', 'Glade', 
+        'Laundry, Paper & Cleaning',  6.8, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('dcb3e92c-d5bb-4e6b-abc4-3eb8c3bb9454', 'Lemon Lavender with Essential Oils', 'Yankee Candle', 
+        'Home & Office',  10.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c18e3d2f-ef9b-48be-9116-7be038d6af61', 'Midsummer''s Night with Essential Oils', 'Yankee Candle', 
+        'Home & Office',  10.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('89e646af-90c4-4ee5-ab19-18da19e121fd', 'Pink Sand with Essential Oils', 'Yankee Candle', 
+        'Home & Office',  10.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f789fd0f-046c-48fa-ab83-24383d07d8de', 'Macintosh', 'Yankee Candle', 
+        'Home & Office',  14.25, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('afdf6e27-f29a-4008-a996-4e76d7bf9de1', 'Sage & Citrus', 'Yankee Candle', 
+        'Home & Office',  14.25, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f6e0144a-d368-4c1e-a7ce-b2462e35fbc8', 'Apple Cinnamon Candle', 'Glade', 
+        'Laundry, Paper & Cleaning',  4.08, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('bdb6d354-4f3d-46c4-b0df-18eb1bda7bdc', 'Scented Apple Pumpkin', 'Village Candle', 
+        'Home & Office',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7e05fa08-28c8-4bae-9aec-818413c9c13e', 'Scented Balsam Fir', 'Village Candle', 
+        'Home & Office',  14.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0290e195-fed4-49a1-ab3e-a3da7adbeb82', 'Bayside Cedar', 'Yankee Candle', 
+        'Home & Office',  14.25, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2ccd0f96-10da-441d-a360-36c6c0adeb4a', 'Harvest Pumpkin', 'Tuscany Candle', 
+        'Home & Office',  18.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4dbb0bcb-5beb-4004-a63a-7a93636252c2', 'Clean Linen Candle', 'Glade', 
+        'Laundry, Paper & Cleaning',  4.08, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('bae39811-521c-4f64-b32b-826b447fabf0', 'Maple Butter', 'Village Candle', 
+        'Home & Office',  16.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('cd58d9f9-49a7-4743-9ccf-b36e86145a7e', '2-in-1 Vanilla Passion Fruit + Hawaiian Breeze Candles - 2 ct', 'Glade', 
+        'Laundry, Paper & Cleaning',  8.16, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c5c4608f-cd9b-4c93-894e-defcf15acd1f', 'Cashmere Woods Candle', 'Glade', 
+        'Laundry, Paper & Cleaning',  4.08, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('80cd38e8-821f-40db-9301-e14c191a5f0c', 'Scented Warm Apple Pie', 'Village Candle', 
+        'Home & Office',  26.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3c5a58bc-815f-4af9-ab88-c9d792c8145e', 'Spiced Pumpkin', 'Village Candle', 
+        'Home & Office',  16.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1ad372bf-c397-4bc9-9992-f3209a4447cc', 'Scented Mulled Cider', 'Village Candle', 
+        'Home & Office',  21.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3b70051c-26ba-476c-bfbf-3e05081a2602', 'Scented Spiced Pumpkin', 'Village Candle', 
+        'Home & Office',  21.2, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ca60bf27-0b2b-4475-85cc-2b036fb5b5a6', 'Scented Balsam Fir', 'Village Candle', 
+        'Home & Office',  26.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('62e81499-fd89-4f72-a263-53cc78e0bdb2', 'Comforting Cashmere Woods 3 Wick Candle', 'Glade', 
+        'Laundry, Paper & Cleaning',  6.8, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ff07b267-b31b-44af-af1d-d82b8757d2e4', 'Midsummer''s Night', 'Yankee Candle', 
+        'Home & Office',  14.25, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9a10b490-e208-46a6-b848-1974aaf597f4', 'Sky & Sea Salt Single Wick Candle - 2 ct', 'Glade', 
+        'Laundry, Paper & Cleaning',  8.16, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4dfc07f0-fde9-4719-b6a7-6cdd66b1c239', 'Tranquil Lavender & Aloe Candle - 2 ct', 'Glade', 
+        'Laundry, Paper & Cleaning',  8.16, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d20b627d-2f90-4807-a7cc-a2f0d54a3e42', 'Scented Mulled Cider', 'Village Candle', 
+        'Home & Office',  13.7, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d17b7402-9201-41df-8c17-948a8bd57125', 'Scented Apple Pumpkin', 'Village Candle', 
+        'Laundry, Paper & Cleaning',  1.0, 'EA');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e21a3c32-f251-4908-bd1b-61d2cb9e0ebd', 'Gentlemen''s Collection Scented Bergamot & Amber', 'Village Candle', 
+        'Home & Office',  14.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f0996450-293a-4eca-8ec6-4f1539a5cfd8', 'Scented Apples & Evergreen', 'Village Candle', 
+        'Home & Office',  19.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6e98fc51-7ad2-4b1f-9b31-19e43a165654', 'Gentlemen''s Collection Spiced Tobac & Honey Scented', 'Village Candle', 
+        'Home & Office',  14.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('efb2e697-5a24-42da-a733-03e699edb4bb', 'Mind & Body Dream + Inspire Raspberry Coconut Candle', 'Chesapeake Bay', 
+        'Laundry, Paper & Cleaning',  8.8, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0591c1b5-c1c1-42a2-b592-8301e3e71a4c', 'Mind & Body Balance + Harmony Water Lily Pear Candle', 'Chesapeake Bay', 
+        'Home & Office',  8.8, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('143d2040-e60d-4eee-a7eb-50fd1c34c598', 'Mind & Body Relax + Restore Sage Peppermint Candle', 'Chesapeake Bay', 
+        'Home & Office',  8.8, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1c292e6a-8092-493d-96c5-fe4a9be3e36e', 'Fresh Collection Juniper & Teak 3 Wick Scented Candle - 2 ct', 'Glade', 
+        'Laundry, Paper & Cleaning',  6.8, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d7f2b8c6-9aa5-4aea-bd43-126ea8f15dbe', 'Signature Collection Vanilla Creme Brulee', 'Yankee Candle', 
+        'Home & Office',  4.3, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5a87732e-51c6-48ca-a162-3902c4d2466c', '2-in-1 Sheer Vanilla Embrace & Apple Cinnamon Candle', 'Glade', 
+        'Laundry, Paper & Cleaning',  4.08, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3ab52cb5-5f55-46af-96fb-b77dae0e91bb', 'Soy Blend Vanilla Cream', 'Tuscany Candle', 
+        'Home & Office',  14.0, 'OZ JAR');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('38c7408f-35af-4077-a2d1-a5f30bcbe238', 'Smooth Bourbon & Oak Candles - 2 ct', 'Glade', 
+        'Laundry, Paper & Cleaning',  8.16, 'OZ PKG');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b539a1f8-06f3-426d-912e-6f47ccd9b7e5', 'That''S It Fruit Bars, Apple + Cherries, 12 Bars,  () Each', 'That''s', 
+        'Soup',  1.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a75ccd9a-4a7f-4ff5-ae78-4d2c10a4a25b', 'Fresh Lucy Glo Apples - S Bag', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2500553b-42a4-4549-bd64-33ad8035c05d', 'Goodrow 100% Apple Juice -  Bottle', 'good2grow', 
+        'Soup',  2.0, 'g');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ee7b1651-9c45-4916-ab83-8c415458abf0', 'Once Upon A Farm Green Kale & Apples Organic Kids'' Snack -  Pouch', 'Once', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('df421961-582c-48c2-9500-626e32e0bc6f', 'Nature''S Bakery Apple Crumble Bar - /6Ct', 'Nature''s', 
+        'Soup',  8.46, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ece1425b-1c8b-45a7-b022-807217aeef76', 'Martinelli''S Apple Juice - 1 Liter Bottle', 'Martinelli''s', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('09b46f4e-7dc1-4169-b635-c89bc3a76132', 'Bob Snail, Fruit Rolls, Apple-Pear, 10 Pouches,', 'Bob', 
+        'Soup',  0.35, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6f124954-7ae4-4596-9afe-a5f4d281d5c8', 'Gogo Squeez Applesauce And Fruit Puree, Apple Apple - /40Ct', 'GoGo', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1eec7f82-0dbe-41fe-9c49-6244df6e9cbb', 'Pure Organic Twisted Fruit Bites Peach Mango - /8Ct', 'Pure', 
+        'Soup',  5.6, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ae2974d0-edd8-4888-beef-180da301eb1d', 'Happy Baby Organics Clearly Crafted Stage 2 Apples, Guavas & Beets -', 'Happy', 
+        'Soup',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f1a8fb66-8e06-4e11-bd72-11fb1eb167b0', 'Brainiac Kids Brain Squeezers Applesauce Pouches With Omega-3S Variety Pack Apple, Strawberry And Cinnamon - /10Ct', 'Brainiac', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('360c9387-34ce-491b-ac1c-3d5a2a6d603d', 'Fruit Roll-Ups Betty Crocker Variety Fruit Flavored Snacks - /30Ct', 'Fruit', 
+        'Soup',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9b17c025-5dc3-407d-89b0-009835f36965', 'Organic Dried Unsweetened Apple Rings Snacks -  - Good & Gather™', 'Organic', 
+        'Soup',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2fe246db-dd82-4801-9495-9b7663b946eb', 'Fresh Navel Oranges -  Bag - Good & Gather™', 'Fresh', 
+        'Soup',  4.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('38cc78df-1f71-4015-b540-79f1e2ba1034', 'Mott''S 100% Original Apple Juice - 6Pk/ Bottles', 'Mott''s', 
+        'Soup',  8.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5f19c978-2359-4df0-84f4-a76a23885adf', 'Zoa Green Apple Zero Sugar Energy Drink -  Can', 'ZOA', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0b057245-b531-47f9-9324-55f8327f2bff', 'Gogo Squeez Applesauce On The Go Pouch -', 'GoGo', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('153dafd4-42be-461f-a1c7-83cc2400b0ff', 'Noka Superfood Smoothie Fruit Super Berry Single Pouch -', 'NOKA', 
+        'Soup',  4.22, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ac55dfb2-cae4-4b53-84b4-9b1ff094aec2', 'Sprout Foods Organic Blueberry Apple Wafflez Toddler Snacks -', 'Sprout', 
+        'Soup',  3.15, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8ae778c9-3960-4a33-bfb6-f12f5c5e4cf5', 'Kyvan Mild Honey Apple Salsa -', 'KYVAN', 
+        'Soup',  16.3, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ab95d7ca-0e1e-41c7-a3d8-586d6d0428a4', 'Kencko Mango Fruit Snaps - /5Ct', 'Kencko', 
+        'Soup',  1.8, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('91495f71-8daa-459f-a671-375161d49a35', 'Noka Organic Superfood Smoothie Super Berry + Immune Support Pouches - /4Pk', 'NOKA', 
+        'Soup',  16.9, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c2ad0c64-bee7-4654-9c92-d232c5e89c41', 'Crunch Pak Bluey Snacker With Peeled Apples, Fruit Snacks And Crackers -', 'Crunch', 
+        'Soup',  4.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1208ba4e-957e-4806-9313-b2d464360daa', 'Gogo Squeez Applesauce And Fruit Puree Apple Strawberry Pouches - /12Ct', 'GoGo', 
+        'Soup',  38.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('31806383-9f8c-450f-a87d-6c8b81481eea', 'Epic Bar, Beef Bar, Uncured Bacon + Apple,', 'Epic', 
+        'Soup',  1.3, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e3fe1d81-4164-41e0-abbe-62b1aa9e08ad', 'Mott''S Soft Baked Strawberry Filled Snack Bars - /5Ct', 'Mott''s', 
+        'Soup',  6.55, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2aab3345-2d19-4fb1-b702-33eb108d1f3c', 'Olipop Crisp Apple Soda -  Can', 'OLIPOP', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7d2eb935-304f-4061-8812-75be4e7f0907', 'Happytot Super Morning Organic Apples Cinnamon Yogurt & Oats With Superchia Baby Food Pouch -', 'HappyTot', 
+        'Soup',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('af93d143-ff56-4c04-b59d-6160e95e2ed2', 'North Coast Apple Sauce Honey Crisp 4 Pack Pouch Organic - Box Of 6 -', 'North', 
+        'Soup',  12.8, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9bb3aa76-6c8c-4b7e-a1b0-fae15f10c850', 'Fresh Pink Lady Apples -  Bag - Good & Gather™', 'Fresh', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8c003d48-72fa-4b4c-b613-bc6f41cf66c8', 'Mott''S Assorted Fruit Flavored Snacks Value Pack - /22Ct', 'Mott''s', 
+        'Soup',  19.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f7931f6e-d7a6-465a-a4f9-ac68ca2ac41f', 'Table Talk 4" Baked Apple Pies -', 'Table', 
+        'Soup',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8a191254-414c-4f02-b122-25896e02a8c4', 'Poppi Wild Berry Prebiotic Beverage -  Can', 'Poppi', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9781156d-6e48-4a7e-9b46-1729204f8d4d', 'Betty Crocker Fruit Shapes Lilo & Stitch Fruit Snacks - /10Ct', 'Betty', 
+        'Soup',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6a90e0ea-6e39-4404-9606-ac8c614b353b', 'Dally Apple Gel Snack -', 'Dally', 
+        'Soup',  5.07, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('731b807d-73f1-4573-98e5-789e1b0e9f07', 'Bare Baked Crunchy Fuji & Reds Apple Chips -', 'Bare', 
+        'Soup',  3.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('083bada2-01da-46fd-b38a-8a60c08905c0', 'Brothers-All-Natural Fruit Crisps, Fuji Apple, 12 Single-Serve Bags,  () Each', 'Brothers-All-Natural', 
+        'Soup',  0.35, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8274d5e9-9983-4a64-a77f-5b1275f8983e', 'Nut Cravings Sun Dried Apple Rings: Slices, Unsweetened And All Natural', 'Nut', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7bb0d9dd-b97c-4af5-9787-fcbc44df2112', 'Crunch Pak Organic Sweet Apple Slices - /5Ct', 'Crunch', 
+        'Soup',  11.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d3de1053-01c6-40cf-b9d1-d2843bd92a85', 'Martinelli''S Apple Juice - 4Pk/ Bottles', 'Martinelli''s', 
+        'Soup',  10.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fe60ab30-f872-4b6e-b69b-442086c59255', 'That''S It. Strawberry Banana Mini Fruit Bars - 10Ct/', 'That''s', 
+        'Soup',  7.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5dd0adcf-acd3-46d6-8c6f-5c2d6c12efe8', 'Disney Foodles Peeled Apples, Cheese & Crackers Crunch Pak -', 'Disney', 
+        'Soup',  3.85, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('22226f3b-5de9-43d3-912a-1bbd22a9bd96', 'Noka Superfood Smoothie Fruit Strawberry Pineapple Single Pouch -', 'NOKA', 
+        'Soup',  4.22, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5870aa86-5244-4031-9166-4eed3a77a19a', 'Fresh Gala Apple - Each', 'Fresh', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('cdbc25cd-a3e8-4534-a8c8-4b334971d255', 'Gushers Watermelon Sour Apple Fruit Snacks - /6Ct', 'Gushers', 
+        'Soup',  4.8, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('64ec728a-baa8-49f7-8197-e49e2de8ad57', 'Cove Green Apple Soda -  Can', 'Cove', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e0f99ce2-c506-4591-a36d-f47d35d1c6c5', 'Fresh Organic Gala Apples - S Bag - Good & Gather™', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('31140007-3e40-4138-a7dc-9694ca63a467', 'Brainiac Kids Brain Squeezers Applesauce Pouches Fruit And Veggie Variety Pack Apple Banana Carrot & Apple Strawberry Spinach - /10Ct', 'Brainiac', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('88981cf2-95d9-4a07-a60f-bcbd3e53d341', 'Fresh Organic Cosmic Crisp Apple - S', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2ca4264b-89ec-471c-ab28-1e7974eb801b', 'Bobo''S Stuff''D Apple Pie Bites -', 'Bobo''s', 
+        'Soup',  6.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c0dc0783-8587-4ae9-883f-3b692921550f', 'Noka Organic Superfood Smoothie Cherry Acai - Case Of 6/', 'Noka', 
+        'Soup',  4.22, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e55c04c2-5079-4d4a-a407-f95e716889a0', 'North Coast Apple Sauce Honey Crisp Organic - Pack Of 6 -', 'North', 
+        'Soup',  24.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('316bc9e4-561b-4669-a95b-d95422d174d2', 'Annie''S Organic Bees, Bugs & Butterflies Strawberry, Raspberry & Apple Fruit Snacks - /10Ct', 'Annie''s', 
+        'Soup',  7.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('15e79851-7247-4faf-916b-a4beab1188a9', 'Fresh Honeycrisp Apples -  Bag - Good & Gather™', 'Fresh', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('149ec6f2-5f4f-43a8-9939-b178d7122dcb', 'Smash Foods Concord Grape Superfood Jam -', 'Smash', 
+        'Soup',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8ab3efa3-42aa-4583-9b47-81e3e3fae1cd', 'Betty Crocker Bluey Fruit Flavored Fruit Snacks - /10Ct', 'Betty', 
+        'Soup',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7d693ca4-ba77-45aa-9a03-bfe8953ad4ab', 'Once Upon A Farm Green Kale & Apples Organic Kids'' Snack - 4Ct/ Pouches', 'Once', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1d179594-c235-4eff-9aca-eb96e06ee38b', 'Health-Ade Organic Vegan Pink Lady Apple Kombucha -', 'Health-Ade', 
+        'Soup',  16.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f5ae9d79-c52d-4716-993a-d0a6ffae0aa0', 'Bob Snail, Fruit Rolls, Apple-Sour Cherry, 10 Pouches,', 'Bob', 
+        'Soup',  0.35, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9222dffc-84fa-4f94-bd92-3696baf0cd41', 'Annie''S Organic Sweet & Sour Twists Fruit Snacks - /12Ct', 'Annie''s', 
+        'Soup',  7.68, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4366a293-8eb8-40c7-82d5-382df9979fb0', 'Stonyfield Organic Lowfat Cherry Apple Traditional Kids'' Yogurt Smoothies - /6Ct', 'Stonyfield', 
+        'Soup',  3.1, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7a073d9b-db0a-408d-8625-a318845375fa', 'Stonyfield Organic Lowfat Mango Apple Traditional Kids'' Yogurt Smoothies - /6Ct', 'Stonyfield', 
+        'Soup',  3.1, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3d9830f0-1d4a-4a81-a7b0-a384f3a822e7', 'Apple Pie Nutrition Bars - 5Ct - Good & Gather™', 'Apple', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f97e75ca-62dd-4e8f-b131-13095669a5aa', 'Organic Whole Grain Apple Cinnamon Fruit & Grain Bars - 6Ct - Good & Gather™', 'Organic', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('75330bf4-42aa-4aea-b0fe-9ad3d710e769', 'Mott''S Applesauce Cups - /6Ct', 'Mott''s', 
+        'Soup',  24.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('245b1287-80d4-4659-84cf-168b811ccbcb', 'Brainiac Kids Fruit Snacks With Omega-3S Mixed Fruit - /20Ct', 'Brainiac', 
+        'Soup',  12.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a8ff26f1-c645-4aa2-b89a-3f0fb20d48b3', '100% Apple Juice -  Bottle - Market Pantry™', '100%', 
+        'Soup',  64.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d8395eee-3da0-47c1-ae81-0ece215f49fc', 'Readywise Gluten Free Vegan Simple Kitchen Mango Freeze-Dried Fruit - /6Ct', 'READYWISE', 
+        'Soup',  6.3, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('499b37b5-912d-4c21-a8ef-28f9576ea1fa', 'Gogo Squeez Applesauce, Apple Cinnamon', 'GoGo', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2fbf710c-1413-48b5-9cab-dfd7a189c820', '100% Apple Juice From Concentrate -  Bottle Market Pantry™', '100%', 
+        'Soup',  96.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('865dd03e-c889-4643-9c02-e871d4387290', 'That''S It Fruit Bars, Apple + Mangoes, 12 Bars,  () Each', 'That''s', 
+        'Soup',  1.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8b8cfbde-4355-4c7d-a633-63e631c039ad', 'Olipop Crisp Apple Prebiotic Soda -  Can', 'OLIPOP', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3228fa4b-8c15-4b5c-a527-730863bfcac1', 'Welch''S Christmas Mixed Fruit Snacks - /26Ct', 'Welch''s', 
+        'Soup',  13.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('81c908d7-3a86-4340-b7d5-7399dac4ef2f', 'Naked Mighty Mango Fruit Juice Smoothie -', 'Naked', 
+        'Soup',  15.2, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9fca2482-969d-4a95-8c9a-763627ef9223', 'Kellogg''S Apple Jacks Breakfast Cereal', 'Kellogg''s', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('54995d2c-5d49-489a-bb91-73166252b05b', 'Mott''S Halloween Shapes Fruit Snacks - /28Ct', 'Mott''s', 
+        'Soup',  22.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7ac39970-da04-41e8-a09c-047aabfa637e', 'Bob Snail, Fruit Roll, Mango, 10 Pouches,', 'Bob', 
+        'Soup',  0.35, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3d202b49-99cf-45a0-9dd3-9e2333398559', 'Earth''S Best Organic Apple Toddler Snack Bars Sesame Street Sunny Days - 7Ct', 'Earth''s', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a3bca956-ccf6-45fd-9b19-2eff1917c398', 'Caramel Apple Whole Grain Baked Bar -  - Good & Gather™', 'Caramel', 
+        'Soup',  15.24, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5a922453-84eb-429b-a340-e533450a705a', 'Kyvan Hot Honey Apple Salsa -', 'KYVAN', 
+        'Soup',  16.3, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6d60bfc3-795d-447e-96e8-2a507262e4f9', 'Fresh Fuji Apples -  Bag - Good & Gather™', 'Fresh', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f5726567-f63c-42ae-8bca-580e0080d0f6', 'Welch''S Juicefuls Fusions Fruit Snacks - /20Ct', 'Welch''s', 
+        'Soup',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a0be26c2-6e0a-465c-93e3-f5968589470c', 'Del Monte Diced Pears In 100% Juice Fruit Cups 4Pk/', 'Del', 
+        'Soup',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e92cc089-287a-4078-9ced-2fe2b293e548', 'Marie Callender''S Frozen Dutch Apple Pie -', 'Marie', 
+        'Soup',  38.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4c4800a7-85c9-44f4-bff7-1b9722accbe6', 'Welch''S Holiday Fruit Snacks Mixed Fruit Peg -', 'Welch''s', 
+        'Soup',  2.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3c4e994b-d029-47a9-b1ee-778a0f7a88fd', 'Brainiac Kids Fruit Snacks With Omega-3S Berry Blast - /20Ct', 'Brainiac', 
+        'Soup',  12.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('46dfb35f-89e8-4ffb-94f7-a5176c06a6e2', 'Fresh Snapdragon Apples - S', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ecaec186-c030-44e4-a044-42ea6c6aac7c', 'Dole Diced Peaches In Juice Fruit Cups - /4Ct', 'Dole', 
+        'Soup',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3cb7c103-8306-47c8-a0a7-e58bd87ec835', 'Dried Unsweetened Cinnamon Apple Chips -', 'Dried', 
+        'Soup',  2.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7fa4a300-4f6c-4c72-accb-2cef0bb5eb48', 'Fresh Rockit Miniature Apples -  Bag', 'Fresh', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d3ae2237-9ea0-4d18-b933-c4fd34884c16', 'Naked Pina Colada Blended Juice Smoothie -', 'Naked', 
+        'Soup',  15.2, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('dffa5dad-a8af-46e9-b837-ea4aa8d049e4', 'That''S It. Mango Blueberry Mini Fruit Bars - 10Ct/', 'That''s', 
+        'Soup',  7.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2ca8562d-b8da-42ac-b101-dee8ce030c54', 'Olyra Snack Bars Apple Cinnamon Fruit And Grain Bites - /4Ct', 'Olyra', 
+        'Soup',  5.3, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3bc4a935-8e6d-4db0-a073-5f21d5cb5c40', 'Gogo Squeez Applesauce And Fruit Puree Variety Pack, Apple, Banana & Strawberry - /12Ct', 'GoGo', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0f563cfd-8eec-4a49-be9b-9097b52640b4', 'Betty Crocker Harry Potter Fruit Snacks - /10Ct', 'Betty', 
+        'Soup',  8.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2d0be50a-33fe-4f60-809f-ef0acb290032', 'Honest Kids Organic Apple Juice Drink - 20Pk/ Boxes', 'Honest', 
+        'Soup',  6.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f34773e2-e2a4-499f-b544-044c008d46d2', 'Spindrift Fuji Apple Sparkling Water - 8Pk/ Cans', 'Spindrift', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b856b263-8718-4bcf-ac2e-1d490007b9dd', 'Dole Mandarins In 100% Juice Fruit Cups - /4Ct', 'Dole', 
+        'Soup',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('53394e3c-3185-4af3-a31f-7360d3f93e32', 'That''S It. Apples & Mangoes Flavored Fruit Bars - /5Pk', 'That''s', 
+        'Soup',  6.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('eb4f8893-09a4-4492-a897-6a1bcd923f7b', 'Happytot Fiber & Protein Organic Apples And Spinach Soft-Baked Oat Bar - 5Ct/ Each', 'HappyTot', 
+        'Soup',  0.88, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4328c7df-3962-499b-852d-a2d7025f8157', 'Avocado - Each', 'Avocado', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f0788fa9-2324-44a6-9deb-584c9dbc6da2', 'Mott''S 100% Original Apple Juice -  Bottle', 'Mott''s', 
+        'Soup',  64.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('61657962-8236-46dd-8566-4c1b4b5af07e', 'Fresh Organic Sweet Apples - S', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('67bae964-1b98-48d7-b11b-f36633b3bd42', 'Betty Crocker Bluey Fruit Snacks - /22Ct', 'Betty', 
+        'Soup',  17.6, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('57aad6b8-0aec-4137-ac8e-5b4b7535439f', 'Huel Rtd Daily Greens Apple Cucumber Mint Drink -', 'Huel', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('22bed2a2-0310-4a20-a28d-7ba7abb42820', 'Red Apple Chips -  / 6Ct - Good & Gather™', 'Red', 
+        'Soup',  3.18, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('18d4fe9d-b7da-4aab-9d4b-f822cddb0360', 'Fresh Cosmic Crisp Apples -  Bag', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('19695b41-6a06-48d4-910a-3d0fdf1af2d2', 'Simply Apple Juice -', 'Simply', 
+        'Soup',  52.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('43ebbc80-79f1-4443-a263-f0765e38812b', 'Izze Apple Sparkling Juice - 6Pk/ Cans', 'IZZE', 
+        'Soup',  8.4, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a14348a2-b978-4b8c-a59f-c44eabe5ba73', 'Bob Snail, Fruit Stripe, Apple-Pear-Blueberry, 6 Stripes,', 'Bob', 
+        'Soup',  0.49, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b0ccb1de-66f8-4635-a0e2-312a9cbd6a62', 'Mott''S Unsweetened Applesauce Cups - /6Ct', 'Mott''s', 
+        'Soup',  23.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('97452d9c-5242-469f-9488-360cc96197f8', 'Dole Pineapple Paradise Tidbits Fruit Cups - /4Ct', 'Dole', 
+        'Soup',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b1685c3f-eddb-47a5-b607-b9df34544223', 'Prime Bites Apple Cinnamon Raisin Protein Mini Muffins -  Protein -', 'Prime', 
+        'Soup',  15.0, 'g');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b475974f-3f6b-4f7d-9bb2-b6624184f300', 'Mott''S Cinnamon Applesauce Cups - /6Ct', 'Mott''s', 
+        'Soup',  24.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0b8e722c-faf2-4acb-a509-bd3e419ae9e2', 'Honest Kids Organic Apple Juice Drink - 8Pk/ Box', 'Honest', 
+        'Soup',  6.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('91fe4133-c6cb-4ff9-9edf-6865c7f56e1f', 'Mott''S Soft Baked Apple Filled Snack Bars - /5Ct', 'Mott''s', 
+        'Soup',  6.55, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ce5ebeac-2a94-4adb-a86e-df75fd7733fb', 'Crunchpak Paw Patrol Sweet Apples - S Bag', 'CrunchPak', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b0d981a0-6fe2-4f36-a2e9-80bdc5121406', 'Apple & Eve Sesame Street Big Bird''S Apple Fruit Juice - 8Pk/', 'Apple', 
+        'Soup',  4.23, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('7f1ed9b2-09dc-4239-9aa8-f2f79651c527', 'Family Sweet Li Hing Mui -', 'Family', 
+        'Soup',  6.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('371bf2cd-9800-461b-916a-e6ddd855ea98', 'Brainiac Kids Fruit Snacks With Omega-3S Mega Apple - /20Ct', 'Brainiac', 
+        'Soup',  12.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('23e95c24-4640-45b5-9b69-657efb6a0889', 'Noka Blueberry Acai Superfood Smoothie + Brain Support Pouches - /4Ct', 'NOKA', 
+        'Soup',  16.9, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('91739652-ec16-4d3b-9552-49ca972af8c8', 'Martinelli''S Apple Juice -  Bottle', 'Martinelli''s', 
+        'Soup',  64.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('24642284-bbb7-4f02-8ebc-39f8a541b7ec', 'Gogo Squeez Applesauce, Apple Apple', 'GoGo', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ca8d982d-79ac-4a79-8557-fab077519184', 'Fresh Kanzi Apples -  - Good & Gather™', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('cb922e07-a058-45d5-8526-39376e1b28f3', 'Readywise Vegan Gluten Free Simple Kitchen Sweet Apples Freeze-Dried Fruit - /6Ct', 'READYWISE', 
+        'Soup',  4.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('94df9774-9c64-42fb-a535-411fa22d3147', 'Bare Baked Crunchy Granny Smith Apple Chips -', 'Bare', 
+        'Soup',  3.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('33910508-06f6-40f3-95df-cdc5c0f7ae3f', 'Del Monte No Sugar Added Diced Peaches Fruit Cups - /4Ct', 'Del', 
+        'Soup',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e1c98917-8ac8-4902-92c7-38b2d2e8fd4f', 'Air Wick Scented Oil Air Freshener Spiced Apples -', 'Air', 
+        'Soup',  1.34, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5097ce14-eeeb-4271-a960-a2df510a4f8e', 'Fruitblox Unspeakable Apple & Strawberry Fruit Snacks - /22Ct', 'FruitBlox', 
+        'Soup',  17.6, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a9484d42-9a82-4c4b-80b1-ed4b68f4bdc2', 'Freeze Dried Apple Slices -  - Good & Gather™', 'Freeze', 
+        'Soup',  1.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9007144a-c12c-4c5a-a4a1-c7b4d30bf995', 'Bob Snail, Fruit Stripe, Apple-Raspberry, 6 Count,', 'Bob', 
+        'Soup',  0.49, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('83055139-4b9d-4e0a-9e94-74376ea3d63d', 'That''S It Fruit Bars, Apple + Apricots, 12 Bars,  () Each', 'That''s', 
+        'Soup',  1.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a46e7ea5-f6e5-464b-9765-a1c0629c836d', 'Apple Cinnamon Soft Baked Breakfast Bars - 8Ct/ - Market Pantry™', 'Apple', 
+        'Soup',  10.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('763d645b-2300-4b42-a121-9ed1644d6fd0', 'Kellogg''S Apple Jacks Breakfast Cereal', 'Kellogg''s', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('925532c4-5910-4832-808d-619b49d5774c', 'Bare Baked Crunchy Cinnamon Apple Chips -', 'Bare', 
+        'Soup',  3.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fcb946b1-b5f8-4321-b467-a0ba781512a8', 'Dried Unsweetened Honey Crisp Apple Chips -', 'Dried', 
+        'Soup',  2.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3c6f2682-a196-4581-8c86-c4bef88cb73e', 'Sweet Apple Snackers With Pretzels & Cheese Crunch Pak -', 'Sweet', 
+        'Soup',  3.9, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('527192ce-c228-4812-9474-255e1911e69d', 'Bob Snail, Fruit Rolls, Apple-Black Currant, 10 Pouches,', 'Bob', 
+        'Soup',  0.35, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a45a950c-9340-4a5c-8f9e-a11bc486f1a9', 'Yumi Organic Apple And Cinnamon Squash Baby Snack Bar - /5Ct', 'YUMI', 
+        'Soup',  3.7, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('dcafcaf9-48a6-4030-98a6-62daeea2f11f', 'Fruitblox Aphmau Mixed Fruit Fruit Snacks - /22Ct', 'FruitBlox', 
+        'Soup',  17.6, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2a7bef8a-20c2-417e-8729-792aeccd5b35', 'Welch''S Fruit Snacks Berries N'' Cherries & Fruit Punch - /22Ct', 'WELCH''S', 
+        'Soup',  17.6, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b1606524-dccb-4c78-bb63-66262fd4281c', 'Olipop Crisp Apple Soda - 12Ct/ Cans', 'OLIPOP', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a6f87f23-bf23-4016-925f-2fd26fe57d9e', 'Mamma Chia Organic Squeeze Vitality Snack Wild Raspberry - Case Of 16/', 'Mamma', 
+        'Soup',  3.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6199cb79-61f8-4c1e-91d6-6e19ad9d0e9f', 'Freeze Dried Cinnamon Apple Slices -  - Good & Gather™', 'Freeze', 
+        'Soup',  1.25, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('2e20cc6c-6433-47f8-ab3f-a7692cc9c5fa', 'Fresh Honeycrisp Apple - Each', 'Fresh', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('21464c37-9965-45ae-933f-440d7f927a8b', 'Poppi Raspberry Rose Prebiotic Beverage - 6Pk/ Mini Cans', 'Poppi', 
+        'Soup',  7.5, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1aecab50-a18a-44b9-aa63-d447521672d3', 'Bob Snail, Fruit Rolls, Apple-Strawberry, 10 Pouches,', 'Bob', 
+        'Soup',  0.35, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f0800958-669f-431d-8a82-0cdb021fb740', 'Fresh Sugarbee Apple - Each', 'Fresh', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b4446c1d-b3e7-45b7-94cd-1c99506b2bd6', 'Katz Gluten Free Fritters - Apple - 6 Pack', 'Katz', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('531e6173-57ca-47ae-8576-0120f2204077', 'Fresh Granny Smith Apples -  Bag - Good & Gather™', 'Fresh', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ca05c6c1-4e39-4a3e-b00e-88c50c6c2b2d', 'Naked Juice Rainbow Machine -', 'Naked', 
+        'Soup',  15.2, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('885bb35d-d7e2-47a0-b1a3-6eb43f87d7bb', 'Betty Crocker Fruit Roll-Ups Variety Fruit Flavored Snacks - 10Ct/', 'Betty', 
+        'Soup',  5.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c8cd840f-381e-4659-b66e-db7e7af51342', 'Seneca Original Red Apple Chips -', 'Seneca', 
+        'Soup',  2.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('d4a4e831-e753-4793-baf1-5c0222a37daf', 'Bare Apple Chips Fuji Red And Cinnamon Snack Pack - 7Ct/', 'Bare', 
+        'Soup',  3.7, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('91704b1d-07cc-43c7-9b67-aa23f04210c9', 'Concord Fresh Success Apple Crisp Mix -', 'Concord', 
+        'Soup',  8.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1dbb0322-b4f1-4730-bd21-3d38ac651680', 'Gogo Squeez Applesauce, Apple Apple', 'GoGo', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('55c2310c-c90b-4dda-9233-84c1010b38f7', 'Once Upon A Farm Ohmymegaveggie Apple, Carrot, Beet Organic Kids'' Snack -  Pouch', 'Once', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('3206afc2-39df-4c13-8c68-1d6527c1498b', 'Nature''S Bakery Apple Cinnamon Fig Bar - /6Ct', 'Nature''s', 
+        'Soup',  12.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ed5cbe0e-34c6-4725-a084-9a4e9c65722d', 'Dole Mandarin Oranges Fruit Cups In 100% Juice - /12Ct', 'Dole', 
+        'Soup',  48.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c571f2cf-3b7a-430c-a44a-e5ee91639340', 'Gerber Toddler Apple Prune Juice - 4Ct/', 'Gerber', 
+        'Soup',  16.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e25c6062-e9bd-4c79-b5bc-c0d93fd0199f', 'Paw Patrol Apple Cheese Grape Cookies Crunch Pak -', 'PAW', 
+        'Soup',  3.65, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a118d938-bcb7-40fb-948f-58fc8e304022', 'Fresh Granny Smith Apple - Each', 'Fresh', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fbead265-edfe-418a-8aa7-4e4cb391731f', 'Fresh Sweetango Apples -  Bag', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('c3243dcb-9353-4b5c-b509-11fb9499ae03', 'Poppi Raspberry Rose Prebiotic Beverage - 4Pk/ Cans', 'Poppi', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f1ece033-0a3c-44e8-922b-9af44f10bb00', 'Baked Honeycrisp Apple Chips -  - Good & Gather™', 'Baked', 
+        'Soup',  3.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('b11df752-76d0-4699-9e23-ac149ae52e6b', 'Gogo Squeez Applesauce And Fruit Puree Variety Pack Apple & Cinnamon Pouches - /20Ct', 'GoGo', 
+        'Soup',  64.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4f4d16f3-c53d-4098-95a0-669ae9045ac6', 'Mixed Fruit Flavored Snacks /1Ct - Good & Gather™', 'Mixed', 
+        'Soup',  3.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('46d6d6f4-96aa-419c-88e7-99b5a566105c', 'That''S It. Cherry And Pear Mini Snack Bars Variety Pack - /10Ct', 'That''s', 
+        'Soup',  7.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('95c75dbe-1ae2-4016-a215-d8fda7743402', 'Gogo Squeez Fruit & Veggiez Applesauce And Puree Variety Pack Apple Banana Parsnip & Apple Pear Zucchini & Lime Pouches - /12Ct', 'GoGo', 
+        'Soup',  38.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('213a9397-dc19-4897-9ac4-6b7e262187f5', 'Del Monte Diced Peaches Fruit Cup', 'Del', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('14036922-5b02-4c20-b968-e7a88125a90b', 'Fresh Organic Granny Smith Apples -  Bag - Good & Gather™', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4f1d60bc-3bc0-4e0a-82ef-7705636b0272', 'Fresh Sugarbee Apples -  Bag', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4576b89e-ecb2-45d6-a5b4-4d139bd48295', 'Once Upon A Farm Apple And Oat Snack Bars - /8Ct', 'Once', 
+        'Soup',  9.6, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('40a0ef02-ec0e-445e-a7a3-892ad6da36a3', 'Fresh Mcintosh Apples - S Bag', 'Fresh', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('bca5da56-d248-4ead-901b-529ec72c2f0b', 'Navel Oranges -  Bag - Good & Gather™', 'Navel', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('fdd65ab0-8757-4fd3-99e3-70796d4040ca', 'Gogo Squeez Applesauce And Fruit Puree Variety Pack Apple Peach & Gimme Five! - /20Ct', 'GoGo', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('5419c98c-8ee6-4a4c-aa01-fab56d194b11', 'That''S It. Organic Mango Lime Blends Energy Bars - /6Ct', 'That''s', 
+        'Soup',  4.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('03e5d3df-cd90-41c1-984e-6048c4d8af2e', 'Dole Mangos In Juice Fruit Cups - /4Ct', 'Dole', 
+        'Soup',  4.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f5e15b2e-e46f-4ac9-bcd0-0263904a4e6e', 'Fresh Gala Apples -  Bag - Good & Gather™', 'Fresh', 
+        'Soup',  3.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e16ae37e-b5f0-4f8b-91ce-ad706b165a1b', 'Martinelli''S Apple Juice - 9Pk/ Bottles', 'Martinelli''s', 
+        'Soup',  10.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('89a0d833-d1d9-4f2b-8915-1875c72c73f1', 'Bear Strawberry Apple Fruit Splits -', 'BEAR', 
+        'Soup',  3.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8192de8f-fe24-4b4b-92f1-ac12805b83ac', 'Amish Wedding Apple Pie Filling Pre Cooked Real Natural Flavor  Jar', 'Amish', 
+        'Soup',  32.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('0c75c93a-fb59-4954-9495-15c6489ee2c8', 'That''S It. Apple And Strawberry Nutrition Bar -  - 5Ct', 'That''s', 
+        'Soup',  6.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6e96f078-6185-4519-aed7-446ce1ed668c', 'Poppi Orange Prebiotic Beverage - 4Pk/ Cans', 'Poppi', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9c1b6f55-36fa-46b0-8793-b3db9ddd1d19', 'Fruit Gushers Spooky Halloween Mini Fruit Snacks - /26Ct', 'Fruit', 
+        'Soup',  11.44, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1842f8c9-353b-461f-8ed2-499d48227134', 'Cheerios Breakfast Cereal', 'Cheerios', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('f534e612-0de0-4d68-ac9f-bb62c89b92fd', 'Drink & Play Apple Spring Water -', 'Drink', 
+        'Soup',  10.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('430e5509-f3b1-454e-abbc-af515d72c88d', 'Mott''S Fruit Smoothie Strawberry Banana Pouches - /8Ct', 'Mott''s', 
+        'Soup',  33.6, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('bb27b877-5040-448f-add0-7848a8cd5734', 'Mamma Chia Blueberry Acai Squeeze Vitality Snack Pouches - /4Pk', 'Mamma', 
+        'Soup',  14.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('49e72c8a-e9fe-48fb-ad12-ccfced94b4a6', 'North Coast Apple Sauce Cinnamon 4 Pack Pouch Organic - Box Of 6 -', 'North', 
+        'Soup',  12.8, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9f03c5a5-7d7a-466e-aa7c-71efbc765522', 'Diced Pear No Sugar Added Fruit Cups - /4Ct - Market Pantry™', 'Diced', 
+        'Soup',  16.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('45ef2afe-2933-4943-8057-218e727d6ae5', 'Nutri-Grain Apple Cinnamon Soft Baked Breakfast Bars - 8Ct/', 'Nutri-Grain', 
+        'Soup',  10.4, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('83209c6d-c170-4e02-9d36-a92c5945aa55', 'Fresh Organic Honeycrisp Apples - S Bag - Good & Gather™', 'Fresh', 
+        'Soup',  2.0, 'lb');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('6c0d991d-c218-4f33-aa3d-82393da345b2', 'Goodrow 100% Apple Juice - 3Pk/ Bottles', 'good2grow', 
+        'Soup',  2.0, 'g');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('ae56b617-bdd8-4ee3-a32e-5dbfac81e898', 'Unsweetened Diced Apples -', 'Unsweetened', 
+        'Soup',  3.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('9f1965a9-d3e1-4b32-8ecb-7be3144263bb', 'Poppi Orange Prebiotic Beverage - 6Pk/ Mini Cans', 'Poppi', 
+        'Soup',  7.5, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('caf4f109-eaa1-4422-a53f-9fa9b662dee1', 'Mixed Fruit Flavored Snacks /22Ct - Good & Gather™', 'Mixed', 
+        'Soup',  17.6, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('e119e509-843d-4791-ba7e-81756ee37a0a', 'Fruit Cocktail In Fruit Juice -  - Market Pantry™', 'Fruit', 
+        'Soup',  15.0, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('edf9e3b9-c3ad-4a79-9e20-83b225e1f6dd', 'Poppi Watermelon Prebiotic Beverage -  Can', 'Poppi', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('99f1b965-c8b4-4c0d-ae08-719d307f6a91', 'Organic Apple Cinnamon And Spinach Snacks Bars - /5Ct - Good & Gather™', 'Organic', 
+        'Soup',  3.17, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('50355853-9324-46f1-9fd8-faa6f695e968', 'Apple Mango Spinach Baby Pouch - Yellow -  - Good & Gather™', 'Apple', 
+        'Soup',  3.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('4737eeb8-1299-4b1f-bcc0-4421d55e29a2', 'Seneca Granny Smith Apple Chips -', 'Seneca', 
+        'Soup',  2.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('a78a9a50-e2bb-4764-b54e-481111a614cc', 'Drake''S Apple Fruit Pies - /8Ct', 'Drake''s', 
+        'Soup',  18.04, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('1302bad4-b143-403f-bddf-a9fbbbe9e014', 'Gogo Squeez Fruit & Veggiez Applesauce And Puree Variety Pack, Pedal Peach And Speedy Strawberry - /12Ct', 'GoGo', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('10c61412-e456-4b5d-9398-0a97980b7dab', 'Sweetango Apple - Each', 'Sweetango', 
+        'Soup',  NULL, '');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('631d3d1d-3fde-4537-b6d2-8c94ac9b8fff', 'Red Apple Chips -  - Good & Gather™', 'Red', 
+        'Soup',  3.5, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('24c23ccd-b8cb-49c5-8d8b-b344f51b54b6', 'Gogo Squeez Applesauce And Fruit Puree Variety Pack, Apple, Banana & Strawberry - /20Ct', 'GoGo', 
+        'Soup',  3.2, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('eba24d39-78b9-465f-9541-252a4f4a7294', 'Naked Blue Machine Juice Smoothie -', 'Naked', 
+        'Soup',  15.2, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8085c797-456d-4f83-b1e5-26cf2c9bcf0a', 'Poppi Orange Prebiotic Beverage -  Can', 'Poppi', 
+        'Soup',  12.0, 'fl oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('56e2414f-757c-408a-99bb-d26e51bb3dc0', 'Madegood Snack Bars Apple Crumble Oat Cups - /5Ct', 'MadeGood', 
+        'Soup',  1.23, 'oz');
+INSERT INTO Item (id, name, brand, category, size, unit)
+VALUES ('8aaf3bea-7d94-4c85-ab50-a11bc32bcf7b', 'Old Orchard 100% Frozen Apple Juice -', 'Old', 
+        'Soup',  12.0, 'oz');
 
 -- Item Prices
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1fd36808-de5e-42c7-bdd9-bbf310dd77d6', '3dc3f440-bc82-43fa-9447-a5a220277397', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('83feb570-7f5b-48d6-929f-7d04fb504b69', 'db177b0c-cd54-4460-bb80-1377db92c2f2', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('58d84cba-f672-494d-85a1-0e380e96ea1d', 'c397076c-d504-4c78-a1df-505aaac15af8', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.59);
+VALUES ('ee653624-daea-49e9-abb3-2633c8d6b464', 'e6760b34-66d5-4c60-8dbe-68758cd7e80d', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('4daaf814-78c2-4442-8e0a-0c5cd8735eaf', '55c5480e-7acd-45da-9f7d-32189300e66d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.29);
+VALUES ('3e703a91-7013-4c8a-bb02-31a20caed977', 'e41f5a58-849d-4f15-ba87-e4083998b6f3', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('688bdd11-c3e7-4a74-ad3e-edcd13046caf', '9502e916-4bbe-41c9-b521-cb3ba75583c6', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.09);
+VALUES ('7f5c9793-e8ef-42e8-88ca-a64f9f1678ed', '617cb80c-96e2-4961-bec6-f3264e0eb561', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a5847c3c-76e8-4648-9609-f9b1caa7f550', '407aa82a-0541-42c1-a7c8-3fa7fbcd0167', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 8.45);
+VALUES ('c0d7a7b1-e76d-48df-84e3-c955499195df', 'efbc4488-f03c-4b71-a757-802054b85513', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 8.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d1654b56-f441-4b5e-8cb9-4be30c934a27', '0211cbeb-e511-48b5-9e0e-8442e13f3c4e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('40a7f04a-082b-4d6e-9ed7-316c5c6bb269', '27e1fc35-d335-4f8b-8d52-d9da47ba7ff5', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('13068a09-6a31-4a81-9c87-fdd21afb2fce', 'acc338ba-4cc1-4410-aa08-f954841bbbf4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 8.15);
+VALUES ('e965724c-6d8b-4840-bcdf-a548159b1dbe', '092bfaa3-bd2e-4dcc-a96b-489c4e4546f3', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 8.15);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3c97c33a-ef15-495e-a4ae-094003fb4ba4', '4a8aed54-033d-4520-b263-39b78ec98a88', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('9ad510e5-973d-4865-a790-7a6645c7e05b', '705fc9f9-d173-4beb-9723-39bd674b8dea', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('dd088c6d-acfc-4407-adaf-c75229fced1e', '9fa862ed-d435-43d2-9953-c0b2c6df2cf2', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.55);
+VALUES ('2cb41aa3-d719-446a-8a28-03ea56f499bb', 'a3fe9f2d-2a9f-489a-8050-166983349f9f', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('05232758-f302-441a-a9b0-5ad08ea9223b', '20666f06-2bb7-4f87-8e16-15f556ebf97d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.09);
+VALUES ('03f62de7-6627-4e88-9168-f1907284f62d', '4e031df5-e44f-4e06-a88c-9d898bc6b889', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2b414bec-cbd6-4d85-af55-dd288fba1651', 'c5cbc567-11a0-47ca-bbbe-c6cde9bdddc0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.19);
+VALUES ('96650c49-552c-4c22-a964-ec9f0dae8758', 'fedcdbe0-4511-4cbc-9211-5333773581b8', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('fca5b7a9-395a-4c55-b900-89a9e619d443', 'b378e4aa-1e3d-4c9c-a008-d0a1df87346a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.29);
+VALUES ('d1455ce9-934e-45ef-8fcb-4d0082e03c3f', '48bcfb22-4334-4cc6-99a7-eae1245fbe36', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 0.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('24144a53-cce7-4cea-bf6c-d35349c18ace', '115081fb-35ed-433f-8f93-a1e2e270174c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.55);
+VALUES ('e5a06e37-6f5a-4d6d-b3f7-bf7997ea4887', '68f34a63-b028-4a63-8824-e9ea9769c41f', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 0.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('53bd26ec-24ca-46ce-9275-a5a7b8a86dfe', 'ccd7e80d-5511-435a-9497-7da4d7c08e41', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.15);
+VALUES ('f5e61d06-9d1a-4076-ae76-6e6f31b10e03', '8da3eff1-57a3-4b06-b679-7cf570215bf3', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.15);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b70c99e4-4344-4c93-a19a-40235c8882ce', 'd54dc4ef-289d-4e64-8858-b8692df2f5f3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('7e9fee04-f858-4f12-866d-3fdf08dd9d50', 'b08b2071-ffe9-4da9-8f82-f98489984ac3', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e16be90c-eaa8-4a6f-97f1-fc958ceeafc4', 'f2f2c703-d8b7-44b0-92a5-6911182ad11d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.05);
+VALUES ('d8c5ddf1-c0b5-41ed-a885-9f1d40363f2d', 'd8744e20-629c-49ce-8228-26c627c228dc', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.05);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6433a1fd-3291-4460-adeb-9ff6211eddaf', '5b60f777-a2ef-4bf5-a9b7-5e6a7e0d40b4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.65);
+VALUES ('f8a1c770-05fc-4b6a-a651-bb0542f6e9ab', '7ab895e0-21c1-4ea1-8bee-3041aece4848', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 0.65);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1d3d3eb5-cdc4-480d-a88c-6a24cbde8446', '360df962-0cc6-4885-a204-6115cf85b725', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.75);
+VALUES ('0c2f0d1e-d091-48ba-bb0b-d4a794b83792', '0258ebd1-4d1c-4d89-8d2a-7bb7bf1ab784', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('530d0ae3-8c01-4f07-af8d-193eb22eca4d', 'ebbafa30-90ff-42ee-8fff-8af09e84d86c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.85);
+VALUES ('bfee22b1-fc1c-498f-9cff-daf66178c05a', '3ce5561c-1283-45f7-ad27-a35959188a80', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('351289e1-49db-4eb2-8549-099583ee3351', '737b311d-d30a-4d6e-960b-aaac37719340', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.65);
+VALUES ('7608e933-275e-4fc9-9ecf-69d79812bf21', '0c4cb5c1-6a00-4c53-8782-323bcec8f91b', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.65);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('60058ae8-4417-4c45-bb83-3e359aac0909', '0c474083-9f16-46be-accd-6a710a1a958f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.75);
+VALUES ('dd86da4d-4fa4-4063-a577-4fdec9fe8a24', 'b2680c55-e6d1-451f-81aa-4eec05996632', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('79610581-6cca-4305-8f90-56ed1feb828d', 'e4b93beb-d0ee-4b4b-b746-843f6936fe95', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.65);
+VALUES ('4202e255-024e-438c-a316-fbca133eca99', '44812c68-4e4d-405e-b2df-c4c2a13bb30f', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 0.65);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9dfa1d68-25b4-4371-99d4-75c89f503fa7', '8d30ef9b-37dc-4102-aced-c46fafcc5ea9', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.09);
+VALUES ('0130bc8e-dc73-4b76-9aca-b823d7d79226', 'ddce0a30-721f-422e-a654-65ed72c7809f', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5df981cb-8df1-4c4e-a35c-0295acb3f95f', 'ff46b1aa-da1d-4a94-9655-ae9ac93dcfd8', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.15);
+VALUES ('9b1c76c5-eda9-4deb-97f7-1bca932e11e1', '059acf73-ac6e-4e49-993a-ce5ecf3fcc08', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 7.15);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('baac7166-2585-4e83-aa19-4861218eaf4c', '524eae0e-c607-4f82-902c-1c50990cbf69', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.85);
+VALUES ('e3c0fe2b-1445-43f2-be8a-bcc4cf094f76', 'cb719244-040a-4436-a7b6-3092507c202b', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('69e419c1-0f87-4e62-bada-9225c23bd778', '1f40dd44-902e-4551-ace9-bf273f6f0cd2', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 8.25);
+VALUES ('3014fa82-51b1-472d-b069-baf6f6f4abe9', '11f4c695-13c8-4907-a397-198c333d7a3d', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 8.25);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('97ccb45c-2cbb-4da6-8e26-d517f3384ad2', '212d434a-c607-46c7-9bd1-d082a664e65c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 16.79);
+VALUES ('aaba5ef4-4f9e-49aa-8174-2fe027b77cda', 'ebbc4cf6-359e-4897-a256-1bd0b710ad16', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 16.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3d8e181e-24a3-4b33-b60a-8f898a38cfe2', 'ef8daa8d-bc10-455c-ba71-03ce01b4befc', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.95);
+VALUES ('02d8897f-db5e-4e06-97d9-5d86302f89d3', '9d1a7a14-c1f0-44da-bd7e-33cb5680936d', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.95);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('36eb619a-963f-405c-8253-13fb3d92944f', '0165b519-e73e-471c-8f62-1f57fd992b91', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.85);
+VALUES ('3341ebf7-3bf0-4dbc-bdff-25c6e61d46e9', 'f09c517d-101e-4f29-8aec-e720b3eafb37', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('f69e7d00-40b9-4370-a8c9-b3c123c6777d', 'a59659e9-5274-4c1a-84ea-ac37b86cf341', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.85);
+VALUES ('009644cc-6192-4938-9f40-cea230825b56', '80897074-8a48-4436-b1fb-c1e2635e208f', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('356299c6-395f-42ce-af32-abe422d0dae7', '5ce6d9ad-ac7d-4c19-8be0-96dd2d93d4d7', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.29);
+VALUES ('a407cfd7-2b5a-4b81-b453-1d9f34ccfca3', '4e5193e8-1453-4aac-bd7e-4c5f79d5971a', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('db2c10da-a1c7-459b-9468-496a7a0d13ae', '3c5b56da-96da-443f-9a8e-08c4f6659957', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.29);
+VALUES ('30e0716a-4a00-49b0-8256-09933c6bb498', '25640b66-5678-4cbd-8244-5e16d3cd4bb1', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('459d91bd-9de5-4720-a85c-976df95e7d1c', '9f862ce7-f1fb-4038-b16b-7a34be70d874', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.39);
+VALUES ('70a6c34f-f638-4685-9570-bd1e03991403', '44a8d109-bc1b-499f-82f6-5184d3c60f14', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('68de9ded-1954-4ef6-bb7b-691908ac9578', 'fb3faee7-3e23-491a-b64b-733676be86bd', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.75);
+VALUES ('70db9311-9f4a-4d06-bcd4-6f8b61ed6fe4', '66d00708-2847-4847-ba4a-698b272c728e', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3311a5e9-bbef-4269-8628-2535a6582395', '37bca2c5-2238-4137-8dd8-6f9dec8ac3f1', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.85);
+VALUES ('dded2cac-8c4d-4c64-94ea-51869ce6fc0c', '814b5bd5-81d2-488d-8d4e-9360988759be', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3afa4824-967d-4adc-870e-ff3e3294fa2a', '675fee50-7f7a-4f83-abbd-a312fbbcc944', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.85);
+VALUES ('65da5814-86a3-4285-8817-3718d2901c31', 'f689c25a-7cc7-44ea-bfe6-6e0c4c5093ea', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5acd0ee4-80eb-4447-ba23-1c1e86a156cb', '28833ebf-45ac-4e10-9bc4-e8b6c32ddc2a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.85);
+VALUES ('2a25e033-da53-4c5a-925f-26bb8a349c93', '2c02a9fa-77c0-495f-a096-af61d88b9d16', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('01930382-611a-40d6-99e8-cd02dec503cd', '8eed47b5-2e71-4a50-ad7d-52ebf7b935d9', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.55);
+VALUES ('4ec10484-8fc8-4fb7-9a26-7046737ad488', '23c2571e-f29a-47b6-8ee5-191c4929e909', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ae60b312-4422-45b4-a5c3-8a5cfa312004', '0c95dfe8-3206-4c08-b09d-0d19ba8c7b5b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.19);
+VALUES ('d8b64735-eb17-4f0b-9a49-6fcba3de0ca9', 'fd7d519b-e74e-41c6-afbe-d90c484bdf8c', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e05e907b-1930-4c2d-814e-1398592603c4', 'a2eb384e-2b1f-415a-80d6-1ed5b0534ec3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.25);
+VALUES ('45d76c00-a356-4296-ae32-5502b23e992f', '42413112-5be5-472b-8ffc-a2b5b739d433', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.25);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5f6b7ae0-7a9b-463a-a573-6c768a0ea588', 'ffdc4cb1-91cf-4942-8dfe-b93f2adc04c6', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.39);
+VALUES ('ea936122-46ab-45a5-a1aa-91e454baf3d0', 'ed2218e6-841f-46f9-a26e-0fd462173ebe', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3633ef68-33f4-45c9-8816-a1d27b4b97bb', '892a42c0-c319-4f7a-821c-4be20a918235', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.29);
+VALUES ('5f4af344-68d8-429e-b4b8-6f2eeff36697', '201c4da9-a6d5-455d-9440-65d3ab0c1f77', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('647b0dce-660f-494e-aba3-bec433c8512d', 'c669a815-750a-4d38-b6ba-a233b6373629', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.49);
+VALUES ('4566a36d-9fb1-4e42-babf-e47daa20854e', '5e2a6983-fb76-4497-9692-411d68f2db44', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('120a26c4-3855-4562-9d28-0f17d269b2e6', 'f58a1d73-6590-434e-acd3-c6e693f9530f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.29);
+VALUES ('ceca753b-3868-480d-a00f-8950f49f9f86', '427fe77c-f2d2-43f0-a779-0b9b3abe0c3f', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('dc4b54e2-0ef7-48cc-89bb-95949ed36155', '341c9802-d8a5-4cca-8ec1-3c6f9ae1404b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.79);
+VALUES ('7dc60791-cbe3-4f71-9066-5982f2b345ad', 'f15d4a7e-e5f2-4027-9a36-c40e0c9ad078', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 0.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3e6636b8-4f3c-44bf-9012-968f3afd0fd2', '5ff8bd9d-2ea1-40ad-b8a3-3cd49f2c9f33', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.55);
+VALUES ('d0596111-432a-47e3-8a95-de8405791dde', 'e70da2c3-6f73-460d-9a0c-0df05391d961', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('38153ac1-f62f-4ebe-89f5-5b5bd2c95fe5', '2dfee28a-345d-4464-befb-7068ed442845', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.89);
+VALUES ('831a7d28-faca-4d6a-84d9-f07ff45373f0', '31962d72-497c-4382-abd3-b278d22ad642', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('757cc056-7285-408f-ac14-59c9b7a7fdee', '62087d45-3e62-4f17-81e1-94dc53f7f58c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.05);
+VALUES ('df968766-0f6e-4b5b-8d51-8f3dca2c8ec0', '7c8657cd-7cbb-4b02-a005-143fd3ead9fe', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.05);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3443fe5c-23aa-4640-8ef2-aeb7a824d4fc', 'afa69eee-6c4f-4806-8d86-2f6d9b5da999', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.39);
+VALUES ('be08e4ee-09a1-43c4-8bb9-ef5a02cf2d92', 'dc639576-f8fe-4757-86f8-4d9917a924ea', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c802789a-ad89-495a-9952-4c8b692164c1', 'e7fd9e0d-d354-463c-bb50-e8caae9c71ca', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.29);
+VALUES ('57db0701-0205-4267-8a86-ddd32bf71fdd', '42e4b4cb-3bf7-46ce-803e-878b685bf3bd', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('05ccd3b5-3e54-4d76-834a-4ebdb3d107e1', '7d03acc5-959f-4b0c-9f85-a9e36627e46e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.89);
+VALUES ('f37ed7f4-77cb-456d-b2c6-4284e4acbf65', 'a7e4d05c-75c0-47aa-96c3-dd4f6d6cf1cd', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7afaca46-cf33-4ea0-af87-418b4077a228', '04295c98-c992-4e48-b30c-447ac96fa5a4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('5694a454-52d5-4d20-b02b-9ea8771f60b8', '98074393-af6d-49d5-b15f-e14a50ba9d9b', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bc6cc18d-19e3-49d9-b36d-607027bde143', '5dddb408-a1f6-4485-b041-785d535c63b4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('d6f2f25e-73de-4a1a-93e3-1b8c53898a4a', '48a7b61b-fba8-4bbb-916d-70884c349010', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0b9374c6-a731-4a1e-83a9-1ce179581dc3', '5ba8896a-7e32-448c-9a55-e880156cfd96', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('7a74ad1a-2509-4625-8714-9829f28c0e83', 'b6b6c563-c798-43d0-ad82-8d6c56181ee9', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1815732d-685c-4e65-aed4-6e4d4d7940bb', '755d5853-9278-4e85-9f80-b611155c0763', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.49);
+VALUES ('dd33bd7d-b2e5-4c23-a4de-d0b031e63a8c', '10de16c7-21f0-4c4b-8618-7991d4fd9207', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 7.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('150afda9-a157-4b02-bd10-10fb4d53a7ca', '37f8d804-6dd7-4fed-ad44-627f3b5ee697', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 8.79);
+VALUES ('641b1d5b-b808-46c1-b35b-31d56668e316', '38afe0ee-c83d-456f-8bde-b7007e08cedb', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 8.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bd0e8dc3-e519-4db9-a2a3-49ba3a4521a6', '5ae19222-eeaa-4b54-8183-704e4a443c7d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.19);
+VALUES ('f3271980-c957-49e7-a96e-951979cd3321', '187c8126-5fe4-48ce-8c41-550c91033f38', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('631696d7-0ee5-4bfb-92b7-d77203ed65f0', '5e95a163-55f8-43ef-8c3d-a5eee29bf1f7', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.39);
+VALUES ('32650e67-da71-4a02-b3a6-6282f6f46130', '8a9ae54a-6c7c-42bd-adb3-83cbebd07997', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('78a8bf04-3571-44de-88ab-c44bcdade4a8', 'bee9bf80-920c-4307-b64e-1dfa63bb640f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.39);
+VALUES ('cf4ba29b-5daf-48ff-b8d6-bc91c6bdc9b3', '4c10d690-1b0c-43e2-9417-5484463ab1fd', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('53209869-f982-412b-bbf3-85bb4bff90ad', 'ecf33dd9-4630-4bd5-90ff-4f6924a6760d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.45);
+VALUES ('042de393-b6dd-4ef7-a5f0-0882ffa1ca56', '3910a284-52c6-427d-9807-b1ab49855e09', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('db72c63b-758e-4c72-93fc-1026a95cafa1', '3e33473b-1153-445f-851b-3af01397ac03', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.05);
+VALUES ('0ee38afb-47a2-49b7-b57a-7ea908a554cc', '84623346-aa5d-483b-b351-38968bb02e3b', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.05);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('564b3c0c-e145-47c2-94b0-eda4ebc14f08', '07bfca91-df4b-43b1-8570-8fe900f868a0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.55);
+VALUES ('b743bb7b-cfa9-460a-9386-f3ab97020437', '8a22ce7b-5c71-439c-bea0-6b58e5ed38b0', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('35d9b9af-05bc-462e-b7a1-87e1b368020a', 'e50c645d-1564-4025-a16f-17ce0e83a91e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.15);
+VALUES ('79b867c3-b45b-4dc5-aa81-361d5b2933f2', 'ed448d61-fe5e-4fa3-afaf-da6dc6c1258f', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.15);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c7e5be80-2c60-4208-b785-79d769ea65d5', '8e5d0831-d66b-4e23-b965-86cdb2dfa4e3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.05);
+VALUES ('8b6fd9b0-c459-4cca-857a-3f5f59559d88', 'c0d47e13-dbc7-4363-bcc4-d726f9a4593b', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.05);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ef9f479c-8e44-4dd2-abf2-797e420242e6', 'b3ae25a3-281c-4f65-9df4-a091897ab707', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.05);
+VALUES ('9ac3c044-d4c3-4120-a30f-61e0500bdac2', '101c2330-fbe1-40c6-b0c3-24e1dd6b811e', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.05);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('74770e74-f3dd-4b16-9f41-0b550a6dc26d', '6963305c-fb8e-49f9-b8e4-66b205c6a07a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('2700e45e-4b39-40fc-a23d-1056dd82feaa', 'f574b259-c79f-406a-b8a5-91280605f94d', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c9d7b0fe-434c-495b-96d5-bd02fea35261', 'c941c2f1-9c2b-4219-a0e9-05a9311c215f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.55);
+VALUES ('28cd5687-0cd8-4ce7-986a-11a2aca5a842', '6c5d4a0a-f1cc-4e47-aa74-6b5ea3189804', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('606000fc-b885-4a31-b881-ea84a616acdf', 'd4371086-2827-4b1d-9717-38b02c66a277', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.39);
+VALUES ('2e4c2ca4-dd57-4873-a612-59391e99df96', 'ed0d51a5-6823-4d45-bca1-0f236de06051', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('f5cabcae-ea82-4159-ada8-d6c3b06f5940', '375fca09-cfdc-42ab-a40c-313ae497b21b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.55);
+VALUES ('7073eee6-9fc3-42d1-9a16-626c628a113c', '154d4e07-4b19-4c5d-be77-8cc6c0c193fa', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('beeac5c7-dbd1-401c-9b6d-2a7473827e59', '627ebcad-b75b-4c6d-af26-a895cafbf72e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.65);
+VALUES ('e8d18c5f-f6bc-46b5-83dc-a18241b85907', '980d765c-e132-4d9d-80a2-10ae847c7f4c', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.65);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('19215fdd-a045-41b8-ac43-efe599735bce', '19d80af4-ac49-4ba3-b552-4fc26a3ddd1e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.85);
+VALUES ('dcd2519e-9cd5-4dac-b747-61cb726ed4bc', 'f1ae711b-916a-4e4b-ba24-f206bd2ac261', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('4967dadb-2236-4b8c-98a0-23d16e59d94e', '531e3542-10ae-4058-afec-bddbede948e7', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.75);
+VALUES ('da62088b-4782-4369-af82-b4cd20f28eba', '021bab26-de59-4e68-95f9-efe147de3d25', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9071f583-cd72-4753-8be1-391c4330dd5e', '191eba71-0f66-4850-8e45-2580180d9825', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.49);
+VALUES ('6c32ec7f-0f79-4c16-86d0-59a2bc2a7fd8', 'e65dd5bb-d76c-47fd-bacb-403f32ba9935', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0ea6f64a-bc28-4279-a459-2ba168ed5618', '96e1aafb-1b30-4501-b59a-bccb6c84b95d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('7e575701-ba3b-4c19-ac4d-c76d38b3b661', 'f5bdddf8-00be-4b9c-a5e3-3f1817132dec', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9d864031-fb76-4e68-b124-fe70c07a1b73', '5258f652-bebc-40f5-a3cd-54bc4cf3d2b0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.75);
+VALUES ('40ec6806-f6be-4126-ab8d-0a83721ee563', '39fcfbcb-e162-4f97-a699-ff0b2fab27d1', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b068a902-85bd-472f-8fad-b02c81a109be', '30a2760c-c822-40f7-80ec-d6983f2e2576', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('34929185-64db-40be-b6eb-4cb0d0226167', '9b1802a4-1ee4-498f-b740-91685bd5241e', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('270183ad-ccdc-4c84-9991-4024a3f9cfc1', 'b55fd09f-beb5-41d4-8898-fe833a70f032', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 8.25);
+VALUES ('93e5c8da-fffc-4dd1-a635-6fab6abad1fa', '4a9f7454-ed4d-4c82-b89d-74ee11374171', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 8.25);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bb624971-8da8-40db-a5ed-642c3fe236d3', '44154572-2bb3-4700-9603-7b7145115abf', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.49);
+VALUES ('78d74d58-9e44-43f8-935f-78ad623d6bbc', '2a221741-7ac4-41dc-9ce5-18e7afdaeb36', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('17b3ae3a-c554-45a8-b012-5fac9a32d7f4', '78552278-d4be-4fd2-b2bf-dbd0737de8a5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.95);
+VALUES ('b27f3f23-5dbd-485d-8ded-03274ccde8a3', '566b404c-3e41-408e-ad83-a85a7a502266', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.95);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3537fe3b-216b-45c4-9665-d97d420cfc32', 'c17f2321-525f-4b9e-90d0-ef736faef719', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.85);
+VALUES ('30b01be0-0a9d-4e3f-83b8-0cda69a0a663', '458aee5a-974a-4af1-9de5-0305b54cb414', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e89a15d6-574b-4aca-8dee-bcdad83d80a7', '32703546-686b-4654-9165-761583407c81', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.05);
+VALUES ('ff2c8f61-f36f-49d7-b9eb-434745f3b3b8', 'c57349c1-40b2-4c0d-90fd-ffe1d459967e', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.05);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3b46b013-bb68-40b6-b660-4b09b4f7bd26', 'ca0fa904-5e3b-4f0d-829c-0c9a081e946c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.89);
+VALUES ('5a70ed81-116e-431b-a9ca-569f46a25a4e', '71bfc40b-a199-49c9-b379-e6ade63a9c12', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2382976f-22a2-41cd-a433-0491c88f7962', 'b51fbfc1-3801-468e-bad1-8c7160e39a45', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.35);
+VALUES ('63ccf01f-bdbc-4c5a-874e-964f69c9793d', 'c4878a17-990d-472c-bff7-30843bfdeb1e', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.35);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6497a15c-a173-496d-9cfb-4975e3a9a729', '82194d95-bb91-4d96-ad3e-73b40041b670', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.75);
+VALUES ('df31e376-c5d1-4dd4-99b4-9efddcaaf441', '03b39184-89b7-4d77-be80-1ae88d4a7191', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ad24f283-67c1-4c76-87bf-7d8dfe80fdaf', '6fa23113-fd5b-4e17-bb21-9bc097bc5a86', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.75);
+VALUES ('c086e75f-3679-463a-8d6f-bfa3da6a70d0', '3802f1cb-9e66-43ff-9640-7e3ba43bbd42', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('793a9bff-9694-4422-a90c-115f1980fad9', '5b6e3814-9e9a-4f16-a633-2327456b19e2', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('933a553e-7cbc-4481-9247-4afca1f073d3', '6aca59a0-5ace-4d7c-93c2-2b486dc5d129', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a603fd24-7bfc-4aac-8f54-512ee2a855ba', '0c900102-1c76-4528-9468-2fad31ce578d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('5bbda632-50c8-4049-ad20-5f36dad6e8ff', '329ee0e3-6326-4e76-b1d9-27e994b3f40f', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7b95f5ce-c48e-4006-b9b1-f92b1b1f9140', '3614aaea-d34c-43ab-9626-fc1cb8852d12', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.75);
+VALUES ('14dadcdc-4f64-4283-a788-99922a7a4583', 'f1191ef1-196e-4bab-b468-f169da9d67cc', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3f60bc5f-34d2-4e61-83cc-9e10c2e9b0d9', '3b48665c-cc61-416a-b5f1-806d08c86a0c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('0223741c-aca1-4f60-959f-b2301a54c59c', 'f06fb7f6-0051-43f9-b852-3d385f3edc3d', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('f574acc1-60e0-4e80-8942-14ca36eb5874', '0220cb50-b6b0-4f56-8b73-ac5dbf70b5ab', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.55);
+VALUES ('bec5cdd0-13d0-44a3-9679-2b3d6b0a0db0', '45a8965b-85b9-4a5b-90fe-93097725a4da', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('861d12ec-e548-4dcf-9704-aaf6b63751c4', '095a196b-b114-45c5-af6c-73cb7ba8202d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.59);
+VALUES ('91b388b7-6424-40fe-bba2-ac00a9807199', '1d38382e-d516-418f-ba56-fa95cee734cb', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2e03008d-d955-4311-932b-8e89cf35a0ef', 'ce93c23c-78ba-4266-943a-b830ae8f7afa', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('4a6aca90-5b1d-4822-9c77-e6d23d89b7f1', 'ee8fcda7-352d-4e03-a19e-e9a41372a545', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8fc54c03-1dfd-408f-ae4d-945a5a4a3f46', '2f26a62f-3bef-4950-9c1d-b74f08ab5f3d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.19);
+VALUES ('68c8ec83-6163-42ee-a038-84525104ac47', 'be9ab4ba-181e-4e95-a013-bb622b144731', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b18366d9-5994-498d-a53d-87bf0a7a5b6b', '2517c5bc-4afc-412c-87c1-2637cd91295a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.65);
+VALUES ('9ca3ca88-9efe-465f-8ce6-67084b823604', 'a8f8deaf-703c-4fa0-9150-2934c2c84924', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.65);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b9db1419-f3ca-402d-a679-61438ef947e2', 'db239f1b-efda-4ec6-9dbd-f444293a3483', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.75);
+VALUES ('f0860828-cabf-46ef-b60d-633460215544', '80691dbc-d340-4b51-9e65-ef114e9a7fbd', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e10c4c4a-89ea-4ed2-9756-a7f78864dead', 'd1515f47-0a4e-4a96-a6d5-bf27fccbffe9', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.25);
+VALUES ('740e2414-cb0d-4314-9a46-6b9bcadf388d', 'd5780ab9-d422-4089-b029-aaadcb23ae53', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.25);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ecbf3caf-9821-4dc2-be7b-00f2ece46ea1', 'f569faf3-969f-4883-87e4-8ed3c7cb1bff', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('7792a902-a44b-4d28-90ec-70d7d82f0f2c', 'cdee97f1-77c8-4676-86a2-a8a31edbd475', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a569bd94-49d5-4923-96ae-0e8e96b3a781', 'fd626217-f484-4a76-8ed5-b8a184d5cce2', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('ace0d414-89fc-4c70-be81-28de3e2d4b07', 'f3c8984c-aa42-4ecd-b3ba-d2fc82095ce1', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b2a9fcd7-9f33-499c-a32f-3b7fabc3df78', '95bebf41-978b-45f4-933f-41f22abd9dcc', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('5351bc18-a62c-4081-a42f-59c0a762afa8', '59b7ba68-69ac-42a6-9b15-43621ea62747', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('94978f5b-9187-41ff-9bd3-ed4108889c48', '8429ff5c-e365-4807-aa7b-2451ecc29376', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('5ca6b1e0-1f4c-4b20-b270-767167b9bd5d', '27ffbfb0-1086-4800-9f55-43e4365ab51e', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ba5b8245-1585-456b-b8f1-b9c32977a463', '8454918b-7d4e-4ae1-8423-8a20f47e3f4d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('821b05ef-4e98-4623-8e01-d8db3cfdc9fb', '8ba70f5c-f826-43f2-b026-ccef09e8a61c', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a4b373a3-b8be-426a-9eef-298c15850daa', '30fbae08-2d76-49e6-8855-53feed88da9e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.09);
+VALUES ('cf8a2a6f-8fd4-4a21-ba34-8461ad2728bb', '0008f541-3ed8-4f88-acde-fd86bec0c878', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7d4ce8b1-81b7-4aa8-9a86-6bd1eca44e49', '76e6c16d-751b-44fc-b9b3-8e814db77df4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.15);
+VALUES ('17f51a34-2fd8-48df-b212-b1bb1005fe57', '7960d317-8533-43d2-bd11-d95c799aa0ac', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.15);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('47105c9e-bf31-46da-898f-d7fa29718752', '6baa9176-c882-41fa-af7d-bc161dd71e02', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.55);
+VALUES ('d0a039aa-297a-4d32-b1ec-2b9308e47e4f', '04c2205e-9074-4f8e-aad5-8a8bab2db5ce', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.55);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('df445703-3dbd-4dd2-a325-d53fd2be5ceb', '5c28e8ba-1a02-4ee7-9db9-e4d07fa057d2', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('0782d5a2-89fa-4424-8ffc-f7b6c5a0ff67', '59fb3ce7-6296-4312-acb6-649fb2ce3f4a', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('4d23e2fb-5908-4766-9296-1d4d018ae685', 'a9f101d7-8016-478e-8bfc-1376d4a756cc', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.79);
+VALUES ('c08d4649-6548-4444-9f81-860046870957', '22c2cf56-123e-422b-a0c1-9f5ac9261870', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 4.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0af1c3f0-2bce-4521-82e0-a2f20b42f4f4', '513352b2-9fbc-431e-bdd1-b0eee2a9feb6', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.45);
+VALUES ('61e97ef7-260a-4141-b4cd-b0a15bdbec06', '9d151ac8-44de-47d9-bd42-b6c7455fc9c9', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 6.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ecc07d13-cf13-4db0-8c5d-eb6945986c11', 'f857511e-68ee-440b-a5ce-29968ab1fae4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.19);
+VALUES ('499d277f-b181-47d5-8f4c-8bf4ab09335e', 'b74cc794-1ab4-44f4-857d-0c030e19e48e', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('88e6d4c0-6cd7-459c-89be-f3197a41dce0', 'b61e71d2-f4f7-4f84-b7ce-9452b2809fdd', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('cafd4ea9-492f-4501-a8df-09647e9b215c', '954afb22-74d5-4a4b-8118-d1414a2e0537', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9c306b9e-9e67-4830-b12a-409007704d3a', '647bace7-42cb-4d8d-b18c-acc0bfba71ea', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('dbd91419-d944-4b0c-8be7-21a555a2a4c2', '3b2528d8-a84b-4ed8-89e8-6e81b893efbc', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('70112e96-7c4f-4f9f-86f6-0a25d619e0e3', 'f2c2c9c6-b1d7-403a-937b-2282856d0493', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('e8e10127-404b-4c29-b7d7-359644a67cfc', '0ed15f0f-3d42-4561-aacb-f4c9c9d73cf9', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8e557ba0-e0de-485e-bf83-a192088a582c', 'f5c10396-bcf1-416a-8a5d-8070cdaaba18', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.19);
+VALUES ('8b609073-493b-4656-9fb2-8d0f9e24697f', '155dec2d-4b49-4330-88b7-8f5e5ee985b7', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('822a70ff-7dae-4883-8f02-75218d74afdf', '54579222-e76d-48db-a1f1-2b28b5552b1f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('3e1601d7-dea5-4592-92d6-03f728189d69', '8c563430-f170-4d29-bd2b-5563d18a750e', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('75fdd7a9-40c7-4aaf-924c-f141e61bae20', '39923d8d-5dfc-488e-859c-dc7f8cc0b086', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('ad8be1a1-6510-44cc-98c4-d8e498bb9fdd', '0bb08794-180f-4619-a30a-4cdcec1c9354', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8414ab8e-5682-46f5-815c-bdc6c98d8438', 'b473b2b1-3407-4fca-befb-fb67003398a5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.29);
+VALUES ('7d90efb8-75a2-4b71-b844-963da04687ab', '840ce2ac-310b-4cc8-b674-0061d35fb5b9', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 5.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('47ed570f-208f-40a0-8923-add4154cd6fb', '5847c0da-f27c-4523-88a7-007e1517694b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('9fc287aa-fefc-4e49-8cc3-934c27d908be', 'eba3ef07-d0e6-413d-a798-d04c08158fa5', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6c964617-2b00-4d38-b1bf-5391d65545f8', 'a68c46a9-94c1-4cbe-a94f-5088795fdf0e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('33c02b5e-e570-4be2-a387-29ae8ec39525', '4dc049b5-8c2a-4091-a829-187b07c2442b', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0db025ae-55ae-461e-809a-0e19cfd9f879', '128a00bc-efdf-4929-9a29-22c14e9f4891', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.59);
+VALUES ('dc93a660-912f-4b94-9b75-7eca96d8846a', 'b7f6593a-5427-4144-a0b6-2ca1baf37232', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 0.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1e921bc5-550f-4181-a0bb-f4df51814ab4', 'af56a398-40d4-4c42-8cd4-755d2993e8b1', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.19);
+VALUES ('3832facf-c284-4d96-8ee6-a26bbe9f6a6e', '33ff66ec-e465-48ed-9c03-afd85fa23863', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 3.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('369308a3-6365-4ce1-91c1-bdc6fd0db7b7', '972daf33-97b1-48d9-9a83-23716564e8af', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.19);
+VALUES ('935fdc3d-8f5d-40f2-95cc-158723581537', '7d8a96a7-acf1-4ea6-bcc7-704a1fd5a0ec', '2b05b779-8779-4bd5-b3b9-97a6cf193f66', 2.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('34fdd186-3708-4977-b6e7-7ee8e2020796', '04051020-aabc-44c0-9bb5-4a3ab07b42f5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('f0ec177c-fa87-435c-9b9c-464731e3aad0', '4f958e95-bcf6-4fd3-87d7-b6ea8b76a194', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('4ae0e347-7560-4a52-87ae-95aeb6a4f1a6', '22d7f48f-c344-4ad3-97fa-2b85d1a4ef38', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('774d5f0f-5c29-4f32-8afa-a164ad93f85c', 'f19c9a71-35a4-48e4-9365-202952bfa8e3', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e13dc2dc-6b8d-47a7-bf36-4ed33f6d4464', '9a29d6c3-7968-4faf-b240-8a2f4a219c63', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 8.99);
+VALUES ('1afb12b5-a60f-4446-ad12-110e2ea66f9a', '8cece01d-d302-4c83-b707-f4fa4acf5cbf', '4d58504f-2d00-457e-8340-150635883ce0', 8.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2ef13dea-eb2e-42a5-88bb-dd7f6a823963', 'a831fa93-aa61-4b74-b790-f4bcf9d24716', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('ace6a833-4222-414d-bf94-78414bcf1774', '20d675cd-be77-49ec-b080-517a2792b6db', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('aee80a0c-d45d-4043-83a8-adc905a8f208', '7fde71f3-635b-40f5-99ce-251b51512f3d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.07);
+VALUES ('191e79a1-2aa2-43e9-9550-e35ad52a3d14', '11936f32-f439-40f7-a866-984769311705', '4d58504f-2d00-457e-8340-150635883ce0', 1.07);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('646ba595-1e79-45fe-84cd-1ada0519168c', '208d5037-3ea4-49e9-8723-90f639a1353e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.59);
+VALUES ('06429528-3d36-4dff-b2cd-738203249c82', '0ef69879-3a3e-4bfd-ace4-ba4e73d6a8e7', '4d58504f-2d00-457e-8340-150635883ce0', 4.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d0045f0f-307c-486c-bc17-96c950890c8a', '18668659-de01-496f-8ac6-fbe83ee4c54d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.85);
+VALUES ('4761de02-8e5b-40d8-b1a5-a665ec6215d5', 'ed4fa2da-b4cf-44c8-a456-3984b6a61eca', '4d58504f-2d00-457e-8340-150635883ce0', 0.85);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5347506c-988c-4dec-9186-a9c901e30147', 'bd020128-ad2a-433f-a55f-4c0079657334', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.69);
+VALUES ('4be77ff3-93c0-4be7-8b38-c5863b40660f', '906f6f8e-63c0-43ec-bd97-83cafaf61d93', '4d58504f-2d00-457e-8340-150635883ce0', 1.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2f2f5411-cac5-460e-af0f-b9365644aa19', 'cbd0616c-fd79-49f4-9d38-d06d970eb333', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.86);
+VALUES ('f82b7031-fbae-44f8-b700-225a97af8669', 'af3103cb-855c-4612-822a-0f37b96757c0', '4d58504f-2d00-457e-8340-150635883ce0', 0.86);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('aeb996cd-79a5-461a-a9f0-ef7d21450a3d', 'bbb9ef48-ab1a-4c50-9a14-2d388f212cc0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.95);
+VALUES ('4164efa0-e674-4b3b-bc20-b3e74b55f113', 'd4f964a1-8097-4ce9-88ac-56d46a0b4d84', '4d58504f-2d00-457e-8340-150635883ce0', 0.95);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b9f9cf70-c73e-477c-945c-5c4568090689', '3988a5f0-8f41-4448-823b-358f60f7a879', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.94);
+VALUES ('3bdd32a8-d81e-400e-8f5c-9930dca24a9d', 'ba25f3d4-1144-40fe-857b-bbb7bc4cb991', '4d58504f-2d00-457e-8340-150635883ce0', 0.94);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2357948a-6d86-42c4-8a01-3252eaf50c0a', 'c7ac9135-6bf6-4bc2-968d-49e02390075e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.98);
+VALUES ('6a19f2e8-e750-469f-ac65-5b4780a04bdb', 'a83073e8-bb44-4863-986a-5784553c18d5', '4d58504f-2d00-457e-8340-150635883ce0', 0.98);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c4fda1ad-449d-4f21-b5ad-e9ed0dba3936', '4fe45097-9cd4-4a2a-afe2-c54a4c2c7b23', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.9);
+VALUES ('0040678f-b990-4455-bef8-76ee46848084', 'f94f39c0-557e-4484-98c5-6c6255d46096', '4d58504f-2d00-457e-8340-150635883ce0', 0.9);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('71e3930e-8c84-4e02-a8ed-e7b6e7c77cc0', '2b14842a-6a88-4c28-a68e-270882115450', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.13);
+VALUES ('f2dd0cda-9a65-4af6-b03b-eceb0ae792a3', '410d325d-18e6-4dd1-a97d-a36a76ddca0f', '4d58504f-2d00-457e-8340-150635883ce0', 1.13);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('603dca28-a1bc-488d-9529-4344f1e820a0', '4b4ada6a-ddd2-4e0b-b857-e855748c1efd', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.45);
+VALUES ('1e25fea9-db0d-453c-b0ab-e98b938c4c2f', '2f8eb569-e504-48d1-bd09-15876940c5e3', '4d58504f-2d00-457e-8340-150635883ce0', 7.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ec8599f2-f59d-4722-a78b-f6e2ac75cc00', '75bb99ac-de08-44ec-b920-70be643a0714', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.45);
+VALUES ('d8db4dfb-70aa-4ec4-ba57-5b28a4c1a295', 'ed80d0a1-a465-42b6-888a-2b5688e26fbe', '4d58504f-2d00-457e-8340-150635883ce0', 7.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('27104317-4e64-4901-9048-18327a5454a3', '983f85d5-01eb-437d-b72b-843beae4a8f5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('f7b043af-4fd2-4f59-abc6-3498b7c95007', '81022f0f-77f7-45c6-8e4f-d5e4eeaa37a4', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5ee1b4a1-11be-4d75-a11b-64ca1e6175da', '71fec5bb-e85c-436f-942a-9c26e8693305', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.89);
+VALUES ('69c49e0c-c1d8-4cb7-94a1-5d83c125158c', 'a977c8df-0db4-45c7-89e2-3a1448d7970b', '4d58504f-2d00-457e-8340-150635883ce0', 5.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('cb4cdac9-d5e8-4470-a456-f94e0a86b88b', '0d9c2650-39a8-447c-bf4d-3aaab0e3811f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.45);
+VALUES ('f73c3fa4-c48f-4468-8e60-294bbc86c3d9', '86aa8ea4-4e2e-4b6b-ade0-9db601876043', '4d58504f-2d00-457e-8340-150635883ce0', 7.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5a600674-8b50-4733-82ba-afa5e36c5e22', 'c14738f0-794b-4144-825b-b76355968ad3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('1abe7a03-71a6-4033-8ecf-11fb8b249e28', 'c5411aa1-f5ac-4657-9ae1-bdb5acf8df6e', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9aea7ea1-cf5e-44d9-9a3b-a4e4f1b642af', 'af53f363-099c-4956-8c2e-7206d7f97232', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('544b569b-5ec8-4f14-a933-86003aa3ef38', '9fa7b287-275b-4584-9936-044272f12484', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('850a983b-5031-4109-b7e6-8350d1defb9a', 'b6505036-b941-4e94-8e35-12c6c49dd29f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('a4bdc37e-c049-4468-bf15-33629b86cf7d', '4e78bd98-8734-4706-8d58-b7c56524956c', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('be8403c1-add6-45ad-ac41-5c43641d2dfc', '5f49afdf-3cb0-4d96-bd7d-6d15f82fa260', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.45);
+VALUES ('67183229-94a6-450e-a36e-736e47eb9932', 'e3f98019-ce32-4386-8e85-068c6b4e197f', '4d58504f-2d00-457e-8340-150635883ce0', 7.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('23bedc31-511a-4b52-9572-5883150a7ecd', '9c579f30-4417-4eb5-8f4d-19989f593800', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('d2cac9ab-9a2a-4f08-b45d-352a470e69b3', '596d762d-7f8a-4111-b42f-dba108405dc2', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6ebd7cc2-ac01-4f8a-9fd7-666f43302a25', '8419e25b-1282-4712-b80b-001e3e2a7935', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('c7885ef7-d3bf-4b7a-9ce9-da11d8ce14bc', '8f1bb711-2e6c-497b-b28b-da35c385e239', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('61ed4a4e-9d37-4840-bdc2-e233b6446dc6', '5bb7ef4e-bef2-4d76-9c1e-e20561814c1a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('690c055c-cda6-44a0-afe4-eaa0c5ff3b06', 'c5c51c9b-e3d3-45be-bc2a-8a9506cf8c0b', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7db40531-d93b-4d09-86e2-0a68d6f9c330', '5dca55a8-a124-4b25-9574-c4d4134552a6', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.52);
+VALUES ('48979434-b888-452f-aa06-fba589af9c60', 'b538e983-e5f6-4631-acc1-96afef8e4c6d', '4d58504f-2d00-457e-8340-150635883ce0', 1.52);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('156c1adc-bb66-416b-8dea-7965de780fdc', '38d9dfe3-95fd-4ac5-bd7c-443e01d1830b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.42);
+VALUES ('7076a3a0-e88b-4f5a-bcba-3199c00afb43', '1c0fc96f-89e7-4ae5-8e0c-c7666eb26ce1', '4d58504f-2d00-457e-8340-150635883ce0', 1.42);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2d6397a8-1fa3-43b4-815e-37ba768cb165', 'acc5b10f-4369-4aea-b975-ce7cfccdd14c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.45);
+VALUES ('1cdc0df2-7c7b-4763-baad-c2a23ca16fa7', '0452f96b-119b-41a8-bea3-c1e08d48a80d', '4d58504f-2d00-457e-8340-150635883ce0', 7.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3c5d505c-de01-46ce-aaeb-48ce61eccc5b', '14ea8774-a234-4b68-a266-51cbed8fd70d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.64);
+VALUES ('5e665e82-1040-4620-a9ce-a6af52996170', '27356132-adbf-4463-8d81-6240840cc7b3', '4d58504f-2d00-457e-8340-150635883ce0', 1.64);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9e48de19-c2db-4217-a572-68de6b812fd8', 'bdffdeab-2dfc-4851-bcf7-9029b7e66236', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.81);
+VALUES ('3ee26ba4-75a0-4e64-83c8-6f4a46178dae', 'f30030bf-e10d-4e07-9b25-b9f8e1346701', '4d58504f-2d00-457e-8340-150635883ce0', 0.81);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5f050b2d-5c02-4a12-9cc8-b5da1532341b', 'fbf8ef1f-fcf0-474f-8a86-afeedab24d2b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.2);
+VALUES ('a65a35f7-5933-4022-839f-9cf60029e96a', '648c391e-318f-47b9-a337-21bf1bcd46b3', '4d58504f-2d00-457e-8340-150635883ce0', 1.2);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8db9f710-8217-4a8a-a6f2-d636e0af3f3a', 'c9c57699-4225-4f19-be07-10a01322e1e5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.45);
+VALUES ('284bcca7-d67c-4b70-b419-ccb1e1bc74c5', 'e071996c-2efb-4782-9637-eac9ca8eeb55', '4d58504f-2d00-457e-8340-150635883ce0', 1.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3381f4da-64c8-4fd6-87f8-178abf2aab81', 'edefa4a3-9956-4a3a-992b-5301b4b29420', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.49);
+VALUES ('982c914d-4a47-4eb5-a794-f659bcc75fe2', '039af4da-7c96-44b7-b44d-ad4f61ef9946', '4d58504f-2d00-457e-8340-150635883ce0', 3.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('edc91407-7ff2-442b-93ea-0d5a2d744c29', '088cdfb8-fd00-4eb8-8656-9261347eec83', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('266e7687-666c-4558-b4df-3f943d4a1bab', '1e95ee3d-c946-4af7-b9c7-e4f7620147ca', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('00f4acfc-6c02-4815-a662-82ddebf27596', '0c8a1edc-23b6-4cd2-9308-627661ef9f4e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.45);
+VALUES ('7f8d356e-e4bf-457d-aa2b-03da61b66979', 'ed715cb5-6e36-4f05-8517-8dc6a8e387a3', '4d58504f-2d00-457e-8340-150635883ce0', 7.45);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('818a73b6-495b-4b22-85c0-86b754d1aa43', 'b836c75b-56c3-4203-90a7-5f389b2092fa', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.14);
+VALUES ('9f32a47d-c660-4eb5-9a4a-dbaef3775338', '8e74f511-5744-4cf7-9f0b-e1c0c37e33ab', '4d58504f-2d00-457e-8340-150635883ce0', 2.14);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e7ba1f58-e161-48d6-afc0-214b53e32cbd', 'f2b161e0-ba75-4955-9a8a-c45134fdcdfa', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.69);
+VALUES ('9e7d2b85-3f90-4bfb-8756-5c502adbac54', 'e87752f2-d872-4efe-b47f-8aec02dd9385', '4d58504f-2d00-457e-8340-150635883ce0', 3.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d992b38d-f7e9-46cf-bae2-b5f67f09f3de', '004202a8-7dea-4bd6-85da-380cd0050406', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.69);
+VALUES ('2685702d-4637-4103-9357-a65a0672a6e7', 'ea25bee6-9c37-4782-81f2-a402fefd3773', '4d58504f-2d00-457e-8340-150635883ce0', 3.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c43e8698-40aa-45e9-b884-1c38d89bd079', 'a52ab18d-db3d-495f-8374-f64688149016', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.24);
+VALUES ('4d2f8e25-c1b9-4a0e-87dd-ecc8d1b8a92d', 'fc73e1c3-b5d9-4fc8-9307-d62f40d2c004', '4d58504f-2d00-457e-8340-150635883ce0', 3.24);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('13ba1e08-32a4-4661-8b33-e66e23c4033b', '2666daff-6529-4de7-9e4c-b59dc534c0eb', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.29);
+VALUES ('0134794e-bb08-4abf-a6aa-7a894ce44c61', 'f914128c-d125-4c4d-81fb-93bd2c887cc0', '4d58504f-2d00-457e-8340-150635883ce0', 5.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7fb51580-7c89-4e09-8185-23df526185c4', '2c90cc13-4910-4d68-b794-bd69821d4cb0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('72dfb5a8-6390-4af4-afe1-f07172450936', '36b15daf-af82-484d-91dd-5019690f080b', '4d58504f-2d00-457e-8340-150635883ce0', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('262c92c4-10ec-40eb-bacb-2e9566a3b0fc', '5cc6ea2b-681a-4a06-9d49-dc3b27afe777', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.49);
+VALUES ('86c5de13-140c-4f4d-8242-bf186881faa8', '6038d3f2-fe12-4816-96a9-686fe00f676b', '4d58504f-2d00-457e-8340-150635883ce0', 3.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bd897249-728e-438f-811f-3c98b338d020', 'd8bac475-6605-4b81-9c9e-289d4f63e81b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.79);
+VALUES ('75cfc66e-05b5-44c3-9be4-ec3e0ce1bec4', '75af8531-d3e4-4dee-b7d3-cf7c2ec3eb28', '4d58504f-2d00-457e-8340-150635883ce0', 4.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('90091a2e-f2b0-4598-b8e0-2a1468824b36', '44d2f8ad-ed51-4a21-8bd5-1155eff26c55', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('bc5593f9-eeef-492b-b18c-18ecfbd34eb0', '62534056-a140-42cd-9305-dce17abaa8df', '4d58504f-2d00-457e-8340-150635883ce0', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('038b9f45-faad-4d87-a999-987a8a28e222', '5340784f-6be1-42d3-abcb-2d0adb33c3b0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('3425e9fb-49e2-4ad2-99e2-3177cb0cbbf2', '88f38743-4a80-4f54-bcab-b908dbd673a7', '4d58504f-2d00-457e-8340-150635883ce0', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('66e0fab6-594d-4168-86a3-3fad3dbc581a', '2562cdbd-00b7-421e-9411-47bd82bdbbe4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.69);
+VALUES ('7353890c-9cbb-4a02-a650-ef0c28a85310', '0c020083-54da-4ad7-83fc-8d3ad792aa48', '4d58504f-2d00-457e-8340-150635883ce0', 4.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('60040467-8b70-4385-a203-fac5fbc9a2ae', 'ec73330b-53c8-4f6c-8d8e-d815f2e8d327', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('976ae7b0-864a-45ff-b6ca-6857bc773798', 'fec29886-6234-4c97-9130-4e9af61f3a1b', '4d58504f-2d00-457e-8340-150635883ce0', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2cc2c705-5725-43ad-85ba-2cf7fb627ba0', '79a3b8c6-9d67-4002-b755-f01f106654df', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.99);
+VALUES ('e3fa9c40-6987-46d2-a19d-917ae5006478', '7fa0c31d-2e19-418c-8eda-910ff5048f44', '4d58504f-2d00-457e-8340-150635883ce0', 6.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8ff8d928-ddff-4def-b0a7-8180cd0649f5', 'f672f604-5c1b-4509-ab4e-c845cf227276', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('110c55f8-c562-4144-991f-b72c8a968127', 'a1c929b2-917d-4141-9405-1782100107b2', '4d58504f-2d00-457e-8340-150635883ce0', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8e22e2af-8106-4755-b1b3-d7fd2f0ddfe2', 'd7c0ba13-00c7-438c-9d07-c93af28a3ea8', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('1f964b18-9c7b-44f3-9190-fe78fd903210', '3931ddcf-d3a8-46f6-8241-6975bb9427ec', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7459b797-b1fe-4d92-8b0c-8b8f141f0c03', '9cb6c2dd-c5c0-4760-b5be-444ca676d3ee', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('807a6ab8-51b7-40a5-a59f-5842f449d0e0', '8be97469-c624-4ff1-8d07-bda7ab9995c1', '4d58504f-2d00-457e-8340-150635883ce0', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('793c3a2b-33dd-46ca-a7de-f3e8ad33f133', 'c1f2b9d0-368e-4884-8291-16cb27ca5036', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.29);
+VALUES ('ad0f56f6-e912-4b4a-ad3c-71e9d5a056ae', '14d39044-711d-462e-9eb0-6c3440fc8a74', '4d58504f-2d00-457e-8340-150635883ce0', 5.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('499a633b-429b-4535-85e3-86855b9a7d6d', 'c9296990-185b-48d7-b345-c1ef129b140b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('273df0f5-3071-4cf7-88b1-1835fa862282', '376eec7c-2349-4f6c-a3c3-8f315ea79cc3', '4d58504f-2d00-457e-8340-150635883ce0', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('134eb95f-748e-403b-b38a-9c21e1ef4cfd', 'fa228764-6bd1-4a48-8a72-afc5cd615688', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.39);
+VALUES ('d140bd04-e214-4fb5-b29b-9f1a2dec1aa5', '28020589-31ac-4d2d-99f4-609e130eb127', '4d58504f-2d00-457e-8340-150635883ce0', 1.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5faae21b-749e-42fd-af0b-da693b05e1d5', '1daa2063-9675-4b7a-8793-67fd4e87bd29', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('0de567ef-57aa-42f9-9c3a-e347bab78d45', 'd47e9470-18fb-4c55-a57b-76e67b7bd39a', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('020fc1ad-3d30-47aa-9283-c7010aca42d6', '58219166-e72f-445f-ac0d-d1b4dbf125c9', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.99);
+VALUES ('aa245f0d-589d-4213-9fee-fdf4571ffbd2', 'b8a30f37-82c2-4a7c-a5d8-e5f986be2db6', '4d58504f-2d00-457e-8340-150635883ce0', 6.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b2fdfa39-ea3e-4b23-922a-d89a4e24e935', 'a36c5ab0-f406-4096-b470-024d72b8e878', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('bb9b740b-ef0d-4b89-a837-f032a381b42e', '5aee7906-5549-4350-b75d-bc49e1996532', '4d58504f-2d00-457e-8340-150635883ce0', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('82461da4-f512-4023-bc87-22f42c8e2a44', '57641b97-9c2c-4460-9c9f-11ec9b2bbbe0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.79);
+VALUES ('16902b52-5765-48d8-b69f-2baa317f8baf', '93d5b03e-bbee-41b2-8e96-c6608b3e23b3', '4d58504f-2d00-457e-8340-150635883ce0', 4.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c7e67206-1b91-4dbe-a845-bb83e566ddad', '9cd66007-d842-4216-a0df-7d50f612e90a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('765335c7-6478-4fef-a43e-814ab34986e1', '093e2570-178d-424f-9039-6cc8a4c04822', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('75ec27cd-3c3a-4d7b-9e8d-fa834835d4d2', 'db24dc3e-af9e-408e-8129-8f214e98de42', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('e2ecfa1f-7781-4475-a63b-62af19e5ccf6', '67541d56-c0b3-422e-b710-9e9afda867c4', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('613f0dc0-626c-42e2-9dbe-918d0a5890cd', 'bd779803-1918-441a-8fb3-a14b93486cbf', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.79);
+VALUES ('47c37616-a9b1-4be5-bd08-163019418ea7', '0ac250a7-823a-4e20-9576-7404f7b08a7e', '4d58504f-2d00-457e-8340-150635883ce0', 7.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('df8bdfb0-b5d5-4287-a571-42b1a61ff231', '1fbf613a-1241-4251-9062-b02f2234551d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.99);
+VALUES ('ac086003-35b6-431c-99cf-30db1f315ff4', '72fc67d8-7af1-4b10-a97b-3517ae364c27', '4d58504f-2d00-457e-8340-150635883ce0', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bc4df9fc-8dfb-4cbb-8dda-f821a349a5dc', 'dde287ae-4044-429d-bb3b-469cfcb90b5a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('f9010655-bb69-4f0f-8a08-58d7b7beb1f1', '9f2961e2-250f-4a92-8cd6-c5e90fbd0e0f', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('03bb7a75-e662-43d3-aff4-8d89501ba4b9', '7d92f34a-994f-4b3f-a300-10cb2d76dea5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.39);
+VALUES ('aa8fa7ee-704e-4cbb-ac0d-0adf60571878', 'fd329336-0ddb-4e73-af5a-3637bcb5c4ba', '4d58504f-2d00-457e-8340-150635883ce0', 6.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ce8d765b-ecb3-4507-a27f-2c5ec83802c6', '2feb7b66-fabc-4eb5-a362-72455e29dd8d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.79);
+VALUES ('acc7beff-d39c-43c3-a1c1-ae8641ae6d17', '78299a95-be56-484e-a627-7b2d27a0a230', '4d58504f-2d00-457e-8340-150635883ce0', 7.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('21b0342b-7e33-43d0-9926-78436fc45630', '2774f7cd-bc47-4280-b859-66f168905de9', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('d523492e-b6bb-491f-8146-c3c846bc4d49', '7ad9eb0f-f77c-4ad0-beae-afc21561ecdf', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('47c33d74-05fe-4d3b-be42-809aee8e7d9b', '82cfdf1d-138d-42c4-bf0c-68cfc70da99a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.39);
+VALUES ('867b3314-6115-4346-8ca3-1125863cbec2', '47731937-5dc1-4c06-8694-b057508765d4', '4d58504f-2d00-457e-8340-150635883ce0', 1.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('812031f1-e41f-45ce-81d2-5d8cce9a2473', '364ad617-8382-447b-9bf8-6e67c1b3cc37', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.99);
+VALUES ('cbb890cb-4ed8-4629-b9a3-0b17140b715c', '4ef70e82-b264-4b38-b2e7-cd2623268fee', '4d58504f-2d00-457e-8340-150635883ce0', 6.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('63a2cb90-883e-4e20-94a7-09c14528721d', '08309d92-663c-4eb2-bdb1-26b574a8c099', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.29);
+VALUES ('72758b7e-e07e-4efc-acf9-5aeb557620e6', '0a9d75ac-67a6-4900-a2ac-b439ac589609', '4d58504f-2d00-457e-8340-150635883ce0', 5.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c7fa629f-f60e-440c-9a30-3324a4bb0dca', 'f204f4c8-ff85-4cb2-918c-681c81cd9fe7', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.39);
+VALUES ('7f4e0521-27e1-4894-8fb5-40583dccb689', 'c8ded2bf-00f7-4b00-a5e7-c6ae06db4046', '4d58504f-2d00-457e-8340-150635883ce0', 6.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ffee4a30-5734-459a-ad4c-7a2d7f974433', 'd58ddd94-8b01-4e22-a0ea-c045a8af5271', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.79);
+VALUES ('c774a6a1-73df-4d77-b281-c7d2acc06942', 'a4f82609-af26-4231-a11e-000986c534bb', '4d58504f-2d00-457e-8340-150635883ce0', 7.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('062de15f-d2fa-4d09-848d-f78fbc238e82', '6ec22fd2-4d09-4bcd-894b-274f7d4e92ea', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 7.79);
+VALUES ('ab4d14a8-cb12-4ef1-b9a9-173d0f77d220', '360e13fb-27df-46cc-a30d-a5f2c361f623', '4d58504f-2d00-457e-8340-150635883ce0', 7.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bfed8b8d-72b2-452b-ac9d-70e70611d075', '0062086f-bd49-4de9-9d9a-145fabd89c20', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.59);
+VALUES ('85903565-f664-45e7-b50e-aa9cc5df4386', 'c162f4d5-0665-4786-8371-b32761a6020f', '4d58504f-2d00-457e-8340-150635883ce0', 4.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c8c12b53-c900-419c-a8cb-24e50a5ad4f5', '84671b6f-8959-4823-9d87-e4ed1ba6346a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('cf630e83-3d0c-42d6-882d-2efef5815f03', '1706c170-9cd3-4571-a493-4a1b575339d8', '4d58504f-2d00-457e-8340-150635883ce0', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6e611e9c-8987-4bba-afb7-f4c7f4a58232', 'ef763312-8d5b-41d2-9fae-aaaf982a7b6f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.29);
+VALUES ('6500fb99-ad95-44ec-99cf-101714180752', 'b472f6cf-2021-45e8-b267-6a8cc77953bb', '4d58504f-2d00-457e-8340-150635883ce0', 5.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('36ea4a7b-7218-46d9-ba79-55a5f832dd21', '3c3428c6-c4e0-4531-b2e6-42959fab1d50', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.39);
+VALUES ('46ae0743-296d-4593-9d8c-1ea148824bba', 'cbef4766-a291-4d11-b20b-15c25ed5bdb8', '4d58504f-2d00-457e-8340-150635883ce0', 6.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e70d0950-b274-41f5-b714-3becdc09682d', '6c3e599c-fb3c-4a91-9565-9bf582e618dd', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.39);
+VALUES ('68ad5063-db26-4252-819c-a367f97c5b8c', 'f855421f-faf9-4ab9-b988-0bcc3110624d', '4d58504f-2d00-457e-8340-150635883ce0', 6.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3fafd5d5-dd2f-4630-b648-b75c0745cc98', '1a056e4f-22dc-4871-9fb4-fd3b0697cc40', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.89);
+VALUES ('6bc1d249-2c0b-44cd-9ac5-cf84169d101d', 'fbdbbec1-fc09-49c3-8bbd-9cc7f8f4b3cc', '4d58504f-2d00-457e-8340-150635883ce0', 5.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('47c664a6-d9b7-4059-9789-1b0c6930837d', '07fb5fac-0250-4f28-b349-a74c7c0b1d2f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.19);
+VALUES ('50504fd8-02e4-4ce1-a9c8-d09a2dfe30f3', '81ba61e5-3a29-4737-971d-80ab96d77869', '4d58504f-2d00-457e-8340-150635883ce0', 2.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5a4dba7c-fe11-43a5-be70-b2f78560495e', '67569645-916d-46a6-8a86-e30595620b2d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.21);
+VALUES ('7e44519b-d2bb-4bd4-843d-8e15cd321f1f', 'fa615e59-21b1-4e8e-a867-06d85d8a087d', '4d58504f-2d00-457e-8340-150635883ce0', 0.21);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0fead97b-a168-41cd-a7f5-7d4aaa47e8dd', '505762a3-fe87-4ebe-a9b1-cdc31a678901', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.21);
+VALUES ('a9e439eb-e249-4a82-af2b-809e3f0fa199', 'ec7debd3-e52c-4d63-b3ac-4f9281445e21', '4d58504f-2d00-457e-8340-150635883ce0', 0.21);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('19e9c807-afa0-453e-9559-b72782f1ced1', '45aa35f1-159e-4c65-9d19-675aa9240326', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.47);
+VALUES ('be730a7f-ebfa-498e-861e-203c7818abc8', '05b40ba5-f05b-41fa-a2c1-ba845e3ae8e0', '4d58504f-2d00-457e-8340-150635883ce0', 2.47);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('27b8b128-f14d-425f-9c03-1ef4e5477a4c', '073b3551-faea-4542-9fad-79fb591a1f0e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.69);
+VALUES ('04d8da15-0072-4505-80d9-3fd0f271949b', 'eb1aba67-e931-44f1-88a6-e058b42771b8', '4d58504f-2d00-457e-8340-150635883ce0', 0.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9f0619cc-485a-4604-8128-453dd6035450', 'c6549f1f-c4c0-4d3a-a31c-81f230facc78', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.49);
+VALUES ('d22aff54-ea49-4175-9f42-7f912d5a7faf', 'fb6f7df1-3f58-49e0-986d-69333b31e472', '4d58504f-2d00-457e-8340-150635883ce0', 2.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a46c1d39-58c8-4100-901a-ee134befb596', '49d8087a-4901-404d-8a0a-178ef0787e29', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('38fe0218-ad52-450f-98ee-560dddbe6c92', '1b560b63-9eec-4197-a630-cda946cfe6d5', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c4ab70d0-879e-46f8-a611-35505a32f5cd', '1119775b-0eb3-4a0d-8835-3579361a608a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.49);
+VALUES ('ba700f94-ac39-4925-a410-6f5aa389b8fc', '6c4019ba-8a4f-4e4c-8b69-78ef49b39ebd', '4d58504f-2d00-457e-8340-150635883ce0', 3.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('46ac33ee-d4a5-4530-ad0a-45788c9f2cb5', '35cb4c4b-d8cd-4e22-8990-08c1fa032f56', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.59);
+VALUES ('0004f558-ae1e-4022-8d05-89ed05537f23', 'c16d8e5f-4d48-451a-8f61-027c69acd24e', '4d58504f-2d00-457e-8340-150635883ce0', 3.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c5370a06-4f43-48ac-8c37-97085d01f5e1', 'c7f2dc3d-f814-4047-9d2b-ce62fb37651e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.49);
+VALUES ('f0eb8bcb-5e27-4fb7-ba53-14e1d84d7658', '5bf2cacd-29ea-4e48-9a0b-24d99516324f', '4d58504f-2d00-457e-8340-150635883ce0', 3.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('30b68a67-672f-4e81-a384-bc8fc7700269', '179993d0-f48d-41d8-b16b-677459718059', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.49);
+VALUES ('b47b813a-727f-44eb-b945-40d982c0f5fb', '51d792db-d4b3-4e7b-be9f-b7496f8b591c', '4d58504f-2d00-457e-8340-150635883ce0', 2.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('56c68f05-cde1-4190-b1f6-2dc7ebab6215', 'c55ee3da-423e-4193-8e8b-ddffebb1777f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.79);
+VALUES ('a3c315b6-fa22-4d47-8845-f7d1e68ff0e9', '1428b34b-7011-4c24-bd20-695154163d64', '4d58504f-2d00-457e-8340-150635883ce0', 2.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('34d5a3b2-b3ab-42ab-a62a-51985c095067', '055afe22-3e93-4b87-bba8-05c0d0d8b4c5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.95);
+VALUES ('f5991d96-6211-4434-90d7-02f4822edc3c', '0507095c-c47b-4bea-9fed-28430a270971', '4d58504f-2d00-457e-8340-150635883ce0', 4.95);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e21c2816-e566-49fc-a791-b057885f48a5', '29bcb2c1-66ff-4e09-ad84-d00a53c473da', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.75);
+VALUES ('d659df4f-8abb-4d98-b516-04dd8956992a', 'd16d1ed1-4d00-4b02-89e2-16650e621f94', '4d58504f-2d00-457e-8340-150635883ce0', 5.75);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8111d874-a49d-491f-bf56-e5c9645ffd12', '0510dc6a-4b9e-48ff-be55-6ef01ab41788', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.59);
+VALUES ('b26e860b-bcd5-4316-85fe-129404731bc9', '42dbe726-4879-44e8-bddd-6f08d2086a5d', '4d58504f-2d00-457e-8340-150635883ce0', 3.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d54345bc-38d1-4bcb-ae15-477777a0cd92', 'e0ac4560-8b3c-419a-968b-fae13ca3c5a4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.89);
+VALUES ('2548ad17-f71c-43c6-bbc3-5525c6b99925', 'ab546775-93d7-41e2-a2d7-1ff2a857b57b', '4d58504f-2d00-457e-8340-150635883ce0', 4.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a3ad8c80-b377-4bb7-9b29-d221d18d48b8', '3822db89-8697-4b6e-b245-a1b4bdcfe18f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.99);
+VALUES ('b592e906-1e9a-4d50-93be-f10fee9b3412', '1598ceca-07ef-4d6b-bd50-aaa2631b5a3d', '4d58504f-2d00-457e-8340-150635883ce0', 5.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2b0d1415-2834-4e7c-8044-e91f9dadf88b', '35984c39-9e71-466c-bc12-d2f324188eca', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.65);
+VALUES ('1b279991-97f7-4778-ac23-6a77199fb476', '6b596c75-a9e1-454a-a396-d93a895fe098', '4d58504f-2d00-457e-8340-150635883ce0', 0.65);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ffa9b8e7-683b-4ee7-b69e-87951586276f', 'e64e3501-9e11-48af-972e-2d0e5750ebee', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.79);
+VALUES ('d70d76f3-3991-4a95-9844-3fcaf6f2d837', '5985d9e3-15b9-4098-85b3-1b40deb7df17', '4d58504f-2d00-457e-8340-150635883ce0', 1.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1e4fae28-aeaa-4f46-8236-691b9d3e9d61', '3a523cc0-d518-41e4-afd3-76a4e3d50d9f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.0);
+VALUES ('b4442db0-59c0-497a-9704-b538ab56a991', '8ccf2d27-5f19-46f6-89d8-63914a80dc59', '4d58504f-2d00-457e-8340-150635883ce0', 2.0);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3ca73129-76f8-4429-9f01-1c54f4f4c610', '7a61b8b8-6d4f-45e8-9d87-2543d90d4276', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.49);
+VALUES ('3b4256ef-101f-4eff-ab02-d61edf54d6bd', '6b2e907f-7b75-4590-bb79-54735ac494fe', '4d58504f-2d00-457e-8340-150635883ce0', 5.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('354e4d2b-ae0d-4b9f-a27d-3e23dd205c16', '1e02a684-f541-4a9f-bb36-2ac6224ccde6', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.89);
+VALUES ('52a80158-e5ca-4c27-93f6-1f1cfc3207be', 'a04f3df5-3ef0-4b76-ad9f-13330bcca10d', '4d58504f-2d00-457e-8340-150635883ce0', 0.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('64282c5d-ffc0-4fec-8115-31b57745a127', 'f2fc8ef5-04f2-4541-a435-2019b251bed0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.79);
+VALUES ('714b465e-03f6-4742-a477-bfd640ba810d', '48260c5e-7b13-4a0b-8f42-ad663b6fc392', '4d58504f-2d00-457e-8340-150635883ce0', 0.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('96fbdc0c-b0c2-4e98-b998-9dc673cb1914', '175e24c4-2e6b-4a97-bdaf-34499d7862d3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.49);
+VALUES ('b65af7e7-2db9-49af-b575-d15d99534c29', '45cf4f25-ee1a-4c47-8b48-2eb7ad326c01', '4d58504f-2d00-457e-8340-150635883ce0', 5.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d6e99715-ea80-49fe-a993-9dc21f174fef', 'b64052e9-6fc0-4d80-80d7-b37e7f976f1b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.99);
+VALUES ('f6cde9e0-dfb4-47de-822e-127a184168ac', '082f2d54-28e4-4764-aad2-58036c29e928', '4d58504f-2d00-457e-8340-150635883ce0', 5.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('eee67219-f25b-46ae-b005-6121322d3d84', '26fdbdfa-7612-4dc3-b7e0-beb47a82f88c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.69);
+VALUES ('93f2a45a-1c2e-4e83-be5f-af029e81047f', '2f8b425d-baa4-42c5-9053-86bc3263298d', '4d58504f-2d00-457e-8340-150635883ce0', 1.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1ff05bfd-8d73-4f56-8b4c-6f2442c6f1ef', '09537b7a-ecee-41be-99b0-2048b5d3b28c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.89);
+VALUES ('2137aefd-45f9-4072-8e4d-1c59e586eb05', '9ecd741c-8046-4bfb-b26c-12ffe90880e1', '4d58504f-2d00-457e-8340-150635883ce0', 1.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('59538c22-acea-4945-8246-7db423fa2e9b', '15a8d534-4f1b-4306-88fd-3f8cf237c7f7', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 4.99);
+VALUES ('910ec0e2-6380-4fdc-96dd-e0e0f61547e3', '163e126d-3e96-4a23-a2d1-3639262a76f8', '4d58504f-2d00-457e-8340-150635883ce0', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('14a80412-3d78-4a6c-9fd2-9fef840b00b1', '0a1e5018-0449-4f4b-af6d-72490483fee2', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.89);
+VALUES ('90d23cb5-359e-429c-990e-6629fdc30ea9', '60ed1a7c-9d20-46e8-977d-26970366c5f3', '4d58504f-2d00-457e-8340-150635883ce0', 1.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6a7c2813-9816-410c-b020-59da430b4327', 'f716ad1c-922f-4a01-b2cc-1ac8553707dd', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.89);
+VALUES ('d7e2defe-ce6e-4a16-86d5-abec6947ca66', '31557c77-c640-4778-babb-9bda972704a9', '4d58504f-2d00-457e-8340-150635883ce0', 1.89);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('dddfc49f-087f-47dd-9752-bff5613451bb', 'ff69a320-b368-4d93-82cb-ea2014e6a69f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.49);
+VALUES ('a00405b3-486e-4693-8687-e5a9877e84a8', 'c21551ce-06c4-4fb0-87bf-ad2d00eaaeb5', '4d58504f-2d00-457e-8340-150635883ce0', 2.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c6e131eb-4d40-4e6c-be3a-c46d7463ec18', 'eb10c1e0-7caa-427e-be75-ffd62b0dad60', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('ba852f4d-f12d-4850-8632-5bea1a288f29', '7a4c0442-068a-48e8-bc9c-c6a6f1a9011b', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9f46d11b-472f-47c4-a720-72b1a1510427', 'cf4a06fd-4d57-44d0-bb4f-78b37f6c0a76', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.49);
+VALUES ('b2cdf78b-112f-466b-a9df-50edfa3cf617', 'd90ea925-33c9-4d86-8ec9-d039f6f93480', '4d58504f-2d00-457e-8340-150635883ce0', 1.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ddcc7cee-69cb-4175-b32c-a8659baaf699', '9cc045a5-b0e2-476e-9799-0b933d8104b4', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.99);
+VALUES ('20c8c3a1-69e3-4219-ab74-21c3b2eb941a', 'fa1a1501-cebb-40f5-b639-b92a923669aa', '4d58504f-2d00-457e-8340-150635883ce0', 2.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0c73c7ae-4006-4e91-9de9-b98e937bce29', '79d7fa6e-fa83-45d8-97d2-0615c8a035f5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.59);
+VALUES ('38a07245-f4f6-4af7-a938-4a088a6d0394', 'ed1c0864-1cb5-4869-a508-8024e0a7e696', '4d58504f-2d00-457e-8340-150635883ce0', 1.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('36601246-c2ee-4fc7-9b80-0da34dc343b9', 'a2b43dad-09fb-4b78-b772-25a761256fc5', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.59);
+VALUES ('99ec3c53-3892-4ecc-a4af-9254b44fb200', '14af5eaf-d843-4c3a-ade8-7fcfb84e15d8', '4d58504f-2d00-457e-8340-150635883ce0', 1.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b990593b-9e11-4230-9541-8978a2950bb8', '939ecfad-33c6-48f5-bdd5-0c3d3a1222cb', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.59);
+VALUES ('48aaed1f-7e23-4846-946d-f13dc0e0feab', 'f5b6bea3-a598-40b2-a3c5-24682a55dfbc', '4d58504f-2d00-457e-8340-150635883ce0', 1.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d8711cd8-e712-44cd-bdbe-d819ce2599e9', '38e55ad1-72ee-4f91-8af7-753d0a670157', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.09);
+VALUES ('f969bb8e-5df3-4cd5-bb24-75f5412239ae', '66e13c95-7003-4d5c-866c-b600b3bd5ebc', '4d58504f-2d00-457e-8340-150635883ce0', 3.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d4f9a3c0-7906-4bd3-a612-f244bc983a29', '10a30a6c-3724-4289-a632-bae1749e4915', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.49);
+VALUES ('dcf7fafa-4c5f-4687-bfc2-69e5e50c6af8', '9aeba663-7731-4903-97e3-564cd994e82a', '4d58504f-2d00-457e-8340-150635883ce0', 5.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('708601ff-f697-41fc-bf38-b57889a44a76', '2940cf94-13b5-4639-b5c9-f9de5d2fff41', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.39);
+VALUES ('b51dbbb2-99b5-4646-a1b4-cb2f7731f340', 'd045f3f6-c50c-4994-a672-c77d434a2066', '4d58504f-2d00-457e-8340-150635883ce0', 1.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d0418aa0-893f-4cee-a842-d62790a843ea', 'd9f001df-1c6a-44bc-bfe0-2bd1ed607e0c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.09);
+VALUES ('8cb17e36-9d90-4f18-a39d-a440bf49acc9', '9bb78705-691a-4466-a85c-67fdb684e761', '4d58504f-2d00-457e-8340-150635883ce0', 2.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2126ed3f-9479-4426-9c72-47af9c81c652', '8ea8622a-74ea-40a9-a374-93459566115d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.29);
+VALUES ('2834e1a2-04b4-4c71-8893-57d610428fcd', '99775ab5-b796-4033-a756-f92d1f2c74ea', '4d58504f-2d00-457e-8340-150635883ce0', 19.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b57d5d29-a6b3-4d17-83ff-ad2af2394fa5', 'f0794625-8f03-46f2-8dc0-cd9de2b1c8e7', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 10.99);
+VALUES ('a92cb05d-bfbf-44f1-af05-21908b05c125', '9de4288c-bcd6-4a3e-80a5-fb6e3bbc2f95', '4d58504f-2d00-457e-8340-150635883ce0', 10.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('099943b0-21ba-4547-8f19-2e168f94264a', '6422c459-24cf-4514-b5ca-9ffbf3854683', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 17.49);
+VALUES ('f172be59-2caf-4f81-86cd-714aa5db697b', 'e3d830fa-98bf-4bbe-85c3-9cc918657df0', '4d58504f-2d00-457e-8340-150635883ce0', 17.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ce09823e-9727-4725-9a69-97f6cd1674e3', 'd5414522-b78c-4902-a836-6cb71fd405bf', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 17.49);
+VALUES ('16c0208d-1bf6-42e3-a2d7-493da4b8d637', '0a9c426a-e038-4dce-903f-34685858182d', '4d58504f-2d00-457e-8340-150635883ce0', 17.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a6188464-fa8d-46bc-9171-bf6042080421', '0ba76e57-4399-4050-b9bf-b347e64dae9c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.99);
+VALUES ('1b83416b-db78-4757-b9dc-b462223ae71d', '3a81d70a-6896-4b17-8554-e1d9ee50bf63', '4d58504f-2d00-457e-8340-150635883ce0', 5.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bf2fc827-e68b-4d28-b3a7-a2355131a23b', '56fe7dcb-d475-41ed-ac31-6acc1af1159f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 8.79);
+VALUES ('0bc81421-d21e-4a48-bde0-1c2c5a422168', '1cba349c-177a-4d3c-a09a-3d8575d93a6c', '4d58504f-2d00-457e-8340-150635883ce0', 8.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e4c38c19-a11b-493d-aa92-a1e2d38b4367', '05e6a83a-a098-4083-80c1-c064f7e9e69c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 58.99);
+VALUES ('0ab6274d-83e9-4de5-932c-933f8c63ac86', '7de9352e-a5d9-4214-9b7b-b80141a30828', '4d58504f-2d00-457e-8340-150635883ce0', 58.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('16d53475-f864-4178-9623-46a63046a66e', 'd422cb42-ed68-4477-87fe-fbee579b0f29', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('8c872cee-4c4c-42af-afd4-393fb9d0e831', '1ece00e7-59b2-4596-afb9-cfc0ff7d80c7', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('49dbcdc7-3d9f-4322-bba8-58fc8635359d', '70bb4f38-bfa9-4838-99d4-1f3217c184da', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 27.99);
+VALUES ('a1174879-3b75-4334-8e1d-29fd52d7f147', '7ec111a3-bd25-47bc-bdb1-5794167e6074', '4d58504f-2d00-457e-8340-150635883ce0', 27.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e7907709-64e2-4054-94ac-a790867b764b', '975ceee0-01c6-4992-96ef-3d09be29a694', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 5.99);
+VALUES ('11fecb06-f7ed-4de8-83c8-7811f578b214', 'bf6ee340-1567-4d05-96b2-e54e225092ba', '4d58504f-2d00-457e-8340-150635883ce0', 5.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('93968aa3-4a3c-4a33-b2b2-1a68a45a1b8c', '56677c0e-81f1-4b8f-bc78-a9bea873b7f1', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 41.99);
+VALUES ('64c61aed-ac48-4f38-86cc-44ba31a8397d', 'eb25a78b-dbb6-46cc-b3f5-6823702b056e', '4d58504f-2d00-457e-8340-150635883ce0', 41.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ff5d8644-a563-445e-9a67-3586389e34c4', 'fb412699-ea55-45e3-95f7-06154000fc05', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 17.99);
+VALUES ('c1256793-6358-4762-a59d-9b02f1025e1c', '8d1bf213-ae35-4cab-a9ac-f40cb07f820e', '4d58504f-2d00-457e-8340-150635883ce0', 17.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d87c17cf-3f59-4525-95f9-c7515af12d41', '5897a5c6-fa02-454c-9063-eb782784b562', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 17.49);
+VALUES ('a1dccd58-1e07-41ac-a14b-7355f61e346f', '28ad2171-f824-4da7-8a4e-08af0d368d7f', '4d58504f-2d00-457e-8340-150635883ce0', 17.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ee717c19-4dce-464b-9a93-5f69256c3220', '18e83478-1ec3-4c19-92ad-bba8409d9286', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 17.99);
+VALUES ('d6658485-a3ec-482d-a8d0-4014d6d3f11c', '174b58c8-67ed-4828-9e10-0d665e00de49', '4d58504f-2d00-457e-8340-150635883ce0', 17.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0a396cbd-e2a7-42c8-a2ca-ce6fb37748d8', '7f894b24-6240-4223-9c17-8c271c0b7e4e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('43603511-2a4a-4857-bf18-c3a0f800f88f', '48b90a24-36eb-4ba4-aad1-dbd091bc4bf7', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('f3caeada-0fbc-4ae4-b672-cf2d389555a1', '032b39d6-41f3-4d28-b0a9-f5a3dc772323', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('b42a7574-f691-45b9-a0bc-55705e77805a', '358c4650-def1-468f-8096-29033f60c6f5', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('4bb7526a-0bf4-4827-a715-b7f31be99ccf', 'd0f865ec-43e4-4ac9-b36e-d8ccc625052f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.69);
+VALUES ('d8d468c2-d482-46c7-b7c8-5ddd4157eb80', 'bd9ea01a-710d-4720-89d5-542835d77c69', '4d58504f-2d00-457e-8340-150635883ce0', 3.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6847ae23-3dd6-4868-90c1-831ed91c70c9', '9c33cc2c-b25b-4755-a6f0-54d15dec2c3c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('b9db7e3f-4063-4123-a7fb-3b733bcf1225', 'df4b846e-905f-44fe-a036-d248697803ef', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('be100724-bcae-498c-9dce-a9682d38f13f', 'e5502f00-9070-4d1a-a08f-bcb47cefb5c1', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.69);
+VALUES ('2b51d705-860a-4269-89a9-376dbc35c12e', '7fc85be8-7199-4690-8992-c0c41c1c112f', '4d58504f-2d00-457e-8340-150635883ce0', 3.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6f83a066-9126-4711-9cde-ac89063b5638', 'b957217d-c931-4a6f-9542-334e4aadd942', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('056abb70-884c-4a81-9e8f-73dce41522f4', '60f701e8-6c45-484e-b579-9d4111f5d23a', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bf018668-ec90-452a-9e30-dea2ca679d8a', '76afd239-bd4a-45d9-8e98-a66adc84ddc0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 58.99);
+VALUES ('5c2d1280-9f91-45ae-8385-3671aa5c65e1', 'dc836a27-5bb2-43a9-955b-777d8ddce04c', '4d58504f-2d00-457e-8340-150635883ce0', 58.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1d60677f-8c09-4b9a-8c96-20991dd69d39', 'f1a0ee1f-79af-4f45-bde5-0bc6cf808334', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('d447ed71-ca72-494f-a2de-250fd9924a1a', '02ab48db-dbf9-4414-910c-2944b5aca1b6', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('25bfc1dc-c20e-499d-8e13-e2cd562b7a84', '4f79dc77-067b-486a-9263-9d1e3da60f2e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('d944d452-b947-4cb2-84e0-75563cbaabfd', '6d388085-fb80-4a8d-a70a-f2434cd33ffd', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('db1cf1c5-c37b-4283-a333-217a8603e4dc', '3fee2b7f-4e88-4023-bdfa-6791ae1ee36b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('423b89d6-42ed-47c6-b170-0cfe32bbad2f', 'fb8858a6-cc50-40f7-9082-7a2770719b9c', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7e777387-ad12-458a-b66f-1d9490cd9190', '0aae69f4-64d2-475f-b84e-b64774721bbb', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('0afd795d-2433-43a3-b696-8e8406822153', '5cf73bae-49ca-4941-9424-68134554896e', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('53780558-5944-462c-a419-5d8bf80745de', 'eeda86f7-b06f-4734-9e27-c80bd11c863f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.29);
+VALUES ('ed1e0605-7a2b-49dd-8f80-3dffb968f6d8', '56b3e2a3-528e-45c3-8e62-53b5388cb25b', '4d58504f-2d00-457e-8340-150635883ce0', 2.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('cf133c4b-10ec-4b32-b59f-89c529bedf80', '119bcea3-e985-4bfc-bdb2-d02f07d0dcdf', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('ea33dd11-ee28-48ce-9e41-6de3f4c35ef9', '40a75523-3ed7-4f19-9474-fc7d70039343', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8905bfa4-97db-45a6-81bc-b06115b4ceef', '09b6e762-962e-43c8-b08a-36d9dd1148c9', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 0.99);
+VALUES ('66f3113f-2995-48a1-8649-0848cbccbbd7', 'd735df4a-b50e-4e26-bd9d-c585830a59dd', '4d58504f-2d00-457e-8340-150635883ce0', 0.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bd2155be-2ea6-404d-ab5f-4114bb8d7162', '733cfc43-40e6-4425-a19d-f0eaa88644cb', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.29);
+VALUES ('87dfec7d-2132-4571-b13a-f465e36c70bc', 'f440829d-ee0d-4fbb-9051-996a0feef7ab', '4d58504f-2d00-457e-8340-150635883ce0', 2.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3a363b69-1b17-4781-af2c-d2001a937720', '5a73858e-047c-467c-88fc-6e071dc8fd25', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.09);
+VALUES ('5410ba8c-3f80-46b5-97fc-c832f87e69f5', '7ba7007c-844a-4561-be57-4d1bc645792f', '4d58504f-2d00-457e-8340-150635883ce0', 1.09);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7dc6d5cc-1715-4dc8-a99c-0629594a83db', '5a2dcfcd-b237-4bce-a910-53e54559e8ef', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.29);
+VALUES ('3758fdc7-07e7-453e-bcd4-1014c3fc9267', '20c19689-c5a3-42db-8504-2db1f9010dc4', '4d58504f-2d00-457e-8340-150635883ce0', 2.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e35c929f-f1c9-45f8-9cd1-f33e0a25800c', 'a802178f-2de7-4b5e-8fb1-09bf3088bd42', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.79);
+VALUES ('e2897852-991a-4cd9-b898-08d4162a2f06', 'a3f9f393-5bec-48e8-b1ea-96b0ceedaddb', '4d58504f-2d00-457e-8340-150635883ce0', 2.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('5221bd7c-1f9f-48bb-b8ba-48e87ec545bd', 'f3564cab-33d2-4a1d-a629-f9961542e957', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.5);
+VALUES ('db6b4217-1df7-4192-ba82-dbf0890fe4f4', '93817bfe-4766-4959-a843-43c3d263408a', '4d58504f-2d00-457e-8340-150635883ce0', 2.5);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7deee1ac-853f-4893-8e4d-f33277701034', '6a15f295-cdb5-48cd-95e8-5e7f255612f3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.79);
+VALUES ('47ca276e-8433-41f4-9a3b-bf37b97dc49d', '2c0c8e13-95a2-4cc7-9f56-52fe8072c109', '4d58504f-2d00-457e-8340-150635883ce0', 2.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('76d83843-1b23-4282-931e-01d42058c3d9', 'b77afd51-a343-4564-8f37-ab4fc79ab04e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.69);
+VALUES ('8a30bf95-8cf8-41ba-b3b7-db94707c6c64', '6b609065-82bf-43a3-9000-0c76887e535d', '4d58504f-2d00-457e-8340-150635883ce0', 1.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('52f3b53c-12b5-4b5f-a3d6-583fa8f8a4cf', '40a12f7d-c8cf-470b-a5c4-1b293e2d9e8b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.5);
+VALUES ('1a023ed1-98af-488f-b4e8-fce8104fe87f', 'c17aec6d-92aa-4c5d-a478-17b0e65b83c2', '4d58504f-2d00-457e-8340-150635883ce0', 2.5);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b1baaf3f-0fd3-4471-8da3-02cf3bd5ed30', '0458c3a1-5a75-46f5-8ce6-68e10f114c07', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.19);
+VALUES ('b9f99bb8-3747-4193-af6f-86fc5cc27608', '9938a5fd-d989-414e-bab8-5666890b7b72', '4d58504f-2d00-457e-8340-150635883ce0', 2.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('496008d3-5f60-4bc6-885c-61943cd7f048', '51bdf451-3377-4b07-8840-02c40e466427', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.19);
+VALUES ('b45f45bb-d1e7-4e7d-8b38-7d09e569ca4f', '2651517f-4983-404d-9649-2d12c1d32322', '4d58504f-2d00-457e-8340-150635883ce0', 2.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8d29ae47-4d01-4b48-a393-918e54d62cfa', '7305bbba-6207-4e24-b617-31423c232b9d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 1.79);
+VALUES ('7f77ca16-12aa-4314-a94a-b9c46bec81c3', '4d1fff01-1b5d-4970-8a5e-599de828c887', '4d58504f-2d00-457e-8340-150635883ce0', 1.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('59378d6d-5450-4ffc-9c27-df8e162c1cca', '56967b60-14d2-4fbc-9bc8-e1291e2591b9', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 2.69);
+VALUES ('54385f2a-6325-438e-8fb2-1b4f00b9ee7e', 'f6db5619-54e8-4bf9-81f6-7ea8b1090e5f', '4d58504f-2d00-457e-8340-150635883ce0', 2.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('f5399143-c442-469e-a140-5c964ffef0b2', '017e9c2f-4394-405c-a328-166bb4935fb3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('e8bdaf3a-a2a6-4dce-9a77-d795ec2889a0', 'd849e6ca-eb0f-4112-b61d-10770e425263', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a660742b-7313-4285-91cd-a2f13d63287e', '2542ec36-c25c-48f3-b901-21ed8f5f758d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 14.99);
+VALUES ('a8f263d8-c5ac-4599-a56a-1facf777107b', '97ded5a9-3f29-4f96-9218-51c75d53aabb', '4d58504f-2d00-457e-8340-150635883ce0', 14.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('25235830-4c6f-4fea-80c6-7881a0534673', '84db3571-05ff-4aac-bf76-c367583e2092', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('15bff8f7-092c-4a07-bb25-a1cc6b8f5124', '2f736794-7dd1-437a-84a6-78f9b46bc5ce', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('81297097-22ab-4476-bfd7-87a9782640b3', 'dc857137-684b-4c7b-8c40-74acdea29121', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.49);
+VALUES ('27bda65a-cdd6-496a-b42d-203ae07b204f', '8eb5c845-8fa5-4785-93cf-15b2fab7f58c', '4d58504f-2d00-457e-8340-150635883ce0', 6.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1a886f6b-8ce1-445f-9379-deb159cf5277', '4dc295f3-e61c-4da2-95e2-6e67edaa10ff', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 14.99);
+VALUES ('62a58955-bad5-49a9-b85d-c83b7ab8f4c8', 'dcb3e92c-d5bb-4e6b-abc4-3eb8c3bb9454', '4d58504f-2d00-457e-8340-150635883ce0', 14.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('f4de8c21-9853-485e-b263-cee1b1913805', '54ec5884-d4bf-4b27-9eda-712e17120396', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 14.99);
+VALUES ('3d0854e5-30ed-4057-a596-e24da5b8a2ca', 'c18e3d2f-ef9b-48be-9116-7be038d6af61', '4d58504f-2d00-457e-8340-150635883ce0', 14.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('bac9c5bf-5501-47ca-a3aa-79ebf2593718', '2922f4ee-8b42-4baf-a119-91c9f8838155', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 14.99);
+VALUES ('075c76bd-b13c-4847-b36f-f306e40e8ea1', '89e646af-90c4-4ee5-ab19-18da19e121fd', '4d58504f-2d00-457e-8340-150635883ce0', 14.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6ec5e8e3-0a2d-44e3-ad0a-d443e6591d63', 'f4693d66-9f71-44c8-804a-4647e1b895ec', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('9a7f918d-24d1-486d-9f8f-2bde45f3c747', 'f789fd0f-046c-48fa-ab83-24383d07d8de', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('88f0d63d-9beb-40bb-8732-f8a79f5eb918', '27fdba28-cbf6-4894-9212-031da15ad667', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('81a6923d-62ae-48d4-b7c8-4de1c58ec858', 'afdf6e27-f29a-4008-a996-4e76d7bf9de1', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('a18766dc-c4f1-4800-afe3-7f0e5ace6560', 'bff39b92-b636-4a9e-8bfc-c5a9bf753062', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('ee6dc0d5-f09c-499e-9caf-64fbdc6e015a', 'f6e0144a-d368-4c1e-a7ce-b2462e35fbc8', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('58184dd4-0beb-4ea2-8531-4fd65696c5f2', '4c0bf1ce-02c6-401a-87fe-b1fd4d96c2ab', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 18.99);
+VALUES ('cc75f209-b1f6-48fe-a89a-4ae30f178535', 'bdb6d354-4f3d-46c4-b0df-18eb1bda7bdc', '4d58504f-2d00-457e-8340-150635883ce0', 18.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('45214f22-3a7e-4e81-b36b-086b6c7e14e1', '7d8ba39f-2a1c-46bd-a5ee-810ffc20f275', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 15.19);
+VALUES ('9a043fbf-492f-4ddf-a3ea-a8458fbb6d19', '7e05fa08-28c8-4bae-9aec-818413c9c13e', '4d58504f-2d00-457e-8340-150635883ce0', 15.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b3f68b85-2db9-49f5-8d66-5746a67901fb', '1983a281-d1ec-4a40-9753-76ff440fee94', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('17757c61-60e0-4e35-904e-fdd53919a4ef', '0290e195-fed4-49a1-ab3e-a3da7adbeb82', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('efd58911-2f93-4a73-b0c6-74b341f2e4b5', '90ed1b12-5a3e-4cc7-afba-7a792174f1b0', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 11.49);
+VALUES ('4959b813-0438-4349-85da-e4d0365e2b9a', '2ccd0f96-10da-441d-a360-36c6c0adeb4a', '4d58504f-2d00-457e-8340-150635883ce0', 11.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ec7ef752-1b7a-4a01-a97a-b1a78cece4dc', '2b377d30-f917-4309-8c27-acc41236e03b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('af81cf64-4273-4600-b1ae-dad03a626c30', '4dbb0bcb-5beb-4004-a63a-7a93636252c2', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('48a6e77f-48b6-4fd3-85b2-c1f99f86bf92', '439c2733-84a9-4283-a346-2cb8c4ad22f7', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 15.19);
+VALUES ('32bcbf8a-403a-426a-81cc-2b6b13584b8a', 'bae39811-521c-4f64-b32b-826b447fabf0', '4d58504f-2d00-457e-8340-150635883ce0', 15.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('114082af-3223-4426-9971-cd8129982aa3', 'bf38cf49-e426-4f42-b466-51cb2f40e838', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('d86a77e3-3359-4bbd-97e8-45217be09366', 'cd58d9f9-49a7-4743-9ccf-b36e86145a7e', '4d58504f-2d00-457e-8340-150635883ce0', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('4e7df462-4e04-4376-b79d-077abc70b566', '8ddf102d-bd21-4956-8503-9c476f520505', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('90eebad0-abf8-46c9-83c7-e8b26629e64f', 'c5c4608f-cd9b-4c93-894e-defcf15acd1f', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('dc3ffb3a-9ff9-4b9f-aa3d-a533369cbd5e', 'ab847a9a-206b-41af-aa8f-7dbb6a943612', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('15946c41-5316-450f-b381-b4a7bd953757', '80cd38e8-821f-40db-9301-e14c191a5f0c', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c135aa11-0948-4e3e-ad79-9b19911c772e', 'fac1331b-b145-42da-8ddc-e2aefb991310', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 15.19);
+VALUES ('8027eee6-9bdd-49f3-9c6b-f1a5dd06c825', '3c5a58bc-815f-4af9-ab88-c9d792c8145e', '4d58504f-2d00-457e-8340-150635883ce0', 15.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c038e4af-fec3-4b05-b3c5-96a606f999da', '861f4546-a858-44ea-8b20-b888a0b54b5c', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('05bfff4e-db89-409d-801d-0a5a6fc6fa74', '1ad372bf-c397-4bc9-9992-f3209a4447cc', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ea62cbe2-f87a-4ef1-999f-438590b37ea1', '86dde04a-eeb1-4497-809f-07fcccab2bdf', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('bc66ca12-af5c-4ab1-85f4-5652a49b98fb', '3b70051c-26ba-476c-bfbf-3e05081a2602', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b5f00537-4947-4622-8ce7-29b83d78e781', '5a0b25a2-ed59-4ec1-aa17-f8bc45d759c3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('c5450543-7623-4022-aad7-e13dea8722f7', 'ca60bf27-0b2b-4475-85cc-2b036fb5b5a6', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0d35dfb3-940b-469b-89c7-41b1d2bf55ca', 'f694b945-b92e-4214-80d7-9ae4b7a99047', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.49);
+VALUES ('2276f52a-ad63-4c30-b68e-bc2a4310584c', '62e81499-fd89-4f72-a263-53cc78e0bdb2', '4d58504f-2d00-457e-8340-150635883ce0', 6.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2787c5f1-6d4e-4ad5-8850-ab3b29c54468', '579b3803-927b-4717-ad40-17c8b3e23467', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 19.99);
+VALUES ('24945869-aa92-45b2-acac-0387d3adf342', 'ff07b267-b31b-44af-af1d-d82b8757d2e4', '4d58504f-2d00-457e-8340-150635883ce0', 19.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('1b6cbeff-c9e6-4dc3-8d65-0b2b90eee9de', '2cf429fd-7189-475f-a7fc-0a8c2a393a69', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('d3c9bd15-e6ff-400c-9fa0-d5af9b3fe10b', '9a10b490-e208-46a6-b848-1974aaf597f4', '4d58504f-2d00-457e-8340-150635883ce0', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7facc8f6-8240-45bd-8810-0167b97b0624', 'a3691a19-eb2c-4a28-a010-34099eff7b85', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('0d1831fe-43eb-4867-a2ea-acc079fa80b6', '4dfc07f0-fde9-4719-b6a7-6cdd66b1c239', '4d58504f-2d00-457e-8340-150635883ce0', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('c4664772-4702-4077-84d3-1279d7b070bf', '78878459-2cbd-421d-9e56-06da1dfd364a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 15.19);
+VALUES ('98063942-f195-4c9f-ae8e-80656bd36074', 'd20b627d-2f90-4807-a7cc-a2f0d54a3e42', '4d58504f-2d00-457e-8340-150635883ce0', 15.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8dd61cfc-7512-4682-b489-a972232ab1cc', '42658bca-5583-43ce-a462-a116b5de173b', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 14.99);
+VALUES ('29fe0349-c972-4c4f-9883-de6b41c10cb6', 'd17b7402-9201-41df-8c17-948a8bd57125', '4d58504f-2d00-457e-8340-150635883ce0', 14.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('df671ae0-17cd-4f8e-a281-73211a3ffc98', 'e96d8889-c79b-4e87-8245-a553a59cce45', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 14.99);
+VALUES ('ead01d7d-6b26-41bf-94a2-ef71099f05ad', 'e21a3c32-f251-4908-bd1b-61d2cb9e0ebd', '4d58504f-2d00-457e-8340-150635883ce0', 14.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('60c8e2c8-3932-4efa-93f9-184b3ce7da38', 'f91e2b40-36d1-4c51-8321-bbd4ffcbcb29', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 18.99);
+VALUES ('60f4e670-8b6b-4563-82ad-2501c8f0e066', 'f0996450-293a-4eca-8ec6-4f1539a5cfd8', '4d58504f-2d00-457e-8340-150635883ce0', 18.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('f3e72d25-c11e-4243-9acf-697e2cee2dc4', '738682ab-fc80-4afe-a80a-7340ff9dcfa3', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 14.99);
+VALUES ('aa645aef-5da4-45c0-8e8b-f24471eb8211', '6e98fc51-7ad2-4b1f-9b31-19e43a165654', '4d58504f-2d00-457e-8340-150635883ce0', 14.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2787d885-2d10-4f7b-88f7-43b35d63bc12', 'ed7f79c4-2d1a-4da8-b128-9ff651628ae1', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 11.59);
+VALUES ('24dbf81a-679a-4cd5-8fe9-58590df3d522', 'efb2e697-5a24-42da-a733-03e699edb4bb', '4d58504f-2d00-457e-8340-150635883ce0', 11.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e3bb5b6f-7b8c-446f-823c-15ea4e801493', 'b41ea99a-6c59-4a6e-a752-f47434b7394a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 11.59);
+VALUES ('e39ef855-93b3-4595-b271-7380c69a136d', '0591c1b5-c1c1-42a2-b592-8301e3e71a4c', '4d58504f-2d00-457e-8340-150635883ce0', 11.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('6effdd20-088d-4f9b-9e05-52082a618b88', '32eb0899-5972-4e5b-8f8b-b9ca74e7295a', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 11.59);
+VALUES ('d7f41eee-9a3f-43f8-8b0a-1e7c2f83cdbb', '143d2040-e60d-4eee-a7eb-50fd1c34c598', '4d58504f-2d00-457e-8340-150635883ce0', 11.59);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d5faded9-9cf8-452f-a74f-f502bb79807d', '82d5ae5a-c9d8-4f63-83ae-e3594e7cb8b2', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.49);
+VALUES ('9822707c-fdb3-4fa3-9998-a90d7bb97cca', '1c292e6a-8092-493d-96c5-fe4a9be3e36e', '4d58504f-2d00-457e-8340-150635883ce0', 6.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('985d8f43-d28d-4da4-9b8a-a8cdd1ffc718', '599d9351-f054-4e66-90a4-e1e0692a42c8', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 11.5);
+VALUES ('2d131c12-efa8-4b84-bb7e-000916d4235d', 'd7f2b8c6-9aa5-4aea-bd43-126ea8f15dbe', '4d58504f-2d00-457e-8340-150635883ce0', 11.5);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8144b000-5609-46a6-b61d-7b371165ccf4', 'e5626f88-6ad7-40ff-a55f-0a606106b68f', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 3.99);
+VALUES ('94ed7eaf-ac42-4e5f-91c2-ba063015d5ce', '5a87732e-51c6-48ca-a162-3902c4d2466c', '4d58504f-2d00-457e-8340-150635883ce0', 3.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('3ca34369-045b-49df-a95d-bb1a55b6cbce', '4745287e-748f-40e9-9e7a-bb85ed40263e', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 9.99);
+VALUES ('35610a93-f753-4275-8c4c-449e72a2eb9a', '3ab52cb5-5f55-46af-96fb-b77dae0e91bb', '4d58504f-2d00-457e-8340-150635883ce0', 9.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('69e8cfe4-902d-4b60-ba76-7810ac5b00d5', '3cdc7538-465c-4d4f-b86c-4f643207021d', 'cc2704a2-04ac-40c3-a2e4-a9a1d14654d1', 6.29);
+VALUES ('1f1468b2-05d5-4b98-99fa-c1363934ffb8', '38c7408f-35af-4077-a2d1-a5f30bcbe238', '4d58504f-2d00-457e-8340-150635883ce0', 6.29);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('10ce2b6f-81de-4847-ab56-fed0d949311f', '3e2374bc-cb7c-457e-970f-3c7eaf041b6f', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 0.79);
+VALUES ('1603dc98-9321-44ab-a8be-17e1fa02f00b', 'b539a1f8-06f3-426d-912e-6f47ccd9b7e5', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 24.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('00606b8b-6ee9-4860-8c45-18688aaece8d', '1e7997b8-2300-4d8f-a069-5cf2f3cc0be7', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 4.48);
+VALUES ('200ad55f-a0d9-49c3-96be-cd516c05bfad', 'a75ccd9a-4a7f-4ff5-ae78-4d2c10a4a25b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b3c44380-db73-4b16-b6d8-0b451f0c47a4', '3be34829-8430-4421-8827-4153700fea99', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 0.71);
+VALUES ('e2149f3e-7baa-45cb-917a-463bb5a907f9', '2500553b-42a4-4549-bd64-33ad8035c05d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('9aac6046-14c6-443c-9ebe-fc0445bafa3d', '67a804e1-92c0-4fa2-85bc-685f0c62f487', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 4.48);
+VALUES ('41ca21a9-05ab-468f-bc5c-1015082755e1', 'ee7b1651-9c45-4916-ab83-8c415458abf0', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.54);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('f15ab3a5-8cde-48d3-93ce-381b4792be82', 'c76aba3f-c4c4-4c72-98c2-ee7618b7f7e4', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 1.29);
+VALUES ('02291977-fdf2-41e7-898b-89c908f180e2', 'df421961-582c-48c2-9500-626e32e0bc6f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ad567305-057e-4726-b370-23cde2e00964', '208ddf6a-94ec-4959-8f71-6449af6f43d0', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 0.5);
+VALUES ('87e8ada5-1b80-4108-85fd-87a2f20c36e4', 'ece1425b-1c8b-45a7-b022-807217aeef76', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('61d1d89f-f662-46f9-a3a0-0ba43cd3d82d', '04678e8b-a188-4301-ab11-37669fb7f0fe', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 2.5);
+VALUES ('e2947297-3346-426a-8fb8-2223aebf52b0', '09b46f4e-7dc1-4169-b635-c89bc3a76132', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 14.48);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('0f2ab136-4d6f-405e-99a4-5ac3582cff18', '0ca4cb2d-7c19-475e-88b6-f2cc8309afd4', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 2.49);
+VALUES ('ddeee383-b632-4381-b62d-126b6d3bba72', '6f124954-7ae4-4596-9afe-a5f4d281d5c8', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 24.3);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d763f5dd-ed96-4586-a4aa-dcdc977c5b2a', '43827ca7-083a-4fa9-a3a0-437d4004ad7c', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 0.71);
+VALUES ('1737d2b2-5052-4d7c-bb07-6096902d1c02', '1eec7f82-0dbe-41fe-9c49-6244df6e9cbb', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.49);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('cb05c445-8461-43a5-9c32-2e90066c8958', '0d5937f2-d17e-4a92-a21e-c6a2498450c1', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 4.99);
+VALUES ('a8401c7b-6f92-4c58-950c-edd2b5a76fe1', 'ae2974d0-edd8-4888-beef-180da301eb1d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('69262cbc-60a4-4c2e-8e12-5fd634f31bdf', '9d0cec18-70c6-4c32-96b4-ad832f1d1ba2', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 3.99);
+VALUES ('e1be3f25-9e2c-487d-92f9-1c83bd6ab648', 'f1a8fb66-8e06-4e11-bd72-11fb1eb167b0', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('2dd08a5d-8ecb-4cc5-bc57-4764d27f138b', '662c7132-0581-4988-bb6f-35849fa3eac3', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 5.24);
+VALUES ('cb0cb9c0-568c-4222-ac78-5dd1f09ab268', '360c9387-34ce-491b-ac1c-3d5a2a6d603d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.79);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('8e09a3b0-9f74-4665-810a-8da0dc6cae88', '94abe264-ad83-404c-bc4b-4207aaa9e74d', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 5.0);
+VALUES ('f655a7f0-1cc3-4a7a-8749-9542ef9ddae4', '9b17c025-5dc3-407d-89b0-009835f36965', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('d3b9d6f7-f9fd-406d-89d3-0f79770fef51', '78e7bf35-7242-4509-9bd5-ea7123abf296', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 6.99);
+VALUES ('c985c83d-ea23-4674-8c68-d654d5dde5ab', '2fe246db-dd82-4801-9495-9b7663b946eb', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.19);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('e748c1cf-ade6-4239-97d6-ea4db5691727', 'a7dbd5cb-1a60-4c89-89b1-f279db27f889', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 2.5);
+VALUES ('c8bb814e-a570-46aa-a59c-6a4f164126bf', '38cc78df-1f71-4015-b540-79f1e2ba1034', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.39);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('b7f3e7d7-2327-4070-9296-debb35ae3425', 'ec6e5526-0071-41f7-9ed0-f2e2409f2e0e', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 3.49);
+VALUES ('edf23638-07b0-4608-8fcb-c63c2bcdc0bd', '5f19c978-2359-4df0-84f4-a76a23885adf', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.99);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('12f37ba4-56d3-45a4-ac06-ef2017bdbf6d', '9ed5b76a-9188-4a46-9718-626c1e816d91', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 5.0);
+VALUES ('2f0b7179-4044-45a2-a98f-33803e0978ec', '0b057245-b531-47f9-9324-55f8327f2bff', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.0);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('7d16961a-dd12-450e-9b77-d7d5407637b6', '212bdb89-137f-461c-8281-f160e1120ff0', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 2.5);
+VALUES ('9210efe7-634f-4aff-9988-ba4c366d02e7', '153dafd4-42be-461f-a1c7-83cc2400b0ff', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.0);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('32082e11-8c4f-4869-9abf-a5931bfb0e63', 'fb6f96fa-3cf6-435d-b485-04a96cb219ed', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 2.5);
+VALUES ('b5e61203-b153-457e-b327-949037aed45e', 'ac55dfb2-cae4-4b53-84b4-9b1ff094aec2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.69);
 INSERT INTO itemprice (id, itemid, storeid, price)
-VALUES ('ce123d67-664d-467d-80ae-ee12f2cdb202', '4ab759b0-5f3d-4455-a46d-25ac5ca4746b', 'b6015df1-fbae-4122-b5b4-e2dbd53ce1ab', 2.5);
+VALUES ('ab029bcb-d034-453f-802a-0a56d0b337df', '8ae778c9-3960-4a33-bfb6-f12f5c5e4cf5', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('14e422a4-6da7-4ea9-b068-c96656ec2710', 'ab95d7ca-0e1e-41c7-a3d8-586d6d0428a4', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('1a860c63-ef74-4b4d-addb-fb48e1a7e8e4', '91495f71-8daa-459f-a671-375161d49a35', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('2bf3e2f9-f7d6-4954-adf9-215fc7b873fe', 'c2ad0c64-bee7-4654-9c92-d232c5e89c41', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d5c326a5-3c09-49a4-97b5-4fa896832662', '1208ba4e-957e-4806-9313-b2d464360daa', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('c37bcd96-e455-4304-ab6c-11e9cb4146fc', '31806383-9f8c-450f-a87d-6c8b81481eea', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 13.32);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('2603a71e-3fdd-47d9-8403-d856fd34c64f', 'e3fe1d81-4164-41e0-abbe-62b1aa9e08ad', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('662eb8fc-fccc-498a-8522-baf59d2f7597', '2aab3345-2d19-4fb1-b702-33eb108d1f3c', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('da4472ba-6016-4c41-b045-6d34cc189625', '7d2eb935-304f-4061-8812-75be4e7f0907', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d55268c6-d233-458e-abeb-1b77b7e69539', 'af93d143-ff56-4c04-b59d-6160e95e2ed2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 36.41);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5dcbb268-9889-41af-a66c-1d0a671142bd', '9bb3aa76-6c8c-4b7e-a1b0-fae15f10c850', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('c83a3772-3aea-4a70-a5af-547568fd9594', '8c003d48-72fa-4b4c-b613-bc6f41cf66c8', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e09a9530-b259-4a48-ac5f-365471e871d0', 'f7931f6e-d7a6-465a-a4f9-ac68ca2ac41f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('93751edb-6341-4569-a06b-12591cc4ac8d', '8a191254-414c-4f02-b122-25896e02a8c4', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e52f89db-daa8-47a0-9ae6-01a618821b6c', '9781156d-6e48-4a7e-9b46-1729204f8d4d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('a4e05022-6df9-4ce7-87d3-300e4a56b069', '6a90e0ea-6e39-4404-9606-ac8c614b353b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('620aa437-36b5-4a38-8f98-b8482f9c9d75', '731b807d-73f1-4573-98e5-789e1b0e9f07', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('16197b4f-1839-4b90-b774-7823de2093ef', '083bada2-01da-46fd-b38a-8a60c08905c0', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 21.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('997fff3e-cd56-407d-9382-a9efb20de3a4', '8274d5e9-9983-4a64-a77f-5b1275f8983e', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 22.97);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7ad41033-42d6-40dd-ac96-8b103fe9998f', '7bb0d9dd-b97c-4af5-9787-fcbc44df2112', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('76460b95-4958-47e2-bf35-97f29d6827dd', 'd3de1053-01c6-40cf-b9d1-d2843bd92a85', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.39);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('63e26b3f-37ee-4145-a1bc-51b882954128', 'fe60ab30-f872-4b6e-b69b-442086c59255', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('3b1110dd-7a7b-4e77-acc5-e56c7f7351a9', '5dd0adcf-acd3-46d6-8c6f-5c2d6c12efe8', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e6e47955-72a7-410b-8b29-2d22d5f79178', '22226f3b-5de9-43d3-912a-1bbd22a9bd96', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.0);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('831178a7-ac66-4b1d-bd9a-99e7fbbb09b7', '5870aa86-5244-4031-9166-4eed3a77a19a', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 0.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('0761e47e-849e-4eb8-8bf7-7b1139e3a038', 'cdbc25cd-a3e8-4534-a8c8-4b334971d255', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('c25066a7-58f6-4e65-a259-12e584c30541', '64ec728a-baa8-49f7-8197-e49e2de8ad57', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('2ae42b8c-2252-4d91-bee2-9debf61ad242', 'e0f99ce2-c506-4591-a36d-f47d35d1c6c5', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('26971cde-1d36-4bb1-b13e-42d7e1f94da9', '31140007-3e40-4138-a7dc-9694ca63a467', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5f64e3ee-bd75-4b62-a1b2-02c6e15a77ee', '88981cf2-95d9-4a07-a60f-bcbd3e53d341', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.39);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('caa1a46c-bb88-4792-bb12-52533118f29a', '2ca4264b-89ec-471c-ab28-1e7974eb801b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('af144dca-58f0-4530-800b-586d5d734c59', 'c0dc0783-8587-4ae9-883f-3b692921550f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 31.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5f8df9d4-0ed5-4383-9220-62c6ab335eb9', 'e55c04c2-5079-4d4a-a407-f95e716889a0', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 45.3);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('4d7b9821-d812-40c9-9b2c-6e0d91651303', '316bc9e4-561b-4669-a95b-d95422d174d2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('83556929-7fc8-4625-8eb4-33793d8dee16', '15e79851-7247-4faf-916b-a4beab1188a9', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('63354987-73f0-4b68-b7d7-dc0e9d0575a7', '149ec6f2-5f4f-43a8-9939-b178d7122dcb', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('21f5b317-66e2-41e0-8673-a0a6922349c6', '8ab3efa3-42aa-4583-9b47-81e3e3fae1cd', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7a59836f-81a6-4253-b197-9a39f12ff2c4', '7d693ca4-ba77-45aa-9a03-bfe8953ad4ab', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.81);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('9507fbe6-f044-4e4e-801f-c2d751b813a1', '1d179594-c235-4eff-9aca-eb96e06ee38b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7803fc56-9c14-4019-8c61-4605fb6baa1d', 'f5ae9d79-c52d-4716-993a-d0a6ffae0aa0', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 13.1);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('f1efd5a6-75ad-4124-852f-34829a14bb98', '9222dffc-84fa-4f94-bd92-3696baf0cd41', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 9.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('762b818a-89d3-4694-9ed6-67cfbc8a84cc', '4366a293-8eb8-40c7-82d5-382df9979fb0', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d7d2d179-291e-4fa0-aeec-c9535d314217', '7a073d9b-db0a-408d-8625-a318845375fa', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5bcda237-02ff-4f0f-a668-6551c1efd785', '3d9830f0-1d4a-4a81-a7b0-a384f3a822e7', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e1449be3-c78f-4ade-8bb2-946f37923e5c', 'f97e75ca-62dd-4e8f-b131-13095669a5aa', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('3642691a-6c33-42e8-8439-044d71d7b7a6', '75330bf4-42aa-4aea-b0fe-9ad3d710e769', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('82f095d9-5eeb-4089-adaa-33097aa7e81d', '245b1287-80d4-4659-84cf-168b811ccbcb', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('84314e9e-5c52-4962-985b-be1a0c0b7662', 'a8ff26f1-c645-4aa2-b89a-3f0fb20d48b3', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.39);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('6eb646e7-2d3d-43de-b531-c8f061f867c9', 'd8395eee-3da0-47c1-ae81-0ece215f49fc', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 29.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('8b432b7b-ba04-453e-ab2b-49e2a844480a', '499b37b5-912d-4c21-a8ef-28f9576ea1fa', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('f1deb967-de9a-4772-aa76-b1bd4183e130', '2fbf710c-1413-48b5-9cab-dfd7a189c820', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('3663cad3-3536-450b-995b-f6badb59efb3', '865dd03e-c889-4643-9c02-e871d4387290', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 24.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('8cc74a33-cc90-4afb-bf8b-8b23e693f3a8', '8b8cfbde-4355-4c7d-a633-63e631c039ad', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('8ecadc57-8916-4cfc-9b57-8b217c719f6d', '3228fa4b-8c15-4b5c-a527-730863bfcac1', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('ea245e43-c2d9-49a0-9771-aa6061c60ec3', '81c908d7-3a86-4340-b7d5-7399dac4ef2f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('b851e562-9ed5-49dd-b0b5-7563986ef641', '9fca2482-969d-4a95-8c9a-763627ef9223', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.39);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('0f4764db-35d3-4327-bb18-66c2b32aeb53', '54995d2c-5d49-489a-bb91-73166252b05b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('a0b7ad36-d10b-4202-a438-2436706e807f', '7ac39970-da04-41e8-a09c-047aabfa637e', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 14.48);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('961eb052-3404-4651-a7b7-36312c41a60d', '3d202b49-99cf-45a0-9dd3-9e2333398559', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7a6201a1-2f8a-426e-b00c-b3f2226e0e32', 'a3bca956-ccf6-45fd-9b19-2eff1917c398', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d443c6ce-1c76-4167-8af2-74066865de66', '5a922453-84eb-429b-a340-e533450a705a', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('dcf153b4-0652-4203-85a7-8429b41e4dcf', '6d60bfc3-795d-447e-96e8-2a507262e4f9', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('a1d043e2-7dcc-4c27-ae84-d0ab690486a6', 'f5726567-f63c-42ae-8bca-580e0080d0f6', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('27a61acb-ea27-407b-a44b-caa0c5c93d98', 'a0be26c2-6e0a-465c-93e3-f5968589470c', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5b721e61-31f3-438d-a9ee-990f1ecee18b', 'e92cc089-287a-4078-9ced-2fe2b293e548', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d7374800-0c54-4e03-87b7-1942212ee84f', '4c4800a7-85c9-44f4-bff7-1b9722accbe6', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('a3a2a8a6-ae24-45f9-9c95-5be4c318017f', '3c4e994b-d029-47a9-b1ee-778a0f7a88fd', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('828b6a15-89e9-4689-8306-1ff5a3d24782', '46dfb35f-89e8-4ffb-94f7-a5176c06a6e2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('cf344f0a-ce3d-459d-ba99-989762466796', 'ecaec186-c030-44e4-a044-42ea6c6aac7c', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('958b1da5-b797-4808-aabf-40fc8ba26edf', '3cb7c103-8306-47c8-a0a7-e58bd87ec835', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('61148c4c-f900-40c8-83b0-3936053f18ca', '7fa4a300-4f6c-4c72-accb-2cef0bb5eb48', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('ab280e11-2977-4ab0-8355-cf6a7f63223f', 'd3ae2237-9ea0-4d18-b933-c4fd34884c16', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('782d1966-18a2-4547-8ab0-e090124a7383', 'dffa5dad-a8af-46e9-b837-ea4aa8d049e4', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7f0e1919-8cf7-493f-8a20-b26b155bebd4', '2ca8562d-b8da-42ac-b101-dee8ce030c54', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.24);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('394506df-32fa-4d6a-ae91-5bba1dae57e0', '3bc4a935-8e6d-4db0-a073-5f21d5cb5c40', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d61252e0-9b1e-4b3c-bfae-bf826541f3c4', '0f563cfd-8eec-4a49-be9b-9097b52640b4', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('4a67fb65-d554-4a1a-bbe1-96771258c76d', '2d0be50a-33fe-4f60-809f-ef0acb290032', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('57492936-fb2d-46b1-ae7d-1d9ba3b56906', 'f34773e2-e2a4-499f-b544-044c008d46d2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('a37a682e-e12f-48c4-94de-0f0d7af5c368', 'b856b263-8718-4bcf-ac2e-1d490007b9dd', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('3da23124-3cc4-4dac-a275-cb017e3a8ef4', '53394e3c-3185-4af3-a31f-7360d3f93e32', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5d0cb617-d169-4121-8f14-4fd256223659', 'eb4f8893-09a4-4492-a897-6a1bcd923f7b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7b2567bd-9101-48d4-8d87-3dc3447dfba9', '4328c7df-3962-499b-852d-a2d7025f8157', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 0.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('8ae3f158-c55e-4726-9a52-7e2ce9c7c550', 'f0788fa9-2324-44a6-9deb-584c9dbc6da2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7aaf71e5-beeb-43bf-b1bc-ce929e7cba5d', '61657962-8236-46dd-8566-4c1b4b5af07e', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('b550f311-6457-4e00-b063-b761e26ea37c', '67bae964-1b98-48d7-b11b-f36633b3bd42', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('b614a51c-3351-4095-979a-e938cf11093e', '57aad6b8-0aec-4137-ac8e-5b4b7535439f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('775b8922-1f52-4ae6-84af-4d22b0aec2d7', '22bed2a2-0310-4a20-a28d-7ba7abb42820', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e876a4d8-c5fd-4526-abf1-a69ca3039951', '18d4fe9d-b7da-4aab-9d4b-f822cddb0360', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('46360e22-dfa5-4c96-82cf-0f5d6ae110c4', '19695b41-6a06-48d4-910a-3d0fdf1af2d2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('86820f46-a2cf-4182-9be2-e537fc3d61d5', '43ebbc80-79f1-4443-a263-f0765e38812b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('847162da-9c87-4bca-82c9-887ebfb846d1', 'a14348a2-b978-4b8c-a59f-c44eabe5ba73', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 13.88);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('12c9308f-8054-48f2-bc0d-8d3ab4d138f3', 'b0ccb1de-66f8-4635-a0e2-312a9cbd6a62', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('0748261d-ed11-4bb9-9f36-0fe6d3ef9684', '97452d9c-5242-469f-9488-360cc96197f8', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d1f0628b-be6b-4bb4-abac-ca4fb1aa0be5', 'b1685c3f-eddb-47a5-b607-b9df34544223', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.0);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('61384af4-5f8b-4eff-949c-3ccf0f2a9a41', 'b475974f-3f6b-4f7d-9bb2-b6624184f300', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('28c5d425-c376-443c-a348-6f7cccede209', '0b8e722c-faf2-4acb-a509-bd3e419ae9e2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('a2ffedf0-b269-4fa8-a2ea-5a0d0879ea04', '91fe4133-c6cb-4ff9-9edf-6865c7f56e1f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('df93bdb9-51ba-41a2-8f03-91a0b1eb5e8a', 'ce5ebeac-2a94-4adb-a86e-df75fd7733fb', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d3daea72-a52d-4d73-9032-d4dacfa24e5d', 'b0d981a0-6fe2-4f36-a2e9-80bdc5121406', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('cf8190fc-5aff-42af-9d00-eebfd9242ee7', '7f1ed9b2-09dc-4239-9aa8-f2f79651c527', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('fc7c6aef-0e4e-4534-a177-aff4923eb67d', '371bf2cd-9800-461b-916a-e6ddd855ea98', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('4d97f07d-3f00-4883-8eab-6dc08f8fc99e', '23e95c24-4640-45b5-9b69-657efb6a0889', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('014191dd-3b66-4f47-a381-feb3d19ba502', '91739652-ec16-4d3b-9552-49ca972af8c8', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('dcc30e87-5d9b-4439-9a60-96f1e0b28d00', '24642284-bbb7-4f02-8ebc-39f8a541b7ec', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('521009d6-688d-4b65-a5c4-6add9eac19cb', 'ca8d982d-79ac-4a79-8557-fab077519184', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('daae8175-99b3-481c-9a08-d955b2cf2c0d', 'cb922e07-a058-45d5-8526-39376e1b28f3', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 29.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('f83fd1ae-0ca0-4183-98cf-20df33d08599', '94df9774-9c64-42fb-a535-411fa22d3147', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('0f97bd24-20cd-4c6e-97a3-7d82d26d9811', '33910508-06f6-40f3-95df-cdc5c0f7ae3f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('1df06c69-e488-4efc-a776-1aabc49494f3', 'e1c98917-8ac8-4902-92c7-38b2d2e8fd4f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.39);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('b20dacb0-8b62-4dd4-9fa4-dca5f642eefc', '5097ce14-eeeb-4271-a960-a2df510a4f8e', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('abf1987c-a5f7-4d9f-a04d-1a8909897631', 'a9484d42-9a82-4c4b-80b1-ed4b68f4bdc2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('69dd245b-eaf5-467d-87bf-d7c657f13bda', '9007144a-c12c-4c5a-a4a1-c7b4d30bf995', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 13.88);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('07545942-5f3e-4705-9b73-047ef90dc866', '83055139-4b9d-4e0a-9e94-74376ea3d63d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 24.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d26af497-ac94-470f-8cce-51e227d7990d', 'a46e7ea5-f6e5-464b-9765-a1c0629c836d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('caf861c1-0b8c-4909-8464-91e4caf1d597', '763d645b-2300-4b42-a121-9ed1644d6fd0', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('1cfe4979-3189-4db4-8449-12dc2ad28e8b', '925532c4-5910-4832-808d-619b49d5774c', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d68b6ff1-3298-465a-a2a4-3025fa262c02', 'fcb946b1-b5f8-4321-b467-a0ba781512a8', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('8127ce94-28e0-4311-b8a8-46981ac31f61', '3c6f2682-a196-4581-8c86-c4bef88cb73e', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('9946dd67-b1b3-44d8-ab85-85c8ec65b88c', '527192ce-c228-4812-9474-255e1911e69d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 14.48);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('ad043da2-e764-4e05-b170-c9b9aaa7024e', 'a45a950c-9340-4a5c-8f9e-a11bc486f1a9', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d13548f3-e178-44f4-8f01-974acf4b975e', 'dcafcaf9-48a6-4030-98a6-62daeea2f11f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('f0d61ef0-9e21-4812-b450-7cb4d280fdd0', '2a7bef8a-20c2-417e-8729-792aeccd5b35', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('ffebfdb0-6975-476f-94de-945ce1557eef', 'b1606524-dccb-4c78-bb63-66262fd4281c', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 35.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5c0d862c-117f-4b2a-83e1-2b1f12b2414c', 'a6f87f23-bf23-4016-925f-2fd26fe57d9e', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 46.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('163e31c0-732d-442d-a1da-5ac9a14ba673', '6199cb79-61f8-4c1e-91d6-6e19ad9d0e9f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('cb2a02ea-e0ba-430f-bd18-8b3618c7d29b', '2e20cc6c-6433-47f8-ab3f-a7692cc9c5fa', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('10d9f480-e733-4f52-a53f-bda6c259fef8', '21464c37-9965-45ae-933f-440d7f927a8b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 10.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('dc2a1d69-d586-4060-b88c-1fd6c4199711', '1aecab50-a18a-44b9-aa63-d447521672d3', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 14.48);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('f50cd082-2775-47fe-a560-bbe9d2802909', 'f0800958-669f-431d-8a82-0cdb021fb740', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.39);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('410da46f-74fa-41d1-ad69-3cca52b273cf', 'b4446c1d-b3e7-45b7-94cd-1c99506b2bd6', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 45.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('8df789b6-7bec-4048-80fd-15cab5d8e83b', '531e6173-57ca-47ae-8576-0120f2204077', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('f1244b31-90eb-4bb4-8902-cf18fc4e597e', 'ca05c6c1-4e39-4a3e-b00e-88c50c6c2b2d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('81eb4319-6c31-48e2-aa33-47e1550ed8cc', '885bb35d-d7e2-47a0-b1a3-6eb43f87d7bb', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('868f1f94-b4aa-425a-ad09-dca4072ba8ae', 'c8cd840f-381e-4659-b66e-db7e7af51342', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('629e6b84-7576-4cb0-937c-9ca8bab5e56b', 'd4a4e831-e753-4793-baf1-5c0222a37daf', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 9.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('650e94cd-01ee-49ee-9a5c-afc1b72bddf8', '91704b1d-07cc-43c7-9b67-aa23f04210c9', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('72cee65f-ebd9-4b79-929b-b1d31e1d42b6', '1dbb0322-b4f1-4730-bd21-3d38ac651680', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('099b9a39-9193-4e04-b5d1-613484951c34', '55c2310c-c90b-4dda-9233-84c1010b38f7', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.54);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('f5f8f642-1179-4cd8-b636-3350c5216d15', '3206afc2-39df-4c13-8c68-1d6527c1498b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('cc5cecd2-7b33-4cfe-9b25-a3247d5e8b0e', 'ed5cbe0e-34c6-4725-a084-9a4e9c65722d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('413d9c4a-bb09-4837-b8fa-2d1013501c90', 'c571f2cf-3b7a-430c-a44a-e5ee91639340', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('8b4ecd85-5733-4531-be5c-12809ad078f3', 'e25c6062-e9bd-4c79-b5bc-c0d93fd0199f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('2527cea1-0a95-4bba-8030-2e09fb1a7dbc', 'a118d938-bcb7-40fb-948f-58fc8e304022', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 0.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('892ac767-de7d-4f6b-93c2-093b013d835a', 'fbead265-edfe-418a-8aa7-4e4cb391731f', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('0561ba26-7fe1-46d5-863f-99ccba12a507', 'c3243dcb-9353-4b5c-b509-11fb9499ae03', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('069b710d-4378-4d18-929b-f3474cce28fa', 'f1ece033-0a3c-44e8-922b-9af44f10bb00', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e00176f4-5cab-44e7-90d3-23b74a9c59d5', 'b11df752-76d0-4699-9e23-ac149ae52e6b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 12.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('ed084a24-3293-4e1e-be10-42d7b7bc815b', '4f4d16f3-c53d-4098-95a0-669ae9045ac6', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('12153af9-3f8e-4396-a57d-d9f01680df44', '46d6d6f4-96aa-419c-88e7-99b5a566105c', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('33cca1ca-dce0-4f27-baca-4d7167acc34b', '95c75dbe-1ae2-4016-a215-d8fda7743402', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('1b8e9690-ade3-4378-8f43-9c1ec3b3b252', '213a9397-dc19-4897-9ac4-6b7e262187f5', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('dd986cb5-75d4-4761-9995-6b594740e775', '14036922-5b02-4c20-b968-e7a88125a90b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('9cde9bd7-cc77-4768-b783-3d127d8d89e7', '4f1d60bc-3bc0-4e0a-82ef-7705636b0272', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('a2486fc0-a8cc-4e8b-be28-16010ed8eb8f', '4576b89e-ecb2-45d6-a5b4-4d139bd48295', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 9.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('9fcbaa58-81d0-4e27-8962-0c353e855709', '40a0ef02-ec0e-445e-a7a3-892ad6da36a3', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('2ab0a144-61c3-4539-a3f1-e171c72a0f64', 'bca5da56-d248-4ead-901b-529ec72c2f0b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.39);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d5a482fa-b604-47d7-a448-ba66143d8afe', 'fdd65ab0-8757-4fd3-99e3-70796d4040ca', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 12.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('62c83e66-645a-4066-a35d-636af7dfeade', '5419c98c-8ee6-4a4c-aa01-fab56d194b11', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('b3bfdbf1-877e-48cd-bfe1-1c27e14e9514', '03e5d3df-cd90-41c1-984e-6048c4d8af2e', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e6e6d9e6-04d6-4b9f-acd4-117270816649', 'f5e15b2e-e46f-4ac9-bcd0-0263904a4e6e', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('540def69-f321-41fa-b194-a5399b102c13', 'e16ae37e-b5f0-4f8b-91ce-ad706b165a1b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 13.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('23056b2e-3ec0-4034-833a-ab3700366edf', '89a0d833-d1d9-4f2b-8915-1875c72c73f1', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('de15256a-32a2-4286-ab96-a7ab312aac86', '8192de8f-fe24-4b4b-92f1-ac12805b83ac', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 25.98);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('8a816c45-9fd2-4e1b-90fa-7815b8d96b8e', '0c75c93a-fb59-4954-9495-15c6489ee2c8', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e1cb3749-b2eb-4f65-8bea-85e2431096fa', '6e96f078-6185-4519-aed7-446ce1ed668c', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 8.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5d9e9819-0592-4d08-a4cd-ffe5b560e3aa', '9c1b6f55-36fa-46b0-8793-b3db9ddd1d19', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7d0bb860-5512-4990-b650-1982f88c75c5', '1842f8c9-353b-461f-8ed2-499d48227134', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('47aaf416-530c-40c4-89c5-83c6b1541709', 'f534e612-0de0-4d68-ac9f-bb62c89b92fd', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('c1bf1498-84d1-46ed-b9f6-c64f8419fdcc', '430e5509-f3b1-454e-abbc-af515d72c88d', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('e8e554cb-5c1f-4d52-b4b0-cc7649974674', 'bb27b877-5040-448f-add0-7848a8cd5734', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('5a13003d-fc92-433a-905c-122d4280e22e', '49e72c8a-e9fe-48fb-ad12-ccfced94b4a6', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 38.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('656a7747-b918-4372-87d2-a39b06f90212', '9f03c5a5-7d7a-466e-aa7c-71efbc765522', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('fcc615cc-743b-4cbd-a40c-856c7d684a89', '45ef2afe-2933-4943-8057-218e727d6ae5', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('3fb3a37e-c1aa-45a9-88fb-65850c51cb6b', '83209c6d-c170-4e02-9d36-a92c5945aa55', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 6.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('cf361d21-8835-445b-b025-8aaadd4a0430', '6c0d991d-c218-4f33-aa3d-82393da345b2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('562dd149-d084-4e7c-b143-6550eaccd989', 'ae56b617-bdd8-4ee3-a32e-5dbfac81e898', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('7f4c77aa-f099-4a1b-9526-c3408e664468', '9f1965a9-d3e1-4b32-8ecb-7be3144263bb', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 10.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('b61a436d-9d83-462c-b0bb-e4d33db3e371', 'caf4f109-eaa1-4422-a53f-9fa9b662dee1', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('b321cb00-9803-47d9-908a-eed85bcffdf8', 'e119e509-843d-4791-ba7e-81756ee37a0a', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.89);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('adb1b67f-92ce-4c96-a800-ec79b3c7d5e8', 'edf9e3b9-c3ad-4a79-9e20-83b225e1f6dd', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('d673371f-55b5-4ffd-914b-0b92d6a136b9', '99f1b965-c8b4-4c0d-ae08-719d307f6a91', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.59);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('895bdc4c-33df-4955-a89b-5cc74a583cb8', '50355853-9324-46f1-9fd8-faa6f695e968', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 0.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('6ca81404-b2d2-46f9-bfa0-530d06e67770', '4737eeb8-1299-4b1f-bcc0-4421d55e29a2', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('4b74c178-508a-4775-8f7e-1b2e2d7a438c', 'a78a9a50-e2bb-4764-b54e-481111a614cc', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.39);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('432d72f2-8ee0-4038-b8d3-98ef3bb3a9ed', '1302bad4-b143-403f-bddf-a9fbbbe9e014', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 7.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('f6931d1e-928f-4303-b0ec-eb4902f5e078', '10c61412-e456-4b5d-9398-0a97980b7dab', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 0.99);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('883d455a-225a-4d82-abed-ebb029548657', '631d3d1d-3fde-4537-b6d2-8c94ac9b8fff', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 4.69);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('04b99f7a-0bc3-4b10-812d-13a7244c530b', '24c23ccd-b8cb-49c5-8d8b-b344f51b54b6', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 12.79);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('27b2c2ba-f1cf-4740-a5e2-8fe8d2142a06', 'eba24d39-78b9-465f-9541-252a4f4a7294', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 3.19);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('35b599f2-466f-48f1-9c7f-2d9d590abc55', '8085c797-456d-4f83-b1e5-26cf2c9bcf0a', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 2.29);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('c3b0d561-3460-4702-8adc-0582da932788', '56e2414f-757c-408a-99bb-d26e51bb3dc0', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 5.49);
+INSERT INTO itemprice (id, itemid, storeid, price)
+VALUES ('2154f171-20af-4ada-85b7-81b073f6efef', '8aaf3bea-7d94-4c85-ab50-a11bc32bcf7b', '169b9b9c-f98f-4cdb-924d-59a33f83b1ad', 1.59);
