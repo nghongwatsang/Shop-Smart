@@ -28,14 +28,13 @@ export default function SearchPage() {
         .then(res => res.json());
     }
 
-    async function fetchCategories() {
-        const data = await getCategories();
-        setCategories(data["categories"]);
-    }
-
     useEffect(() => {
+        const fetchCategories = async () => {
+            const data = await getCategories();
+            setCategories(data["categories"]);
+        }
         fetchCategories();
-    }, [fetchCategories]);
+    }, []);
     
     return(
         <section>
