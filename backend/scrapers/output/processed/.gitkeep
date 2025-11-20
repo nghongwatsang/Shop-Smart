@@ -1,0 +1,10 @@
+# Processed Data Output
+
+This directory contains processed/transformed data after running `process_products.py`.
+
+Files in this directory:
+
+- `combined_products.json` - All products from all stores, validated and transformed
+- Other processed outputs as needed
+
+This data is ready for database insertion or further analysis.
