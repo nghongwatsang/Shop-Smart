@@ -6,7 +6,6 @@ bp = Blueprint('result', __name__, url_prefix='/results')
 
 @bp.route('/', methods=['POST'], endpoint='get_results')
 def get_results():
-    print("Start")
     db_gen = get_db()
     db = next(db_gen)
 
@@ -25,7 +24,7 @@ def get_results():
             return jsonify({"error": "allowedStores must be a list"}), 400
             
         service = CartPricingService(db)
-        print("Entering Service")
+    
         result = service.get_prices_for_cart(items, allowed_stores=allowed_stores)
 
         return jsonify(result), 200
