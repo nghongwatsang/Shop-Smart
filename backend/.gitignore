@@ -29,8 +29,6 @@ htmlcov/
 *~
 
 # Output files (keep structure, ignore content)
-scrapers/output/raw/*.json
-scrapers/output/processed/*.json
 !scrapers/output/raw/.gitkeep
 !scrapers/output/processed/.gitkeep
 
