@@ -25,6 +25,12 @@ export default function ProductPage({ params }: ProductPageProps) {
 
     const {shoppingList, setShoppingList} = useGlobal();
 
+    async function getCategories() {
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
+        return await fetch(`${baseUrl}/api/v1/categories`)
+        .then(res => res.json());
+    }
+
     {/* Search field submit router*/}
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
