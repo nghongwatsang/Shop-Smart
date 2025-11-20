@@ -220,8 +220,8 @@ class AldiScraper:
             # Clean product name: remove size/price info that was extracted
             product_name = self._clean_product_name(product_name, size, unit, price)
             
-            # Extract category (try from element or default)
-            category = self._extract_category(element)
+            # Extract product URL and fetch category from detail page
+            category = self._extract_category_from_detail_page(element)
             
             # Build raw product data
             raw_data = {
@@ -361,21 +361,70 @@ class AldiScraper:
         
         return ('', '')
     
-    def _extract_category(self, element) -> str:
-        """Extract category from element."""
-        category_selectors = [
-            '.category', '[data-category]', '.department',
-            '[class*="category"]'
-        ]
+    def _extract_category_from_detail_page(self, element) -> str:
+        """
+        Extract category by following product link and parsing breadcrumb.
         
-        for selector in category_selectors:
-            elem = element.select_one(selector)
-            if elem:
-                text = clean_text(elem.get_text())
-                if text:
-                    return text
-        
-        return 'Grocery'  # Default category
+        Breadcrumb format: Home > Snacks > Chips, Crackers & Popcorn
+        Returns the last breadcrumb item (e.g., "Chips, Crackers & Popcorn")
+        """
+        try:
+            # Find product link
+            link = element.find('a', href=True)
+            if not link:
+                return 'Grocery'
+            
+            product_url = link['href']
+            
+            # Make sure it's a full URL
+            if not product_url.startswith('http'):
+                product_url = self.base_url + product_url
+            
+            # Fetch the product detail page
+            response = self.http_client.get(product_url)
+            if response.status_code != 200:
+                return 'Grocery'
+            
+            # Parse the detail page
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Look for breadcrumb navigation
+            breadcrumb_selectors = [
+                '.breadcrumb',
+                '[class*="breadcrumb"]',
+                'nav[aria-label*="breadcrumb" i]',
+                'nav[class*="breadcrumb"]',
+                '.breadcrumbs',
+                '[data-testid*="breadcrumb"]'
+            ]
+            
+            for selector in breadcrumb_selectors:
+                breadcrumb = soup.select_one(selector)
+                if breadcrumb:
+                    # Get all breadcrumb items
+                    items = breadcrumb.find_all(['a', 'li', 'span'])
+                    
+                    # Filter out "Home" and get the last meaningful category
+                    categories = []
+                    for item in items:
+                        text = clean_text(item.get_text())
+                        if text and text.lower() not in ['home', '']:
+                            categories.append(text)
+                    
+                    # Return the last (most specific) category
+                    if categories:
+                        return categories[-1]
+            
+            # If no breadcrumb found, try looking for category in meta tags or schema
+            category_meta = soup.find('meta', {'property': 'product:category'})
+            if category_meta and category_meta.get('content'):
+                return clean_text(category_meta['content'])
+            
+            return 'Grocery'
+            
+        except Exception as e:
+            # If anything fails, return default category
+            return 'Grocery'
     
     def _print_summary(self, result: ScraperResult) -> None:
         """Print scraping summary."""
