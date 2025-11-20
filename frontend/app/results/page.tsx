@@ -20,7 +20,6 @@ export default function ResultsPage() {
   const router = useRouter();
 
   const { shoppingList, activeStores } = useGlobal();
-  const itemCount = shoppingList.length; 
 
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
   const [error, setError] = useState<string | null>(null);

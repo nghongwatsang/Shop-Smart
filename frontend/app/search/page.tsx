@@ -9,7 +9,6 @@ import { MoveRight } from "lucide-react";
 import GoBackButton from "@/components/back-button";
 
 import { useRouter } from "next/navigation";
-import { get } from "http";
 
 export default function SearchPage() {
     const router = useRouter();
@@ -36,7 +35,7 @@ export default function SearchPage() {
 
     useEffect(() => {
         fetchCategories();
-    }, []);
+    }, [fetchCategories]);
     
     return(
         <section>
