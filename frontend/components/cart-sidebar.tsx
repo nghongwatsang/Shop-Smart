@@ -17,21 +17,22 @@ import Image from "next/image"
 import Link from "next/link"
 import { Trash2, Banknote } from "lucide-react"
 import QuantityMenu from "@/components/QuantityMenu"
+import { CartItem } from "@/types/CartItem"
 
-export function AppSidebar() {
+export function CartSidebar() {
   const { shoppingList, setShoppingList } = useGlobal()
 
-  function removeItem(product: { item: string; imgSrc: string; quantity: number }) {
+  function removeItem(product: CartItem) {
     setShoppingList((prevList) =>
       prevList.filter(
-        (item) => item.item !== product.item || item.imgSrc !== product.imgSrc
+        (item) => item.name !== product.name || item.brand !== product.brand
       )
     );
   }
 
   return (
     <Sidebar side="right"
-      className="fixed top-0 right-0 h-screen w-[20rem] z-[9998] shadow-lg bg-background transition-transform duration-300"
+      className="fixed top-0 right-0 h-screen w-1/5 min-w-[14rem] z-[9998] shadow-lg bg-background transition-transform duration-300"
     >
       <SidebarHeader>
         <div className="px-2 py-2">
@@ -54,22 +55,15 @@ export function AppSidebar() {
             ) : (
               <SidebarMenu>
                 {[...shoppingList].sort((a, b) =>
-                  a.item.localeCompare(b.item)
+                  a.name.localeCompare(b.name)
                 ).map((item, index) => (
                   <SidebarMenuItem
                     key={index}
                     className="w-full flex flex-row justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-700"
                   >
                     {/* Left side: image + name */}
-                    <div className="flex items-center gap-2 flex-1">
-                      <Image
-                        src={item.imgSrc}
-                        alt={item.item}
-                        width={24}
-                        height={24}
-                        className="rounded-md object-cover"
-                      />
-                      <span className="pl-1 truncate">{item.item}</span>
+                    <div className="flex items-center gap-2 flex-1 overflow-hidden">
+                      <span className="pl-1 truncate">{item.name}</span>
                     </div>
 
                     {/* Right side: quantity + delete button */}
@@ -106,7 +100,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <Link href="/results" className="w-full">
-                  <SidebarMenuButton className="w-full cursor-pointer text-green-700 dark:text-">
+                  <SidebarMenuButton className="w-full cursor-pointer text-green-700 dark:text-white">
                     <Banknote className="h-4 w-4" />
                     <span>Calculate Savings</span>
                   </SidebarMenuButton>

@@ -125,7 +125,7 @@ for idx, url in enumerate(urls_to_scrape, start=1):
     print(f"[{idx}/{len(urls_to_scrape)}] Scraped: {product_info}")
 
 # Save to JSON
-json_filename = "target_bananas_products.json"
+json_filename = "target_results.json"
 with open(json_filename, "w", encoding="utf-8") as f:
     json.dump(products_data, f, indent=2)
 

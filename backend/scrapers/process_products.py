@@ -10,8 +10,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 # Go up two levels to get to the project root
 PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 
-SCRAPED_PRODUCTS_FILE = os.path.join(PROJECT_ROOT, 'scraped_products.json')
-HANNAFORD_PRODUCTS_FILE = os.path.join(PROJECT_ROOT, 'hannaford_produce_results.json')
+ALDI_RESULTS_FILE = os.path.join(PROJECT_ROOT, 'aldi_results.json')
+HANNAFORD_RESULTS_FILE = os.path.join(PROJECT_ROOT, 'hannaford_results.json')
+TARGET_RESULTS_FILE = os.path.join(PROJECT_ROOT, 'target_results.json')
 STORE_INFO = [
     {
         'name': 'Aldi',
@@ -78,7 +79,6 @@ def process_products(products: List[Dict[str, Any]], store_id: str) -> Tuple[Lis
             'name': product['name'],
             'brand': product['brand'],
             'category': product['category'],
-            'product_url': product.get('product_url', ''),
             'size': size_value,
             'unit': product.get('unit', '')
         }
@@ -99,8 +99,9 @@ def process_products(products: List[Dict[str, Any]], store_id: str) -> Tuple[Lis
 def generate_sql_inserts() -> str:
     """Generate SQL INSERT statements for all data."""
     # Load product data
-    aldi_products = load_json_file(SCRAPED_PRODUCTS_FILE)
-    hannaford_products = load_json_file(HANNAFORD_PRODUCTS_FILE)
+    aldi_products = load_json_file(ALDI_RESULTS_FILE)
+    hannaford_products = load_json_file(HANNAFORD_RESULTS_FILE)
+    target_products = load_json_file(TARGET_RESULTS_FILE)
     
     all_items = []
     all_item_prices = []
@@ -150,6 +151,13 @@ def generate_sql_inserts() -> str:
         items, item_prices = process_products(hannaford_products, hannaford_store_id)
         all_items.extend(items)
         all_item_prices.extend(item_prices)
+        
+    # Process Target products
+    target_store_id = store_mapping.get('target')
+    if target_store_id and target_products:
+        items, item_prices = process_products(target_products, target_store_id)
+        all_items.extend(items)
+        all_item_prices.extend(item_prices)
     
     # Generate SQL statements
     sql_statements = []
@@ -173,9 +181,9 @@ VALUES ('{store['id']}', '{store['name']}', '{store['addressId']}');"""
     sql_statements.append('\n-- Items')
     for item in all_items:
         size = 'NULL' if item['size'] is None else str(item['size'])
-        sql = f"""INSERT INTO Item (id, name, brand, category, product_url, size, unit)
+        sql = f"""INSERT INTO Item (id, name, brand, category, size, unit)
 VALUES ('{item['id']}', '{item['name'].replace("'", "''")}', '{item['brand'].replace("'", "''")}', 
-        '{item['category'].replace("'", "''")}', '{item['product_url']}', {size}, '{item['unit']}');"""
+        '{item['category'].replace("'", "''")}',  {size}, '{item['unit']}');"""
         sql_statements.append(sql)
     
     # Insert item prices

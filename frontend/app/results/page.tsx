@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -11,16 +11,15 @@ import GoBackButton from "@/components/back-button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
-/*import { useGlobal } from "@/app/context/GlobalContext";*/
+import { useGlobal } from "@/app/context/GlobalContext";
+import { CartItem } from "@/types/CartItem";
+import { Store } from "@/types/Store";
 
 
 export default function ResultsPage() {
   const router = useRouter();
 
-  /* 
-    Distance fetch should get rewritten with stores
-    const { shoppingList, setShoppingList, stores, setStores } = useGlobal(); 
-  */
+  const { shoppingList, activeStores } = useGlobal();
 
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -42,90 +41,82 @@ export default function ResultsPage() {
     );
   }, []);
 
-  async function getDistance(lat1: number, lon1: number, lat2: number, lon2: number){
+  async function getDistance(lat1: number, lon1: number, storeName: string) {
     const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-    return await fetch(`${baseUrl}/api/v1/route?start_lat=${lat1}&start_lng=${lon1}&end_lat=${lat2}&end_lng=${lon2}`)
+    return await fetch(`${baseUrl}/api/v1/route?start_lat=${lat1}&start_lng=${lon1}&store_name=${storeName}`)
     .then(res => res.json());
   }
 
+  async function getResults(shoppingList: CartItem[], activeStores: Store[]) {
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
+    return await fetch(`${baseUrl}/api/v1/results/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        items: shoppingList,
+        allowedStores: activeStores.map(store => store.name)
+      })
+    }).then(res => res.json());
+  }
 
-  const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<{item: string, cost: number}>}>>([]);
+
+  const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<CartItem>}>>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [distIsLoading, setDistIsLoading] = useState(false);
   
-  const fetchResults = React.useCallback(async () => {
-    const stores = [
-      {
-        name: "Walmart",
-        latitude: 42.7457318,
-        longitude: -73.6387872,
-      },
-      {
-        name: "Hannaford",
-        latitude: 42.7438908,
-        longitude: -73.6519795,
-      },
-      {
-        name: "Market32",
-        latitude: 42.7421706,
-        longitude: -73.643382,
+  // Fetch results based on location, shopping list, and active stores
+  const fetchResults = useCallback(async () => {
+
+    const listResults = await getResults(shoppingList, activeStores);
+    console.log("List Results:", listResults);
+    const newResults = [];
+    for (const store of activeStores) {
+
+      let distance = "N/A";
+      if (location) {
+        setDistIsLoading(true);
+        const data = await getDistance(location.lat, location.lon, store.name);
+        distance = data.data.distance_miles + " mi";
       }
-    ];
 
-    const results = [
-      {
-        id: 1,
-        name: "Walmart",
-        distance: "N/A",
-        cost: 1,
-        basket: [{ item: "Sample Item", cost: 1 }],
-      },
-      {
-        id: 2,
-        name: "Hannaford",
-        distance: "N/A",
-        cost: 2,
-        basket: [{ item: "Sample Item", cost: 2 }],
-      },
-      {
-        id: 3,
-        name: "Market32",
-        distance: "N/A",
-        cost: 3,
-        basket: [{ item: "Sample Item", cost: 3 }],
-      },
-    ];
-
-    if (!location) {
-      return results;
+      const cost = listResults.results[store.name]?.reduce(
+        (acc: number, item: CartItem) => acc + item.price * item.quantity,
+        0
+      ) ?? -1;
+      newResults.push({
+        id: store.id,
+        name: store.name,
+        distance: distance,
+        cost,
+        basket: listResults.results[store.name] || [],
+      });
     }
 
-    for (let i = 0; i < stores.length; i++) {
-      const store = stores[i];
-      const distance = await getDistance(location.lat, location.lon, store.latitude, store.longitude);
-      console.log(distance);
-      results[i].distance = distance.data.distance_miles + " mi";
-    }
+    return newResults;
+  }, [location, shoppingList, activeStores]);
 
-    return results;
-  }, [location]);
 
   useEffect(() => {
     const loadResults = async () => {
       try {
+        setIsLoading(true);
         const data = await fetchResults();
         setResults(data);
-      } catch (error) {
-        console.error('Error fetching results:', error);
+      } catch (err) {
+        console.error(err);
       } finally {
         setIsLoading(false);
+        if (location) setDistIsLoading(false);
       }
     };
-
     loadResults();
-  }, [location, fetchResults]); // Re-run when location or fetchResults changes
+  }, [location, fetchResults]);
+  // Re-run when location or fetchResults changes
   
   // Loading state
-  if (isLoading) {
+  if (isLoading || distIsLoading) {
     return (
       <section className="flex flex-col items-center justify-center h-screen w-screen p-4">
         <div className="w-full max-w-md space-y-4">
@@ -173,47 +164,66 @@ export default function ResultsPage() {
 
   // Results state
   return (
+    
     <section className="flex flex-col items-center justify-center min-h-screen w-screen p-4">
       <div className="w-full max-w-md space-y-4">
         <div className="flex items-center justify-between">
-          <h1 className="text-lg font-medium">Results for basket:</h1>
+          <h1 className="text-lg font-medium text-center w-full">Results for basket:</h1>
           <GoBackButton router={router} />
         </div>
-        
-        {results.length === 0 ? (
-          <div className="text-center py-8 text-muted-foreground">
-            No results found. Try adjusting your search.
-          </div>
-        ) : (
-          <Accordion type="multiple" className="space-y-2">
-            {results.map((element, index) => (
-              <AccordionItem
-                value={String(index)}
-                key={index}
-                className="border rounded-lg shadow-sm bg-card"
-              >
-                <AccordionTrigger className="flex flex-row justify-between items-center px-6 py-3 text-lg font-medium">
-                  <div className="flex-1 text-left">{element.name}</div>
-                  <div className="flex-1 text-center">{element.distance}</div>
-                  <div className="flex-1 text-right">${element.cost}</div>
-                </AccordionTrigger>
 
-                <AccordionContent className="flex flex-col px-6 pb-3">
-                  {element.basket.map((sub_element, sub_index) => (
-                    <div
-                      className="flex flex-row justify-between py-1 text-sm"
-                      key={sub_index}
-                    >
-                      <div>{sub_element.item}</div>
-                      <div>${sub_element.cost}</div>
-                    </div>
-                  ))}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        {shoppingList.length !== 0 ? (
+          results.length === 0 ? (
+            <div className="text-center py-8 text-muted-foreground">
+              No results found. Try adjusting your search.
+            </div>
+          ) : (
+            <Accordion type="multiple" className="space-y-2">
+              {[...results]
+                .sort((a, b) => {
+                  // Primary: basket length DESC
+                  if (b.basket.length !== a.basket.length) {
+                    return b.basket.length - a.basket.length;
+                  }
+
+                  // Secondary: cost ASC
+                  return a.cost - b.cost;
+                })
+                .map((element, index) => (
+                <AccordionItem
+                  value={String(index)}
+                  key={index}
+                  className="border rounded-lg shadow-sm bg-card"
+                >
+                  <AccordionTrigger className="flex flex-row justify-between items-center px-6 py-3 text-lg font-medium">
+                    <div className="flex-1 text-left">{element.name}</div>
+                    <div className="flex-1 text-center">{element.distance}</div>
+                    {element.cost !== -1 ? 
+                      <div className="flex-1 text-right">${element.cost}</div> :
+                      <div className="flex-1 text-right">N/A</div>
+                    }
+                  </AccordionTrigger>
+
+                  <AccordionContent className="flex flex-col px-6 pb-3">
+                    {element.basket.map((sub_element, sub_index) => (
+                      <div
+                        className="flex flex-row justify-between py-1 text-sm overflow-hidden"
+                        key={sub_index}
+                      >
+                        <div className="truncate">{sub_element.name} ({sub_element.quantity}{sub_element.unit})</div>
+                        <div className={sub_element.price === shoppingList.find(item => item.name === sub_element.name)?.price ? "text-green-500" : ""}>${sub_element.price}</div>
+                      </div>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          )) : (
+          <div className="text-center py-8 text-muted-foreground">
+            Your shopping cart is empty. Please add items to see results.
+          </div>
         )}
-      </div>
-    </section>
+        </div>
+      </section>
   );
 }

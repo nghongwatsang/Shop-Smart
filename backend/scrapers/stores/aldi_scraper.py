@@ -485,7 +485,7 @@ def main():
         # Get the project root directory (3 levels up from this file)
         current_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
-        json_file_path = os.path.join(project_root, "scraped_products.json")
+        json_file_path = os.path.join(project_root, "aldi_results.json")
         
         # Save to JSON file
         with open(json_file_path, 'w', encoding='utf-8') as f:

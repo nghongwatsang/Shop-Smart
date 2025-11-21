@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Card, CardContent} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 export default function SearchPage() {
     const router = useRouter();
     const [query, setQuery] = useState("");
+    const [categories, setCategories] = useState<string[]>([]);
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         console.log("Test")
@@ -21,22 +22,24 @@ export default function SearchPage() {
         router.push(`/search/${encodeURIComponent(query.trim())}`);
     }
 
-    function fetchCategories() {
-        // fetch categories from backend once setup, dummy data for now
-        return [
-        {id: 1, name: "Apples",},
-        {id: 2, name: "Bananas",},
-        {id: 3, name: "Candles",},
-        {id: 4, name: "Dog Food",},
-        {id: 5, name: "Else",},
-        ];
+    async function getCategories() {
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
+        return await fetch(`${baseUrl}/api/v1/categories`)
+        .then(res => res.json());
     }
-    const categories = fetchCategories();
+
+    useEffect(() => {
+        const fetchCategories = async () => {
+            const data = await getCategories();
+            setCategories(data["categories"]);
+        }
+        fetchCategories();
+    }, []);
     
     return(
         <section>
             <GoBackButton router={router} />
-            <section className="flex flex-row items-center justify-center w-screen h-screen p-10">
+            <section className="flex flex-row items-center justify-center w-screen p-10">
                 <section className="flex flex-col w-3/5 h-full items-center gap-2">
                     <form
                         onSubmit={handleSubmit}
@@ -57,12 +60,12 @@ export default function SearchPage() {
                             <MoveRight />
                         </Button>
                     </form>
-                    <div className="flex flex-wrap gap-2 w-1/2 justify-center">
-                        {categories.map((category) => (
-                            <Link href={`/search/${category.name}`} key={category.id}>
-                                <Card className="w-30 h-10 hover:scale-110 transition-all cursor-pointer bg-gray-50 dark:bg-gray-700">
+                    <div className="flex flex-wrap gap-2 w-3/5 justify-center">
+                        {categories.map((category, index) => (
+                            <Link href={`/search/${category}`} key={index}>
+                                <Card className="w-40 h-20 hover:scale-110 transition-all cursor-pointer bg-gray-50 dark:bg-gray-700">
                                     <CardContent className="flex h-full items-center justify-center">
-                                        <div>{category.name}</div>
+                                        <div>{category}</div>
                                     </CardContent>
                                 </Card>
                             </Link>

@@ -594,8 +594,8 @@ def main():
             print(f"\n✅ Successfully scraped {len(products)} product(s) from produce category!")
             
             # Save results
-            scraper.save_to_json(products, 'hannaford_produce_results.json')
-            print(f"💾 Saved {len(products)} product(s) to hannaford_produce_results.json")
+            scraper.save_to_json(products, 'hannaford_results.json')
+            print(f"💾 Saved {len(products)} product(s) to hannaford_results.json")
             
             # Show first few products
             print("\n🔍 Sample products:")
