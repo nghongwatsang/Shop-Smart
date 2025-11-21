@@ -66,7 +66,7 @@ class CartPricingService:
 
             # ---- Database lookup ----
             filters = []
-
+            print(name, brand, size, unit)
             # name must be partial match
             filters.append(Item.name.ilike(f"%{name}%"))
 
@@ -80,7 +80,7 @@ class CartPricingService:
             if size:
                 # try to cast to int if DB stores size numerically
                 try:
-                    filters.append(Item.size == int(size))
+                    filters.append(Item.size == float(size))
                 except:
                     filters.append(Item.size == size)
 

@@ -64,6 +64,7 @@ export default function ResultsPage() {
 
   const [results, setResults] = useState<Array<{id: number, name: string, distance: string, cost: number, basket: Array<CartItem>}>>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [distIsLoading, setDistIsLoading] = useState(false);
   
   // Fetch results based on location, shopping list, and active stores
   const fetchResults = useCallback(async () => {
@@ -75,6 +76,7 @@ export default function ResultsPage() {
 
       let distance = "N/A";
       if (location) {
+        setDistIsLoading(true);
         const data = await getDistance(location.lat, location.lon, store.name);
         distance = data.data.distance_miles + " mi";
       }
@@ -106,6 +108,7 @@ export default function ResultsPage() {
         console.error(err);
       } finally {
         setIsLoading(false);
+        if (location) setDistIsLoading(false);
       }
     };
     loadResults();
@@ -113,7 +116,7 @@ export default function ResultsPage() {
   // Re-run when location or fetchResults changes
   
   // Loading state
-  if (isLoading) {
+  if (isLoading || distIsLoading) {
     return (
       <section className="flex flex-col items-center justify-center h-screen w-screen p-4">
         <div className="w-full max-w-md space-y-4">
@@ -204,11 +207,11 @@ export default function ResultsPage() {
                   <AccordionContent className="flex flex-col px-6 pb-3">
                     {element.basket.map((sub_element, sub_index) => (
                       <div
-                        className="flex flex-row justify-between py-1 text-sm"
+                        className="flex flex-row justify-between py-1 text-sm overflow-hidden"
                         key={sub_index}
                       >
-                        <div>{sub_element.name}</div>
-                        <div>${sub_element.price}</div>
+                        <div className="truncate">{sub_element.name} ({sub_element.quantity}{sub_element.unit})</div>
+                        <div className={sub_element.price === shoppingList.find(item => item.name === sub_element.name)?.price ? "text-green-500" : ""}>${sub_element.price}</div>
                       </div>
                     ))}
                   </AccordionContent>
