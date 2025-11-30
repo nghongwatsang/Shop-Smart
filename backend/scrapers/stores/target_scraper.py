@@ -131,3 +131,142 @@ with open(json_filename, "w", encoding="utf-8") as f:
 
 driver.quit()
 print(f"\nScraping complete. JSON saved to {json_filename}")
+
+
+def run_target_scraper(search_term: str = "bananas") -> list[dict]:
+    """
+    Run the Target scraper and return a list of product dictionaries.
+    Does NOT write JSON, does NOT exit, does NOT print except progress.
+    """
+
+    print(f"🔍 Running Target scraper for '{search_term}'...")
+
+    # Setup Chrome driver
+    options = webdriver.ChromeOptions()
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+
+    driver = webdriver.Chrome(
+        service=Service(ChromeDriverManager().install()),
+        options=options
+    )
+
+    category_url = f"https://www.target.com/s?searchTerm={search_term}"
+    driver.get(category_url)
+
+    all_product_urls = set()
+
+    print("📄 Collecting product URLs...")
+
+    # Collect all product urls
+    while True:
+        scroll_pause_time = 0.5
+        scroll_step = 500
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        current_position = 0
+
+        while current_position < last_height:
+            driver.execute_script(f"window.scrollTo(0, {current_position});")
+            time.sleep(scroll_pause_time)
+            current_position += scroll_step
+            last_height = driver.execute_script("return document.body.scrollHeight")
+
+        # Collect product urls
+        try:
+            WebDriverWait(driver, 15).until(
+                EC.presence_of_all_elements_located((By.CSS_SELECTOR, "a[data-test='product-title']"))
+            )
+        except:
+            print("⚠️ No product elements found.")
+            break
+
+        product_elements = driver.find_elements(By.CSS_SELECTOR, "a[data-test='product-title']")
+        for elem in product_elements:
+            href = elem.get_attribute("href")
+            if href:
+                all_product_urls.add(href)
+
+        # Next page
+        try:
+            next_button = WebDriverWait(driver, 7).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "button[data-test='next']"))
+            )
+            driver.execute_script("arguments[0].click();", next_button)
+            time.sleep(1.7)
+        except:
+            print("📌 No more pages.")
+            break
+
+    print(f"📦 Collected {len(all_product_urls)} product URLs")
+
+    urls_to_scrape = list(all_product_urls)
+    products_data = []
+
+    # Scrape each product page
+    for idx, url in enumerate(urls_to_scrape, start=1):
+        driver.get(url)
+
+        # Title
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "h1[data-test='product-title']"))
+            )
+            raw_name = driver.find_element(By.CSS_SELECTOR, "h1[data-test='product-title']").text.strip()
+        except:
+            raw_name = "No title found"
+
+        # Price
+        try:
+            price = driver.find_element(By.CSS_SELECTOR, "span[data-test='product-price']").text.strip()
+        except:
+            price = "No price found"
+
+        # Extract brand
+        try:
+            brand_elem = driver.find_element(By.CSS_SELECTOR, "span[data-test='brand-name']")
+            brand = brand_elem.text.strip()
+        except:
+            brand = raw_name.split()[0]
+
+        # Regex for size + unit
+        size = ""
+        unit = ""
+        pattern = r"(\d+(?:\.\d+)?)\s*(fl\s*oz|oz|ounce|lb|pound|g|kg)"
+        match = re.search(pattern, raw_name.lower())
+        if match:
+            size = match.group(1)
+            unit = match.group(2).replace(" ", "")
+            unit = {
+                "ounce": "oz",
+                "oz": "oz",
+                "floz": "fl oz",
+                "lb": "lb",
+                "pound": "lb",
+                "g": "g",
+                "kg": "kg"
+            }.get(unit, unit)
+
+        # Clean name
+        name = re.sub(pattern, "", raw_name.lower(), flags=re.IGNORECASE).strip()
+        name = name.title()
+
+        product_info = {
+            "brand": brand,
+            "name": name,
+            "price": price,
+            "category": search_term.title(),
+            "size": size,
+            "unit": unit,
+            "source": "target",
+            "product_url": url,
+            "raw_name": raw_name
+        }
+
+        products_data.append(product_info)
+        print(f"[{idx}/{len(urls_to_scrape)}] {name} (${price})")
+
+    driver.quit()
+
+    print(f"✅ Target scraper complete. Extracted {len(products_data)} products.\n")
+    return products_data
