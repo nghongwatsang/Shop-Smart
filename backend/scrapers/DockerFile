@@ -1,0 +1,64 @@
+# ───────────────────────────────────────────────
+# BASE IMAGE
+# ───────────────────────────────────────────────
+FROM python:3.11-slim
+
+# ───────────────────────────────────────────────
+# SYSTEM DEPS (Chrome, ChromeDriver, Selenium reqs)
+# ───────────────────────────────────────────────
+RUN apt-get update && apt-get install -y \
+    wget \
+    curl \
+    gnupg \
+    unzip \
+    xvfb \
+    fonts-liberation \
+    libasound2 \
+    libatk-bridge2.0-0 \
+    libgtk-3-0 \
+    libnss3 \
+    libxss1 \
+    libgbm-dev \
+    libxshmfence-dev \
+    --no-install-recommends
+
+# ───────────────────────────────────────────────
+# INSTALL GOOGLE CHROME (stable)
+# ───────────────────────────────────────────────
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list' \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable
+
+# ───────────────────────────────────────────────
+# INSTALL CHROMEDRIVER TO MATCH CHROME
+# ───────────────────────────────────────────────
+RUN CHROME_VERSION=$(google-chrome-stable --version | sed 's/.*Chrome //;s/ .*//') && \
+    CHROMEDRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json" \
+        | grep -A 3 "\"$CHROME_VERSION\"" \
+        | grep "chromedriver_linux64" \
+        | head -n 1 \
+        | sed 's/.*"url": "//;s/".*//') && \
+    wget -O /tmp/chromedriver.zip "$CHROMEDRIVER_VERSION" && \
+    unzip /tmp/chromedriver.zip -d /usr/local/bin && \
+    rm /tmp/chromedriver.zip && \
+    chmod +x /usr/local/bin/chromedriver
+
+# ───────────────────────────────────────────────
+# PYTHON ENVIRONMENT
+# ───────────────────────────────────────────────
+WORKDIR /app
+
+COPY ../requirements.txt .
+COPY ../backend app/backend
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ───────────────────────────────────────────────
+# COPY SCRAPER CODE
+# ───────────────────────────────────────────────
+COPY . .
+
+# ───────────────────────────────────────────────
+# DEFAULT COMMAND (run weekly scheduler)
+# ───────────────────────────────────────────────
+CMD ["python", "-m", "backend.scrapers.main"]
