@@ -1,0 +1,5807 @@
+{
+  "store": "Hannaford",
+  "processed_at": "2025-12-02T23:41:23.254181",
+  "product_count": 580,
+  "products": [
+    {
+      "brand": "MorningStar Farms",
+      "name": "Morningstar Farms Plant Protein Veggie Breakfast Sausage Patties",
+      "price": "4.59",
+      "category": "Frozen Plant-Based Breakfast Meat",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.57
+    },
+    {
+      "brand": "MorningStar Farms",
+      "name": "Morningstar Farms Plant Protein Veggie Breakfast Sausage Links",
+      "price": "4.59",
+      "category": "Frozen Plant-Based Breakfast Meat",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.57
+    },
+    {
+      "brand": "MorningStar Farms",
+      "name": "Morningstar Farms Veggie Maple Flavored Sausage Patties Frozen",
+      "price": "4.59",
+      "category": "Frozen Plant-Based Breakfast Meat",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.57
+    },
+    {
+      "brand": "Gardein",
+      "name": "Gardein Ultimate Plant-based Breakfast Saus'ge Patties Frozen",
+      "price": "8.19",
+      "category": "Frozen Plant-Based Breakfast Meat",
+      "size": "13.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Beef Stew Meat",
+      "price": "11.99",
+      "category": "Beef Stew & Kabobs Meat",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 11.99
+    },
+    {
+      "brand": "Impossible",
+      "name": "Impossible Meat From Plants Steak Bites Frozen",
+      "price": "8.99",
+      "category": "Frozen Plant-Based Beef",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.9
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise 92% Lean 8% Fat Ground Chicken",
+      "price": "4.49",
+      "category": "Ground Chicken",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Generic",
+      "name": "80% Lean Ground Beef",
+      "price": "13.47",
+      "category": "Fresh Ground Beef",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 13.47
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "90% Lean Ground Beef",
+      "price": "8.99",
+      "category": "Fresh Ground Beef",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "Generic",
+      "name": "85% Lean Ground Beef",
+      "price": "7.24",
+      "category": "Fresh Ground Beef",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 7.24
+    },
+    {
+      "brand": "Generic",
+      "name": "90% Lean Ground Beef",
+      "price": "8.74",
+      "category": "Fresh Ground Beef",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 8.74
+    },
+    {
+      "brand": "Generic",
+      "name": "85% Lean Ground Beef",
+      "price": "5.61",
+      "category": "Fresh Ground Beef",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Generic",
+      "name": "80% Lean Ground Beef",
+      "price": "5.99",
+      "category": "Fresh Ground Beef",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.99
+    },
+    {
+      "brand": "Generic",
+      "name": "Ground Turkey 85% Lean 15% Fat",
+      "price": "4.99",
+      "category": "Ground Turkey",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Ground Turkey 85% Lean 15% Fat",
+      "price": "3.5",
+      "category": "Ground Turkey",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.22
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Ground Turkey 94% Lean 6% Fat",
+      "price": "5.99",
+      "category": "Ground Turkey",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "Generic",
+      "name": "81%/19% Ground Beef Family Pack",
+      "price": "15.72",
+      "category": "Fresh Ground Beef",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 15.72
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "85% Lean Ground Beef",
+      "price": "7.99",
+      "category": "Fresh Ground Beef",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Shady Brook Farms",
+      "name": "Shady Brook Farms Ground Turkey 93% Lean 7% Fat",
+      "price": "6.99",
+      "category": "Ground Turkey",
+      "size": "1.3",
+      "unit": "lb",
+      "source": "Hannaford",
+      "unit_price": 5.38
+    },
+    {
+      "brand": "Generic",
+      "name": "Angus Stew Beef",
+      "price": "8.99",
+      "category": "Beef Stew & Kabobs Meat",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 8.99
+    },
+    {
+      "brand": "BrightFarms",
+      "name": "Brightfarms Chickpea Caesar Salad Crunch Kit",
+      "price": "4.99",
+      "category": "Salad Kits",
+      "size": "6.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.77
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Red & Green Grapes",
+      "price": "2.29",
+      "category": "Produce Snack Packs",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "BrightFarms",
+      "name": "Brightfarms Southwest Chipotle Salad Crunch Kit",
+      "price": "4.99",
+      "category": "Salad Kits",
+      "size": "5.85",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.85
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snak Pals Grapes & Cheese",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snak Pals Peanut Butter Pretzels Strawberries & Cheese",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Strawberry Grapes & Cheese",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Chiquita",
+      "name": "Chiquita Bites Peeled Juicy Red Apples Snack Pack",
+      "price": "4.19",
+      "category": "Produce Snack Packs",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Berries & Brownies",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Red Grapes Cucumber & Cheese",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Citrus Berry",
+      "price": "2.29",
+      "category": "Produce Snack Packs",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.29
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Strawberry & Kiwi",
+      "price": "2.29",
+      "category": "Produce Snack Packs",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Strawberry Green Grape & Cheese",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Chiquita",
+      "name": "Chiquita Bites Juicy Red Apples Snack Pack",
+      "price": "4.19",
+      "category": "Produce Snack Packs",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "The County Tripack Fruit & Vanilla Buttercreme Icing",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "9.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Rebel Green",
+      "name": "Rebel Green Fruit & Veggie Clean Trigger Spray",
+      "price": "4.99",
+      "category": "Produce Wash",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Grapes Nuts & Hard Boiled Eggs",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Tomato Cucumber & Cheese",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Chiquita",
+      "name": "Chiquita Bites Juicy Red Apples Family Pack",
+      "price": "3.29",
+      "category": "Produce Snack Packs",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snak Pals Fiber Filled Cheese & Veggie",
+      "price": "3.99",
+      "category": "Produce Snack Packs",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snak Pals Cucumber Blueberries & Cashews Plant Powered",
+      "price": "3.99",
+      "category": "Produce Snack Packs",
+      "size": "6.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.61
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Treat Yourself",
+      "price": "3.99",
+      "category": "Produce Snack Packs",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Snack Pals Protein Power",
+      "price": "3.99",
+      "category": "Produce Snack Packs",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Generic",
+      "name": "Snack Pals Hummus & Veggies",
+      "price": "2.99",
+      "category": "Produce Snack Packs",
+      "size": "7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.43
+    },
+    {
+      "brand": "Generic",
+      "name": "Pineapple Cranberries & Pecans Snack Kit",
+      "price": "7.99",
+      "category": "Produce Snack Packs",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.8
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Yellow Bananas",
+      "price": "0.21",
+      "category": "Yellow Bananas",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Green Bananas",
+      "price": "0.21",
+      "category": "Green Bananas",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Sweet Potatoes",
+      "price": "0.71",
+      "category": "Fresh Sweet Potatoes & Yams",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.71
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Honeycrisp Apples",
+      "price": "1.49",
+      "category": "Honeycrisp Apples",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 1.49
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Ripe Hass Avocados",
+      "price": "0.89",
+      "category": "Hass Avocado",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Broccoli Crowns",
+      "price": "1.59",
+      "category": "Fresh Broccoli",
+      "size": "1",
+      "unit": "crown",
+      "source": "Hannaford",
+      "unit_price": 1.59
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Blueberries",
+      "price": "3.99",
+      "category": "Fresh Blueberries",
+      "size": "1",
+      "unit": "dry",
+      "source": "Hannaford",
+      "unit_price": 3.99
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Lemons",
+      "price": "0.79",
+      "category": "Lemons",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.79
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Green Bell Peppers",
+      "price": "0.79",
+      "category": "Fresh Green Bell Peppers",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.79
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Strawberries",
+      "price": "5.99",
+      "category": "Fresh Strawberries",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Plum Roma Tomatoes",
+      "price": "0.42",
+      "category": "Plum Roma Tomatoes",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Yellow Onions",
+      "price": "0.54",
+      "category": "Yellow Onions",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.54
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Red Bell Peppers",
+      "price": "1.79",
+      "category": "Fresh Red Bell Peppers",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 1.79
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Limes",
+      "price": "0.59",
+      "category": "Limes",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Hot House Seedless Cucumber",
+      "price": "1.69",
+      "category": "Hot House English Cucumbers",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 1.69
+    },
+    {
+      "brand": "USDA Produce",
+      "name": "Large Baking Russet Potatoes",
+      "price": "0.86",
+      "category": "Fresh Russet & Baking Potatoes",
+      "size": "1",
+      "unit": "ea",
+      "source": "Hannaford",
+      "unit_price": 0.86
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Wild Caught Breaded Haddock Fish Fillets Frozen",
+      "price": "9.09",
+      "category": "Frozen Fish Fillets",
+      "size": "14.6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.62
+    },
+    {
+      "brand": "transOcean",
+      "name": "Transocean Seafood Snackers",
+      "price": "1.5",
+      "category": "Imitation Crab & Lobster",
+      "size": "3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Air Fried Wild Alaskan Pollock Fish Fillets Frozen",
+      "price": "7.49",
+      "category": "Frozen Fish Fillets",
+      "size": "15.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Beer Battered Fish Fillets Frozen",
+      "price": "7.49",
+      "category": "Frozen Fish Fillets",
+      "size": "18.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Singleton Seafood",
+      "name": "Singleton Seafood Faroe Island Scallops 40-80 Ct Frozen",
+      "price": "11.99",
+      "category": "Scallops",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.0
+    },
+    {
+      "brand": "Fresh Seafood",
+      "name": "Galilean Seafoods Wild Caught Chopped Sea Clams",
+      "price": "10.49",
+      "category": "Clams",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.66
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Wild Caught Crunchy Haddock Fish Sticks Frozen",
+      "price": "9.09",
+      "category": "Fish Sticks",
+      "size": "14.6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.62
+    },
+    {
+      "brand": "Generic",
+      "name": "Gulf Of Maine Salmon Fillet",
+      "price": "10.99",
+      "category": "Salmon",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 10.99
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Crispy Battered Fish Fillets Frozen",
+      "price": "6.99",
+      "category": "Frozen Fish Fillets",
+      "size": "11.4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.61
+    },
+    {
+      "brand": "Generic",
+      "name": "Grab & Go Farm Raised Gulf Of Maine Salmon Fillet",
+      "price": "11.49",
+      "category": "Salmon",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 11.49
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Southern Style Breaded Fish Fillets Frozen",
+      "price": "6.99",
+      "category": "Frozen Fish Fillets",
+      "size": "11",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "Generic",
+      "name": "Wild Caught Haddock Fillet Frozen At Sea",
+      "price": "6.74",
+      "category": "Haddock",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 6.74
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Crispy Battered Fish Fillets Frozen",
+      "price": "7.49",
+      "category": "Frozen Fish Fillets",
+      "size": "19",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Wild Caught Cod Fillet Frozen At Sea",
+      "price": "8.24",
+      "category": "Cod",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 8.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Farm Raised Cooked Tail-on Peeled Large Shrimp 26-30 Ct Frozen",
+      "price": "9.49",
+      "category": "Cooked Frozen Shrimp",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "Generic",
+      "name": "Crab Cakes Previously Frozen",
+      "price": "1.39",
+      "category": "Crab",
+      "size": "4",
+      "unit": "ct",
+      "source": "Hannaford",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Breaded Fish Sticks Pack Frozen",
+      "price": "7.49",
+      "category": "Fish Sticks",
+      "size": "24.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Generic",
+      "name": "Wild Caught Sea Scallops Previously Frozen",
+      "price": "21.99",
+      "category": "Scallops",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 21.99
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Parmesan Crusted Breaded Fish Fillets Frozen",
+      "price": "7.49",
+      "category": "Frozen Fish Fillets",
+      "size": "18.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Generic",
+      "name": "Raw Tail-on Large Ez-peel Shrimp 26-30 Ct Frozen",
+      "price": "6.99",
+      "category": "Raw Frozen Shrimp",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Gorton's",
+      "name": "Gorton's Crunchy Breaded Fish Fillets Frozen",
+      "price": "7.49",
+      "category": "Frozen Fish Fillets",
+      "size": "19",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Farm Raised Cooked Tail-on Peeled Medium Shrimp 41-50 Ct Frozen",
+      "price": "8.99",
+      "category": "Cooked Frozen Shrimp",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "Generic",
+      "name": "Cooked Shrimp Ring With Cocktail Sauce 41-50 Ct Frozen",
+      "price": "8.99",
+      "category": "Frozen Shrimp Ring",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "Generic",
+      "name": "Wild Caught Gulf Of Maine Haddock Fillet",
+      "price": "11.24",
+      "category": "Haddock",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 11.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Raw Tail-on Extra Large Ez-peel Shrimp 16-20 Ct Frozen",
+      "price": "8.99",
+      "category": "Raw Frozen Shrimp",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "Generic",
+      "name": "Farm Raised Gulf Of Maine Center Cut Salmon Portion",
+      "price": "7.29",
+      "category": "Salmon",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.46
+    },
+    {
+      "brand": "Generic",
+      "name": "Flake Style Imitation Crab Meat",
+      "price": "4.89",
+      "category": "Imitation Crab & Lobster",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Fresh Seafood",
+      "name": "Live Lobster",
+      "price": "14.99",
+      "category": "Lobster",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 14.99
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Raw Peeled & Deveined Tail-on Small Shrimp Frozen",
+      "price": "7.49",
+      "category": "Raw Frozen Shrimp",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.62
+    },
+    {
+      "brand": "Generic",
+      "name": "Farm Raised Cooked Tail-on Peeled Xl Shrimp 16-20 Ct Frozen",
+      "price": "10.99",
+      "category": "Cooked Frozen Shrimp",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.69
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Raw Peeled & Deveined Tail On Large Shrimp Frozen",
+      "price": "9.99",
+      "category": "Raw Frozen Shrimp",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.83
+    },
+    {
+      "brand": "Generic",
+      "name": "Raw Tail-on Medium Ez-peel Shrimp 41-50 Ct Frozen",
+      "price": "6.99",
+      "category": "Raw Frozen Shrimp",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Farm Raised Skin-on Atlantic Salmon Fillets Frzn",
+      "price": "8.99",
+      "category": "Salmon",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.75
+    },
+    {
+      "brand": "Generic",
+      "name": "Farm Raised Tilapia Fillet Previously Frozen",
+      "price": "3.25",
+      "category": "Tilapia",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 3.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Grab & Go Farm Raised Gulf Of Maine Center Cut Salmon Portion",
+      "price": "7.79",
+      "category": "Salmon",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.56
+    },
+    {
+      "brand": "Generic",
+      "name": "Grab & Go Wild Caught Cod Fillet Frozen At Sea",
+      "price": "5.75",
+      "category": "Cod",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.75
+    },
+    {
+      "brand": "Fresh Seafood",
+      "name": "Wild Caught Sea Scallops",
+      "price": "22.49",
+      "category": "Scallops",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 22.49
+    },
+    {
+      "brand": "Generic",
+      "name": "Grab & Go Crab Cakes Previously Frozen",
+      "price": "5.99",
+      "category": "Crab",
+      "size": "4",
+      "unit": "ct",
+      "source": "Hannaford",
+      "unit_price": 1.5
+    },
+    {
+      "brand": "Generic",
+      "name": "Wild Caught Swordfish Steak Previously Frozen",
+      "price": "3.25",
+      "category": "Swordfish",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 3.25
+    },
+    {
+      "brand": "Paul Piazza",
+      "name": "Paul Piazza Wild Caught Peeled/deveined Gulf Shrimp 26-35 Ct Frozen",
+      "price": "12.49",
+      "category": "Raw Frozen Shrimp",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.78
+    },
+    {
+      "brand": "Applegate",
+      "name": "Applegate Naturals Antibiotic Free Turkey Uncured Pepperoni Slices",
+      "price": "4.49",
+      "category": "Packaged Lunch Meat Pepperoni",
+      "size": "4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.12
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Black Forest Ham ( Sliced)",
+      "price": "5",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Oven Roasted Turkey Breast & Honey Ham Ultra Thin Sliced",
+      "price": "8.49",
+      "category": "More Packaged Lunch Meat",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Lower Sodium Oven Roasted Turkey Breast Sliced",
+      "price": "5.49",
+      "category": "Packaged Lunch Meat Turkey",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.69
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Maple & Brown Sugar Ham ( Sliced)",
+      "price": "5",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Wildflower Honey Ham ( Sliced)",
+      "price": "5",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Ultra Thin Sliced Honey Ham Mega Pack",
+      "price": "9.99",
+      "category": "Packaged Lunch Meat Ham",
+      "size": "22",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.45
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Hickory Smoked Off The Bone Ham (reg Sliced)",
+      "price": "4",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.0
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Black Forest Ham Ultra Thin Sliced",
+      "price": "8.49",
+      "category": "Packaged Lunch Meat Ham",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Krakus",
+      "name": "Krakus Deli Import Polish Ham ( Sliced)",
+      "price": "4.5",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.5
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Honey Roasted Turkey Breast & Smoked Ham Ultra Thin Sliced",
+      "price": "8.49",
+      "category": "More Packaged Lunch Meat",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Lower Sodium Wildflower Honey Ham (reg Sliced)",
+      "price": "5",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Oven Roasted Turkey Breast Ultra Thin Sliced Mega Pack",
+      "price": "9.99",
+      "category": "Packaged Lunch Meat Turkey",
+      "size": "22",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.45
+    },
+    {
+      "brand": "Krakus",
+      "name": "Krakus Deli Reduced Sodium Imported Polish Ham ( Sliced)",
+      "price": "4.5",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.5
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Oven Baked Ham ( Sliced)",
+      "price": "4",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.0
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Ham Black Forest Ultra Thin Sliced",
+      "price": "5.49",
+      "category": "Packaged Lunch Meat Ham",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.61
+    },
+    {
+      "brand": "Margherita",
+      "name": "Margherita Deli Dry Cured Prosciutto ( Sliced)",
+      "price": "6",
+      "category": "Deli Prosciutto",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 6.0
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Ham Honey Ultra Thin Sliced Family Size",
+      "price": "8.49",
+      "category": "Packaged Lunch Meat Ham",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Hillshire Farm",
+      "name": "Hillshire Farm Ham Honey Ultra Thin Sliced",
+      "price": "5.49",
+      "category": "Packaged Lunch Meat Ham",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.61
+    },
+    {
+      "brand": "Fresh Deli",
+      "name": "Deli Deal Maple Bacon Chicken Breast & Extra Sharp Cheddar Cheese",
+      "price": "14.48",
+      "category": "Deli Ham",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.6
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Deli Oven Roast Turkey Breast ( Sliced)",
+      "price": "6.5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 6.5
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Cracked Black Pepper Turkey Breast (reg Sliced)",
+      "price": "5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Hatfield",
+      "name": "Hatfield Gluten Free Cooked Ham ( Sliced)",
+      "price": "2.5",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 2.5
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Honey Roasted Turkey Breast ( Sliced)",
+      "price": "5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Turkey Breast ( Sliced)",
+      "price": "5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Lower Sodium Turkey Breast ( Sliced)",
+      "price": "4.5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.5
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Deli Hickory Smoked Turkey Breast ( Sliced)",
+      "price": "5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Deli Honey Smoked Turkey Breast ( Sliced)",
+      "price": "6.5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 6.5
+    },
+    {
+      "brand": "Smithfield",
+      "name": "Smithfield Honey Cured Ham ( Sliced)",
+      "price": "4",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.0
+    },
+    {
+      "brand": "Smithfield",
+      "name": "Smithfield Virginia Brand Ham ( Sliced)",
+      "price": "4",
+      "category": "Deli Ham",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.0
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Organic Prosciutto",
+      "price": "5.99",
+      "category": "Deli Prosciutto",
+      "size": "3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 2.0
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "All Turkey Breast ( Sliced)",
+      "price": "5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Lower Sodium Maple Honey Turkey Breast (reg Sliced)",
+      "price": "4.5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.5
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise No Salt Added Oven Roasted Turkey Breast ( Sliced)",
+      "price": "6.5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 6.5
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Lower Sodium Turkey Breast ( Sliced)",
+      "price": "4.5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.5
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Oven Roasted Herb Turkey Breast ( Sliced)",
+      "price": "5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Cooper Farms",
+      "name": "Cooper Farms Deluxe Turkey Breast ( Sliced)",
+      "price": "3.5",
+      "category": "Deli Sliced Turkey",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 3.5
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Donettes Mini Crunch Donuts",
+      "price": "2.5",
+      "category": "Packaged Donuts & Breakfast Treats",
+      "size": "9.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Chocolate Cream Pie 8 Inch",
+      "price": "9.99",
+      "category": "More Types of Pie",
+      "size": "29",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Donettes On The Go! Mini Powdered Donuts",
+      "price": "3.99",
+      "category": "Packaged Donuts & Breakfast Treats",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Donettes Mini Powdered Donuts Sharing Size",
+      "price": "3.99",
+      "category": "Packaged Donuts & Breakfast Treats",
+      "size": "17.4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Vanilla Creme Horns",
+      "price": "4.99",
+      "category": "More Desserts",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.62
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Plain Jr. Chocolate Whoopie Snack",
+      "price": "5.99",
+      "category": "More Desserts",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.67
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Donettes Mini Old Fashioned Donuts",
+      "price": "2.5",
+      "category": "Packaged Donuts & Breakfast Treats",
+      "size": "10.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Mini Chocolate Cream Pie Mini",
+      "price": "3",
+      "category": "More Types of Pie",
+      "size": "7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.43
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Donettes Honey Bun Mini Donuts",
+      "price": "2.5",
+      "category": "Packaged Donuts & Breakfast Treats",
+      "size": "10.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Jr Chocolate Swiss Rolls",
+      "price": "4.99",
+      "category": "More Desserts",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.55
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Chocolate Cupcakes Family Pack",
+      "price": "4.99",
+      "category": "Packaged Cakes & Cupcakes",
+      "size": "22.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.22
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Dessert Shells",
+      "price": "2.99",
+      "category": "Pastry & Dessert Shells",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.6
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Chocolate Ding Dongs Snack Cakes Family Pack",
+      "price": "4.99",
+      "category": "Packaged Snack Cakes",
+      "size": "20.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Coconut Cream Pie 8 Inch",
+      "price": "9.99",
+      "category": "Coconut Pie",
+      "size": "29",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Mini Plain Cannolis",
+      "price": "5.49",
+      "category": "More Desserts",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.1
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Boston Creme Pie",
+      "price": "11.99",
+      "category": "More Types of Pie",
+      "size": "26",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.46
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Donettes Fritter Rings Apple Cinnamon Donuts",
+      "price": "3.99",
+      "category": "Packaged Donuts & Breakfast Treats",
+      "size": "10.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Peanut Butter Creme Pie 8 Inch",
+      "price": "9.99",
+      "category": "More Types of Pie",
+      "size": "2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Hostess",
+      "name": "Hostess Chocolate Cupcakes",
+      "price": "3.99",
+      "category": "Packaged Cakes & Cupcakes",
+      "size": "12.7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Mini Chocolate Dipped Cannolis",
+      "price": "5.99",
+      "category": "More Desserts",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.2
+    },
+    {
+      "brand": "Tastykake",
+      "name": "Tastykake Glazed Lemon Blueberry Dipp'n Donut Sticks",
+      "price": "2.29",
+      "category": "Packaged Donuts & Breakfast Treats",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Lemon Burst Square",
+      "price": "3.99",
+      "category": "More Desserts",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.8
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Mini Lemon Creme Pie",
+      "price": "3",
+      "category": "More Types of Pie",
+      "size": "0.7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 4.29
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Plain Cannoli",
+      "price": "3.99",
+      "category": "More Desserts",
+      "size": "4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.0
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Mississippi Mud Square",
+      "price": "3.99",
+      "category": "More Desserts",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.8
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Chocolate Dipped Cannolis",
+      "price": "4.99",
+      "category": "More Desserts",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.83
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Chocolate Raspberry Mousse 3 Inch",
+      "price": "4.99",
+      "category": "More Desserts",
+      "size": "5.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.96
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Chocolate Chip Cookie Bar",
+      "price": "3.99",
+      "category": "More Desserts",
+      "size": "5.6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.71
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Sliced Italian Bread Loaf",
+      "price": "2",
+      "category": "Italian Bakery Bread",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.13
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Bakery French Baguette Bread",
+      "price": "3.99",
+      "category": "French Bakery Bread",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Bakery Sourdough Loaf Bread",
+      "price": "4.99",
+      "category": "Sourdough Bakery Bread",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery French Bread Loaf",
+      "price": "2",
+      "category": "French Bakery Bread",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.13
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Half Loaf Sourdough Panini Bread",
+      "price": "4.99",
+      "category": "Sourdough Bakery Bread",
+      "size": "17.6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Garlic Bread Loaf",
+      "price": "3.99",
+      "category": "Garlic Bakery Bread",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Sliced Banana Bread",
+      "price": "5.99",
+      "category": "Pound Cake",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.43
+    },
+    {
+      "brand": "Fresh Bakery",
+      "name": "Pumpkin Pie",
+      "price": "7.99",
+      "category": "Pumpkin Pie",
+      "size": "22",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Chocolate Chunk Cookies",
+      "price": "4.99",
+      "category": "Bakery Cookies",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery Mini Garlic Bread Loaf",
+      "price": "2.99",
+      "category": "Garlic Bakery Bread",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "Generic",
+      "name": "Bakery All Butter Croissants",
+      "price": "4.99",
+      "category": "Bakery Croissants",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.55
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Nature's Promise Bakery Sourdough Boule Bread",
+      "price": "4.99",
+      "category": "Sourdough Bakery Bread",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "fairlife",
+      "name": "Whole Milk",
+      "price": "5.39",
+      "category": "Lactose Free Milk",
+      "size": "52",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.1
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Plant-based Coconut Blend Non-dairy Vanilla & Cinnamon Yogurt Cup",
+      "price": "1.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Icelandic Provisions",
+      "name": "Icelandic Provisions Thick & Creamy Low Fat Key Lime Skyr Yogurt Cup",
+      "price": "1.69",
+      "category": "Icelandic Skyr Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.32
+    },
+    {
+      "brand": "Oakhurst",
+      "name": "Skim Milk",
+      "price": "4.91",
+      "category": "Fat Free Skim Milk Gallon",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Hannaford",
+      "unit_price": 4.91
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Plant-based Coconut Blend Non-dairy Mixed Berries Yogurt Cup",
+      "price": "1.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Strawberry Banana Coconutmilk Yogurt Cup",
+      "price": "1.89",
+      "category": "Coconutmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Oakhurst",
+      "name": "Whole Milk",
+      "price": "5.18",
+      "category": "Whole Milk Gallon",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Hannaford",
+      "unit_price": 5.18
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Raspberry Coconutmilk Yogurt Alternative Cup",
+      "price": "1.89",
+      "category": "Coconutmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Oakhurst",
+      "name": "2% Reduced Fat Milk",
+      "price": "5.05",
+      "category": "2% Reduced Fat Milk Gallon",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Hannaford",
+      "unit_price": 5.05
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Peach Coconutmilk Yogurt Alternative Cup",
+      "price": "1.89",
+      "category": "Coconutmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Oakhurst",
+      "name": "Skim Milk",
+      "price": "2.85",
+      "category": "Fat Free Skim Milk 1/2 Gallon",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 2.85
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Plant-based Coconut Blend Non-dairy Strawberry Yogurt Cup",
+      "price": "1.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Oakhurst",
+      "name": "Whole Milk",
+      "price": "2.99",
+      "category": "Whole Milk 1/2 Gallon",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 2.99
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Vegan Vanilla Soymilk Yogurt Alternative Cup",
+      "price": "1.99",
+      "category": "Soymilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Vegan Peach Mango Soymilk Yogurt Alternative Cup",
+      "price": "1.99",
+      "category": "Soymilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Blueberry Coconutmilk Yogurt Alternative Cup",
+      "price": "1.89",
+      "category": "Coconutmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Oakhurst",
+      "name": "Oakhurst 1% Low Fat Milk",
+      "price": "4.95",
+      "category": "1% Low Fat Milk Gallon",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Hannaford",
+      "unit_price": 4.95
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Vegan Vanilla Almondmilk Yogurt Alternative Cup",
+      "price": "2.15",
+      "category": "Almondmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Oakhurst",
+      "name": "Oakhurst 1% Low Fat Milk",
+      "price": "2.88",
+      "category": "1% Low Fat Milk 1/2 Gallon",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 2.88
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Vanilla Coconutmilk Yogurt Alternative Cup",
+      "price": "1.89",
+      "category": "Coconutmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Oakhurst",
+      "name": "2% Reduced Fat Milk",
+      "price": "2.92",
+      "category": "2% Reduced Fat Milk 1/2 Gallon",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 2.92
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Plant-based Coconut Blend Non-dairy Vanilla Yogurt",
+      "price": "7.49",
+      "category": "Non-Dairy Yogurt Alternative Large Tub",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Unsweetened Vanilla Coconutmilk Yogurt Alternative",
+      "price": "5.99",
+      "category": "Non-Dairy Yogurt Alternative Large Tub",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Vanilla Coconutmilk Yogurt Alternative",
+      "price": "5.99",
+      "category": "Non-Dairy Yogurt Alternative Large Tub",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Dark Chocolate Coconut Almondmilk Yogurt Alternative Cup",
+      "price": "2.15",
+      "category": "Almondmilk Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Vegan Vanilla Soymilk Yogurt Alternative",
+      "price": "5.99",
+      "category": "Non-Dairy Yogurt Alternative Large Tub",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Forager Project",
+      "name": "Forager Project Organic Dairy-free Unsweetened Vanilla Cashewmilk Yogurt",
+      "price": "6.29",
+      "category": "Non-Dairy Yogurt Alternative Large Tub",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Unsweetened Coconutmilk Yogurt Alternative",
+      "price": "5.99",
+      "category": "Non-Dairy Yogurt Alternative Large Tub",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Vanilla Coconutmilk Yogurt Cup",
+      "price": "6.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "21.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Vegan Unsweet Vanilla Almondmilk Yogurt Alternative",
+      "price": "6.29",
+      "category": "Non-Dairy Yogurt Alternative Large Tub",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Vegan Vanilla Almondmilk Yogurt Alternative",
+      "price": "6.29",
+      "category": "Non-Dairy Yogurt Alternative Large Tub",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "Culina",
+      "name": "Culina Dairy-free Bourbon Vanilla Greek Style Yogurt",
+      "price": "3.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.8
+    },
+    {
+      "brand": "So Delicious",
+      "name": "So Delicious Dairy Free Vegan Strawberry Coconutmilk Yogurt Cup",
+      "price": "6.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "21.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Culina",
+      "name": "Culina Dairy-free Plain & Simple Greek Style Yogurt",
+      "price": "3.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.8
+    },
+    {
+      "brand": "Culina",
+      "name": "Culina Dairy-free Cherry Almond Greek Style Yogurt",
+      "price": "3.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.8
+    },
+    {
+      "brand": "Culina",
+      "name": "Culina Dairy-free Strawberry Rose Greek Style Yogurt",
+      "price": "3.99",
+      "category": "Coconutmilk Yogurt",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.8
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Sweet & Creamy Flavored Almondmilk Coffee Creamer",
+      "price": "5.49",
+      "category": "Almond Coffee Creamer",
+      "size": "1",
+      "unit": "quart",
+      "source": "Hannaford",
+      "unit_price": 5.49
+    },
+    {
+      "brand": "Silk",
+      "name": "Silk Dairy Free Vanilla Flavored Almondmilk Coffee Creamer",
+      "price": "5.49",
+      "category": "Almond Coffee Creamer",
+      "size": "1",
+      "unit": "quart",
+      "source": "Hannaford",
+      "unit_price": 5.49
+    },
+    {
+      "brand": "Planet Oat",
+      "name": "Planet Oat Dairy Free Caramel Flavored Oatmilk Coffee Creamer",
+      "price": "4.49",
+      "category": "Oat Coffee Creamer",
+      "size": "1",
+      "unit": "quart",
+      "source": "Hannaford",
+      "unit_price": 4.49
+    },
+    {
+      "brand": "Icelandic Provisions",
+      "name": "Icelandic Provisions Thick & Creamy Non-dairy Vanilla Bean Oatmilk Yogurt",
+      "price": "1.89",
+      "category": "Icelandic Skyr Yogurt",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Cabot",
+      "name": "Shredded Cheddar Cheese",
+      "price": "3.39",
+      "category": "Packaged Shredded Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Generic",
+      "name": "White American Cheese ( Sliced)",
+      "price": "2.5",
+      "category": "Deli American Cheese",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 2.5
+    },
+    {
+      "brand": "Cabot",
+      "name": "Cabot Creamery Aged Vermont Seriously Sharp White Cheddar Cheese Block",
+      "price": "3.29",
+      "category": "Packaged Block Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Cabot",
+      "name": "Cabot Creamery Fine Cut Shredded Mexican 4 Cheese",
+      "price": "3.39",
+      "category": "Mexican & Taco Cheese Blends Shredded",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Land O Lakes",
+      "name": "Land O Lakes Deli White American Cheese ( Sliced)",
+      "price": "4",
+      "category": "Deli American Cheese",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.0
+    },
+    {
+      "brand": "Generic",
+      "name": "Fancy Shredded Mexican Style 4 Cheese Blend",
+      "price": "1.99",
+      "category": "Mexican & Taco Cheese Blends Shredded",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Cabot",
+      "name": "Cabot Creamery Aged Vermont Extra Sharp White Cheddar Cheese Block",
+      "price": "3.29",
+      "category": "Packaged Block Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Generic",
+      "name": "Shredded Part Skim Mozzarella Cheese",
+      "price": "1.99",
+      "category": "Packaged Mozzarella Cheese Shredded",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Cabot",
+      "name": "Cabot Creamery White Cheddar Cheese Curds",
+      "price": "4.99",
+      "category": "Packaged Cheddar Cheese Curds",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.0
+    },
+    {
+      "brand": "Generic",
+      "name": "Cream Cheese Bar",
+      "price": "1.89",
+      "category": "Brick Cream Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Land O Lakes",
+      "name": "Land O Lakes Sharp White & Medium Cheddar Cheese Cubes",
+      "price": "3.29",
+      "category": "Cheese Cubes",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Generic",
+      "name": "Cream Cheese Bars Ea",
+      "price": "3.67",
+      "category": "Brick Cream Cheese",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "Cabot",
+      "name": "Shredded Cheddar Cheese",
+      "price": "3.39",
+      "category": "Packaged Shredded Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Kraft Philadelphia",
+      "name": "Philadelphia Cream Cheese Brick",
+      "price": "3.79",
+      "category": "Brick Cream Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Annie's",
+      "name": "Annie's Shells & White Cheddar Macaroni & Cheese",
+      "price": "2",
+      "category": "Macaroni & Cheese Boxed",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Kraft",
+      "name": "Kraft Flavor Mac & Cheese Dinner",
+      "price": "1.29",
+      "category": "Macaroni & Cheese Boxed",
+      "size": "7.25",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.18
+    },
+    {
+      "brand": "Galbani",
+      "name": "Whole Milk",
+      "price": "6.45",
+      "category": "Ricotta Cheese",
+      "size": "28",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "Generic",
+      "name": "Shredded Cheddar Cheese",
+      "price": "1.99",
+      "category": "Packaged Shredded Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Cabot",
+      "name": "Cabot Aged Vermont Seriously Sharp White Cheddar Cheese Slices",
+      "price": "2.99",
+      "category": "Packaged Sliced Cheddar Cheese",
+      "size": "7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.43
+    },
+    {
+      "brand": "Cooper",
+      "name": "Cooper Brand Sharp American Cheese ( Sliced)",
+      "price": "4",
+      "category": "Deli American Cheese",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.0
+    },
+    {
+      "brand": "Galbani",
+      "name": "Whole Milk",
+      "price": "3.99",
+      "category": "Ricotta Cheese",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Kraft Philadelphia",
+      "name": "Philadelphia Cream Cheese Bricks/2 Ct",
+      "price": "6.99",
+      "category": "Brick Cream Cheese",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Generic",
+      "name": "Fancy Shredded Parmesan Cheese",
+      "price": "1.99",
+      "category": "Packaged Parmesan & Romano Cheese Grated",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Generic",
+      "name": "Fancy Shredded Mexican Style 4 Cheese Blend",
+      "price": "3.79",
+      "category": "Mexican & Taco Cheese Blends Shredded",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Shredded Cheddar Cheese",
+      "price": "1.99",
+      "category": "Packaged Shredded Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Grated Aged Parmesan Cheese",
+      "price": "2.19",
+      "category": "Packaged Parmesan & Romano Cheese Grated",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Aged New York Extra Sharp White Cheddar Cheese Block",
+      "price": "1.99",
+      "category": "Packaged Block Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Shredded Cheddar Cheese",
+      "price": "1.99",
+      "category": "Packaged Shredded Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Thick Cut Shredded Part Skim Mozzarella Cheese",
+      "price": "1.99",
+      "category": "Packaged Mozzarella Cheese Shredded",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "BelGioioso",
+      "name": "Belgioioso Freshly Grated Parmesan Cheese",
+      "price": "4.99",
+      "category": "Specialty Parmesan Cheese Grated & Shredded",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.0
+    },
+    {
+      "brand": "Generic",
+      "name": "Whipped Cream Cheese Spread",
+      "price": "2.99",
+      "category": "Plain Soft Cream Cheese Spread",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Annie's",
+      "name": "Annie's Organic Cheddar Macaroni & Cheese",
+      "price": "2",
+      "category": "Macaroni & Cheese Boxed",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Generic",
+      "name": "Fancy Shredded Part Skim Mozzarella Cheese",
+      "price": "1.99",
+      "category": "Packaged Mozzarella Cheese Shredded",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Aged New York Extra Sharp White Cheddar Cheese Block",
+      "price": "3.95",
+      "category": "Packaged Block Cheddar Cheese",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Annie's",
+      "name": "Annie's Shells & Real Aged Cheddar Macaroni & Cheese",
+      "price": "2",
+      "category": "Macaroni & Cheese Boxed",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Generic",
+      "name": "Provolone Cheese Slices",
+      "price": "2.22",
+      "category": "Packaged Provolone Cheese Sliced",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Generic",
+      "name": "Aged Sharp Yellow Cheddar Cheese Block",
+      "price": "3.95",
+      "category": "Packaged Block Cheddar Cheese",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Cream Cheese Spread",
+      "price": "2.99",
+      "category": "Plain Soft Cream Cheese Spread",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Aged Parmesan Cheese Wedge",
+      "price": "5.99",
+      "category": "Specialty Parmesan Cheese Chunk",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.75
+    },
+    {
+      "brand": "Generic",
+      "name": "Sharp White Cheddar Cheese Slices",
+      "price": "2.22",
+      "category": "Packaged Sliced Cheddar Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Non Fat Vanilla Skyr Yogurt Cup",
+      "price": "1.25",
+      "category": "Icelandic Skyr Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Chobani",
+      "name": "Chobani Flip Greek Chocolate Covered Strawberry Yogurt Cup",
+      "price": "1.39",
+      "category": "Strawberry Greek Yogurt",
+      "size": "4.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Non Fat Vanilla Skyr Yogurt Cup",
+      "price": "4.99",
+      "category": "Icelandic Skyr Yogurt",
+      "size": "21.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Non Fat Plain Greek Yogurt",
+      "price": "3.59",
+      "category": "Plain Greek Yogurt Large Tub",
+      "size": "32",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.11
+    },
+    {
+      "brand": "Chobani",
+      "name": "Chobani Flip Low Fat Key Lime Crumble Greek Yogurt Cup",
+      "price": "1.39",
+      "category": "Lime Greek Yogurt",
+      "size": "4.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Non Fat Mixed Berries & Acai Skyr Yogurt Cup",
+      "price": "4.99",
+      "category": "Icelandic Skyr Yogurt",
+      "size": "21.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Cabot",
+      "name": "Cabot Triple Cream Vanilla Bean Greek Yogurt",
+      "price": "4.59",
+      "category": "Vanilla Greek Yogurt Large Tub",
+      "size": "32",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.14
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Non Fat Raspberry Skyr Yogurt Cup",
+      "price": "1.25",
+      "category": "Icelandic Skyr Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Non Fat Vanilla Greek Yogurt Cup",
+      "price": "0.89",
+      "category": "Vanilla Greek Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "YoCrunch",
+      "name": "Yocrunch Low Fat M&m's Vanilla Yogurt Cup",
+      "price": "3.89",
+      "category": "Kids Yogurt Cups",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Non Fat Black Cherry Greek Yogurt Cup",
+      "price": "0.89",
+      "category": "Cherry Greek Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "YoCrunch",
+      "name": "Yocrunch Low Fat M&m's Strawberry Yogurt Cup",
+      "price": "3.89",
+      "category": "Kids Yogurt Cups",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Non Fat Plain Greek Yogurt Cup",
+      "price": "0.89",
+      "category": "Plain Greek Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "Noosa",
+      "name": "Whole Milk",
+      "price": "1.99",
+      "category": "Strawberry Traditional Yogurt",
+      "size": "5.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "Generic",
+      "name": "Non Fat Peach Greek Yogurt Cup",
+      "price": "0.89",
+      "category": "Peach Greek Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "Danimals",
+      "name": "Danimals Smoothie Soaring Strawberry & Incredible Berry Drink 12 Pk",
+      "price": "5.99",
+      "category": "Kids Yogurt Drinks, Shakes & Smoothies",
+      "size": "3.1",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.93
+    },
+    {
+      "brand": "Generic",
+      "name": "Non Fat Mixed Berry Greek Yogurt Cup",
+      "price": "0.89",
+      "category": "Mixed Berry Greek Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "Stonyfield",
+      "name": "Stonyfield Organic Smoothie Pouches Strawbana Smash Dairy Free",
+      "price": "6.39",
+      "category": "Kids Yogurt Pouches & Tubes",
+      "size": "12.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Chobani",
+      "name": "Chobani Protein Lowfat Vanilla Greek Yogurt",
+      "price": "1.69",
+      "category": "Vanilla Greek Yogurt",
+      "size": "6.7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Siggi's",
+      "name": "Siggi's Non Fat Mixed Berries & Acai Skyr Yogurt Cup",
+      "price": "1.25",
+      "category": "Icelandic Skyr Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Low Fat Vanilla Yogurt Cup",
+      "price": "0.55",
+      "category": "Vanilla Traditional Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.09
+    },
+    {
+      "brand": "Yoplait",
+      "name": "Yoplait Original Vanilla Yogurt",
+      "price": "0.75",
+      "category": "Vanilla Traditional Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "Chobani",
+      "name": "Chobani Protein Lowfat Raspberry Lemon Greek Yogurt",
+      "price": "1.69",
+      "category": "Raspberry Greek Yogurt",
+      "size": "6.7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Oui by Yoplait",
+      "name": "Yoplait Original Strawberry Yogurt",
+      "price": "1.69",
+      "category": "Strawberry Traditional Yogurt",
+      "size": "5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "Yoplait",
+      "name": "Yoplait Original Strawberry Yogurt",
+      "price": "0.75",
+      "category": "Strawberry Traditional Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "Stonyfield",
+      "name": "Whole Milk",
+      "price": "5.29",
+      "category": "Vanilla Traditional Yogurt Large Tub",
+      "size": "32",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "Generic",
+      "name": "Low Fat Strawberry Yogurt Cup",
+      "price": "0.55",
+      "category": "Strawberry Traditional Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.09
+    },
+    {
+      "brand": "Chobani",
+      "name": "Chobani Flip Low Fat Strawberry Cheesecake Greek Yogurt Cup",
+      "price": "1.39",
+      "category": "Strawberry Greek Yogurt",
+      "size": "4.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Chobani",
+      "name": "Chobani Flip Low Fat Coconut Caramel Cookie Greek Yogurt Cup",
+      "price": "1.39",
+      "category": "Coconut Greek Yogurt",
+      "size": "4.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Oikos",
+      "name": "Oikos Triple Zero Protein Non Fat Vanilla Blended Greek Yogurt Cup",
+      "price": "4.89",
+      "category": "Vanilla Greek Yogurt",
+      "size": "21.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "FAGE",
+      "name": "Fage Total Non Fat 0% Milkfat Plain Strained Greek Yogurt Cup",
+      "price": "1.59",
+      "category": "Plain Greek Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Stonyfield",
+      "name": "Stonyfield Organic Kids Low Fat Strawberry Banana Yogurt Pouch",
+      "price": "6.39",
+      "category": "Kids Yogurt Pouches & Tubes",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.46
+    },
+    {
+      "brand": "Cabot",
+      "name": "Whole Milk",
+      "price": "4.59",
+      "category": "Plain Greek Yogurt Large Tub",
+      "size": "32",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.14
+    },
+    {
+      "brand": "Noosa",
+      "name": "Whole Milk",
+      "price": "1.99",
+      "category": "Cherry Traditional Yogurt",
+      "size": "5.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "Chobani",
+      "name": "Chobani Low Fat Vanilla Mixed Berry On The Bottom Greek Yogurt Cup",
+      "price": "4.99",
+      "category": "Vanilla Greek Yogurt",
+      "size": "21.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Non Fat Raspberry Greek Yogurt Cup",
+      "price": "0.89",
+      "category": "Raspberry Greek Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "Generic",
+      "name": "Low Fat Vanilla Yogurt",
+      "price": "2.59",
+      "category": "Vanilla Traditional Yogurt Large Tub",
+      "size": "32",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.08
+    },
+    {
+      "brand": "Yoplait",
+      "name": "Yoplait Low Fat Harvest Peach Yogurt Cup",
+      "price": "0.75",
+      "category": "Peach Traditional Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "Yoplait",
+      "name": "Yoplait Original Strawberry Yogurt",
+      "price": "0.75",
+      "category": "Strawberry Traditional Yogurt",
+      "size": "4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.19
+    },
+    {
+      "brand": "El Monterey",
+      "name": "El Monterey Egg Applewood Smoked Bacon & Cheese Breakfast Burritos",
+      "price": "9.99",
+      "category": "Frozen Breakfast Burritos",
+      "size": "36",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Generic",
+      "name": "Large White Eggs",
+      "price": "2.39",
+      "category": "White Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 2.39
+    },
+    {
+      "brand": "Nellie's",
+      "name": "Large Brown Eggs",
+      "price": "6.69",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 6.69
+    },
+    {
+      "brand": "Nellie's",
+      "name": "Large Brown Eggs",
+      "price": "8.57",
+      "category": "Brown Eggs",
+      "size": "1.5",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 5.71
+    },
+    {
+      "brand": "Generic",
+      "name": "Large Brown Eggs",
+      "price": "3.57",
+      "category": "Brown Eggs",
+      "size": "1.5",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 2.38
+    },
+    {
+      "brand": "Generic",
+      "name": "Large Brown Eggs",
+      "price": "2.39",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 2.39
+    },
+    {
+      "brand": "Vital Farms",
+      "name": "Large Brown Eggs",
+      "price": "7.99",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 7.99
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Large Brown Eggs",
+      "price": "5.95",
+      "category": "Brown Eggs",
+      "size": "1.5",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 3.97
+    },
+    {
+      "brand": "Vital Farms",
+      "name": "Large Brown Eggs",
+      "price": "11.29",
+      "category": "Brown Eggs",
+      "size": "1.5",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 7.53
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Large Brown Eggs",
+      "price": "3.99",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 3.99
+    },
+    {
+      "brand": "El Monterey",
+      "name": "El Monterey Signature Egg Sausage Cheese & Potato Breakfast Burritos",
+      "price": "9.99",
+      "category": "Frozen Breakfast Burritos",
+      "size": "36",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Large Brown Eggs",
+      "price": "4.59",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 4.59
+    },
+    {
+      "brand": "Vital Farms",
+      "name": "Large Brown Eggs",
+      "price": "7.59",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 7.59
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Large Brown Eggs",
+      "price": "4.19",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 4.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Large Brown Eggs",
+      "price": "2.79",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 2.79
+    },
+    {
+      "brand": "Nellie's",
+      "name": "Large Brown Eggs",
+      "price": "5.79",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 5.79
+    },
+    {
+      "brand": "El Monterey",
+      "name": "El Monterey Signature Meat Lovers Breakfast Burritos",
+      "price": "9.99",
+      "category": "Frozen Breakfast Burritos",
+      "size": "36",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Large Brown Eggs",
+      "price": "4.99",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 4.99
+    },
+    {
+      "brand": "El Monterey",
+      "name": "El Monterey Signature Egg Sausage & Cheese Breakfast Burritos",
+      "price": "9.99",
+      "category": "Frozen Breakfast Burritos",
+      "size": "36",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Generic",
+      "name": "Jumbo Brown Eggs",
+      "price": "2.99",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 2.99
+    },
+    {
+      "brand": "Vital Farms",
+      "name": "Large Brown Eggs",
+      "price": "9.99",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 9.99
+    },
+    {
+      "brand": "Pete & Gerry's",
+      "name": "Large Brown Eggs",
+      "price": "7.99",
+      "category": "Brown Eggs",
+      "size": "1.5",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 5.33
+    },
+    {
+      "brand": "Pete & Gerry's",
+      "name": "Large Brown Eggs",
+      "price": "6.39",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 6.39
+    },
+    {
+      "brand": "Pete & Gerry's",
+      "name": "Large Brown Eggs",
+      "price": "8.99",
+      "category": "Brown Eggs",
+      "size": "1.5",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 5.99
+    },
+    {
+      "brand": "Pete & Gerry's",
+      "name": "Large Brown Eggs",
+      "price": "6.99",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 6.99
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Large Brown Eggs",
+      "price": "4.09",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 4.09
+    },
+    {
+      "brand": "Generic",
+      "name": "Large Brown Eggs",
+      "price": "1.7",
+      "category": "Brown Eggs",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 1.7
+    },
+    {
+      "brand": "Eggland's Best",
+      "name": "Large Brown Eggs",
+      "price": "6.69",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 6.69
+    },
+    {
+      "brand": "Pete & Gerry's",
+      "name": "Large Brown Eggs",
+      "price": "7.19",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 7.19
+    },
+    {
+      "brand": "Pete & Gerry's",
+      "name": "Large Brown Eggs",
+      "price": "4.39",
+      "category": "Brown Eggs",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "Nature's Promise",
+      "name": "Large Brown Eggs",
+      "price": "6.25",
+      "category": "Brown Eggs",
+      "size": "1.5",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 4.17
+    },
+    {
+      "brand": "Eggland's Best",
+      "name": "Large White Eggs",
+      "price": "4.79",
+      "category": "White Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 4.79
+    },
+    {
+      "brand": "Generic",
+      "name": "Medium Brown Eggs",
+      "price": "2.29",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 2.29
+    },
+    {
+      "brand": "The Country Hen",
+      "name": "Large Brown Eggs",
+      "price": "3.89",
+      "category": "Brown Eggs",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 3.89
+    },
+    {
+      "brand": "Eggland's Best",
+      "name": "Large Brown Eggs",
+      "price": "9.79",
+      "category": "Brown Eggs",
+      "size": "1.5",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 6.53
+    },
+    {
+      "brand": "Pete & Gerry's",
+      "name": "Pete & Gerry's Organic Free Range Jumbo Brown Eggs",
+      "price": "4.45",
+      "category": "Brown Eggs",
+      "size": null,
+      "unit": null,
+      "source": "Hannaford",
+      "unit_price": 4.45
+    },
+    {
+      "brand": "Pete & Gerry's",
+      "name": "Large Brown Eggs",
+      "price": "7.99",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 7.99
+    },
+    {
+      "brand": "Maine Family Farms",
+      "name": "Large Brown Eggs",
+      "price": "6.49",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 6.49
+    },
+    {
+      "brand": "Nature's Hen House",
+      "name": "Large Brown Eggs",
+      "price": "7.15",
+      "category": "Brown Eggs",
+      "size": "1",
+      "unit": "doz",
+      "source": "Hannaford",
+      "unit_price": 7.15
+    },
+    {
+      "brand": "Nellie's",
+      "name": "Nellie's Free Range Medium Hard-boiled Eggs",
+      "price": "4.29",
+      "category": "Hard Cooked Eggs",
+      "size": "9.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.46
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana 4 Cheese Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana 5 Cheese Tortellini Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Four Cheese Tortellini Pasta",
+      "price": "6.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Butternut Squash Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Spinach & Ricotta Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Mozzarella Cheese Ravioli Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Annie's",
+      "name": "Annie's Homegrown Macaroni & Cheese Cheddar",
+      "price": "7.29",
+      "category": "Macaroni & Cheese Boxed",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Linguine Pasta",
+      "price": "3.99",
+      "category": "Fresh Linguine Pasta",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Chef Boyardee",
+      "name": "Chef Boyardee Mini Spaghetti Rings & Meatballs Microwavable Bowl",
+      "price": "1.89",
+      "category": "Canned Pasta",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Tri-color Cheese Tortellini Pasta",
+      "price": "6.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Chicken & Roasted Garlic Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Fettuccine Pasta",
+      "price": "3.99",
+      "category": "Fresh Fettuccine Pasta",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Cheese Lovers Tortelloni Pasta",
+      "price": "6.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Spinach & Ricotta Ravioli Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Annie's",
+      "name": "Annie's Shells & White Cheddar Macaroni & Cheese",
+      "price": "7.29",
+      "category": "Macaroni & Cheese Boxed",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Buitoni",
+      "name": "Buitoni Five Cheese Tortellini Pasta",
+      "price": "5.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.6
+    },
+    {
+      "brand": "Annie's",
+      "name": "Annie's Marvel Spidey & His Amazing Friends Pasta & Cheddar",
+      "price": "2",
+      "category": "Macaroni & Cheese Boxed",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Taste Republic",
+      "name": "Taste Republic Gluten Free Four Cheese Tortelloni Pasta",
+      "price": "5.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.67
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Spinach & Cheese Tortelloni Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Mushroom Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Chicken Mozzarella Tortelloni Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Italian Sausage Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "Buitoni",
+      "name": "Buitoni Fettuccine Pasta",
+      "price": "3.99",
+      "category": "Fresh Fettuccine Pasta",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Italian Sausage Tortellini Pasta",
+      "price": "6.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Buitoni",
+      "name": "Buitoni Five Cheese Tortellini Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Beef Short Rib Ravioli Pasta",
+      "price": "8.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.12
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Roasted Butternut Squash Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Taste Republic",
+      "name": "Taste Republic Gluten Free Linguini Pasta",
+      "price": "4.99",
+      "category": "Fresh Linguine Pasta",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.55
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Italian-style Cheese Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Pumpkin & Sage Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Buitoni",
+      "name": "Buitoni Mixed Cheese Tortellini Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Smoked Beef Brisket Ravioli Pasta",
+      "price": "8.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.12
+    },
+    {
+      "brand": "Giovanni Rana",
+      "name": "Giovanni Rana Bbq Pulled Pork Ravioli Pasta",
+      "price": "8.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.12
+    },
+    {
+      "brand": "Buitoni",
+      "name": "Buitoni Four Cheese Ravioli Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Taste of Inspirations",
+      "name": "Spinach & Cheese Ravioli Pasta",
+      "price": "6.99",
+      "category": "Fresh Ravioli Pasta",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Alfredo",
+      "name": "Alfredo Stuffed Pasta Shells Cheese With Tomato Sauce Frozen",
+      "price": "11.99",
+      "category": "Frozen Stuffed Pasta Shells & Manicotti",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Buitoni",
+      "name": "Buitoni Chicken Tortelloni Pasta Family Size",
+      "price": "9.99",
+      "category": "Fresh Tortellini Pasta",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Polar",
+      "name": "Polar Raspberry Lime Seltzer Water 12 Pk",
+      "price": "5",
+      "category": "Flavored Sparkling Water & Seltzer",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Generic",
+      "name": "Diced Mild Green Chilies",
+      "price": "0.89",
+      "category": "Canned Green Chiles",
+      "size": "4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.22
+    },
+    {
+      "brand": "Polar",
+      "name": "Polar Exclusive Clementine Bramble Seltzer Water 12 Pk",
+      "price": "5",
+      "category": "Flavored Sparkling Water & Seltzer",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Dole",
+      "name": "Dole 100% Pineapple Orange Juice 6 Pk",
+      "price": "5.09",
+      "category": "Non-Refrigerated Pineapple Juice",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.85
+    },
+    {
+      "brand": "Generic",
+      "name": "Cut Yams Sweet Potatoes In Syrup",
+      "price": "1.29",
+      "category": "Canned Sweet Potatoes & Yams",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.09
+    },
+    {
+      "brand": "Generic",
+      "name": "Diced White Potatoes",
+      "price": "0.97",
+      "category": "Canned White Potatoes",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.06
+    },
+    {
+      "brand": "Polar",
+      "name": "Polar Orange Vanilla Seltzer Water 12 Pk",
+      "price": "5",
+      "category": "Flavored Sparkling Water & Seltzer",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Princella",
+      "name": "Princella Cut Sweet Potatoes Yams In Syrup",
+      "price": "3.39",
+      "category": "Canned Sweet Potatoes & Yams",
+      "size": "40",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.08
+    },
+    {
+      "brand": "Polar",
+      "name": "Polar Lime Seltzer Water 12 Pk",
+      "price": "5",
+      "category": "Flavored Sparkling Water & Seltzer",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Generic",
+      "name": "Pack Mild Banana Pepper Rings",
+      "price": "2.59",
+      "category": "Canned Banana Peppers",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.16
+    },
+    {
+      "brand": "Dole",
+      "name": "Dole Mandarin Oranges Fruit Cups In Juice",
+      "price": "8.59",
+      "category": "Oranges Fruit Cups & Bowls",
+      "size": "48",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.18
+    },
+    {
+      "brand": "Old El Paso",
+      "name": "Old El Paso Chopped Mild Peeled Green Chiles",
+      "price": "2.09",
+      "category": "Canned Green Chiles",
+      "size": "4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.52
+    },
+    {
+      "brand": "Polar",
+      "name": "Polar Strawberry Watermelon Seltzer Water 12 Pk",
+      "price": "5",
+      "category": "Flavored Sparkling Water & Seltzer",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Generic",
+      "name": "Pack Jalapeno Peppers Slices",
+      "price": "2.49",
+      "category": "Canned Jalapenos",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.16
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole Chipotle Peppers In Adobo Sauce",
+      "price": "1.39",
+      "category": "Canned Chipotle Peppers",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Sliced White Potatoes",
+      "price": "0.97",
+      "category": "Canned White Potatoes",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.06
+    },
+    {
+      "brand": "Polar",
+      "name": "Polar Blackberry Mango Seltzer 12 Pk",
+      "price": "5",
+      "category": "Flavored Sparkling Water & Seltzer",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole Pepperoncini Peppers",
+      "price": "2.59",
+      "category": "Canned Pepperoncini",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.16
+    },
+    {
+      "brand": "Dole",
+      "name": "Dole No Sugar Added Mandarin Oranges Fruit Cups In Sweetened Water",
+      "price": "3.69",
+      "category": "Oranges Fruit Cups & Bowls",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "CHI-CHI'S",
+      "name": "Chi-chi's Diced Green Chilies",
+      "price": "1.39",
+      "category": "Canned Green Chiles",
+      "size": "4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Polar",
+      "name": "Polar Ruby Red Grapefruit Seltzer Water 12 Pk",
+      "price": "5",
+      "category": "Flavored Sparkling Water & Seltzer",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Ortega",
+      "name": "Ortega Diced Fire Roasted Mild Green Chiles",
+      "price": "2.29",
+      "category": "Canned Green Chiles",
+      "size": "4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.57
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole White Potatoes",
+      "price": "0.97",
+      "category": "Canned White Potatoes",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.06
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole Roasted Red Peppers",
+      "price": "1.59",
+      "category": "Canned Roasted Red Peppers",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.07
+    },
+    {
+      "brand": "Old El Paso",
+      "name": "Old El Paso Chopped Mild Peeled Green Chiles",
+      "price": "2.49",
+      "category": "Canned Green Chiles",
+      "size": "7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Mezzetta",
+      "name": "Mezzetta Sliced Medium Heat Golden Greek Pepperoncini Peppers",
+      "price": "4.09",
+      "category": "Canned Pepperoncini",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "Generic",
+      "name": "Sliced Roasted Red Peppers",
+      "price": "3.39",
+      "category": "Canned Roasted Red Peppers",
+      "size": "24",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.14
+    },
+    {
+      "brand": "Generic",
+      "name": "No Salt Added Sliced White Potatoes",
+      "price": "0.97",
+      "category": "Canned White Potatoes",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.06
+    },
+    {
+      "brand": "Mezzetta",
+      "name": "Mezzetta Sliced Tamed Medium Heat Jalapeno Peppers",
+      "price": "3.79",
+      "category": "Canned Jalapenos",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Mezzetta",
+      "name": "Mezzetta Pack Mild Banana Pepper Rings",
+      "price": "3.79",
+      "category": "Canned Banana Peppers",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "No Salt Added Whole White Potatoes",
+      "price": "0.97",
+      "category": "Canned White Potatoes",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.06
+    },
+    {
+      "brand": "Pastene",
+      "name": "Pastene Golden Greek Pepperoncini Peppers",
+      "price": "3.39",
+      "category": "Canned Pepperoncini",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Mezzetta",
+      "name": "Mezzetta Medium Heat Golden Greek Pepperoncini Peppers",
+      "price": "4.09",
+      "category": "Canned Pepperoncini",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "Goya",
+      "name": "Goya Chipotle Peppers In Adobo Sauce",
+      "price": "3.29",
+      "category": "Canned Chipotle Peppers",
+      "size": "7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Mezzetta",
+      "name": "Mezzetta Mild Roasted Red Bell Pepper Strips",
+      "price": "2.55",
+      "category": "Canned Roasted Red Peppers",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "Generic",
+      "name": "Pack Hot Banana Pepper Rings",
+      "price": "2.59",
+      "category": "Canned Banana Peppers",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.16
+    },
+    {
+      "brand": "Mt. Olive",
+      "name": "Mt. Olive Jalapeno Pepper Slices",
+      "price": "3.15",
+      "category": "Canned Jalapenos",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "Generic",
+      "name": "Pack Southern Style Jalapeno Peppers Slices",
+      "price": "1.97",
+      "category": "Canned Jalapenos",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.16
+    },
+    {
+      "brand": "Mezzetta",
+      "name": "Mezzetta Sliced Hot Cherry Peppers",
+      "price": "3.79",
+      "category": "Canned Cherry Peppers",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole Roasted Red Peppers",
+      "price": "2.79",
+      "category": "Canned Roasted Red Peppers",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "Apple Jacks",
+      "name": "Apple Jacks Cereal",
+      "price": "4.59",
+      "category": "Kids' Cereal",
+      "size": "8.9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.52
+    },
+    {
+      "brand": "Chex",
+      "name": "Rice Chex Gluten Free Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "Kellogg's Raisin Bran",
+      "name": "Kellogg's Raisin Bran Crunch Cereal Large Size",
+      "price": "5.49",
+      "category": "Family Favorites Cereal",
+      "size": "19.7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Special K",
+      "name": "Special K Red Berries Cereal",
+      "price": "4.69",
+      "category": "Family Favorites Cereal",
+      "size": "11.4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Honey Nut Cereal",
+      "price": "4.99",
+      "category": "Family Favorites Cereal",
+      "size": "15.4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.32
+    },
+    {
+      "brand": "Chex",
+      "name": "Corn Chex Gluten Free Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "Kellogg's Frosted Flakes",
+      "name": "Frosted Flakes Cereal",
+      "price": "5.29",
+      "category": "Family Favorites Cereal",
+      "size": "17.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Chex",
+      "name": "Chex Gluten Free Cinnamon Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "Froot Loops",
+      "name": "Froot Loops Cereal",
+      "price": "4.99",
+      "category": "Kids' Cereal",
+      "size": "8.9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "Cinnamon Toast Crunch",
+      "name": "Cinnamon Toast Crunch Cereal",
+      "price": "4.99",
+      "category": "Kids' Cereal",
+      "size": "16.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Life",
+      "name": "Quaker Life Cereal Giant Size",
+      "price": "5.99",
+      "category": "Family Favorites Cereal",
+      "size": "24.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Chex",
+      "name": "Chex Gluten Free Chocolate Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "12.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.2
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Honey Nut Cereal",
+      "price": "5.99",
+      "category": "Family Favorites Cereal",
+      "size": "27.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.22
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Original Cereal",
+      "price": "4.99",
+      "category": "Family Favorites Cereal",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "Chex",
+      "name": "Chex Gluten Free Honey Nut Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "12.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.2
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Honey Nut Cereal",
+      "price": "3.99",
+      "category": "Family Favorites Cereal",
+      "size": "10.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "Life",
+      "name": "Quaker Life Cinnamon Cereal Giant Size",
+      "price": "5.99",
+      "category": "Family Favorites Cereal",
+      "size": "24.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Chex",
+      "name": "Chex Gluten Free Peanut Butter Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "12.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.2
+    },
+    {
+      "brand": "Frosted Mini Wheats",
+      "name": "Frosted Mini Wheats Whole Grain Cereal",
+      "price": "4.99",
+      "category": "Family Favorites Cereal",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Chex",
+      "name": "Wheat Chex Whole Grain Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.18
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Original Cereal",
+      "price": "3.99",
+      "category": "Family Favorites Cereal",
+      "size": "8.9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.45
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Original Cereal",
+      "price": "5.99",
+      "category": "Family Favorites Cereal",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Lucky Charms",
+      "name": "Lucky Charms Gluten Free Cereal With Marshmallows",
+      "price": "3.99",
+      "category": "Kids' Cereal",
+      "size": "10.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Cinnamon Toast Crunch",
+      "name": "Cinnamon Toast Crunch Cereal",
+      "price": "5.99",
+      "category": "Kids' Cereal",
+      "size": "27",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.22
+    },
+    {
+      "brand": "Generic",
+      "name": "Bite-sized Frosted Shredded Whole Grain Wheat Cereal",
+      "price": "2.29",
+      "category": "Family Favorites Cereal",
+      "size": "18",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.13
+    },
+    {
+      "brand": "Cinnamon Toast Crunch",
+      "name": "Cinnamon Toast Crunch Cereal",
+      "price": "3.99",
+      "category": "Kids' Cereal",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Honey-Comb",
+      "name": "Honey-comb Cereal Large Size",
+      "price": "2.97",
+      "category": "Kids' Cereal",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Crunchy Granola Raisin Bran Cereal",
+      "price": "2.79",
+      "category": "Family Favorites Cereal",
+      "size": "18.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.15
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Honey Nut Cereal",
+      "price": "1.29",
+      "category": "Cereal Cups & Variety Packs",
+      "size": "1.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.72
+    },
+    {
+      "brand": "Lucky Charms",
+      "name": "Lucky Charms Gluten Free Cereal Cup With Marshmallows",
+      "price": "1.29",
+      "category": "Cereal Cups & Variety Packs",
+      "size": "1.7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.76
+    },
+    {
+      "brand": "Chex",
+      "name": "Chex Gluten Free Strawberry Vanilla Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "12.4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.2
+    },
+    {
+      "brand": "Kellogg's Frosted Flakes",
+      "name": "Frosted Flakes Cereal",
+      "price": "1.49",
+      "category": "Cereal Cups & Variety Packs",
+      "size": "2.1",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.71
+    },
+    {
+      "brand": "Generic",
+      "name": "Raisin Bran Cereal",
+      "price": "2.89",
+      "category": "Family Favorites Cereal",
+      "size": "23.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "Cinnamon Toast Crunch",
+      "name": "Cinnamon Toast Crunch Cereal",
+      "price": "1.29",
+      "category": "Cereal Cups & Variety Packs",
+      "size": "2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.65
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Original Cereal",
+      "price": "1.29",
+      "category": "Cereal Cups & Variety Packs",
+      "size": "1.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.99
+    },
+    {
+      "brand": "Generic",
+      "name": "Crispy Rice Cereal",
+      "price": "1.99",
+      "category": "Family Favorites Cereal",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Honey Nut Cereal",
+      "price": "5.49",
+      "category": "Family Favorites Cereal",
+      "size": "18.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.29
+    },
+    {
+      "brand": "Chex",
+      "name": "Chex Gluten Free Blueberry Cereal",
+      "price": "2.5",
+      "category": "Family Favorites Cereal",
+      "size": "12",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Original Cereal",
+      "price": "5.99",
+      "category": "Family Favorites Cereal",
+      "size": "11.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Generic",
+      "name": "Essentially You Cereal With Red Berries",
+      "price": "2.72",
+      "category": "Family Favorites Cereal",
+      "size": "11.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Frito-Lay",
+      "name": "Frito-lay Baked & Popped Mix Variety Pack",
+      "price": "11.49",
+      "category": "Variety Pack & Multipack Chips",
+      "size": "14.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.81
+    },
+    {
+      "brand": "Generic",
+      "name": "Kettle Cooked Potato Chips",
+      "price": "2",
+      "category": "Plain & Regular Potato Chips",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Frito-Lay",
+      "name": "Frito-lay Snacks Mix Variety Pack",
+      "price": "11.49",
+      "category": "Variety Pack & Multipack Chips",
+      "size": "18",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "Frito-Lay",
+      "name": "Frito-lay Doritos & Cheetos Mix Variety Pack",
+      "price": "11.49",
+      "category": "Variety Pack & Multipack Chips",
+      "size": "17.6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.65
+    },
+    {
+      "brand": "Ruffles",
+      "name": "Ruffles Potato Chips Party Size",
+      "price": "4.69",
+      "category": "Plain & Regular Potato Chips",
+      "size": "13",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lay's Potato Chips Party Size",
+      "price": "4.49",
+      "category": "Plain & Regular Potato Chips",
+      "size": "13",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Utz",
+      "name": "Utz Gluten Free Ripples Potato Chips Party Size",
+      "price": "4.29",
+      "category": "Plain & Regular Potato Chips",
+      "size": "12.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "Cape Cod",
+      "name": "Cape Cod 40% Less Fat Kettle Cooked Potato Chips",
+      "price": "3.99",
+      "category": "Plain & Regular Potato Chips",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Frito-Lay",
+      "name": "Frito-lay Snacks Flavor Mix Variety Pack",
+      "price": "11.49",
+      "category": "Variety Pack & Multipack Chips",
+      "size": "18",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lay's Wavy Potato Chips Party Size",
+      "price": "4.49",
+      "category": "Plain & Regular Potato Chips",
+      "size": "13",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Fritos",
+      "name": "Fritos Corn Chips Flavor Twists Honey Barbecue",
+      "price": "4.69",
+      "category": "Corn Chips",
+      "size": "9.25",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.51
+    },
+    {
+      "brand": "Generic",
+      "name": "Gluten Free Rippled Potato Chips",
+      "price": "3.09",
+      "category": "Plain & Regular Potato Chips",
+      "size": "13.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "Kettle Brand",
+      "name": "Kettle Brand Gluten Free Dill Pickle Krinkle Cut Potato Chips",
+      "price": "2.99",
+      "category": "More Potato Chip Flavors",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "Utz",
+      "name": "Utz Ripples Gluten Free Sour Cream & Onion Potato Chips Family Size",
+      "price": "2.93",
+      "category": "Sour Cream & Onion Potato Chips",
+      "size": "7.75",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Cape Cod",
+      "name": "Cape Cod 40% Less Fat Kettle Cooked Potato Chips Party Size",
+      "price": "5.49",
+      "category": "Plain & Regular Potato Chips",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "Cape Cod",
+      "name": "Cape Cod Sea Salt & Vinegar Kettle Cooked Potato Chips",
+      "price": "3.99",
+      "category": "Salt & Vinegar Potato Chips",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Tostitos",
+      "name": "Tostitos Scoops! Gluten Free Tortilla Chips",
+      "price": "4.29",
+      "category": "Plain Tortilla Chips",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.43
+    },
+    {
+      "brand": "Utz",
+      "name": "Utz Honey Barbeque Potato Chips Family Size",
+      "price": "2.93",
+      "category": "Barbecue Potato Chips",
+      "size": "9.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.32
+    },
+    {
+      "brand": "Utz",
+      "name": "Utz Gluten Free Ripples Potato Chips Family Size",
+      "price": "2.93",
+      "category": "Plain & Regular Potato Chips",
+      "size": "7.75",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Ruffles",
+      "name": "Ruffles Potato Chips",
+      "price": "3.5",
+      "category": "Plain & Regular Potato Chips",
+      "size": "8.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Frito-Lay",
+      "name": "Frito-lay Snacks Family Fun Variety Pack",
+      "price": "11.49",
+      "category": "Variety Pack & Multipack Chips",
+      "size": "16.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.68
+    },
+    {
+      "brand": "Generic",
+      "name": "Gluten Free Wavy Potato Chips",
+      "price": "3.09",
+      "category": "Plain & Regular Potato Chips",
+      "size": "13.75",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.22
+    },
+    {
+      "brand": "Cape Cod",
+      "name": "Cape Cod With Sea Salt Kettle Cooked Potato Chips",
+      "price": "3.99",
+      "category": "Plain & Regular Potato Chips",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Cape Cod",
+      "name": "Cape Cod Kettle Cooked Potato Chips Party Size",
+      "price": "5.49",
+      "category": "Plain & Regular Potato Chips",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Salt & Malt Vinegar Kettle Cooked Potato Chips",
+      "price": "2",
+      "category": "Salt & Vinegar Potato Chips",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Pringles",
+      "name": "Pringles Potato Crisps Chips",
+      "price": "2.5",
+      "category": "Plain & Regular Potato Chips",
+      "size": "5.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.48
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lay's Gluten Free Baked Potato Chips",
+      "price": "4.69",
+      "category": "Plain & Regular Potato Chips",
+      "size": "6.25",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.75
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lay's Potato Chips",
+      "price": "2.5",
+      "category": "Plain & Regular Potato Chips",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Pringles",
+      "name": "Pringles Sour Cream & Onion Potato Crisps Chips",
+      "price": "2.5",
+      "category": "Sour Cream & Onion Potato Chips",
+      "size": "5.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.45
+    },
+    {
+      "brand": "Generic",
+      "name": "Bbq Kettle Cooked Potato Chips",
+      "price": "2",
+      "category": "Barbecue Potato Chips",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Ruffles",
+      "name": "Ruffles Cheddar & Sour Cream Potato Chips Party Size",
+      "price": "4.69",
+      "category": "Cheese Potato Chips",
+      "size": "12.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Utz",
+      "name": "Utz Gluten Free Salt 'n Vinegar Potato Chips Family Size",
+      "price": "2.93",
+      "category": "Salt & Vinegar Potato Chips",
+      "size": "7.75",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Cape Cod",
+      "name": "Cape Cod Sweet Mesquite Barbeque Kettle Cooked Potato Chips",
+      "price": "3.99",
+      "category": "Barbecue Potato Chips",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lay's Lightly Salted Wavy Potato Chips",
+      "price": "2.5",
+      "category": "Plain & Regular Potato Chips",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lay's Lightly Salted Potato Chips Party Size",
+      "price": "4.49",
+      "category": "Plain & Regular Potato Chips",
+      "size": "12.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lay's Potato Chips",
+      "price": "0.5",
+      "category": "Plain & Regular Potato Chips",
+      "size": "1",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Cape Cod",
+      "name": "Cape Cod Sweet & Spicy Jalapeno Kettle Cooked Potato Chips",
+      "price": "3.99",
+      "category": "Hot & Spicy Potato Chips",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lay's Salt & Vinegar Potato Chips",
+      "price": "2.5",
+      "category": "Salt & Vinegar Potato Chips",
+      "size": "7.75",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.32
+    },
+    {
+      "brand": "Cape Cod",
+      "name": "Cape Cod 40% Less Fat Sea Salt & Vinegar Kettle Cooked Potato Chips",
+      "price": "3.99",
+      "category": "Salt & Vinegar Potato Chips",
+      "size": "7.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Utz",
+      "name": "Utz Gluten Free Potato Chips Family Size",
+      "price": "2.93",
+      "category": "Plain & Regular Potato Chips",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "Little Debbie",
+      "name": "Little Debbie Cosmic Brownies With Chocolate Chip Candy",
+      "price": "2.5",
+      "category": "Packaged Cookies & Brownies",
+      "size": "13.1",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.19
+    },
+    {
+      "brand": "Little Debbie",
+      "name": "Little Debbie Cosmic Brownies With Chocolate Chip Candy Big Pack",
+      "price": "4.99",
+      "category": "Packaged Cookies & Brownies",
+      "size": "28",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.18
+    },
+    {
+      "brand": "Little Debbie",
+      "name": "Little Debbie Christmas Tree Brownies",
+      "price": "3",
+      "category": "Packaged Cookies & Brownies",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "ALLfree",
+      "name": "Allfree Brownie Bites Double Chocolate Chip Gluten Free",
+      "price": "5.99",
+      "category": "Packaged Cookies & Brownies",
+      "size": "8.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "O'Doughs",
+      "name": "O'doughs All Free Brownie Bites Sea Salt Caramel",
+      "price": "5.99",
+      "category": "Packaged Cookies & Brownies",
+      "size": "8.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.7
+    },
+    {
+      "brand": "Little Debbie",
+      "name": "Little Debbie Snowflake Brownies",
+      "price": "3",
+      "category": "Packaged Cookies & Brownies",
+      "size": "10.17",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.29
+    },
+    {
+      "brand": "Wholly Wholesome",
+      "name": "Wholly Wholesome Gluten Free Fudge Brownies",
+      "price": "4.59",
+      "category": "Packaged Cookies & Brownies",
+      "size": "7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.66
+    },
+    {
+      "brand": "Little Debbie",
+      "name": "Little Debbie Christmas Gingerbread Soft Cookies",
+      "price": "3",
+      "category": "Packaged Cookies & Brownies",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Tastykake",
+      "name": "Tastykake Spring Cookies Shortbread",
+      "price": "4.99",
+      "category": "Packaged Cookies & Brownies",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "Entenmann's",
+      "name": "Entenmann's Ultimate Holiday Cookie Collection",
+      "price": "18.99",
+      "category": "Packaged Cookies & Brownies",
+      "size": "13.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.44
+    },
+    {
+      "brand": "Reese's",
+      "name": "Reese's Milk Chocolate Peanut Butter Cups Candy Miniatures Family Pack",
+      "price": "9.99",
+      "category": "Packaged Chocolate Candy",
+      "size": "17.6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.57
+    },
+    {
+      "brand": "Hershey's",
+      "name": "Hershey's Milk Chocolate Candy Bars Full Size",
+      "price": "7.25",
+      "category": "Packaged Chocolate Candy",
+      "size": "9.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.78
+    },
+    {
+      "brand": "Sour Patch",
+      "name": "Sour Patch Kids Sour Then Sweet Soft & Chewy Candy Movie Theater Box",
+      "price": "1.29",
+      "category": "Single Serve Chewy & Gummy Candy",
+      "size": "3.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "Hershey's",
+      "name": "Hershey's Nuggets Milk Chocolate Candy With Toffee & Almonds Share Pack",
+      "price": "6.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "M&M's",
+      "name": "M&m's Milk Chocolate Candy Sharing Size",
+      "price": "5.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.55
+    },
+    {
+      "brand": "Snickers",
+      "name": "Snickers Peanuts Caramel & Milk Chocolate Candy Bars Fun Size",
+      "price": "5.39",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.51
+    },
+    {
+      "brand": "Hershey's KISSES",
+      "name": "Hershey's Kisses Milk Chocolate Candy Share Pack",
+      "price": "6.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.6
+    },
+    {
+      "brand": "York",
+      "name": "York Dark Chocolate Peppermint Patties Candy Share Pack",
+      "price": "6.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.1",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "Hershey's",
+      "name": "Hershey's Nuggets Milk Chocolate Candy Share Pack",
+      "price": "6.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "Butterfinger",
+      "name": "Butterfinger Milk Chocolate Peanut Butter Candy Bars Fun Size",
+      "price": "5.75",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "Swedish Fish",
+      "name": "Swedish Fish Soft & Chewy Candy Movie Theater Box",
+      "price": "1.29",
+      "category": "Single Serve Chewy & Gummy Candy",
+      "size": "3.1",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "M&M's",
+      "name": "M&m's Peanut Milk Chocolate Candy",
+      "price": "5.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.55
+    },
+    {
+      "brand": "Swedish Fish",
+      "name": "Swedish Fish Mini Assorted Soft & Chewy Candy Family Size",
+      "price": "9.99",
+      "category": "Gummy Candy",
+      "size": "28.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Milky Way",
+      "name": "Milky Way Milk Chocolate Candy Bars Fun Size",
+      "price": "5.39",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.51
+    },
+    {
+      "brand": "Justin's",
+      "name": "Justin's Organic Mini Dark Chocolate Peanut Butter Cups Candy",
+      "price": "6.75",
+      "category": "Packaged Chocolate Candy",
+      "size": "4.7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.44
+    },
+    {
+      "brand": "Hershey's",
+      "name": "Hershey's Milk Chocolate Candy Bars Snack Size",
+      "price": "6.09",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.35",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "Sour Patch",
+      "name": "Sour Patch Kids Sour Then Sweet Soft & Chewy Candy",
+      "price": "3.49",
+      "category": "Gummy Candy",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Reese's",
+      "name": "Reese's Milk Chocolate Peanut Butter Cups Candy Minis Unwrapped",
+      "price": "7.15",
+      "category": "Packaged Chocolate Candy",
+      "size": "7.6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.94
+    },
+    {
+      "brand": "KIT KAT",
+      "name": "Kit Kat Milk Chocolate Crisp Wafers Candy Bars Miniatures Share Pack",
+      "price": "6.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.1",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "DOVE",
+      "name": "Dove Promises Dark Chocolate Candy Large Bag",
+      "price": "11.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "14.08",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.82
+    },
+    {
+      "brand": "Reese's",
+      "name": "Reese's Milk Chocolate Peanut Butter Cups Candy Snack Size",
+      "price": "6.09",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.58
+    },
+    {
+      "brand": "Hershey's KISSES",
+      "name": "Hershey's Kisses Milk Chocolate Candy Family Pack",
+      "price": "9.99",
+      "category": "Packaged Chocolate Candy",
+      "size": "17.9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "Hershey's",
+      "name": "Hershey's Milk Chocolate Candy Bar Giant Size",
+      "price": "4.89",
+      "category": "Packaged Chocolate Candy",
+      "size": "7.56",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.65
+    },
+    {
+      "brand": "M&M's",
+      "name": "M&m's Milk Chocolate Candy Minis Sharing Size",
+      "price": "5.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "9.4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.58
+    },
+    {
+      "brand": "Reese's",
+      "name": "Reese's Milk Chocolate Peanut Butter Cups Candy Snack Size",
+      "price": "2.59",
+      "category": "Packaged Chocolate Candy",
+      "size": "4.4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "Twix",
+      "name": "Twix Caramel & Milk Chocolate Candy Cookie Bars Fun Size",
+      "price": "5.39",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "KIT KAT",
+      "name": "Kit Kat Milk Chocolate Crisp Wafers Candy Bars Snack Size",
+      "price": "6.09",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.78",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "M&M's",
+      "name": "M&m's Peanut Milk Chocolate Candy Family Size",
+      "price": "9.99",
+      "category": "Packaged Chocolate Candy",
+      "size": "18",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "UNREAL",
+      "name": "Unreal Gluten Free Dark Chocolate Peanut Butter Cups Candy",
+      "price": "6.29",
+      "category": "Packaged Chocolate Candy",
+      "size": "4.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.5
+    },
+    {
+      "brand": "DOVE",
+      "name": "Dove Promises Dark Chocolate Candy",
+      "price": "6.39",
+      "category": "Packaged Chocolate Candy",
+      "size": "7.61",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.84
+    },
+    {
+      "brand": "M&M's",
+      "name": "M&m's Milk Chocolate Candy Family Size",
+      "price": "9.99",
+      "category": "Packaged Chocolate Candy",
+      "size": "18",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "Reese's",
+      "name": "Reese's Milk Chocolate Peanut Butter Cups Candy King Size",
+      "price": "2.39",
+      "category": "Packaged Chocolate Candy",
+      "size": "2.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.85
+    },
+    {
+      "brand": "UNREAL",
+      "name": "Unreal Gluten Free Dark Chocolate Coconut Candy Bars",
+      "price": "6.29",
+      "category": "Packaged Chocolate Candy",
+      "size": "4.2",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.5
+    },
+    {
+      "brand": "Riesen",
+      "name": "Riesen Chocolate Covered Chewy Caramels Candy",
+      "price": "2.89",
+      "category": "Packaged Chocolate Candy",
+      "size": "5.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.53
+    },
+    {
+      "brand": "Hershey's",
+      "name": "Hershey's Nuggets Milk Chocolate Candy With Almonds Share Pack",
+      "price": "6.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.1",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "3 Musketeers",
+      "name": "3 Musketeers Milk Chocolate Candy Bars Fun Size",
+      "price": "5.39",
+      "category": "Packaged Chocolate Candy",
+      "size": "10.48",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.51
+    },
+    {
+      "brand": "UNREAL",
+      "name": "Unreal Dark Chocolate Caramel Peanut Nougat Candy Bars",
+      "price": "6.29",
+      "category": "Packaged Chocolate Candy",
+      "size": "3.4",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 1.85
+    },
+    {
+      "brand": "DOVE",
+      "name": "Dove Promises Milk Chocolate Candy",
+      "price": "11.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "14",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.82
+    },
+    {
+      "brand": "M&M's",
+      "name": "M&m's Peanut Butter Milk Chocolate Candy Sharing Size",
+      "price": "5.49",
+      "category": "Packaged Chocolate Candy",
+      "size": "9",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.61
+    },
+    {
+      "brand": "CRUNCH",
+      "name": "Crunch Milk Chocolate With Crisped Rice Candy Bars Fun Size",
+      "price": "5.75",
+      "category": "Packaged Chocolate Candy",
+      "size": "10",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.57
+    },
+    {
+      "brand": "Generic",
+      "name": "Large Brown Eggs",
+      "price": "2.39",
+      "category": "Dairy & Eggs",
+      "size": "12",
+      "unit": "ct",
+      "source": "Hannaford",
+      "unit_price": 0.2
+    },
+    {
+      "brand": "Generic",
+      "name": "Large White Eggs",
+      "price": "2.39",
+      "category": "Dairy & Eggs",
+      "size": "12",
+      "unit": "ct",
+      "source": "Hannaford",
+      "unit_price": 0.2
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole Milk",
+      "price": "3.99",
+      "category": "Dairy",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Hannaford",
+      "unit_price": 3.99
+    },
+    {
+      "brand": "Generic",
+      "name": "Skim Milk",
+      "price": "3.99",
+      "category": "Dairy",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Hannaford",
+      "unit_price": 3.99
+    },
+    {
+      "brand": "Generic",
+      "name": "2% Reduced Fat Milk",
+      "price": "3.99",
+      "category": "Dairy",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Hannaford",
+      "unit_price": 3.99
+    },
+    {
+      "brand": "Generic",
+      "name": "White Sandwich Bread",
+      "price": "1.99",
+      "category": "Bakery",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.1
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole Wheat Bread",
+      "price": "2.29",
+      "category": "Bakery",
+      "size": "20",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.11
+    },
+    {
+      "brand": "Generic",
+      "name": "Salted Butter",
+      "price": "3.99",
+      "category": "Dairy",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Unsalted Butter",
+      "price": "3.99",
+      "category": "Dairy",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Barilla",
+      "name": "Barilla Spaghetti",
+      "price": "1.49",
+      "category": "Pasta",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.09
+    },
+    {
+      "brand": "Barilla",
+      "name": "Barilla Penne",
+      "price": "1.49",
+      "category": "Pasta",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.09
+    },
+    {
+      "brand": "Generic",
+      "name": "Diced Tomatoes",
+      "price": "0.99",
+      "category": "Canned Goods",
+      "size": "14.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.07
+    },
+    {
+      "brand": "Generic",
+      "name": "Black Beans",
+      "price": "0.99",
+      "category": "Canned Goods",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.07
+    },
+    {
+      "brand": "Generic",
+      "name": "Kidney Beans",
+      "price": "0.99",
+      "category": "Canned Goods",
+      "size": "15",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.07
+    },
+    {
+      "brand": "Generic",
+      "name": "Long Grain White Rice",
+      "price": "2.99",
+      "category": "Grains",
+      "size": "32",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.09
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lays Classic Potato Chips",
+      "price": "3.99",
+      "category": "Snacks",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lays Barbecue Potato Chips",
+      "price": "3.99",
+      "category": "Snacks",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Doritos",
+      "name": "Doritos Nacho Cheese Chips",
+      "price": "4.29",
+      "category": "Snacks",
+      "size": "9.25",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.46
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Original Cereal",
+      "price": "3.99",
+      "category": "Cereal",
+      "size": "10.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "General Mills",
+      "name": "Cinnamon Toast Crunch Cereal",
+      "price": "4.49",
+      "category": "Cereal",
+      "size": "16.8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Kellogg's",
+      "name": "Frosted Flakes Cereal",
+      "price": "4.29",
+      "category": "Cereal",
+      "size": "17.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Ritz",
+      "name": "Ritz Crackers",
+      "price": "3.49",
+      "category": "Snacks",
+      "size": "13.7",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Jif",
+      "name": "Jif Creamy Peanut Butter",
+      "price": "2.99",
+      "category": "Condiments",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.19
+    },
+    {
+      "brand": "Folgers",
+      "name": "Folgers Classic Roast Coffee",
+      "price": "9.99",
+      "category": "Coffee",
+      "size": "30.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "DiGiorno",
+      "name": "DiGiorno Pepperoni Pizza",
+      "price": "6.99",
+      "category": "Frozen",
+      "size": "27.5",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Breyers",
+      "name": "Breyers Vanilla Ice Cream",
+      "price": "3.99",
+      "category": "Frozen",
+      "size": "48",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.08
+    },
+    {
+      "brand": "Tropicana",
+      "name": "Tropicana Orange Juice",
+      "price": "3.99",
+      "category": "Beverages",
+      "size": "52",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.08
+    },
+    {
+      "brand": "Coca-Cola",
+      "name": "Coca Cola",
+      "price": "2.29",
+      "category": "Beverages",
+      "size": "2",
+      "unit": "liter",
+      "source": "Hannaford",
+      "unit_price": 1.15
+    },
+    {
+      "brand": "Pepsi",
+      "name": "Pepsi",
+      "price": "2.29",
+      "category": "Beverages",
+      "size": "2",
+      "unit": "liter",
+      "source": "Hannaford",
+      "unit_price": 1.15
+    },
+    {
+      "brand": "Dannon",
+      "name": "Dannon Strawberry Yogurt",
+      "price": "0.89",
+      "category": "Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "Yoplait",
+      "name": "Yoplait Original Strawberry Yogurt",
+      "price": "0.75",
+      "category": "Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "Yoplait",
+      "name": "Yoplait Original Vanilla Yogurt",
+      "price": "0.75",
+      "category": "Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "Generic",
+      "name": "Shredded Cheddar Cheese",
+      "price": "1.99",
+      "category": "Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "Kraft",
+      "name": "Shredded Cheddar Cheese",
+      "price": "2.49",
+      "category": "Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Generic",
+      "name": "80% Lean Ground Beef",
+      "price": "4.99",
+      "category": "Meat",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Generic",
+      "name": "85% Lean Ground Beef",
+      "price": "5.49",
+      "category": "Meat",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "Generic",
+      "name": "90% Lean Ground Beef",
+      "price": "6.49",
+      "category": "Meat",
+      "size": "16",
+      "unit": "oz",
+      "source": "Hannaford",
+      "unit_price": 0.41
+    }
+  ]
+}
