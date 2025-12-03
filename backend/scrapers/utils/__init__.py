@@ -36,6 +36,19 @@ from .exporters import (
     generate_filename
 )
 
+from .normalizer import (
+    normalize_category,
+    normalize_unit,
+    parse_size_and_unit,
+    normalize_product,
+    normalize_products,
+    calculate_unit_price,
+    products_match,
+    find_matching_products,
+    CATEGORY_TAXONOMY,
+    UNIT_MAPPINGS
+)
+
 __all__ = [
     # Parsers
     'parse_price',
@@ -59,6 +72,18 @@ __all__ = [
     'load_from_json',
     'merge_json_files',
     'generate_filename',
+    
+    # Normalizer
+    'normalize_category',
+    'normalize_unit',
+    'parse_size_and_unit',
+    'normalize_product',
+    'normalize_products',
+    'calculate_unit_price',
+    'products_match',
+    'find_matching_products',
+    'CATEGORY_TAXONOMY',
+    'UNIT_MAPPINGS',
 ]
 # from .parsers import parse_price, parse_size, clean_text
 # from .validators import validate_product, clean_product_data

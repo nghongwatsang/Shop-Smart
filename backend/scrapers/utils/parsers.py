@@ -259,32 +259,3 @@ def extract_unit_price(text: str) -> Optional[float]:
             return None
     
     return None
-
-from decimal import Decimal
-from typing import Tuple, Optional
-import re
-
-
-# TODO: Implement parse_price(price_str: str) -> Decimal
-# - Handle different formats: $1.99, €2,50, 2 for $5
-# - Remove currency symbols
-# - Handle "2 for $5" → calculate unit price
-# - Return Decimal for precision
-
-
-# TODO: Implement parse_size(size_str: str) -> Tuple[str, str]
-# - Extract size and unit from strings like "12 oz", "1.5L"
-# - Handle variations: "12oz", "12 oz", "12-oz"
-# - Return (size, unit) tuple
-
-
-# TODO: Implement clean_text(text: str) -> str
-# - Remove extra whitespace
-# - Normalize unicode characters
-# - Strip HTML entities
-
-
-# TODO: Implement parse_brand_and_name(raw_name: str, known_brands: list) -> dict
-# - Split product name into brand and item name
-# - Handle multi-word brands
-# - Return {'brand': str, 'name': str}
