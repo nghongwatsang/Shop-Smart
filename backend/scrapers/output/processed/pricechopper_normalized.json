@@ -1,0 +1,4637 @@
+{
+  "store": "Price Chopper",
+  "processed_at": "2025-12-02T23:41:23.289026",
+  "product_count": 463,
+  "products": [
+    {
+      "brand": "Generic",
+      "name": "Strawberries Package",
+      "price": "5.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 5.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Green Seedless Grapes",
+      "price": "3.29",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.65
+    },
+    {
+      "brand": "peelz citrus",
+      "name": "Peelz Citrus Mandarins",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Avocado",
+      "price": "1.25",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.25
+    },
+    {
+      "brand": "naturipe",
+      "name": "Naturipe Blueberries",
+      "price": "4.99",
+      "category": "produce",
+      "size": "1",
+      "unit": "pt",
+      "source": "Price Chopper",
+      "unit_price": 4.99
+    },
+    {
+      "brand": "Generic",
+      "name": "Cucumber",
+      "price": "0.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Seedless Grapes Bag",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "Generic",
+      "name": "Broccoli Crown",
+      "price": "1.93",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.93
+    },
+    {
+      "brand": "Generic",
+      "name": "Green Bell Pepper",
+      "price": "1.09",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.09
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Bananas",
+      "price": "0.35",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Bell Pepper",
+      "price": "1.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Garlic",
+      "price": "1.09",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.09
+    },
+    {
+      "brand": "Generic",
+      "name": "Asparagus",
+      "price": "5.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 5.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Brussels Sprouts",
+      "price": "3.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.79
+    },
+    {
+      "brand": "Generic",
+      "name": "Lemon",
+      "price": "0.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Red Seedless Grapes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Raspberries Package",
+      "price": "4.39",
+      "category": "produce",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.73
+    },
+    {
+      "brand": "Generic",
+      "name": "Bartlett Pear",
+      "price": "1.25",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Red On The Vine Tomato",
+      "price": "1.26",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.26
+    },
+    {
+      "brand": "Generic",
+      "name": "Vidalia Onion",
+      "price": "1.03",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.03
+    },
+    {
+      "brand": "Generic",
+      "name": "English Seedless Cucumber",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Blueberries Package",
+      "price": "6.49",
+      "category": "produce",
+      "size": "1",
+      "unit": "pint",
+      "source": "Price Chopper",
+      "unit_price": 6.49
+    },
+    {
+      "brand": "Generic",
+      "name": "Honeycrisp Apple",
+      "price": "1.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.29
+    },
+    {
+      "brand": "Generic",
+      "name": "Shallot",
+      "price": "0.73",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.73
+    },
+    {
+      "brand": "market 32",
+      "name": "Baby Carrots, Cut & Peeled",
+      "price": "1.99",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Guacamole",
+      "price": "5.39",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.67
+    },
+    {
+      "brand": "green giant",
+      "name": "Green Giant Broccoli Florets",
+      "price": "3.29",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Gala Apple",
+      "price": "1.04",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.04
+    },
+    {
+      "brand": "naturesweet",
+      "name": "Naturesweet Cherubs Heavenly Salad Grape Tomatoes",
+      "price": "4.89",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "market 32",
+      "name": "Sliced Brussels Sprouts",
+      "price": "6.49",
+      "category": "produce",
+      "size": "12.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.52
+    },
+    {
+      "brand": "naturesweet",
+      "name": "Naturesweet Cherubs Heavenly Salad Grape Tomatoes",
+      "price": "8.69",
+      "category": "produce",
+      "size": "24",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Spicy Guacamole",
+      "price": "5.39",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.67
+    },
+    {
+      "brand": "dandy",
+      "name": "Dandy Celery Sticks",
+      "price": "3.29",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "green giant",
+      "name": "Green Giant Sugar Snap Peas",
+      "price": "4.69",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Peeled Mini Carrots",
+      "price": "2.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.79
+    },
+    {
+      "brand": "naturesweet",
+      "name": "Naturesweet Glorys Ingredient Cherry Tomatoes",
+      "price": "4.89",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Guacamole",
+      "price": "7.09",
+      "category": "produce",
+      "size": "15",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "market 32",
+      "name": "Diced Tri-pepper",
+      "price": "3.29",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.66
+    },
+    {
+      "brand": "Generic",
+      "name": "Avocado Bag",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Beefsteak Tomato",
+      "price": "2.07",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.07
+    },
+    {
+      "brand": "wholly",
+      "name": "Wholly Guacamole Organic Bowl",
+      "price": "7.09",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "gutzy",
+      "name": "Gutzy Raspberry, Blueberry & Beet, Plant-based Snack With Prebiotics",
+      "price": "2.19",
+      "category": "produce",
+      "size": "3.9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.56
+    },
+    {
+      "brand": "Generic",
+      "name": "Macoun Apple Bag",
+      "price": "5.39",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.8
+    },
+    {
+      "brand": "Generic",
+      "name": "Apple Cider",
+      "price": "2.19",
+      "category": "produce",
+      "size": "16",
+      "unit": "fl",
+      "source": "Price Chopper",
+      "unit_price": 0.14
+    },
+    {
+      "brand": "Generic",
+      "name": "Granny Smith Apple",
+      "price": "1.0",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.0
+    },
+    {
+      "brand": "infinite herbs",
+      "name": "Infinite Herbs Thyme, Organic",
+      "price": "3.29",
+      "category": "produce",
+      "size": "0.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "earthbound farm",
+      "name": "Earthbound Farm Organic Baby Arugula",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "earthbound farm",
+      "name": "Earthbound Farm Organic Baby Spinach",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "nasoya",
+      "name": "Nasoya Tofu, Super Firm, Organic",
+      "price": "4.39",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "market 32",
+      "name": "Cantaloupe Chunks",
+      "price": "7.09",
+      "category": "produce",
+      "size": "18",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "dole",
+      "name": "Dole Celery Hearts",
+      "price": "3.79",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Curly Parsley Bunch",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "market 32",
+      "name": "Cantaloupe Spears",
+      "price": "7.59",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "market 32",
+      "name": "Fruit Burst",
+      "price": "7.09",
+      "category": "produce",
+      "size": "18",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Cantaloupe",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "market 32",
+      "name": "Potatoes, Russet",
+      "price": "3.99",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 0.8
+    },
+    {
+      "brand": "Generic",
+      "name": "Butterhead (boston Bunch",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "bunch",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "naturipe",
+      "name": "Naturipe Mighty Blues Blueberries",
+      "price": "8.69",
+      "category": "produce",
+      "size": "9.8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "green giant",
+      "name": "Green Giant Brussels Sprouts",
+      "price": "3.29",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "market 32",
+      "name": "Strawberry Blueberry Mix",
+      "price": "5.99",
+      "category": "produce",
+      "size": "7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.86
+    },
+    {
+      "brand": "Generic",
+      "name": "Honeycrisp Apple",
+      "price": "11.89",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.38
+    },
+    {
+      "brand": "pero family farms",
+      "name": "Pero Family Farms French Beans",
+      "price": "4.69",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "Generic",
+      "name": "Carrot Bunch",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "count",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "wonderful seedless lemons",
+      "name": "Wonderful Seedless Lemons Seedless Lemons",
+      "price": "6.49",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 3.25
+    },
+    {
+      "brand": "spice world",
+      "name": "Spice World Garlic",
+      "price": "2.19",
+      "category": "produce",
+      "size": "3",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.73
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Italian Parsley",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "driscoll's",
+      "name": "Driscoll's Organic Raspberries",
+      "price": "5.39",
+      "category": "produce",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.9
+    },
+    {
+      "brand": "Generic",
+      "name": "Honeycrisp Apple Tote",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Salad, American",
+      "price": "4.39",
+      "category": "produce",
+      "size": "11",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "pero family farms",
+      "name": "Pero Family Farms Okra",
+      "price": "5.39",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.45
+    },
+    {
+      "brand": "mott's",
+      "name": "Mott's Red Apples, Sliced, 6 Pack",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "Generic",
+      "name": "White Mini Pumpkin",
+      "price": "1.09",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.09
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Spinach, Chopped",
+      "price": "3.29",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Romaine Lettuce",
+      "price": "2.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "little leaf farms",
+      "name": "Little Leaf Farms Baby Crispy Green Leaf Lettuce",
+      "price": "7.59",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.95
+    },
+    {
+      "brand": "Generic",
+      "name": "Green Leaf Lettuce Bunch",
+      "price": "2.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "bunch",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Organic Baby Spinach",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "marzetti",
+      "name": "Marzetti Caramel Dip, Singles",
+      "price": "5.79",
+      "category": "produce",
+      "size": "1.7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 3.41
+    },
+    {
+      "brand": "goodness gardens",
+      "name": "Goodness Gardens Organic Chives",
+      "price": "3.29",
+      "category": "produce",
+      "size": "0.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "Generic",
+      "name": "White Onion",
+      "price": "0.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 0.79
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company A Little Roasted Garlic Rosemary & Thyme Potatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "garden highway",
+      "name": "Garden Highway Assorted Fruit Spears",
+      "price": "6.49",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "bolthouse farms",
+      "name": "Bolthouse Farms Whole Carrots, Bag",
+      "price": "2.69",
+      "category": "produce",
+      "size": "32",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.08
+    },
+    {
+      "brand": "jacobs farm",
+      "name": "Jacobs Farm Organic Herb Sage",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "mott's",
+      "name": "Mott's Apples, Sliced",
+      "price": "3.79",
+      "category": "produce",
+      "size": "14",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Ginger Gold Apple Tote",
+      "price": "1.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.69
+    },
+    {
+      "brand": "tanimura & antle",
+      "name": "Tanimura & Antle Lettuce, Romaine",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "naturesweet",
+      "name": "Naturesweet Heavenly Salad Tomatoes, Organic",
+      "price": "5.99",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.6
+    },
+    {
+      "brand": "little leaf farms",
+      "name": "Little Leaf Farms Baby Red And Lettuce",
+      "price": "4.39",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.1
+    },
+    {
+      "brand": "earthbound farm",
+      "name": "Earthbound Farm Organic Spring Mix",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Chipotle Cheddar Chopped Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "11.4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Generic",
+      "name": "Yellow Sweet Corn",
+      "price": "0.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Salad, Sweet Butter",
+      "price": "4.39",
+      "category": "produce",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.73
+    },
+    {
+      "brand": "little leaf farms",
+      "name": "Little Leaf Farms Baby Red & Green Leaf Lettuce",
+      "price": "7.59",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.95
+    },
+    {
+      "brand": "taylor farms",
+      "name": "Taylor Farms Everything Chopped Salad Kit",
+      "price": "4.39",
+      "category": "produce",
+      "size": "11.57",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Salad, Leafy Green Romaine, Crunchy Blends",
+      "price": "3.59",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "Generic",
+      "name": "Parsnip",
+      "price": "1.27",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.27
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company Purely Purple Creamer Potatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1.5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.93
+    },
+    {
+      "brand": "sunset brands",
+      "name": "Sunset Brands Shishito Peppers, Mild & Savory",
+      "price": "3.79",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "little leaf farms",
+      "name": "Little Leaf Farms Baby Crispy Green Leaf",
+      "price": "4.39",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.1
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Pear",
+      "price": "1.25",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Empire Apple Tote",
+      "price": "1.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Mcintosh Apple Tote",
+      "price": "1.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Green Kiwi",
+      "price": "0.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "rockit",
+      "name": "Rockit Sweet Miniature Apple, Crisp",
+      "price": "4.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Mango",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Sweet Potato (yam)",
+      "price": "1.11",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.11
+    },
+    {
+      "brand": "Generic",
+      "name": "Escarole",
+      "price": "5.14",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 5.14
+    },
+    {
+      "brand": "Generic",
+      "name": "Roma Tomato",
+      "price": "0.64",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.64
+    },
+    {
+      "brand": "goodness garden",
+      "name": "Goodness Garden Organic Tarragon",
+      "price": "3.29",
+      "category": "produce",
+      "size": "0.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Salad, Italian",
+      "price": "4.39",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Yellow Potatoes",
+      "price": "5.39",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.8
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Baby Spinach",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Organic Red Potato",
+      "price": "5.39",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.8
+    },
+    {
+      "brand": "sapori",
+      "name": "Sapori Sweet Italian Tomatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "clamshell",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Asian Chopped Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.29
+    },
+    {
+      "brand": "pero family farms",
+      "name": "Pero Family Farms Green Beans, Organic, Snipped",
+      "price": "4.99",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.42
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Gala Apples",
+      "price": "6.49",
+      "category": "produce",
+      "size": "20",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.32
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Arugula",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "Generic",
+      "name": "Buttercup Squash",
+      "price": "2.87",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.87
+    },
+    {
+      "brand": "Generic",
+      "name": "Honeydew Melon",
+      "price": "6.49",
+      "category": "produce",
+      "size": "6",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.08
+    },
+    {
+      "brand": "infinite herbs",
+      "name": "Infinite Herbs Organic Basil Herb",
+      "price": "3.29",
+      "category": "produce",
+      "size": "0.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "Generic",
+      "name": "White Onion",
+      "price": "1.62",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.62
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Chopped Kale",
+      "price": "3.29",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "market 32",
+      "name": "Potatoes, White",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Green Peppers",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Hearts Of Romaine",
+      "price": "4.39",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company Potatoes, Yellow Creamer, Little Charmers",
+      "price": "7.59",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.53
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Onion",
+      "price": "1.34",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.34
+    },
+    {
+      "brand": "Generic",
+      "name": "Cilantro",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "bunch",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Baby Mix, Sweet",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "Generic",
+      "name": "Papaya",
+      "price": "1.22",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.22
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Green Onions (scallions)",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Mcintosh Apple",
+      "price": "0.83",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.83
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Chopped Greek Caesar Salad Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "9.8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Generic",
+      "name": "Zucchini Squash",
+      "price": "1.53",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.53
+    },
+    {
+      "brand": "market 32",
+      "name": "Pepper & Onion",
+      "price": "6.49",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.65
+    },
+    {
+      "brand": "sunset brands",
+      "name": "Sunset Brands Wild Wonders Tomatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "market 32",
+      "name": "Dried Pineapple Chunks",
+      "price": "5.39",
+      "category": "produce",
+      "size": "11",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "roar organic",
+      "name": "Roar Organic Vitamin Enhanced Beverage, Organic, Georgia Peach",
+      "price": "2.69",
+      "category": "produce",
+      "size": "18",
+      "unit": "fl",
+      "source": "Price Chopper",
+      "unit_price": 0.15
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Diced Yellow Onion",
+      "price": "3.29",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.66
+    },
+    {
+      "brand": "market 32",
+      "name": "Whole Mushrooms",
+      "price": "3.29",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Organic Baby Spring Mix",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company Yellow Fingerlings Potatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1.5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.93
+    },
+    {
+      "brand": "market 32",
+      "name": "White Mushrooms, Sliced",
+      "price": "2.79",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Generic",
+      "name": "Eggplant",
+      "price": "3.55",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.55
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Granny Smith Apples",
+      "price": "6.49",
+      "category": "produce",
+      "size": "20",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.32
+    },
+    {
+      "brand": "cindy's kitchen",
+      "name": "Cindy's Kitchen Dip, Vegan Avocado Ranch",
+      "price": "6.49",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.81
+    },
+    {
+      "brand": "Generic",
+      "name": "Yellow Onion Bag",
+      "price": "6.49",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.3
+    },
+    {
+      "brand": "house foods",
+      "name": "House Foods Tofu, Firm",
+      "price": "3.29",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "Generic",
+      "name": "Golden Delicious Apple",
+      "price": "1.03",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.03
+    },
+    {
+      "brand": "market 32",
+      "name": "Sliced Baby Bella Mushrooms",
+      "price": "3.29",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Generic",
+      "name": "Orange Bell Pepper",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "gourmet garden",
+      "name": "Garden Lightly Dried Italian Herbs",
+      "price": "5.99",
+      "category": "produce",
+      "size": "0.35",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 17.11
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Spring Mix",
+      "price": "7.59",
+      "category": "produce",
+      "size": "11",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Florida Avocado",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "Generic",
+      "name": "Yucca",
+      "price": "0.21",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "tasteful selections",
+      "name": "Tasteful Selections Organic Ruby Sensation Baby Potatoes",
+      "price": "5.99",
+      "category": "produce",
+      "size": "24",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "martin farms",
+      "name": "Martin Farms Butter Squash, Cut, Club Pack",
+      "price": "3.49",
+      "category": "produce",
+      "size": "20",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.17
+    },
+    {
+      "brand": "Generic",
+      "name": "Collard Greens",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "bunch",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Yellow Squash",
+      "price": "5.39",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.67
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Mixed Bell Peppers",
+      "price": "6.49",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.81
+    },
+    {
+      "brand": "Generic",
+      "name": "Russet Potato",
+      "price": "0.82",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.82
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Caesarlite Salad Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "9.8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "gourmet garden",
+      "name": "Garden Basil Stir-in Paste",
+      "price": "5.99",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.5
+    },
+    {
+      "brand": "green giant",
+      "name": "Green Giant Broccoli Medley",
+      "price": "3.29",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "farmer\u2019s direct",
+      "name": "Farmer\u2019s Direct Organic Chopped Kale",
+      "price": "4.39",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "market 32",
+      "name": "Baby Carrots, Cut & Peeled",
+      "price": "3.99",
+      "category": "produce",
+      "size": "32",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "Generic",
+      "name": "Yellow Squash",
+      "price": "1.66",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.66
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Sliced Portabella Mushroom",
+      "price": "4.39",
+      "category": "produce",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.73
+    },
+    {
+      "brand": "market 32",
+      "name": "Mango Spears",
+      "price": "7.59",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Generic",
+      "name": "Pomegranate",
+      "price": "3.99",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.99
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Diced Red Onion",
+      "price": "3.29",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.66
+    },
+    {
+      "brand": "house foods",
+      "name": "House Foods Tofu, Extra Firm",
+      "price": "3.29",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "wholly",
+      "name": "Wholly Guacamole Avocado Verde Salsa",
+      "price": "5.39",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.54
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Southwest Chopped Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "11.4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Generic",
+      "name": "Anaheim Pepper",
+      "price": "0.54",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.54
+    },
+    {
+      "brand": "Generic",
+      "name": "Yellow Bell Pepper",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Spinach",
+      "price": "3.59",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.45
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle 50/50 Blend",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Spicy Guacamole",
+      "price": "7.09",
+      "category": "produce",
+      "size": "15",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Generic",
+      "name": "Fuji Apple",
+      "price": "1.06",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.06
+    },
+    {
+      "brand": "Generic",
+      "name": "Limes",
+      "price": "0.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "market 32",
+      "name": "Potatoes, Red",
+      "price": "5.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.08
+    },
+    {
+      "brand": "Generic",
+      "name": "Spanish Onion",
+      "price": "1.12",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.12
+    },
+    {
+      "brand": "Generic",
+      "name": "Habanero Pepper",
+      "price": "0.18",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.18
+    },
+    {
+      "brand": "Generic",
+      "name": "Anjou Pears",
+      "price": "1.25",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.25
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Baby Spinach",
+      "price": "7.59",
+      "category": "produce",
+      "size": "11",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.69
+    },
+    {
+      "brand": "house foods",
+      "name": "House Foods Tofu, Soft",
+      "price": "3.29",
+      "category": "produce",
+      "size": "14",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Caesar Salad Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "9.8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Pink Lady (cripps) Apple",
+      "price": "1.32",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.32
+    },
+    {
+      "brand": "Generic",
+      "name": "Dill Bunch",
+      "price": "2.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Pineapple",
+      "price": "3.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.79
+    },
+    {
+      "brand": "pero family farms",
+      "name": "Pero Family Farms Snipped Green Beans",
+      "price": "3.29",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "earthbound farm",
+      "name": "Earthbound Farm Celery Hearts",
+      "price": "3.99",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 3.99
+    },
+    {
+      "brand": "snapdragon",
+      "name": "Snapdragon Apples",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Green Bell Pepper",
+      "price": "2.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Power Greens",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "Generic",
+      "name": "Acorn Squash",
+      "price": "2.67",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.67
+    },
+    {
+      "brand": "auerpak brand",
+      "name": "Auerpak Brand Organic Shallots",
+      "price": "4.39",
+      "category": "produce",
+      "size": "3",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.46
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Carrots",
+      "price": "3.29",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.65
+    },
+    {
+      "brand": "Generic",
+      "name": "Green Kiwi",
+      "price": "8.69",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 4.34
+    },
+    {
+      "brand": "love beets",
+      "name": "Love Beets Beets, Cooked",
+      "price": "4.39",
+      "category": "produce",
+      "size": "8.8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.5
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Potato",
+      "price": "0.82",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.82
+    },
+    {
+      "brand": "Generic",
+      "name": "Tri-color Peppers",
+      "price": "5.99",
+      "category": "produce",
+      "size": "4",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.5
+    },
+    {
+      "brand": "gourmet garden",
+      "name": "Garden Minced Garlic Stir-in Paste",
+      "price": "5.99",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.5
+    },
+    {
+      "brand": "gourmet garden",
+      "name": "Garden Lightly Dried Basil",
+      "price": "5.99",
+      "category": "produce",
+      "size": "0.42",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 14.26
+    },
+    {
+      "brand": "Generic",
+      "name": "Garnet Sweet Potato (yam)",
+      "price": "1.0",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.0
+    },
+    {
+      "brand": "auerpak brand",
+      "name": "Auerpak Brand Organic Ginger",
+      "price": "3.29",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.82
+    },
+    {
+      "brand": "market 32",
+      "name": "Empires Apple Bag",
+      "price": "5.39",
+      "category": "produce",
+      "size": "48",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.11
+    },
+    {
+      "brand": "green giant",
+      "name": "Green Giant Broccoli Slaw",
+      "price": "3.59",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Orange Bag",
+      "price": "9.79",
+      "category": "produce",
+      "size": "4",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.45
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Caesar Chopped Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "9.9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.43
+    },
+    {
+      "brand": "Generic",
+      "name": "Kale",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "bunch",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "market 32",
+      "name": "Crimini Mushrooms",
+      "price": "6.49",
+      "category": "produce",
+      "size": "24",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Pink Lady (cripps) Apple",
+      "price": "1.11",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.11
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company Little Potatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1.5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.93
+    },
+    {
+      "brand": "goodness gardens",
+      "name": "Goodness Gardens Organic Bay Leaves",
+      "price": "3.29",
+      "category": "produce",
+      "size": "20",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.16
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Salad Kit, Romaine",
+      "price": "4.39",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "Generic",
+      "name": "Layered Celery, Onion & Carrot",
+      "price": "4.99",
+      "category": "produce",
+      "size": "15",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "Generic",
+      "name": "Baby Eggplant",
+      "price": "7.85",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 7.85
+    },
+    {
+      "brand": "Generic",
+      "name": "Bunch Celery",
+      "price": "1.99",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.99
+    },
+    {
+      "brand": "Generic",
+      "name": "Napa Cabbage",
+      "price": "11.14",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 11.14
+    },
+    {
+      "brand": "cal-organic farms",
+      "name": "Cal-organic Farms Carrots, Organic",
+      "price": "1.89",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Twisted Caesar Avocado Caesar Chopped Salad Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.29
+    },
+    {
+      "brand": "green giant",
+      "name": "Green Giant Rainbow Slaw",
+      "price": "3.59",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "market 32",
+      "name": "Watermelon Spears",
+      "price": "7.59",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Generic",
+      "name": "Hydroponic Tomato",
+      "price": "2.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.39
+    },
+    {
+      "brand": "dole",
+      "name": "Dole Iceberg Lettuce",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Lemon",
+      "price": "1.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.79
+    },
+    {
+      "brand": "infinite herbs",
+      "name": "Infinite Herbs Organic Dill",
+      "price": "3.29",
+      "category": "produce",
+      "size": "0.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "taylor farms",
+      "name": "Taylor Farms Sweet Kale Chopped Salad Kit",
+      "price": "4.39",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "Generic",
+      "name": "Radish Bunch",
+      "price": "2.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Black Grapes",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "goodness gardens",
+      "name": "Goodness Gardens Organic Cilantro",
+      "price": "3.29",
+      "category": "produce",
+      "size": "0.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "market 32",
+      "name": "Diced Butternut Squash",
+      "price": "6.49",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "ocean spray",
+      "name": "Ocean Spray Cranberries",
+      "price": "2.99",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.25
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Poppyseed Chopped Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "13",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "naturesweet",
+      "name": "Naturesweet Red Cherry Tomatoes On The Vine",
+      "price": "4.39",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Salad, Caesar, Crunchy Blends",
+      "price": "4.39",
+      "category": "produce",
+      "size": "11",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "Generic",
+      "name": "Mushrooms, Organic, Baby Bella",
+      "price": "4.39",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.55
+    },
+    {
+      "brand": "Generic",
+      "name": "Baking Potatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1.13",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 3.88
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Broccoli Crowns",
+      "price": "7.59",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Red Bell Pepper",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "market 32",
+      "name": "Watermelon Chunks",
+      "price": "7.09",
+      "category": "produce",
+      "size": "18",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "market 32",
+      "name": "Pitted Dates",
+      "price": "5.39",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.6
+    },
+    {
+      "brand": "solata farms",
+      "name": "Solata Farms Spinach",
+      "price": "3.29",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "Generic",
+      "name": "Cortland Apple",
+      "price": "0.88",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "Generic",
+      "name": "Heirloom Tomato",
+      "price": "4.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.19
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Organic Russet Potatoes",
+      "price": "5.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 5.39
+    },
+    {
+      "brand": "market 32",
+      "name": "Pineapple Spears",
+      "price": "7.59",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Red On The Vine Tomato",
+      "price": "1.66",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.66
+    },
+    {
+      "brand": "nasoya foods",
+      "name": "Nasoya Foods Tofu, Organic, Extra Firm",
+      "price": "3.79",
+      "category": "produce",
+      "size": "14",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "farmers direct",
+      "name": "Farmers Direct Organic Chopped Spinach & Kale",
+      "price": "4.39",
+      "category": "produce",
+      "size": "9",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "house foods",
+      "name": "House Foods Tofu, Shirataki, Spaghetti",
+      "price": "3.29",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Grapefruit",
+      "price": "1.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.69
+    },
+    {
+      "brand": "spice world",
+      "name": "Spice World & Peeled Garlic",
+      "price": "5.39",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Zucchini Squash",
+      "price": "1.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.89
+    },
+    {
+      "brand": "Generic",
+      "name": "Ginger Root",
+      "price": "1.01",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.01
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Peach Chunks",
+      "price": "2.69",
+      "category": "produce",
+      "size": "7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "Generic",
+      "name": "Tomatillo",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "earthbound farm",
+      "name": "Earthbound Farm Organic Romaine Hearts",
+      "price": "4.99",
+      "category": "produce",
+      "size": "3",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.66
+    },
+    {
+      "brand": "Generic",
+      "name": "Plantain",
+      "price": "0.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.89
+    },
+    {
+      "brand": "true brands",
+      "name": "True Brands Ruby Grapefruit Cup No Sugar Added",
+      "price": "2.19",
+      "category": "produce",
+      "size": "7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "Generic",
+      "name": "Butternut Squash",
+      "price": "5.49",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 5.49
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Curly Parsley",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "bunch",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Cabbage",
+      "price": "4.38",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.38
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Iceberg Garden Salad Blend",
+      "price": "2.79",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.23
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Onion",
+      "price": "3.79",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.9
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Salad, Spring Mix",
+      "price": "4.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.88
+    },
+    {
+      "brand": "Generic",
+      "name": "Mini Watermelon",
+      "price": "5.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 5.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Vidalia Sweet Onions",
+      "price": "4.89",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.44
+    },
+    {
+      "brand": "Generic",
+      "name": "Poblano Pepper",
+      "price": "1.0",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.0
+    },
+    {
+      "brand": "Generic",
+      "name": "Persimmon",
+      "price": "2.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.79
+    },
+    {
+      "brand": "olivia's organics",
+      "name": "Olivia's Organics Cubed Butternut Squash",
+      "price": "5.39",
+      "category": "produce",
+      "size": "20",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "infinite herbs",
+      "name": "Infinite Herbs Rosemary, Organic",
+      "price": "3.29",
+      "category": "produce",
+      "size": "0.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Bosc Pear",
+      "price": "1.25",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.25
+    },
+    {
+      "brand": "pero family farms",
+      "name": "Pero Family Farms Mini Sweet Peppers",
+      "price": "7.59",
+      "category": "produce",
+      "size": "24",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.32
+    },
+    {
+      "brand": "Generic",
+      "name": "Leek",
+      "price": "5.0",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 5.0
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Russet Potato",
+      "price": "1.03",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.03
+    },
+    {
+      "brand": "Generic",
+      "name": "Baby Bok Choy",
+      "price": "3.61",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 3.61
+    },
+    {
+      "brand": "Generic",
+      "name": "Purple Potato",
+      "price": "1.03",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.03
+    },
+    {
+      "brand": "naturesweet",
+      "name": "Naturesweet Sunburst Sweet Tomatoes",
+      "price": "4.89",
+      "category": "produce",
+      "size": "10.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Soup Starter, Recipe Ready Mirepoix",
+      "price": "3.29",
+      "category": "produce",
+      "size": "14",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "Generic",
+      "name": "Rutabaga",
+      "price": "1.44",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.44
+    },
+    {
+      "brand": "market 32",
+      "name": "Turkish Apricots",
+      "price": "6.49",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.65
+    },
+    {
+      "brand": "Generic",
+      "name": "Pineapple Chunks",
+      "price": "7.09",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 7.09
+    },
+    {
+      "brand": "sunset brands",
+      "name": "Sunset Brands Sweet Bell Peppers",
+      "price": "7.09",
+      "category": "produce",
+      "size": "4",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.77
+    },
+    {
+      "brand": "Generic",
+      "name": "Dragonfruit (pitaya)",
+      "price": "7.59",
+      "category": "produce",
+      "size": "12",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.63
+    },
+    {
+      "brand": "market 32",
+      "name": "Watermelon Chunks",
+      "price": "3.79",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Cucumbers",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "bolthouse farms",
+      "name": "Bolthouse Farms Organic Rainbow Baby Cut Carrots",
+      "price": "3.09",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Cabbage",
+      "price": "6.53",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 6.53
+    },
+    {
+      "brand": "market 32",
+      "name": "Cantaloupe Chunks",
+      "price": "3.79",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "pero family farms",
+      "name": "Pero Family Farms Organic Green Beans, Snipped",
+      "price": "8.69",
+      "category": "produce",
+      "size": "24",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "wholly-mini",
+      "name": "Wholly-mini Organic Guacamole Minis",
+      "price": "6.49",
+      "category": "produce",
+      "size": "2",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 3.25
+    },
+    {
+      "brand": "green giant",
+      "name": "Green Giant Broccoli Florets",
+      "price": "8.69",
+      "category": "produce",
+      "size": "32",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Turnip",
+      "price": "0.95",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.95
+    },
+    {
+      "brand": "Generic",
+      "name": "Jalapeno Pepper",
+      "price": "0.59",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "goodness gardens",
+      "name": "Goodness Gardens Freeze-dried Garlic Shakerz Herb",
+      "price": "5.39",
+      "category": "produce",
+      "size": "1.34",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.02
+    },
+    {
+      "brand": "Generic",
+      "name": "Boniato White Sweet Potato",
+      "price": "0.87",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.87
+    },
+    {
+      "brand": "gourmet garden",
+      "name": "Garden Cilantro Stir-in Paste",
+      "price": "5.99",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.5
+    },
+    {
+      "brand": "yucatan",
+      "name": "Yucatan Authentic Recipe Guacamole",
+      "price": "8.09",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.51
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Delicious Apple",
+      "price": "1.07",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.07
+    },
+    {
+      "brand": "sundia",
+      "name": "Sundia True Fruit Purely Pineapple",
+      "price": "2.19",
+      "category": "produce",
+      "size": "7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Red Grapefruit Fruit Cup Snacks",
+      "price": "2.69",
+      "category": "produce",
+      "size": "7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "bolthouse farms",
+      "name": "Bolthouse Farms Carrot Sticks",
+      "price": "3.29",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Rapini (rabe) Bunch",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Cole Slaw, Old Fashioned",
+      "price": "2.79",
+      "category": "produce",
+      "size": "14",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.2
+    },
+    {
+      "brand": "Generic",
+      "name": "Blackberry Package",
+      "price": "3.99",
+      "category": "produce",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.67
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Red Onion",
+      "price": "1.63",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.63
+    },
+    {
+      "brand": "Generic",
+      "name": "Green Cabbage",
+      "price": "3.93",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.93
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Grapefruit",
+      "price": "3.29",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.29
+    },
+    {
+      "brand": "Generic",
+      "name": "Broccolini",
+      "price": "3.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.79
+    },
+    {
+      "brand": "market 32",
+      "name": "Idaho Potatoes",
+      "price": "5.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.08
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Salad Kit, Sweet Kale Salad",
+      "price": "4.29",
+      "category": "produce",
+      "size": "11.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "mother earth organic",
+      "name": "Mother Earth Organic Organic Whole White",
+      "price": "4.09",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.34
+    },
+    {
+      "brand": "pero family farms",
+      "name": "Pero Family Farms Mini Sweet Peppers, Organic",
+      "price": "5.39",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.67
+    },
+    {
+      "brand": "Generic",
+      "name": "Radish",
+      "price": "3.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 3.79
+    },
+    {
+      "brand": "Generic",
+      "name": "Onion",
+      "price": "1.57",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.57
+    },
+    {
+      "brand": "Generic",
+      "name": "Spaghetti Squash",
+      "price": "4.0",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.0
+    },
+    {
+      "brand": "solata farms",
+      "name": "Solata Farms Spring Mix",
+      "price": "6.49",
+      "category": "produce",
+      "size": "11",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Lime",
+      "price": "1.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Fennel",
+      "price": "3.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 3.79
+    },
+    {
+      "brand": "Generic",
+      "name": "Beet",
+      "price": "5.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 5.39
+    },
+    {
+      "brand": "sundia",
+      "name": "Sundia Orange, Mandarin",
+      "price": "2.19",
+      "category": "produce",
+      "size": "7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.31
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company Little Potatoes With Seasoning Pack",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "naturesweet",
+      "name": "Naturesweet Constellation Summer Medley",
+      "price": "8.69",
+      "category": "produce",
+      "size": "24",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "market 32",
+      "name": "Fruit Burst",
+      "price": "3.79",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.47
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Cilantro",
+      "price": "2.19",
+      "category": "produce",
+      "size": "1",
+      "unit": "bunch",
+      "source": "Price Chopper",
+      "unit_price": 2.19
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Blackberries",
+      "price": "5.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 5.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Avocado",
+      "price": "2.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "Generic",
+      "name": "Red Grapes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Red Grapefruit Fruit Cup Snacks, No Sugar Added",
+      "price": "2.69",
+      "category": "produce",
+      "size": "6.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "Generic",
+      "name": "Stuffed Mushrooms",
+      "price": "6.49",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 6.49
+    },
+    {
+      "brand": "Generic",
+      "name": "Gala Apple Bag",
+      "price": "7.59",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.52
+    },
+    {
+      "brand": "Generic",
+      "name": "Empire Apple",
+      "price": "0.91",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.91
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company Red And Yellow Potatoes",
+      "price": "7.59",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.53
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Yellow Squash",
+      "price": "1.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.89
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company Potatoes, Creamer, Garlic Parsley",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "Generic",
+      "name": "Sweet Onion Bag",
+      "price": "3.29",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.65
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Cherry Mixed Fruit Cup Snacks",
+      "price": "2.69",
+      "category": "produce",
+      "size": "7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "naturipe",
+      "name": "Naturipe Organic Cranberries",
+      "price": "4.39",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.55
+    },
+    {
+      "brand": "Generic",
+      "name": "Organic Yam",
+      "price": "0.72",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.72
+    },
+    {
+      "brand": "Generic",
+      "name": "Asparagus Tips",
+      "price": "6.99",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 6.99
+    },
+    {
+      "brand": "Generic",
+      "name": "Broccoli Florettes",
+      "price": "4.49",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.49
+    },
+    {
+      "brand": "infinite herbs",
+      "name": "Infinite Herbs Organic Oregano",
+      "price": "3.29",
+      "category": "produce",
+      "size": "0.75",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "naturesweet",
+      "name": "Naturesweet Constellation Medley Tomatoes",
+      "price": "4.89",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "Generic",
+      "name": "Beet Bunch",
+      "price": "0.48",
+      "category": "produce",
+      "size": "1",
+      "unit": "bunch",
+      "source": "Price Chopper",
+      "unit_price": 0.48
+    },
+    {
+      "brand": "Generic",
+      "name": "Fruit Platter",
+      "price": "22.69",
+      "category": "produce",
+      "size": "64",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.35
+    },
+    {
+      "brand": "Generic",
+      "name": "Apple",
+      "price": "2.02",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.02
+    },
+    {
+      "brand": "naturipe",
+      "name": "Naturipe Blueberries",
+      "price": "9.79",
+      "category": "produce",
+      "size": "18",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.54
+    },
+    {
+      "brand": "Generic",
+      "name": "Cabbage",
+      "price": "5.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 5.79
+    },
+    {
+      "brand": "Generic",
+      "name": "Sweet Potato Bag",
+      "price": "3.99",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.33
+    },
+    {
+      "brand": "Generic",
+      "name": "Granny Smith Apple",
+      "price": "5.39",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.8
+    },
+    {
+      "brand": "market 32",
+      "name": "Crystal Ginger",
+      "price": "5.39",
+      "category": "produce",
+      "size": "7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.77
+    },
+    {
+      "brand": "Generic",
+      "name": "Navel Orange",
+      "price": "1.0",
+      "category": "produce",
+      "size": "48",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.02
+    },
+    {
+      "brand": "mucci farms",
+      "name": "Mucci Farms Organic Mini Cucumbers",
+      "price": "4.89",
+      "category": "produce",
+      "size": "6",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.81
+    },
+    {
+      "brand": "realsweet",
+      "name": "Realsweet Sweet Onion Bag",
+      "price": "7.09",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.42
+    },
+    {
+      "brand": "samsons jack's salute",
+      "name": "Samsons Jack's Salute Red Seedless Grapes",
+      "price": "6.49",
+      "category": "produce",
+      "size": "907",
+      "unit": "g",
+      "source": "Price Chopper",
+      "unit_price": 0.01
+    },
+    {
+      "brand": "market 32",
+      "name": "Baby Carrots, Petite, Cut & Peeled Supreme",
+      "price": "2.49",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "rainier pink lady",
+      "name": "Rainier Pink Lady Apples",
+      "price": "6.49",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 3.25
+    },
+    {
+      "brand": "Generic",
+      "name": "Starfruit (carambola)",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "market 32",
+      "name": "Navel Oranges",
+      "price": "7.59",
+      "category": "produce",
+      "size": "4",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.9
+    },
+    {
+      "brand": "del monte",
+      "name": "Del Monte Pink Pineapple Chunks",
+      "price": "3.79",
+      "category": "produce",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.63
+    },
+    {
+      "brand": "little leaf farms",
+      "name": "Little Leaf Farms Sweet Baby Butter Leaf Lettuce",
+      "price": "7.59",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.95
+    },
+    {
+      "brand": "ithaca",
+      "name": "Ithaca Olive Oil & Sea Salt Hummus",
+      "price": "5.99",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.6
+    },
+    {
+      "brand": "mucci farms",
+      "name": "Mucci Farms Tomatoes, Sweet Strawberries, Savories",
+      "price": "5.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 5.39
+    },
+    {
+      "brand": "market 32",
+      "name": "Gala Apples",
+      "price": "5.39",
+      "category": "produce",
+      "size": "48",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.11
+    },
+    {
+      "brand": "Generic",
+      "name": "Mini Cucumber",
+      "price": "3.79",
+      "category": "produce",
+      "size": "5",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.76
+    },
+    {
+      "brand": "market 32",
+      "name": "Fruit Burst",
+      "price": "22.69",
+      "category": "produce",
+      "size": "4",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 5.67
+    },
+    {
+      "brand": "frieda\u2019s",
+      "name": "Frieda\u2019s Yellow Dragon Fruit",
+      "price": "10.79",
+      "category": "produce",
+      "size": "2",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 5.39
+    },
+    {
+      "brand": "stash",
+      "name": "Stash Black Loose Leaf Tea Southern Peach Pouch",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "market 32",
+      "name": "Potatoes, Golden, Baby",
+      "price": "3.99",
+      "category": "produce",
+      "size": "1.75",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.28
+    },
+    {
+      "brand": "Generic",
+      "name": "Dragonfruit (pitaya)",
+      "price": "8.69",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 8.69
+    },
+    {
+      "brand": "market 32",
+      "name": "Grape Tomatoes",
+      "price": "2.99",
+      "category": "produce",
+      "size": "1",
+      "unit": "pt",
+      "source": "Price Chopper",
+      "unit_price": 2.99
+    },
+    {
+      "brand": "market 32",
+      "name": "Lemons",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "market 32",
+      "name": "Macintosh Apple Bag",
+      "price": "5.39",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.8
+    },
+    {
+      "brand": "market 32",
+      "name": "Potatoes, Red, Baby",
+      "price": "3.99",
+      "category": "produce",
+      "size": "1.75",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.28
+    },
+    {
+      "brand": "market 32",
+      "name": "Potatoes, Yellow",
+      "price": "5.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.08
+    },
+    {
+      "brand": "giorgio",
+      "name": "Giorgio Stuffed Baby Bella Mushrooms, Artichoke, Spinach & Cheese Blend",
+      "price": "6.49",
+      "category": "produce",
+      "size": "8.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.76
+    },
+    {
+      "brand": "Generic",
+      "name": "Chopped Garlic",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "market 32",
+      "name": "Micro Sweet Corn, 4pk",
+      "price": "5.39",
+      "category": "produce",
+      "size": "4",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 1.35
+    },
+    {
+      "brand": "the little potato company",
+      "name": "The Little Potato Company Little Mini Yellows Potatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "market 32",
+      "name": "Honeycrisp Apples",
+      "price": "6.49",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.16
+    },
+    {
+      "brand": "market 32",
+      "name": "Clementines",
+      "price": "6.49",
+      "category": "produce",
+      "size": "3",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.16
+    },
+    {
+      "brand": "market 32",
+      "name": "Veggie Tray",
+      "price": "16.19",
+      "category": "produce",
+      "size": "40",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "market 32",
+      "name": "Yellow Onion Bag",
+      "price": "2.79",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.4
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express French Bistro Chopped Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "10.7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Chop Kit Snflwr Cr",
+      "price": "4.29",
+      "category": "produce",
+      "size": "11.3",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.38
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Kit Caesar Supreme",
+      "price": "4.29",
+      "category": "produce",
+      "size": "10.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.41
+    },
+    {
+      "brand": "samsons",
+      "name": "Samsons Green Seedless Grape Clamshell",
+      "price": "6.49",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 6.49
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Roasted Sliced Red Peppers",
+      "price": "3.09",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.26
+    },
+    {
+      "brand": "market 32",
+      "name": "Bagged Limes",
+      "price": "6.49",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 3.25
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Romaine Hearts",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Pesto Caesar Chopped Salad Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "10",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 0.43
+    },
+    {
+      "brand": "fresh express",
+      "name": "Express Chopped Kit",
+      "price": "4.29",
+      "category": "produce",
+      "size": "11.6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "caputo & guest",
+      "name": "Caputo & Guest Shiitake Mushrooms, Sliced",
+      "price": "5.39",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.08
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Packed Watermelon",
+      "price": "1.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 1.79
+    },
+    {
+      "brand": "little leaf farms",
+      "name": "Little Leaf Farms Sweet Baby Butter Leaf Lettuce",
+      "price": "4.39",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.1
+    },
+    {
+      "brand": "wholly avocado",
+      "name": "Wholly Avocado Wholly Diced Avocado Carton 2-pack, .5 Lb",
+      "price": "7.09",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.77
+    },
+    {
+      "brand": "market 32",
+      "name": "Mushrooms, Baby Bella, Whole",
+      "price": "3.29",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.33
+    },
+    {
+      "brand": "full circle",
+      "name": "Full Circle Grape Tomatoes",
+      "price": "4.89",
+      "category": "produce",
+      "size": "1",
+      "unit": "pt",
+      "source": "Price Chopper",
+      "unit_price": 4.89
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Pics 4 Cup Garlic Pot",
+      "price": "5.79",
+      "category": "produce",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.96
+    },
+    {
+      "brand": "sam's fresh salsa",
+      "name": "Sam's Salsa Salsa, Mango Pineapple",
+      "price": "6.49",
+      "category": "produce",
+      "size": "12",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.54
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Cashew & Mango Colby Jack Cheese Snack Pack",
+      "price": "1.39",
+      "category": "produce",
+      "size": "1.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.93
+    },
+    {
+      "brand": "good planet foods",
+      "name": "Good Planet Foods Cheese Wedges, Plant-based, Pepper Jack Style",
+      "price": "5.39",
+      "category": "produce",
+      "size": "19",
+      "unit": "g",
+      "source": "Price Chopper",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "cosmic crisp",
+      "name": "Cosmic Crisp Apples",
+      "price": "5.39",
+      "category": "produce",
+      "size": "2",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.69
+    },
+    {
+      "brand": "sunsweet",
+      "name": "Sunsweet Probiotic+ Elderberry Prunes",
+      "price": "5.39",
+      "category": "produce",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.9
+    },
+    {
+      "brand": "gourmet garden",
+      "name": "Garden Lightly Dried Chopped Parsley",
+      "price": "5.99",
+      "category": "produce",
+      "size": "0.35",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 17.11
+    },
+    {
+      "brand": "bard valley",
+      "name": "Bard Valley Date Rolls",
+      "price": "6.49",
+      "category": "produce",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.81
+    },
+    {
+      "brand": "market 32",
+      "name": "Tomatoes",
+      "price": "4.39",
+      "category": "produce",
+      "size": "18",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.24
+    },
+    {
+      "brand": "the little potato co.",
+      "name": "The Little Potato Co. Potatoes",
+      "price": "11.89",
+      "category": "produce",
+      "size": "5",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 2.38
+    },
+    {
+      "brand": "gourmet garden",
+      "name": "Garden Cilantro Lightly Dried Herb",
+      "price": "5.99",
+      "category": "produce",
+      "size": "0.35",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 17.11
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Parsley Flakes, Herb",
+      "price": "8.69",
+      "category": "produce",
+      "size": "2.7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 3.22
+    },
+    {
+      "brand": "caputo & guest",
+      "name": "Caputo & Guest Shiitake Mushrooms, Whole",
+      "price": "5.39",
+      "category": "produce",
+      "size": "3.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.54
+    },
+    {
+      "brand": "very lazy",
+      "name": "Very Lazy Chopped Smoked Garlic",
+      "price": "4.39",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 4.39
+    },
+    {
+      "brand": "market 32",
+      "name": "Mint",
+      "price": "3.79",
+      "category": "produce",
+      "size": "2.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.52
+    },
+    {
+      "brand": "taylor farms",
+      "name": "Taylor Farms Collard Greens",
+      "price": "4.39",
+      "category": "produce",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "pics",
+      "name": "Pics Navel Oranges",
+      "price": "12.99",
+      "category": "produce",
+      "size": "8",
+      "unit": "lb",
+      "source": "Price Chopper",
+      "unit_price": 1.62
+    },
+    {
+      "brand": "lucinda's",
+      "name": "Lucinda's Italian Parsley",
+      "price": "3.79",
+      "category": "produce",
+      "size": "2",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 1.9
+    },
+    {
+      "brand": "market 32",
+      "name": "Carrots, Cut & Peeled, Matchstick",
+      "price": "2.19",
+      "category": "produce",
+      "size": "10",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.22
+    },
+    {
+      "brand": "solata foods",
+      "name": "Solata Foods Baby Spinach",
+      "price": "3.79",
+      "category": "produce",
+      "size": "5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.76
+    },
+    {
+      "brand": "solata farms",
+      "name": "Solata Farms Baby Spinach",
+      "price": "6.49",
+      "category": "produce",
+      "size": "11",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.59
+    },
+    {
+      "brand": "infinite herbs",
+      "name": "Infinite Herbs Organic Herbs & Specialities Chives",
+      "price": "2.79",
+      "category": "produce",
+      "size": "1",
+      "unit": "each",
+      "source": "Price Chopper",
+      "unit_price": 2.79
+    },
+    {
+      "brand": "infinite herbs",
+      "name": "Infinite Herbs Organic Mint(clam)",
+      "price": "3.29",
+      "category": "produce",
+      "size": "4",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.82
+    },
+    {
+      "brand": "Generic",
+      "name": "Large Brown Eggs",
+      "price": "3.29",
+      "category": "Dairy & Eggs",
+      "size": "12",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Large White Eggs",
+      "price": "3.19",
+      "category": "Dairy & Eggs",
+      "size": "12",
+      "unit": "ct",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole Milk",
+      "price": "4.29",
+      "category": "Dairy",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Price Chopper",
+      "unit_price": 4.29
+    },
+    {
+      "brand": "Generic",
+      "name": "Skim Milk",
+      "price": "4.19",
+      "category": "Dairy",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Price Chopper",
+      "unit_price": 4.19
+    },
+    {
+      "brand": "Generic",
+      "name": "2% Reduced Fat Milk",
+      "price": "4.29",
+      "category": "Dairy",
+      "size": "1",
+      "unit": "gallon",
+      "source": "Price Chopper",
+      "unit_price": 4.29
+    },
+    {
+      "brand": "Generic",
+      "name": "White Sandwich Bread",
+      "price": "2.49",
+      "category": "Bakery",
+      "size": "20",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.12
+    },
+    {
+      "brand": "Generic",
+      "name": "Whole Wheat Bread",
+      "price": "2.79",
+      "category": "Bakery",
+      "size": "20",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.14
+    },
+    {
+      "brand": "Generic",
+      "name": "Salted Butter",
+      "price": "4.49",
+      "category": "Dairy",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Generic",
+      "name": "Unsalted Butter",
+      "price": "4.49",
+      "category": "Dairy",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Barilla",
+      "name": "Barilla Spaghetti",
+      "price": "1.79",
+      "category": "Pasta",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.11
+    },
+    {
+      "brand": "Barilla",
+      "name": "Barilla Penne",
+      "price": "1.79",
+      "category": "Pasta",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.11
+    },
+    {
+      "brand": "Generic",
+      "name": "Diced Tomatoes",
+      "price": "1.19",
+      "category": "Canned Goods",
+      "size": "14.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.08
+    },
+    {
+      "brand": "Generic",
+      "name": "Black Beans",
+      "price": "1.09",
+      "category": "Canned Goods",
+      "size": "15",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.07
+    },
+    {
+      "brand": "Generic",
+      "name": "Kidney Beans",
+      "price": "1.09",
+      "category": "Canned Goods",
+      "size": "15",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.07
+    },
+    {
+      "brand": "Generic",
+      "name": "Long Grain White Rice",
+      "price": "3.49",
+      "category": "Grains",
+      "size": "32",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.11
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lays Classic Potato Chips",
+      "price": "4.19",
+      "category": "Snacks",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.52
+    },
+    {
+      "brand": "Lay's",
+      "name": "Lays Barbecue Potato Chips",
+      "price": "4.19",
+      "category": "Snacks",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.52
+    },
+    {
+      "brand": "Doritos",
+      "name": "Doritos Nacho Cheese Chips",
+      "price": "4.49",
+      "category": "Snacks",
+      "size": "9.25",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.49
+    },
+    {
+      "brand": "Cheerios",
+      "name": "Cheerios Original Cereal",
+      "price": "4.79",
+      "category": "Cereal",
+      "size": "10.8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "General Mills",
+      "name": "Cinnamon Toast Crunch Cereal",
+      "price": "4.99",
+      "category": "Cereal",
+      "size": "16.8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.3
+    },
+    {
+      "brand": "Kellogg's",
+      "name": "Frosted Flakes Cereal",
+      "price": "4.79",
+      "category": "Cereal",
+      "size": "17.3",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.28
+    },
+    {
+      "brand": "Ritz",
+      "name": "Ritz Crackers",
+      "price": "3.99",
+      "category": "Snacks",
+      "size": "13.7",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.29
+    },
+    {
+      "brand": "Jif",
+      "name": "Jif Creamy Peanut Butter",
+      "price": "3.49",
+      "category": "Condiments",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.22
+    },
+    {
+      "brand": "Folgers",
+      "name": "Folgers Classic Roast Coffee",
+      "price": "10.99",
+      "category": "Coffee",
+      "size": "30.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.36
+    },
+    {
+      "brand": "DiGiorno",
+      "name": "DiGiorno Pepperoni Pizza",
+      "price": "7.49",
+      "category": "Frozen",
+      "size": "27.5",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.27
+    },
+    {
+      "brand": "Breyers",
+      "name": "Breyers Vanilla Ice Cream",
+      "price": "4.49",
+      "category": "Frozen",
+      "size": "48",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.09
+    },
+    {
+      "brand": "Tropicana",
+      "name": "Tropicana Orange Juice",
+      "price": "4.29",
+      "category": "Beverages",
+      "size": "52",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.08
+    },
+    {
+      "brand": "Coca-Cola",
+      "name": "Coca Cola",
+      "price": "2.49",
+      "category": "Beverages",
+      "size": "2",
+      "unit": "liter",
+      "source": "Price Chopper",
+      "unit_price": 1.25
+    },
+    {
+      "brand": "Pepsi",
+      "name": "Pepsi",
+      "price": "2.49",
+      "category": "Beverages",
+      "size": "2",
+      "unit": "liter",
+      "source": "Price Chopper",
+      "unit_price": 1.25
+    },
+    {
+      "brand": "Dannon",
+      "name": "Dannon Strawberry Yogurt",
+      "price": "1.09",
+      "category": "Yogurt",
+      "size": "5.3",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.21
+    },
+    {
+      "brand": "Yoplait",
+      "name": "Yoplait Original Strawberry Yogurt",
+      "price": "0.89",
+      "category": "Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.15
+    },
+    {
+      "brand": "Yoplait",
+      "name": "Yoplait Original Vanilla Yogurt",
+      "price": "0.89",
+      "category": "Yogurt",
+      "size": "6",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.15
+    },
+    {
+      "brand": "Generic",
+      "name": "Shredded Cheddar Cheese",
+      "price": "3.19",
+      "category": "Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.4
+    },
+    {
+      "brand": "Kraft",
+      "name": "Shredded Cheddar Cheese",
+      "price": "3.49",
+      "category": "Cheese",
+      "size": "8",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.44
+    },
+    {
+      "brand": "Generic",
+      "name": "80% Lean Ground Beef",
+      "price": "5.99",
+      "category": "Meat",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.37
+    },
+    {
+      "brand": "Generic",
+      "name": "85% Lean Ground Beef",
+      "price": "6.29",
+      "category": "Meat",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.39
+    },
+    {
+      "brand": "Generic",
+      "name": "90% Lean Ground Beef",
+      "price": "7.29",
+      "category": "Meat",
+      "size": "16",
+      "unit": "oz",
+      "source": "Price Chopper",
+      "unit_price": 0.46
+    }
+  ]
+}
