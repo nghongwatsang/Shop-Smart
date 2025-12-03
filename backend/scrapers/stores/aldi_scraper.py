@@ -56,12 +56,13 @@ class AldiScraper:
         self.requests_per_second = requests_per_second
         self.http_client = None
     
-    def scrape(self, max_pages: int = 60) -> ScraperResult:
+    def scrape(self, max_pages_per_category: int = 10, categories: Optional[List[str]] = None) -> ScraperResult:
         """
-        Scrape products from Aldi website.
+        Scrape products from Aldi website by category.
         
         Args:
-            max_pages: Maximum number of pages to scrape (default: 3)
+            max_pages_per_category: Maximum number of pages to scrape per category (default: 10)
+            categories: List of category URLs to scrape. If None, discovers all categories.
             
         Returns:
             ScraperResult with products and metadata
@@ -78,24 +79,47 @@ class AldiScraper:
             with HTTPClient(requests_per_second=self.requests_per_second) as http:
                 self.http_client = http
                 
-                # Scrape main products page and paginated pages
-                pages_to_scrape = [f"{self.base_url}/products"]
+                # Discover categories if not provided
+                if categories is None:
+                    print("🔍 Discovering product categories...")
+                    categories = self._discover_categories()
+                    print(f"   ✓ Found {len(categories)} categories\n")
                 
-                # Add pagination pages
-                for page_num in range(2, max_pages + 1):
-                    pages_to_scrape.append(f"{self.base_url}/products?page={page_num}")
-                
-                for page_num, url in enumerate(pages_to_scrape, 1):
-                    print(f"\n📄 Scraping page {page_num}/{len(pages_to_scrape)}: {url}")
+                # Scrape each category
+                for cat_idx, category_url in enumerate(categories, 1):
+                    print(f"\n📂 Category {cat_idx}/{len(categories)}: {category_url}")
                     
-                    try:
-                        products = self._scrape_page(url)
-                        all_products.extend(products)
-                        print(f"   ✓ Found {len(products)} products")
-                    except Exception as e:
-                        error_msg = f"Error scraping page {page_num}: {str(e)}"
-                        print(f"   ✗ {error_msg}")
-                        errors.append(error_msg)
+                    # Build pages for this category
+                    pages_to_scrape = [category_url]
+                    
+                    # Add pagination pages for this category
+                    for page_num in range(2, max_pages_per_category + 1):
+                        separator = '&' if '?' in category_url else '?'
+                        pages_to_scrape.append(f"{category_url}{separator}page={page_num}")
+                    
+                    category_products = []
+                    category_name = self._extract_category_name_from_url(category_url)
+                    
+                    for page_num, url in enumerate(pages_to_scrape, 1):
+                        try:
+                            products = self._scrape_page(url, category_name=category_name)
+                            
+                            # If we get 0 products, stop paginating this category
+                            if not products and page_num > 1:
+                                break
+                            
+                            category_products.extend(products)
+                            all_products.extend(products)
+                            
+                            if products:
+                                print(f"   📄 Page {page_num}: {len(products)} products")
+                        except Exception as e:
+                            error_msg = f"Error scraping {url}: {str(e)}"
+                            print(f"   ✗ {error_msg}")
+                            errors.append(error_msg)
+                            break  # Stop paginating this category on error
+                    
+                    print(f"   ✓ Total from category: {len(category_products)} products")
         
         except Exception as e:
             error_msg = f"Fatal error during scraping: {str(e)}"
@@ -117,7 +141,90 @@ class AldiScraper:
         
         return result
     
-    def _scrape_page(self, url: str) -> List[Product]:
+    def _discover_categories(self) -> List[str]:
+        """
+        Discover all product category URLs from the main products page.
+        
+        Returns:
+            List of category URLs to scrape
+        """
+        try:
+            response = self.http_client.get(f"{self.base_url}/products")
+            
+            if response.status_code != 200:
+                print(f"   ⚠️  Failed to fetch categories page: {response.status_code}")
+                # Return default categories if discovery fails
+                return [
+                    f"{self.base_url}/products/fresh-produce/k/13",
+                    f"{self.base_url}/products/fresh-meat-seafood/k/12",
+                ]
+            
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Find all category links
+            category_links = soup.select('a[href*="/products/"][href*="/k/"]')
+            
+            # Extract unique URLs
+            categories = []
+            seen_urls = set()
+            
+            for link in category_links:
+                href = link.get('href', '')
+                if href and href not in seen_urls:
+                    # Make sure it's a full URL
+                    if not href.startswith('http'):
+                        href = self.base_url + href
+                    
+                    categories.append(href)
+                    seen_urls.add(href)
+            
+            # Filter to main categories (not subcategories) - those with shorter paths
+            # Main categories usually have pattern like /k/13, subcategories like /subcategory/k/89
+            main_categories = []
+            for cat in categories:
+                # Count slashes after /products/
+                parts = cat.split('/products/')[-1]
+                slash_count = parts.count('/')
+                
+                # Main categories have 2 slashes: /category-name/k/13
+                # Subcategories have 3+: /category/subcategory/k/89
+                if slash_count == 2:
+                    main_categories.append(cat)
+            
+            return main_categories if main_categories else categories
+            
+        except Exception as e:
+            print(f"   ⚠️  Error discovering categories: {str(e)}")
+            # Return key categories if discovery fails
+            return [
+                f"{self.base_url}/products/fresh-produce/k/13",
+                f"{self.base_url}/products/fresh-meat-seafood/k/12",
+                f"{self.base_url}/products/dairy-eggs/k/14",
+                f"{self.base_url}/products/pantry-essentials/k/15",
+            ]
+    
+    def _extract_category_name_from_url(self, url: str) -> str:
+        """
+        Extract category name from category URL.
+        
+        Example: 
+            /products/fresh-produce/k/13 -> Fresh Produce
+            /products/dairy-eggs/k/14 -> Dairy Eggs
+        """
+        try:
+            # Extract the part between /products/ and /k/
+            parts = url.split('/products/')
+            if len(parts) > 1:
+                category_slug = parts[1].split('/k/')[0]
+                # Convert slug to title case
+                category_name = category_slug.replace('-', ' ').title()
+                return category_name
+        except:
+            pass
+        
+        return 'Grocery'
+    
+    def _scrape_page(self, url: str, category_name: str = 'Grocery') -> List[Product]:
         """
         Scrape products from a single page.
         
@@ -137,16 +244,17 @@ class AldiScraper:
         soup = BeautifulSoup(response.text, 'html.parser')
         
         # Extract products
-        products = self._extract_products(soup)
+        products = self._extract_products(soup, category_name=category_name)
         
         return products
     
-    def _extract_products(self, soup: BeautifulSoup) -> List[Product]:
+    def _extract_products(self, soup: BeautifulSoup, category_name: str = 'Grocery') -> List[Product]:
         """
         Extract products from page HTML.
         
         Args:
             soup: BeautifulSoup object of the page
+            category_name: Category name for these products
             
         Returns:
             List of Product objects
@@ -176,7 +284,7 @@ class AldiScraper:
         # Extract each product
         for i, element in enumerate(product_elements, 1):
             try:
-                product = self._extract_product_info(element)
+                product = self._extract_product_info(element, category_name=category_name)
                 if product:
                     products.append(product)
             except Exception as e:
@@ -185,12 +293,13 @@ class AldiScraper:
         
         return products
     
-    def _extract_product_info(self, element) -> Optional[Product]:
+    def _extract_product_info(self, element, category_name: str = 'Grocery') -> Optional[Product]:
         """
         Extract product information from a product element.
         
         Args:
             element: BeautifulSoup element containing product data
+            category_name: Category name for this product
             
         Returns:
             Product object or None if extraction failed
@@ -220,8 +329,8 @@ class AldiScraper:
             # Clean product name: remove size/price info that was extracted
             product_name = self._clean_product_name(product_name, size, unit, price)
             
-            # Extract product URL and fetch category from detail page
-            category = self._extract_category_from_detail_page(element)
+            # Use the category from URL instead of fetching detail page
+            category = category_name
             
             # Build raw product data
             raw_data = {
@@ -451,12 +560,29 @@ class AldiScraper:
         print(f"{'='*60}\n")
 
 
+def scrape_aldi(max_pages_per_category: int = 10) -> List[Dict[str, Any]]:
+    """
+    Convenience function to scrape Aldi and return products as list of dicts.
+    
+    Args:
+        max_pages_per_category: Maximum pages to scrape per category
+        
+    Returns:
+        List of product dictionaries
+    """
+    scraper = AldiScraper(requests_per_second=2.0)
+    result = scraper.scrape(max_pages_per_category=max_pages_per_category)
+    
+    # Convert Product objects to dicts
+    return [product.to_dict() for product in result.products]
+
+
 def main():
-    """Main function to run the Aldi scraper."""
+    """Main function to run the Aldi scraper standalone."""
     scraper = AldiScraper(requests_per_second=2.0)
     
-    # Scrape products
-    result = scraper.scrape(max_pages=60)
+    # Scrape products (will auto-discover categories)
+    result = scraper.scrape(max_pages_per_category=10)
     
     # Save results
     if result.products:
