@@ -1,0 +1,26 @@
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Output files (keep structure, ignore content)
+!scrapers/output/raw/.gitkeep
+!scrapers/output/processed/.gitkeep
+
+
+

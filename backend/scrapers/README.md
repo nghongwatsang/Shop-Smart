@@ -1,239 +1,410 @@
-# Web Scrapers Architecture
+# Shop-Smart Scrapers
 
-This directory contains a well-structured, object-oriented web scraping system for multiple grocery stores.
+Automated web scraping and data processing pipeline for grocery store price comparison.
 
-## 🏗️ Architecture Overview
+## Table of Contents
 
-### Core Components
+- [Quick Start](#quick-start)
+- [Architecture](#architecture)
+- [Pipeline Flow](#pipeline-flow)
+- [Core Infrastructure](#core-infrastructure)
+- [Utility Modules](#utility-modules)
+- [Output Files](#output-files)
+- [Product Data Format](#product-data-format)
+- [Individual Scrapers](#individual-scrapers)
+- [Current Status](#current-status)
+- [Testing](#testing)
+- [Adding New Stores](#adding-new-stores)
 
-1. **Base Scraper (`base.py`)**
+## Quick Start
 
-   - Abstract base class for all store scrapers
-   - Common functionality: HTTP requests, HTML parsing, error handling
-   - Enforces consistent interface across all store implementations
+Run the complete pipeline (scraping, processing, and matching):
 
-2. **Store-Specific Scrapers (`stores/`)**
-
-   - `aldi_scraper.py` - Fully implemented Aldi scraper with breadcrumb category extraction
-   - `hannaford_scraper.py` - Template for future implementation
-   - Each inherits from `BaseWebScraper`
-
-3. **Factory Pattern (`scraper_factory.py`)**
-
-   - Creates appropriate scraper instances for static HTTP scrapers
-   - Manages store registration
-   - Provides clean API for scraper creation
-   - Note: Selenium scrapers (like Hannaford) are used directly due to different lifecycle requirements
-
-## 🛠️ Key Features
-
-### Object-Oriented Design
-
-- **Inheritance**: Store scrapers inherit common functionality
-- **Polymorphism**: All scrapers implement the same interface
-- **Encapsulation**: Private methods for store-specific logic
-- **Abstraction**: Clean public API hiding implementation details
-
-### Best Practices Implemented
-
-- **Type hints** for better code clarity and IDE support
-- **Error handling** with try-catch blocks and graceful degradation
-- **Rate limiting** with configurable delays between requests
-- **Session management** with persistent HTTP sessions
-- **Modular design** allowing easy addition of new stores
-
-### Data Structure
-
-```python
-@dataclass
-class Product:
-    name: str
-    price: str
-    category: str      # Extracted from breadcrumbs
-    size: str
-    unit: str
-    source: str        # Store name
-    product_url: str   # Link to product page
+```bash
+cd backend
+python -m scrapers.main
 ```
 
-## 🚀 Usage Examples
+Or skip scraping and just process existing data:
 
-### Basic Scraping
-
-```python
-from scraper_factory import ScraperFactory
-
-# Create and use a specific scraper
-scraper = ScraperFactory.create_scraper('aldi', delay=0.5)
-products = scraper.scrape_products(limit=10)
+```bash
+python -m scrapers.main --skip-scraping
 ```
 
-## Usage Examples
-
-### Static HTTP Scrapers (Aldi)
-
-```python
-from scraper_factory import ScraperFactory
-
-# Create Aldi scraper
-aldi_scraper = ScraperFactory.create_scraper('aldi', delay=0.5)
-
-# Scrape products
-products = aldi_scraper.scrape_products(limit=20)
-
-# Save to JSON
-import json
-with open('aldi_products.json', 'w') as f:
-    json.dump([p.to_dict() for p in products], f, indent=2)
-```
-
-### Selenium Scrapers (Hannaford)
-
-```python
-from stores.hannaford_scraper import HannafordSeleniumScraper
-
-# Create Hannaford scraper
-scraper = HannafordSeleniumScraper()
-
-try:
-    # Scrape category page
-    url = "https://hannaford.com/browse-aisles/categories/1/categories/2098-produce"
-    products = scraper.scrape_category_page(url)
-
-    # Save results
-    scraper.save_to_json(products, 'hannaford_products.json')
-
-finally:
-    # Always cleanup Selenium
-    scraper.cleanup()
-```
-
-service.save_to_csv('products.csv')
+## Architecture
 
 ```
-
-## 📁 File Structure
-
-```
-
 backend/scrapers/
-├── base.py # Abstract base class + Product dataclass  
-├── scraper_factory.py # Factory pattern for static HTTP scrapers
-├── stores/
-│ ├── aldi_scraper.py # Aldi implementation (static HTTP)
-│ └── hannaford_scraper.py # Hannaford implementation (Selenium)
-└── README.md # This file
+├── main.py                 # Main orchestrator (run this!)
+├── stores/                 # Store-specific scrapers
+│   ├── aldi_scraper.py
+│   ├── pricechopper_api_scraper.py
+│   └── target_scraper.py
+├── utils/                  # Shared utilities
+│   ├── data_processor.py   # Normalization, deduplication, matching
+│   ├── parsers.py         # Price, size, text parsing
+│   ├── validators.py      # Data validation and cleaning
+│   └── exporters.py       # JSON/CSV export utilities
+├── core/                   # Core infrastructure
+│   ├── models.py          # Product, ScraperResult models
+│   ├── http_client.py     # HTTP request handling with retry/rate limiting
+│   ├── selenium_client.py # Selenium WebDriver wrapper
+│   └── exceptions.py      # Custom exceptions
+└── output/                # Generated data
+    ├── raw/               # Raw scraped data
+    └── processed/         # Normalized & matched data
+```
 
-````
+## Pipeline Flow
 
-## 🎯 Current Capabilities
+The `main.py` orchestrator runs three steps automatically:
 
-### Aldi Scraper (Static HTTP - Fully Implemented)
+### Step 1: Scraping
 
-- ✅ **Product Discovery**: Finds products on main product pages
-- ✅ **Data Extraction**: Name, price, size, units
-- ✅ **Category Detection**: Visits product pages to extract breadcrumb categories
-- ✅ **URL Handling**: Captures product links for reference
-- ✅ **Rate Limiting**: Respectful scraping with delays
-- ✅ **Error Handling**: Graceful handling of failed requests
+- Scrapes product data from Aldi and Price Chopper
+- Saves raw JSON to `output/raw/`
+- Hannaford data must be added manually to `output/raw/hannaford_scraped_products.json`
 
-### Categories Successfully Extracted
+### Step 2: Processing
 
-- Chips, Crackers & Popcorn
-- Cookies & Sweets
-- Oils & Vinegars
-- Yogurt & Sour Cream
-- Frozen Meat, Poultry & Seafood
-- Spices
-- Pasta, Rice & Grains
-- Healthy Food & Snacks
-- And many more...
+- **Normalization**: Converts to standard format with unit_price
+- **Deduplication**: Removes duplicate products
+- **Simplification**: Removes store branding and excessive descriptors
+- **Size Normalization**: Standardizes size formats (12.0 → 12)
+- Saves to `output/processed/*_normalized.json`
 
-### Hannaford Scraper (Selenium - Fully Implemented)
+### Step 3: Matching
 
-- ✅ **JavaScript Support**: Uses Selenium WebDriver for dynamic content
-- ✅ **Category Scraping**: Scrapes entire produce category pages
-- ✅ **Product Details**: Extracts brand, name, price, size, category
-- ✅ **Smart Parsing**: Handles multi-word brands and size extraction
-- ✅ **Dynamic Loading**: Scrolls and waits for content to load
-- ✅ **Robust Selectors**: Multiple selector strategies for reliability
+- Finds matching products across all three stores
+- Matches based on: brand, name (70% word overlap), size, and unit
+- Saves results to `output/processed/store_matches.json`
 
-**Sample Categories Available**:
-- Produce (fully tested)
-- All other categories accessible via similar URLs
+## Output Files
 
-## 🔧 Adding New Stores
+### Raw Data (`output/raw/`)
 
-### For Static HTTP Sites (like Aldi):
+- `aldi_products.json` - Raw Aldi scrape
+- `pricechopper_products.json` - Raw Price Chopper scrape
+- `hannaford_scraped_products.json` - Manual Hannaford data
 
-1. **Create new scraper class** inheriting from `BaseWebScraper`
-2. **Implement required methods**:
-   - `get_product_pages()` - Return list of URLs to scrape
-   - `extract_products_from_page()` - Find product elements on page
-   - `extract_product_info()` - Extract data from individual product elements
-3. **Register in factory**:
+### Processed Data (`output/processed/`)
 
-```python
-ScraperFactory.register_scraper('store_name', YourScraperClass)
-````
+- `aldi_normalized.json` - Cleaned Aldi products
+- `pricechopper_normalized.json` - Cleaned Price Chopper products
+- `hannaford_normalized.json` - Cleaned Hannaford products
+- `store_matches.json` - Cross-store product matches
 
-### For JavaScript-Heavy Sites (like Hannaford):
+## Product Data Format
 
-1. **Create standalone Selenium scraper** (don't inherit from BaseWebScraper)
-2. **Implement core methods**:
-   - `__init__()` - Set up WebDriver with appropriate options
-   - `scrape_category_page()` - Navigate and extract product links
-   - `scrape_product()` - Extract individual product details
-   - `cleanup()` - Properly close WebDriver
-3. **Use directly** (not through factory due to different lifecycle)
-
-## 📊 Data Export Formats
-
-### JSON Output
+### Normalized Product
 
 ```json
 {
-  "scraped_at": "2025-10-27T12:10:16.061795",
-  "total_products": 5,
-  "products": [
-    {
-      "name": "Product Name",
-      "price": "$1.99",
-      "category": "Chips, Crackers & Popcorn",
-      "size": "8",
-      "unit": "oz",
-      "source": "aldi",
-      "product_url": "https://..."
-    }
-  ]
+  "brand": "Generic",
+  "name": "Whole Milk",
+  "price": "3.89",
+  "category": "Dairy",
+  "size": "1",
+  "unit": "gallon",
+  "source": "Aldi",
+  "unit_price": 3.89
 }
 ```
 
-### CSV Output
+### Match Result
 
-Standard CSV with columns: name, price, category, size, unit, source, product_url
+```json
+{
+  "three_way_matches": [
+    {
+      "hannaford": {...},
+      "aldi": {...},
+      "pricechopper": {...}
+    }
+  ],
+  "hannaford_aldi_matches": [...],
+  "hannaford_pricechopper_matches": [...],
+  "metadata": {
+    "analyzed_at": "2025-12-02T...",
+    "total_hannaford": 574,
+    "total_aldi": 3018,
+    "total_pricechopper": 470,
+    "match_rate": "18.6%"
+  }
+}
+```
 
-## 🛡️ Error Handling
+## Individual Scrapers
 
-- **Connection failures**: Graceful retry and fallback
-- **Missing elements**: Safe extraction with default values
-- **Rate limiting**: Automatic delays to avoid being blocked
-- **Invalid data**: Validation and filtering of malformed products
+You can also run scrapers individually:
 
-## 🔮 Future Enhancements
+```bash
+# Aldi scraper
+python -m scrapers.stores.aldi_scraper
 
-1. **Database Integration**: Save products directly to database
-2. **Caching**: Cache product pages to avoid re-scraping
-3. **Parallel Processing**: Scrape multiple stores simultaneously
-4. **Price Tracking**: Historical price monitoring
-5. **Image Extraction**: Capture product images
-6. **Review/Rating Data**: Extract customer reviews and ratings
+# Price Chopper scraper
+python -m scrapers.stores.pricechopper_api_scraper
+```
 
-## 📈 Performance Metrics
+## Current Status
 
-- **Aldi Scraper**: ~60 products found per page, ~10 products/minute (with respectful delays)
-- **Category Accuracy**: 95%+ accurate category extraction via breadcrumbs
-- **Data Quality**: Clean, structured data with proper type validation
-- **Memory Efficient**: Streaming processing, no large data structures held in memory
+- **Aldi**: 3,018 products (fully automated scraping)
+- **Price Chopper**: 470 products (API-based, Produce only)
+- **Hannaford**: 574 products (manual data collection)
+- **Match Rate**: 18.6% (107 total matches)
+  - 63 three-way matches
+  - 43 Hannaford ↔ Aldi matches
+  - 1 Hannaford ↔ Price Chopper match
 
-This architecture provides a solid foundation for expanding to multiple grocery stores while maintaining code quality and performance.
+## Data Quality Improvements
+
+The pipeline includes automatic data cleaning:
+
+- Removes store-specific branding (e.g., "Specially Selected" → "")
+- Strips excessive descriptors ("Fresh Premium" → "")
+- Normalizes meat descriptions ("Boneless Skinless Chicken Breast" → "Chicken Breast")
+- Standardizes size formats for consistent matching
+- Deduplicates identical products
+
+## Adding New Stores
+
+1. Create scraper in `stores/<store>_scraper.py`
+2. Implement `scrape_<store>()` function returning `List[Dict]`
+3. Add to `main.py` in `run_scrapers()` function
+4. Add processing logic in `process_data()`
+
+---
+
+## Core Infrastructure
+
+### Models (`core/models.py`)
+
+#### Product Dataclass
+
+Immutable product data model with validation:
+
+```python
+from scrapers.core import Product
+
+product = Product(
+    brand='Simply Nature',
+    name='Organic Pasta',
+    price='2.99',
+    category='Pasta, Rice & Grains',
+    size='16',
+    unit='oz',
+    source='aldi'
+)
+```
+
+**Features:**
+
+- Required fields: brand, name, price, category, size, unit, source
+- Automatic validation (no empty fields)
+- Whitespace stripping
+- JSON serialization via `to_dict()`
+
+#### ScraperResult Dataclass
+
+Result container with metadata:
+
+```python
+from scrapers.core import ScraperResult
+
+result = ScraperResult(
+    store='aldi',
+    products=products,
+    duration_seconds=15.5
+)
+
+result.add_error('Failed to parse some products')
+result_dict = result.to_dict()  # Export to JSON
+```
+
+**Features:**
+
+- Metadata: total_scraped, errors, duration, timestamp
+- Version tracking (scraper_version)
+- Success/failure tracking
+- Automatic product count calculation
+
+### HTTP Client (`core/http_client.py`)
+
+Robust HTTP client with retry logic and rate limiting:
+
+```python
+from scrapers.core import HTTPClient
+
+with HTTPClient(requests_per_second=2.0) as http:
+    response = http.get('https://example.com/products')
+    # Parse response...
+```
+
+**Features:**
+
+- Automatic retry with exponential backoff
+- Rate limiting (configurable requests/second)
+- Persistent session with connection pooling
+- Realistic browser headers
+- Context manager support
+- Timeout handling
+- Custom exception mapping
+
+### Selenium Client (`core/selenium_client.py`)
+
+Managed Selenium WebDriver with utilities:
+
+```python
+from scrapers.core import SeleniumClient
+
+with SeleniumClient(headless=True) as selenium:
+    selenium.get('https://example.com')
+    selenium.wait_for_element('.product-list')
+    selenium.scroll_infinite_load()
+    html = selenium.get_page_source()
+```
+
+**Features:**
+
+- Automatic setup and cleanup
+- Context manager support
+- Headless mode
+- Wait utilities (wait_for_element, wait_for_elements)
+- Scroll helpers (scroll_to_bottom, scroll_infinite_load)
+- Configurable timeouts
+- Error handling with custom exceptions
+
+### Exceptions (`core/exceptions.py`)
+
+Custom exception hierarchy for better error handling:
+
+- `ScraperError` - Base exception
+- `ConnectionError` - Network/connectivity issues
+- `ParseError` - HTML/data parsing failures
+- `RateLimitError` - Rate limiting (triggers retry)
+- `ValidationError` - Data validation failures
+- `SeleniumError` - WebDriver issues
+- `ConfigurationError` - Invalid configuration
+
+---
+
+## Utility Modules
+
+### Parsers (`utils/parsers.py`)
+
+Extract structured data from raw scraped content:
+
+```python
+from scrapers.utils import parse_price, parse_size, clean_text
+
+price = parse_price("$1,234.99")  # Returns: 1234.99
+quantity, unit = parse_size("16 oz")  # Returns: (16.0, 'oz')
+name = clean_text("  Product™ Name  ")  # Returns: "Product Name"
+```
+
+**Functions:**
+
+- `parse_price(price_str)` - Extract numeric price from various formats
+- `parse_size(size_str)` - Extract quantity and unit from size strings
+- `clean_text(text)` - Clean and normalize text content
+- `parse_brand_and_name(full_name, known_brands)` - Split product name
+- `extract_unit_price(text)` - Extract unit price from text
+
+### Validators (`utils/validators.py`)
+
+Ensure data quality and consistency:
+
+```python
+from scrapers.utils import validate_product, clean_product_data
+
+# Clean raw data
+raw_data = {
+    "brand": "  Nike  ",
+    "name": "Shoes™",
+    "price": "$99.99",
+    "category": "Apparel",
+    "size": "16 oz",
+    "source": "ALDI"
+}
+cleaned = clean_product_data(raw_data)
+
+# Validate product
+errors = validate_product(product)
+if not errors:
+    print("Valid product!")
+```
+
+**Functions:**
+
+- `validate_product(product)` - Check Product object validity
+- `clean_product_data(data)` - Clean and normalize product dict
+- `is_valid_product_dict(data)` - Quick validation check
+- `deduplicate_products(products)` - Remove duplicates
+- `filter_invalid_products(products)` - Filter valid/invalid
+
+### Exporters (`utils/exporters.py`)
+
+Save scraped data in various formats:
+
+```python
+from scrapers.utils import save_to_json, save_to_csv, load_from_json
+
+# Save to JSON with metadata
+save_to_json(products, "output/aldi_products.json", include_metadata=True)
+
+# Save to CSV
+save_to_csv(products, "output/aldi_products.csv")
+
+# Load from JSON
+loaded = load_from_json("output/aldi_products.json")
+```
+
+**Functions:**
+
+- `save_to_json(products, filepath)` - Save products to JSON
+- `save_scraper_result(result, filepath)` - Save complete ScraperResult
+- `save_to_csv(products, filepath)` - Save products to CSV
+- `append_to_csv(products, filepath)` - Append products to existing CSV
+- `load_from_json(filepath)` - Load products from JSON
+- `merge_json_files(input_files, output_file)` - Merge multiple JSON files
+- `generate_filename(source, extension)` - Generate standardized filenames
+
+---
+
+## Testing
+
+### Run All Tests
+
+```bash
+cd backend
+source .venv/bin/activate
+
+# Core models tests
+python scrapers/core/test_models.py
+
+# Utils tests (25 tests)
+pytest scrapers/utils/test_utils.py -v
+```
+
+### Test Coverage
+
+**Core Models (7 tests):**
+
+- Product creation and validation
+- Whitespace stripping
+- to_dict() serialization
+- ScraperResult creation
+- Error handling
+- JSON serialization
+
+**Utils (25 tests):**
+
+- Parser tests (14): price, size, text cleaning, brand extraction
+- Validator tests (7): validation, cleaning, deduplication
+- Exporter tests (4): JSON, CSV, filename generation
+
+---
+
+## Archive
+
+Old/experimental scripts have been archived and their functionality consolidated into the main pipeline.
