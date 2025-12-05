@@ -1,14 +1,17 @@
 import os
 import uuid
 import asyncio
+import uvicorn
+from fastapi import FastAPI, Response, status
 from typing import Dict, List, Any
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import Session
+
 from backend.scrapers.stores.target_scraper import run_target_scraper
 from backend.scrapers.stores.hannaford_scraper import HannafordSeleniumScraper
 from backend.scrapers.stores.aldi_scraper import AldiScraper
-from process_products import process_products, STORE_INFO
+from .process_products import process_products, STORE_INFO
 
 
 # ============================================================
@@ -19,27 +22,44 @@ DATABASE_URL = os.getenv(
     "postgresql://postgres:postgres@localhost:5432/shopsmart"
 )
 
+app = FastAPI()
+
+# Global health flag
+INITIAL_SCRAPE_COMPLETE = False
+
 
 # ============================================================
-# SCRAPER RUNNER
+# HEALTH ENDPOINT
+# ============================================================
+
+@app.get("/health")
+def health(response: Response):
+    """
+    Returns 200 only after initial scrape completes.
+    """
+    if not INITIAL_SCRAPE_COMPLETE:
+        response.status_code = status.HTTP_503_SERVICE_UNAVAILABLE
+        return {"ok": False, "status": "booting", "detail": "Initial scrape in progress"}
+    return {"ok": True, "status": "ready"}
+
+
+# ============================================================
+# SCRAPER LOGIC
 # ============================================================
 
 async def run_full_scrape() -> Dict[str, Any]:
-    """
-    Runs Target, Hannaford, and Aldi scrapers.
-    Returns dict with results.
-    """
+    """Runs scrapers for Target, Hannaford, and Aldi."""
 
     print("\n====================================")
     print("   🛒 Starting Weekly Scrape Job")
     print("====================================\n")
 
-    # TARGET
+    # ---------- TARGET ----------
     print("▶ Scraping Target...")
     target_products = run_target_scraper("bananas")
     print(f"   ✓ Target products: {len(target_products)}\n")
 
-    # HANNAFORD
+    # ---------- HANNAFORD ----------
     print("▶ Scraping Hannaford...")
     hannaford_scraper = HannafordSeleniumScraper(headless=True)
     hannaford_products = hannaford_scraper.scrape_category_page(
@@ -48,7 +68,7 @@ async def run_full_scrape() -> Dict[str, Any]:
     hannaford_scraper.cleanup()
     print(f"   ✓ Hannaford products: {len(hannaford_products)}\n")
 
-    # ALDI
+    # ---------- ALDI ----------
     print("▶ Scraping Aldi...")
     aldi = AldiScraper(delay=0.3)
     aldi_products = aldi.scrape_products(limit=150)
@@ -62,31 +82,19 @@ async def run_full_scrape() -> Dict[str, Any]:
 
 
 # ============================================================
-# DATABASE HELPERS
+# DB HELPERS
 # ============================================================
 
 def truncate_tables(session: Session):
-    """Clears old rows safely using FK cascading."""
     print("🧹 Truncating tables...")
-
     tables = ["ItemPrice", "Item", "Store", "Address"]
-
     for t in tables:
         session.execute(text(f'TRUNCATE "{t}" CASCADE;'))
-
     session.commit()
     print("   ✓ Tables truncated.\n")
 
 
-def insert_all_data(
-    session: Session,
-    stores: List[Dict[str, Any]],
-    addresses: List[Dict[str, Any]],
-    items: List[Dict[str, Any]],
-    item_prices: List[Dict[str, Any]]
-):
-    """Insert addresses, stores, items, and prices."""
-
+def insert_all_data(session: Session, stores, addresses, items, item_prices):
     print("📝 Inserting Addresses...")
     for a in addresses:
         session.execute(text("""
@@ -140,83 +148,82 @@ def insert_all_data(
 # ============================================================
 
 async def scrape_and_update_db():
-    """Full weekly run: scrape all stores → process → refresh DB."""
+    """Complete scrape and DB refresh."""
+    global INITIAL_SCRAPE_COMPLETE
 
-    result = await run_full_scrape()
+    try:
+        result = await run_full_scrape()
 
-    # Build stores & addresses
-    addresses = []
-    stores = []
-    store_mapping = {}
+        addresses = []
+        stores = []
+        store_mapping = {}
 
-    print("🏗 Building store/address entries...")
+        print("🏗 Building store/address entries...")
 
-    for store_info in STORE_INFO:
-        addr_id = str(uuid.uuid4())
-        store_id = str(uuid.uuid4())
+        for store_info in STORE_INFO:
+            addr_id = str(uuid.uuid4())
+            store_id = str(uuid.uuid4())
 
-        addresses.append({
-            "id": addr_id,
-            "street": store_info["street"],
-            "city": store_info["city"],
-            "state": store_info["state"],
-            "postal_code": store_info["postal_code"],
-            "latitude": store_info["latitude"],
-            "longitude": store_info["longitude"]
-        })
+            addresses.append({
+                "id": addr_id,
+                "street": store_info["street"],
+                "city": store_info["city"],
+                "state": store_info["state"],
+                "postal_code": store_info["postal_code"],
+                "latitude": store_info["latitude"],
+                "longitude": store_info["longitude"]
+            })
 
-        stores.append({
-            "id": store_id,
-            "name": store_info["name"],
-            "addressId": addr_id
-        })
+            stores.append({
+                "id": store_id,
+                "name": store_info["name"],
+                "addressId": addr_id
+            })
 
-        store_mapping[store_info["name"].lower()] = store_id
+            store_mapping[store_info["name"].lower()] = store_id
 
-    print("⚙ Processing products...")
+        print("⚙ Processing products...")
 
-    all_items = []
-    all_prices = []
+        all_items = []
+        all_prices = []
 
-    # Aldi
-    aldi_items, aldi_prices = process_products(result["aldi"], store_mapping["aldi"])
-    all_items.extend(aldi_items)
-    all_prices.extend(aldi_prices)
+        aldi_items, aldi_prices = process_products(result["aldi"], store_mapping["aldi"])
+        all_items.extend(aldi_items)
+        all_prices.extend(aldi_prices)
 
-    # Hannaford
-    h_items, h_prices = process_products(result["hannaford"], store_mapping["hannafords"])
-    all_items.extend(h_items)
-    all_prices.extend(h_prices)
+        h_items, h_prices = process_products(result["hannaford"], store_mapping["hannafords"])
+        all_items.extend(h_items)
+        all_prices.extend(h_prices)
 
-    # Target
-    t_items, t_prices = process_products(result["target"], store_mapping["target"])
-    all_items.extend(t_items)
-    all_prices.extend(t_prices)
+        t_items, t_prices = process_products(result["target"], store_mapping["target"])
+        all_items.extend(t_items)
+        all_prices.extend(t_prices)
 
-    print(f"📦 Total Items: {len(all_items)}")
-    print(f"💲 Total Prices: {len(all_prices)}\n")
+        print(f"📦 Total Items: {len(all_items)}")
+        print(f"💲 Total Prices: {len(all_prices)}\n")
 
-    # DB Connection
-    print("🔌 Connecting to DB...")
-    engine = create_engine(DATABASE_URL)
-    session = Session(engine)
+        engine = create_engine(DATABASE_URL)
+        session = Session(engine)
 
-    # Refresh Tables
-    truncate_tables(session)
-    insert_all_data(session, stores, addresses, all_items, all_prices)
+        truncate_tables(session)
+        insert_all_data(session, stores, addresses, all_items, all_prices)
 
-    session.close()
-    print("🎉 Weekly scrape + DB refresh COMPLETE.\n")
+        session.close()
+        print("🎉 Weekly scrape + DB refresh COMPLETE.")
+        
+        INITIAL_SCRAPE_COMPLETE = True
+        print("✅ System is now HEALTHY.")
+
+    except Exception as e:
+        print(f"❌ Error during scrape/update: {e}")
 
 
 # ============================================================
-# APScheduler — Weekly Cron Trigger
+# SCHEDULER
 # ============================================================
 
 def start_weekly_scheduler():
     scheduler = AsyncIOScheduler()
-
-    # Every Monday at 2 AM
     scheduler.add_job(
         scrape_and_update_db,
         trigger="cron",
@@ -224,29 +231,33 @@ def start_weekly_scheduler():
         hour=2,
         minute=0,
     )
-
     print("⏰ APScheduler: Weekly job scheduled (Mondays @ 02:00)")
     scheduler.start()
 
 
 # ============================================================
-# MAIN ENTRY POINT
+# NON-BLOCKING STARTUP FLOW (CRITICAL FIX)
+# ============================================================
+
+async def run_initial_scrape():
+    """Runs initial scrape AFTER the API is ready."""
+    await asyncio.sleep(1)
+    print("🚀 Running initial scrape in background...")
+    await scrape_and_update_db()
+
+
+@app.on_event("startup")
+async def startup_event():
+    """Start API → scheduler → run scraper in background."""
+    start_weekly_scheduler()
+
+    asyncio.create_task(run_initial_scrape())
+    print("🟢 Startup event complete — API is now ready.")
+
+
+# ============================================================
+# MAIN ENTRY
 # ============================================================
 
 if __name__ == "__main__":
-    """
-    Running this file does:
-    - Starts APScheduler weekly job
-    - Immediately runs the scrape once
-    - Keeps the process alive (with asyncio Event)
-    """
-
-    # Start weekly cron job
-    start_weekly_scheduler()
-
-    # Run immediately on startup
-    asyncio.run(scrape_and_update_db())
-
-    # Keep process alive
-    print("🟢 Scheduler running. Waiting for weekly jobs...")
-    asyncio.get_event_loop().run_forever()
+    uvicorn.run(app, host="0.0.0.0", port=8000)
