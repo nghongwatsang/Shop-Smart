@@ -4,61 +4,66 @@
 FROM python:3.11-slim
 
 # ───────────────────────────────────────────────
-# SYSTEM DEPS (Chrome, ChromeDriver, Selenium reqs)
+# SYSTEM DEPS FOR CHROME + CHROMEDRIVER
 # ───────────────────────────────────────────────
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     curl \
     gnupg \
     unzip \
+    jq \
     xvfb \
-    fonts-liberation \
-    libasound2 \
+    libnss3 \
     libatk-bridge2.0-0 \
     libgtk-3-0 \
-    libnss3 \
-    libxss1 \
     libgbm-dev \
     libxshmfence-dev \
-    --no-install-recommends
+    libasound2 \
+    fonts-liberation && \
+    rm -rf /var/lib/apt/lists/*
 
 # ───────────────────────────────────────────────
-# INSTALL GOOGLE CHROME (stable)
+# INSTALL GOOGLE CHROME (Stable)
 # ───────────────────────────────────────────────
-RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list' \
-    && apt-get update \
-    && apt-get install -y google-chrome-stable
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | \
+      gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg && \
+    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] \
+      http://dl.google.com/linux/chrome/deb/ stable main" \
+      > /etc/apt/sources.list.d/google-chrome.list && \
+    apt-get update && apt-get install -y google-chrome-stable && \
+    rm -rf /var/lib/apt/lists/*
 
 # ───────────────────────────────────────────────
-# INSTALL CHROMEDRIVER TO MATCH CHROME
+# INSTALL MATCHING CHROMEDRIVER (CFT Official API)
 # ───────────────────────────────────────────────
-RUN CHROME_VERSION=$(google-chrome-stable --version | sed 's/.*Chrome //;s/ .*//') && \
-    CHROMEDRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json" \
-        | grep -A 3 "\"$CHROME_VERSION\"" \
-        | grep "chromedriver_linux64" \
-        | head -n 1 \
-        | sed 's/.*"url": "//;s/".*//') && \
-    wget -O /tmp/chromedriver.zip "$CHROMEDRIVER_VERSION" && \
+# Install matching Chromedriver based on Chrome version
+RUN CHROME_MAJOR=$(google-chrome-stable --version | sed -E 's/.*Chrome ([0-9]+).*/\1/') && \
+    echo "Detected Chrome major: $CHROME_MAJOR" && \
+    JSON=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json) && \
+    DRIVER_URL=$(echo "$JSON" | jq -r ".versions[] | select(.version | startswith(\"${CHROME_MAJOR}.\")) | .downloads.chromedriver[] | select(.platform==\"linux64\") | .url" | head -n 1) && \
+    echo "Using Chromedriver URL: $DRIVER_URL" && \
+    wget -O /tmp/chromedriver.zip "$DRIVER_URL" && \
     unzip /tmp/chromedriver.zip -d /usr/local/bin && \
-    rm /tmp/chromedriver.zip && \
-    chmod +x /usr/local/bin/chromedriver
+    mv /usr/local/bin/chromedriver-linux64/chromedriver /usr/local/bin/chromedriver && \
+    rm -rf /usr/local/bin/chromedriver-linux64 && \
+    chmod +x /usr/local/bin/chromedriver && \
+    rm /tmp/chromedriver.zip
+
 
 # ───────────────────────────────────────────────
 # PYTHON ENVIRONMENT
 # ───────────────────────────────────────────────
 WORKDIR /app
 
-COPY ../requirements.txt .
-COPY ../backend app/backend
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # ───────────────────────────────────────────────
-# COPY SCRAPER CODE
+# COPY SCRAPER SOURCE CODE
 # ───────────────────────────────────────────────
-COPY . .
+COPY . backend/
 
 # ───────────────────────────────────────────────
-# DEFAULT COMMAND (run weekly scheduler)
+# DEFAULT COMMAND
 # ───────────────────────────────────────────────
 CMD ["python", "-m", "backend.scrapers.main"]

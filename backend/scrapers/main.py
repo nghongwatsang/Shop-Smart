@@ -21,6 +21,11 @@ from scrapers.utils.data_processor import (
     enhance_product_names
 )
 
+app = FastAPI()
+
+# Global health flag
+INITIAL_SCRAPE_COMPLETE = False
+
 
 def ensure_directories():
     """Create necessary output directories"""
