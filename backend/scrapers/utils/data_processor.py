@@ -185,11 +185,13 @@ def find_matches(hannaford_products: List[Dict], aldi_products: List[Dict],
     
     def products_match(p1: Dict, p2: Dict) -> bool:
         """Check if two products match"""
+        import re
+        
         brand1 = normalize_text(p1.get('brand', ''))
         brand2 = normalize_text(p2.get('brand', ''))
         
-        # Brand must match (or one is generic)
-        if brand1 != brand2 and brand1 != 'generic' and brand2 != 'generic':
+        # Brand must match exactly (no generic wildcard matching)
+        if brand1 != brand2:
             return False
         
         # Size and unit must match if both have them
@@ -206,6 +208,14 @@ def find_matches(hannaford_products: List[Dict], aldi_products: List[Dict],
         # Name matching
         name1 = normalize_text(p1.get('name', ''))
         name2 = normalize_text(p2.get('name', ''))
+        
+        # Extract numbers and percentages from names
+        numbers1 = set(re.findall(r'\d+(?:\.\d+)?%?', name1))
+        numbers2 = set(re.findall(r'\d+(?:\.\d+)?%?', name2))
+        
+        # If both have numbers/percentages, they must match exactly
+        if numbers1 and numbers2 and numbers1 != numbers2:
+            return False
         
         if name1 == name2:
             return True
