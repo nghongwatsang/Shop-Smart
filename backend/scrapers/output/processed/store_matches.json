@@ -2,38 +2,6 @@
   "three_way_matches": [
     {
       "hannaford": {
-        "brand": "Nature's Promise",
-        "name": "90% Lean Ground Beef",
-        "price": "8.99",
-        "category": "Fresh Ground Beef",
-        "size": "16",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.56
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "85% Lean Ground Beef",
-        "price": "6.59",
-        "category": "Frozen Foods",
-        "size": "16",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.41
-      },
-      "pricechopper": {
-        "brand": "Generic",
-        "name": "80% Lean Ground Beef",
-        "price": "5.99",
-        "category": "Meat",
-        "size": "16",
-        "unit": "oz",
-        "source": "Price Chopper",
-        "unit_price": 0.37
-      }
-    },
-    {
-      "hannaford": {
         "brand": "Generic",
         "name": "85% Lean Ground Beef",
         "price": "5.61",
@@ -55,38 +23,6 @@
       },
       "pricechopper": {
         "brand": "Generic",
-        "name": "80% Lean Ground Beef",
-        "price": "5.99",
-        "category": "Meat",
-        "size": "16",
-        "unit": "oz",
-        "source": "Price Chopper",
-        "unit_price": 0.37
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Ground Turkey 85% Lean 15% Fat",
-        "price": "4.99",
-        "category": "Ground Turkey",
-        "size": "16",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.31
-      },
-      "aldi": {
-        "brand": "Kirkwood",
-        "name": "99% Lean Ground Turkey",
-        "price": "5.49",
-        "category": "Fresh Meat Seafood",
-        "size": "16",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.34
-      },
-      "pricechopper": {
-        "brand": "Generic",
         "name": "85% Lean Ground Beef",
         "price": "6.29",
         "category": "Meat",
@@ -94,230 +30,6 @@
         "unit": "oz",
         "source": "Price Chopper",
         "unit_price": 0.39
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Nature's Promise",
-        "name": "Nature's Promise Ground Turkey 85% Lean 15% Fat",
-        "price": "3.5",
-        "category": "Ground Turkey",
-        "size": "16",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.22
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "85% Lean Ground Beef",
-        "price": "6.59",
-        "category": "Frozen Foods",
-        "size": "16",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.41
-      },
-      "pricechopper": {
-        "brand": "Generic",
-        "name": "85% Lean Ground Beef",
-        "price": "6.29",
-        "category": "Meat",
-        "size": "16",
-        "unit": "oz",
-        "source": "Price Chopper",
-        "unit_price": 0.39
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Nature's Promise",
-        "name": "85% Lean Ground Beef",
-        "price": "7.99",
-        "category": "Fresh Ground Beef",
-        "size": "16",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.5
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "85% Lean Ground Beef",
-        "price": "6.59",
-        "category": "Frozen Foods",
-        "size": "16",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.41
-      },
-      "pricechopper": {
-        "brand": "Generic",
-        "name": "80% Lean Ground Beef",
-        "price": "5.99",
-        "category": "Meat",
-        "size": "16",
-        "unit": "oz",
-        "source": "Price Chopper",
-        "unit_price": 0.37
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Oakhurst",
-        "name": "Skim Milk",
-        "price": "4.91",
-        "category": "Fat Free Skim Milk Gallon",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Hannaford",
-        "unit_price": 4.91
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Skim Milk",
-        "price": "3.79",
-        "category": "Dairy",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Aldi",
-        "unit_price": 3.79
-      },
-      "pricechopper": {
-        "brand": "Generic",
-        "name": "Skim Milk",
-        "price": "4.19",
-        "category": "Dairy",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Price Chopper",
-        "unit_price": 4.19
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Oakhurst",
-        "name": "Whole Milk",
-        "price": "5.18",
-        "category": "Whole Milk Gallon",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Hannaford",
-        "unit_price": 5.18
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Whole Milk",
-        "price": "3.89",
-        "category": "Dairy",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Aldi",
-        "unit_price": 3.89
-      },
-      "pricechopper": {
-        "brand": "Generic",
-        "name": "Whole Milk",
-        "price": "4.29",
-        "category": "Dairy",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Price Chopper",
-        "unit_price": 4.29
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Oakhurst",
-        "name": "2% Reduced Fat Milk",
-        "price": "5.05",
-        "category": "2% Reduced Fat Milk Gallon",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Hannaford",
-        "unit_price": 5.05
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "2% Reduced Fat Milk",
-        "price": "3.89",
-        "category": "Dairy",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Aldi",
-        "unit_price": 3.89
-      },
-      "pricechopper": {
-        "brand": "Generic",
-        "name": "2% Reduced Fat Milk",
-        "price": "4.29",
-        "category": "Dairy",
-        "size": "1",
-        "unit": "gallon",
-        "source": "Price Chopper",
-        "unit_price": 4.29
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Cabot",
-        "name": "Shredded Cheddar Cheese",
-        "price": "3.39",
-        "category": "Packaged Shredded Cheddar Cheese",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.42
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Shredded Cheddar Cheese",
-        "price": "2.79",
-        "category": "Cheese",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.35
-      },
-      "pricechopper": {
-        "brand": "Generic",
-        "name": "Shredded Cheddar Cheese",
-        "price": "3.19",
-        "category": "Cheese",
-        "size": "8",
-        "unit": "oz",
-        "source": "Price Chopper",
-        "unit_price": 0.4
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Cabot",
-        "name": "Shredded Cheddar Cheese",
-        "price": "3.39",
-        "category": "Packaged Shredded Cheddar Cheese",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.42
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Shredded Cheddar Cheese",
-        "price": "2.79",
-        "category": "Cheese",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.35
-      },
-      "pricechopper": {
-        "brand": "Generic",
-        "name": "Shredded Cheddar Cheese",
-        "price": "3.19",
-        "category": "Cheese",
-        "size": "8",
-        "unit": "oz",
-        "source": "Price Chopper",
-        "unit_price": 0.4
       }
     },
     {
@@ -652,14 +364,14 @@
         "unit_price": 0.1
       },
       "aldi": {
-        "brand": "L'oven Fresh",
+        "brand": "Generic",
         "name": "White Sandwich Bread",
-        "price": "1.55",
+        "price": "7.69",
         "category": "Bakery Bread",
         "size": "20",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.08
+        "unit_price": 0.38
       },
       "pricechopper": {
         "brand": "Generic",
@@ -684,14 +396,14 @@
         "unit_price": 0.11
       },
       "aldi": {
-        "brand": "L'oven Fresh",
+        "brand": "Generic",
         "name": "Whole Wheat Bread",
-        "price": "1.55",
-        "category": "Bakery Bread",
+        "price": "1.29",
+        "category": "Bakery",
         "size": "20",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.08
+        "unit_price": 0.06
       },
       "pricechopper": {
         "brand": "Generic",
@@ -716,14 +428,14 @@
         "unit_price": 0.25
       },
       "aldi": {
-        "brand": "Simply Nature",
-        "name": "Organic Salted Butter",
-        "price": "6.85",
-        "category": "Dairy Eggs",
+        "brand": "Generic",
+        "name": "Salted Butter",
+        "price": "3.49",
+        "category": "Dairy",
         "size": "16",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.43
+        "unit_price": 0.22
       },
       "pricechopper": {
         "brand": "Generic",
@@ -876,14 +588,14 @@
         "unit_price": 0.07
       },
       "aldi": {
-        "brand": "Simply Nature",
-        "name": "Usda Organic Black Beans Can",
-        "price": "1.05",
-        "category": "Pantry Essentials",
+        "brand": "Generic",
+        "name": "Black Beans",
+        "price": "0.59",
+        "category": "Canned Goods",
         "size": "15",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.07
+        "unit_price": 0.04
       },
       "pricechopper": {
         "brand": "Generic",
@@ -1036,14 +748,14 @@
         "unit_price": 0.46
       },
       "aldi": {
-        "brand": "Generic",
+        "brand": "Doritos",
         "name": "Doritos Nacho Cheese Chips",
-        "price": "3.35",
+        "price": "4.19",
         "category": "Snacks",
         "size": "9.25",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.36
+        "unit_price": 0.45
       },
       "pricechopper": {
         "brand": "Doritos",
@@ -1100,14 +812,14 @@
         "unit_price": 0.27
       },
       "aldi": {
-        "brand": "Generic",
+        "brand": "General Mills",
         "name": "Cinnamon Toast Crunch Cereal",
-        "price": "4.85",
-        "category": "Breakfast Cereals",
+        "price": "4.39",
+        "category": "Cereal",
         "size": "16.8",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.29
+        "unit_price": 0.26
       },
       "pricechopper": {
         "brand": "General Mills",
@@ -1164,14 +876,14 @@
         "unit_price": 0.25
       },
       "aldi": {
-        "brand": "Generic",
+        "brand": "Ritz",
         "name": "Ritz Crackers",
-        "price": "3.88",
-        "category": "Aldi Finds",
+        "price": "2.99",
+        "category": "Snacks",
         "size": "13.7",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.28
+        "unit_price": 0.22
       },
       "pricechopper": {
         "brand": "Ritz",
@@ -1196,14 +908,14 @@
         "unit_price": 0.19
       },
       "aldi": {
-        "brand": "Generic",
-        "name": "Peanut Delightnatural Creamy Peanut Butter",
-        "price": "2.15",
-        "category": "Pantry Essentials",
+        "brand": "Jif",
+        "name": "Jif Creamy Peanut Butter",
+        "price": "2.49",
+        "category": "Condiments",
         "size": "16",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.13
+        "unit_price": 0.16
       },
       "pricechopper": {
         "brand": "Jif",
@@ -1548,24 +1260,24 @@
         "unit_price": 0.31
       },
       "aldi": {
-        "brand": "Generic",
+        "brand": "Kraft",
         "name": "Shredded Cheddar Cheese",
-        "price": "2.79",
+        "price": "2.99",
         "category": "Cheese",
         "size": "8",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.35
+        "unit_price": 0.37
       },
       "pricechopper": {
-        "brand": "Generic",
+        "brand": "Kraft",
         "name": "Shredded Cheddar Cheese",
-        "price": "3.19",
+        "price": "3.49",
         "category": "Cheese",
         "size": "8",
         "unit": "oz",
         "source": "Price Chopper",
-        "unit_price": 0.4
+        "unit_price": 0.44
       }
     },
     {
@@ -1580,14 +1292,14 @@
         "unit_price": 0.31
       },
       "aldi": {
-        "brand": "Never Any!",
-        "name": "Antibiotic Free 80% Lean Ground Pork",
-        "price": "3.19",
-        "category": "Fresh Meat Seafood",
+        "brand": "Generic",
+        "name": "80% Lean Ground Beef",
+        "price": "5.49",
+        "category": "Meat",
         "size": "16",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.2
+        "unit_price": 0.34
       },
       "pricechopper": {
         "brand": "Generic",
@@ -1623,13 +1335,13 @@
       },
       "pricechopper": {
         "brand": "Generic",
-        "name": "80% Lean Ground Beef",
-        "price": "5.99",
+        "name": "85% Lean Ground Beef",
+        "price": "6.29",
         "category": "Meat",
         "size": "16",
         "unit": "oz",
         "source": "Price Chopper",
-        "unit_price": 0.37
+        "unit_price": 0.39
       }
     },
     {
@@ -1645,93 +1357,27 @@
       },
       "aldi": {
         "brand": "Generic",
-        "name": "85% Lean Ground Beef",
-        "price": "6.59",
-        "category": "Frozen Foods",
+        "name": "90% Lean Ground Beef",
+        "price": "6.99",
+        "category": "Meat",
         "size": "16",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.41
+        "unit_price": 0.44
       },
       "pricechopper": {
         "brand": "Generic",
-        "name": "80% Lean Ground Beef",
-        "price": "5.99",
+        "name": "90% Lean Ground Beef",
+        "price": "7.29",
         "category": "Meat",
         "size": "16",
         "unit": "oz",
         "source": "Price Chopper",
-        "unit_price": 0.37
+        "unit_price": 0.46
       }
     }
   ],
   "hannaford_aldi_matches": [
-    {
-      "hannaford": {
-        "brand": "Hillshire Farm",
-        "name": "Hillshire Farm Lower Sodium Oven Roasted Turkey Breast Sliced",
-        "price": "5.49",
-        "category": "Packaged Lunch Meat Turkey",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.69
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Aldideli Sliced Oven Turkey Breast",
-        "price": "3.19",
-        "category": "Deli",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.4
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Cabot",
-        "name": "Cabot Creamery Aged Vermont Seriously Sharp White Cheddar Cheese Block",
-        "price": "3.29",
-        "category": "Packaged Block Cheddar Cheese",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.41
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Cabotseriously Sharp White Cheddar",
-        "price": "4.19",
-        "category": "Dairy Eggs",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.52
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Cabot",
-        "name": "Cabot Creamery Aged Vermont Extra Sharp White Cheddar Cheese Block",
-        "price": "3.29",
-        "category": "Packaged Block Cheddar Cheese",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.41
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Cabotseriously Sharp White Cheddar",
-        "price": "4.19",
-        "category": "Dairy Eggs",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.52
-      }
-    },
     {
       "hannaford": {
         "brand": "Generic",
@@ -1744,53 +1390,9 @@
         "unit_price": 0.24
       },
       "aldi": {
-        "brand": "Happy Farms",
-        "name": "Cream Cheese",
-        "price": "1.65",
-        "category": "Bbq Picnic",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.21
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Land O Lakes",
-        "name": "Land O Lakes Sharp White & Medium Cheddar Cheese Cubes",
+        "brand": "Generic",
+        "name": "Philadelphiaoriginal Cream Cheese Bar",
         "price": "3.29",
-        "category": "Cheese Cubes",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.41
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Cabotseriously Sharp White Cheddar",
-        "price": "4.19",
-        "category": "Dairy Eggs",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.52
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Grated Aged Parmesan Cheese",
-        "price": "2.19",
-        "category": "Packaged Parmesan & Romano Cheese Grated",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.27
-      },
-      "aldi": {
-        "brand": "Reggano",
-        "name": "Grated Parmesan And Romano Cheese",
-        "price": "3.25",
         "category": "Dairy Eggs",
         "size": "8",
         "unit": "oz",
@@ -1810,14 +1412,14 @@
         "unit_price": 0.25
       },
       "aldi": {
-        "brand": "Happy Farms",
-        "name": "Wisconsin Extra Sharp Cheddar Cheese Block",
-        "price": "1.99",
+        "brand": "Generic",
+        "name": "Cabotseriously Sharp White Cheddar",
+        "price": "4.19",
         "category": "Dairy Eggs",
         "size": "8",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.25
+        "unit_price": 0.52
       }
     },
     {
@@ -1832,310 +1434,23 @@
         "unit_price": 0.28
       },
       "aldi": {
-        "brand": "Happy Farms",
-        "name": "Sharp Cheddar Cheese Block",
-        "price": "1.99",
+        "brand": "Generic",
+        "name": "Cabotseriously Sharp White Cheddar",
+        "price": "4.19",
         "category": "Dairy Eggs",
         "size": "8",
         "unit": "oz",
         "source": "Aldi",
-        "unit_price": 0.25
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Non Fat Plain Greek Yogurt",
-        "price": "3.59",
-        "category": "Plain Greek Yogurt Large Tub",
-        "size": "32",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.11
-      },
-      "aldi": {
-        "brand": "Friendly Farms",
-        "name": "Nonfat Plain Greek Yogurt",
-        "price": "3.55",
-        "category": "Healthy Living",
-        "size": "32",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.11
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Low Fat Vanilla Yogurt",
-        "price": "2.59",
-        "category": "Vanilla Traditional Yogurt Large Tub",
-        "size": "32",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.08
-      },
-      "aldi": {
-        "brand": "Friendly Farms",
-        "name": "Low Sugar Vanilla Greek Yogurt",
-        "price": "5.49",
-        "category": "Healthy Living",
-        "size": "32",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.17
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Cheerios",
-        "name": "Cheerios Honey Nut Cereal",
-        "price": "4.99",
-        "category": "Family Favorites Cereal",
-        "size": "15.4",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.32
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Cheerios Honey Nut Cereal",
-        "price": "4.45",
-        "category": "Breakfast Cereals",
-        "size": "15.4",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.29
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Cinnamon Toast Crunch",
-        "name": "Cinnamon Toast Crunch Cereal",
-        "price": "4.99",
-        "category": "Kids' Cereal",
-        "size": "16.8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.3
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "Cinnamon Toast Crunch Cereal",
-        "price": "4.85",
-        "category": "Breakfast Cereals",
-        "size": "16.8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.29
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Crunchy Granola Raisin Bran Cereal",
-        "price": "2.79",
-        "category": "Family Favorites Cereal",
-        "size": "18.2",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.15
-      },
-      "aldi": {
-        "brand": "Millville",
-        "name": "Crunchy Granola Raisin Bran Crunch",
-        "price": "2.99",
-        "category": "Breakfast Cereals",
-        "size": "18.2",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.16
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Crispy Rice Cereal",
-        "price": "1.99",
-        "category": "Family Favorites Cereal",
-        "size": "12",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.17
-      },
-      "aldi": {
-        "brand": "Millville",
-        "name": "Crispy Rice Cereal",
-        "price": "2.15",
-        "category": "Breakfast Cereals",
-        "size": "12",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.18
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Essentially You Cereal With Red Berries",
-        "price": "2.72",
-        "category": "Family Favorites Cereal",
-        "size": "11.2",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.24
-      },
-      "aldi": {
-        "brand": "Fit & Active",
-        "name": "Vitality Cereal With Red Berries",
-        "price": "2.99",
-        "category": "Healthy Living",
-        "size": "11.2",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.27
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Kettle Cooked Potato Chips",
-        "price": "2",
-        "category": "Plain & Regular Potato Chips",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.25
-      },
-      "aldi": {
-        "brand": "Clancy's",
-        "name": "Kettle Chips",
-        "price": "2.15",
-        "category": "Snacks",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.27
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Salt & Malt Vinegar Kettle Cooked Potato Chips",
-        "price": "2",
-        "category": "Salt & Vinegar Potato Chips",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.25
-      },
-      "aldi": {
-        "brand": "Clancy's",
-        "name": "Kettle Chips",
-        "price": "2.15",
-        "category": "Snacks",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.27
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Bbq Kettle Cooked Potato Chips",
-        "price": "2",
-        "category": "Barbecue Potato Chips",
-        "size": "8",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.25
-      },
-      "aldi": {
-        "brand": "Clancy's",
-        "name": "Kettle Chips",
-        "price": "2.15",
-        "category": "Snacks",
-        "size": "8",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.27
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "M&M's",
-        "name": "M&m's Milk Chocolate Candy Minis Sharing Size",
-        "price": "5.49",
-        "category": "Packaged Chocolate Candy",
-        "size": "9.4",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.58
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "M&m'sminis Milk Chocolate Candy Sharing Size Bag",
-        "price": "5.45",
-        "category": "Snacks",
-        "size": "9.4",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.58
-      }
-    },
-    {
-      "hannaford": {
-        "brand": "M&M's",
-        "name": "M&m's Peanut Butter Milk Chocolate Candy Sharing Size",
-        "price": "5.49",
-        "category": "Packaged Chocolate Candy",
-        "size": "9",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.61
-      },
-      "aldi": {
-        "brand": "Generic",
-        "name": "M&m'speanut Butter Milk Chocolate Candy Sharing Size Bag",
-        "price": "5.45",
-        "category": "Snacks",
-        "size": "9",
-        "unit": "oz",
-        "source": "Aldi",
-        "unit_price": 0.61
+        "unit_price": 0.52
       }
     }
   ],
-  "hannaford_pricechopper_matches": [
-    {
-      "hannaford": {
-        "brand": "Generic",
-        "name": "Whole Roasted Red Peppers",
-        "price": "2.79",
-        "category": "Canned Roasted Red Peppers",
-        "size": "12",
-        "unit": "oz",
-        "source": "Hannaford",
-        "unit_price": 0.23
-      },
-      "pricechopper": {
-        "brand": "pics",
-        "name": "Pics Roasted Sliced Red Peppers",
-        "price": "3.09",
-        "category": "produce",
-        "size": "12",
-        "unit": "oz",
-        "source": "Price Chopper",
-        "unit_price": 0.26
-      }
-    }
-  ],
+  "hannaford_pricechopper_matches": [],
   "metadata": {
-    "analyzed_at": "2025-12-02T23:41:24.575046",
+    "analyzed_at": "2025-12-05T15:43:46.595007",
     "total_hannaford": 580,
     "total_aldi": 3006,
     "total_pricechopper": 463,
-    "match_rate": "12.6%"
+    "match_rate": "7.9%"
   }
 }
