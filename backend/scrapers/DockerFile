@@ -66,4 +66,4 @@ COPY . backend/
 # ───────────────────────────────────────────────
 # DEFAULT COMMAND
 # ───────────────────────────────────────────────
-CMD ["python", "-m", "backend.scrapers.main"]
+CMD ["python", "-m", "backend.scrapers.scrape"]

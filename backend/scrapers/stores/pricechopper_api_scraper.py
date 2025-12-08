@@ -13,8 +13,8 @@ import re
 from urllib.parse import urlencode
 from typing import List, Dict, Any, Optional
 
-from scrapers.core import Product, ScraperResult
-from scrapers.utils import clean_product_data, validate_product
+from backend.scrapers.core import Product, ScraperResult
+from backend.scrapers.utils import clean_product_data, validate_product
 
 class PriceChopperAPIScraper:
     """Scraper for Price Chopper using their GraphQL API."""
