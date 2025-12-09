@@ -26,4 +26,4 @@ EXPOSE 3003
 
 # Command to run the application
 # Command to run the application using gunicorn
-CMD ["uvicorn", "--host", "0.0.0.0", "--port", "3003", "run:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:3003", "run:app"]

@@ -68,6 +68,6 @@ typing_extensions==4.15.0
 blinker==1.9.0
 apscheduler
 fastapi
-uvicorn
+gunicorn
 webdriver-manager
 psycopg2-binary
