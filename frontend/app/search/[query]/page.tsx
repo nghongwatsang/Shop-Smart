@@ -67,8 +67,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             setLoading(false);
         }
         getResults();
-        console.log(results);
-    }, [query]);
+    }, [query, results]);
 
     function inCart (product: {name: string, brand: string}) {
         return shoppingList.find(item => item.name === product.name && item.brand === product.brand) ? 'bg-green-400 dark:bg-green-700' : '';
