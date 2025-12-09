@@ -66,7 +66,6 @@ class CartPricingService:
 
             # ---- Database lookup ----
             filters = []
-            print(name, brand, size, unit)
             # name must be partial match
             filters.append(Item.name.ilike(f"%{name}%"))
 
@@ -83,8 +82,6 @@ class CartPricingService:
                     filters.append(Item.size == float(size))
                 except:
                     filters.append(Item.size == size)
-
-            print("Filters:", filters)
 
             query = self.db.query(Item).filter(*filters)
             db_item = query.first()

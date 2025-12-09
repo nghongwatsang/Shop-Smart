@@ -34,7 +34,6 @@ def search_items():
                 )
             )
             .order_by(ItemPrice.price.asc())
-            .order_by(ItemPrice.price.asc())
         )
 
         # Pagination

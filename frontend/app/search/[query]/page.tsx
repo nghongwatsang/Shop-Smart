@@ -51,7 +51,6 @@ export default function ProductPage({ params }: ProductPageProps) {
             try {
                 const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
                 const res = await fetch(`${baseUrl}/api/v1/search?query=${query}`);
-                console.log(res);
                 if (!res.ok) {
                     console.error("Error fetching query results:", res.statusText);
                     setResults([]);
