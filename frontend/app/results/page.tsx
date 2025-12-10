@@ -8,8 +8,6 @@ import {
 } from "@/components/ui/accordion";
 import { useRouter } from "next/navigation";
 import GoBackButton from "@/components/back-button";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertCircle } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGlobal } from "@/app/context/GlobalContext";
 import { CartItem } from "@/types/CartItem";
@@ -22,22 +20,12 @@ export default function ResultsPage() {
   const { shoppingList, activeStores } = useGlobal();
 
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!navigator.geolocation) {
-      setError("Geolocation is not supported by your browser.");
-      return;
-    }
-
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setLocation({ lat: pos.coords.latitude, lon: pos.coords.longitude });
       },
-      (err) => {
-        if (err.code === err.PERMISSION_DENIED) setError("Location access denied.");
-        else setError("Unable to retrieve location.");
-      }
     );
   }, []);
 
@@ -136,26 +124,6 @@ export default function ResultsPage() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-    );
-  }
-
-  // Error state
-  if (error) {
-    return (
-      <section className="flex flex-col items-center justify-center h-screen w-screen p-4">
-        <div className="w-full max-w-md">
-          <Alert variant="destructive">
-            <AlertCircle className="h-4 w-4" />
-            <AlertTitle>Error</AlertTitle>
-            <AlertDescription>
-              {error}
-            </AlertDescription>
-          </Alert>
-          <div className="mt-4">
-            <GoBackButton router={router} />
-          </div>
         </div>
       </section>
     );
