@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import Cookies from "js-cookie";
 import { CartItem } from "@/types/CartItem";
 import { Store } from "@/types/Store";
 
@@ -22,17 +23,13 @@ export function GlobalProvider({ children }: { children: ReactNode }) {
 
   // Load saved data on mount
   useEffect(() => {
-    const savedList = localStorage.getItem("shoppingList");
-    const savedStores = localStorage.getItem("stores");
+    const savedList = Cookies.get("shoppingList");
+    const savedStores = Cookies.get("stores");
 
-    if (savedList) {
-      setShoppingList(JSON.parse(savedList));
-    }
-
+    if (savedList) setShoppingList(JSON.parse(savedList));
     if (savedStores) {
       setStores(JSON.parse(savedStores));
     } else {
-      // Default stores (if nothing is saved yet)
       setStores([
         { id: 1, name: "Aldi", logo_path: "/Aldi-logo.png", active: false },
         { id: 2, name: "Hannaford", logo_path: "/hannafords.svg", active: false },
@@ -43,12 +40,12 @@ export function GlobalProvider({ children }: { children: ReactNode }) {
 
   // Save shoppingList persistently
   useEffect(() => {
-    localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+    Cookies.set("shoppingList", JSON.stringify(shoppingList), { expires: 7 }); // expires in 7 days
   }, [shoppingList]);
 
   // Save stores persistently
   useEffect(() => {
-    localStorage.setItem("stores", JSON.stringify(stores));
+    Cookies.set("stores", JSON.stringify(stores), { expires: 7 });
   }, [stores]);
 
   // Update active stores when store activity changes

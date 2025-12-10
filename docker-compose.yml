@@ -10,8 +10,6 @@ services:
       POSTGRES_DB: shopsmart
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-    ports:
-      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./docker/postgres/schema.sql:/docker-entrypoint-initdb.d/schema.sql
@@ -37,9 +35,6 @@ services:
       context: ./backend
       dockerfile: scrapers/DockerFile
     restart: always
-    ports:
-      - "8000:8000"
-
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 10s
@@ -50,10 +45,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-
     environment:
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/shopsmart
-
     networks:
       - shopsmart-net
 
@@ -76,13 +69,8 @@ services:
         condition: service_healthy
       scraper:
         condition: service_healthy
-
     environment:
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/shopsmart
-
-    ports:
-      - "3003:3003"
-
     networks:
       - shopsmart-net
     
@@ -97,7 +85,7 @@ services:
       backend:
         condition: service_started
     environment:
-      NEXT_PUBLIC_API_URL: "http://backend:3003"
+      NEXT_PUBLIC_API_URL: "http://frontend:3000/api"
     networks:
       - shopsmart-net
 

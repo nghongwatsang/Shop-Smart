@@ -70,7 +70,6 @@ export default function ResultsPage() {
   const fetchResults = useCallback(async () => {
 
     const listResults = await getResults(shoppingList, activeStores);
-    console.log("List Results:", listResults);
     const newResults = [];
     for (const store of activeStores) {
 
