@@ -42,14 +42,12 @@ export default function ResultsPage() {
   }, []);
 
   async function getDistance(lat1: number, lon1: number, storeName: string) {
-    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-    return await fetch(`${baseUrl}/api/v1/route?start_lat=${lat1}&start_lng=${lon1}&store_name=${storeName}`)
+    return await fetch(`/api/v1/route?start_lat=${lat1}&start_lng=${lon1}&store_name=${storeName}`)
     .then(res => res.json());
   }
 
   async function getResults(shoppingList: CartItem[], activeStores: Store[]) {
-    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-    return await fetch(`${baseUrl}/api/v1/results/`, {
+    return await fetch(`/api/v1/results/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
