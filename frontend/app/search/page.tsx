@@ -22,8 +22,8 @@ export default function SearchPage() {
     }
 
     async function getCategories() {
-        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-        return await fetch(`${baseUrl}/api/v1/categories`)
+        {/*const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';*/}
+        return await fetch(`/api/v1/categories`)
         .then(res => res.json());
     }
 
