@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,7 +9,7 @@ import { useGlobal } from "./context/GlobalContext";
 
 export default function Home() {
 
-  const {stores, setStores} = useGlobal();
+  const { stores, setStores } = useGlobal();
   const { setOpen } = useSidebar()
 
   function changeStore(store: Store) {
@@ -24,12 +24,12 @@ export default function Home() {
   function activeStores() {
     return stores.filter((store) => store.active);
   }
-  
-  return(
+
+  return (
     <div className="flex flex-col w-screen h-screen items-center justify-center p-10">
-      
+
       <div className="flex flex-col items-center pb-10">
-        
+
         <div>
           <Image src="/LOGO-transparent.png" alt="Logo" width={300} height={300} />
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
         </Card>
       </div>
 
-      {activeStores().length > 0 && 
+      {activeStores().length > 0 &&
         <div className="pt-10">
           <Link href="/search">
             <Button onClick={() => setOpen(true)}>Start Saving!</Button>
@@ -64,7 +64,7 @@ export default function Home() {
         </div>
       }
 
-      {activeStores().length == 0 && 
+      {activeStores().length == 0 &&
         <div className="pt-10">
           <Button className="bg-gray-500" variant={"ghost"}>Start Saving!</Button>
         </div>

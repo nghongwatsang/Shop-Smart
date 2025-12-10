@@ -1,23 +1,109 @@
-version: '3.8'
-
 services:
-  db:
-    image: postgres:15-alpine
+  # ─────────────────────────────────────────────
+  # POSTGRES DATABASE
+  # ─────────────────────────────────────────────
+  postgres:
+    image: postgres:15
+    container_name: shopsmart-postgres
     restart: always
     environment:
-      POSTGRES_USER: shopuser
-      POSTGRES_PASSWORD: shoppass
-      POSTGRES_DB: shopdb
+      POSTGRES_DB: shopsmart
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    networks:
+      - shopsmart-net
+
+    # HEALTH CHECK — ensures DB is ready
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U shopuser -d shopdb"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d shopsmart"]
       interval: 5s
       timeout: 5s
-      retries: 5
+      retries: 10
+      start_period: 10s
 
+  # ─────────────────────────────────────────────
+  # SCRAPER WORKER (runs AFTER Postgres healthy)
+  # Located at /backend/scraper
+  # ─────────────────────────────────────────────
+  scraper:
+    platform: linux/amd64
+    container_name: shopsmart-scraper
+    build:
+      context: ./backend
+      dockerfile: scrapers/DockerFile
+    restart: always
+    ports:
+      - "8000:8000"
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      start_period: 180s
+
+    # IMPORTANT: Wait for Postgres to be healthy
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/shopsmart
+
+    networks:
+      - shopsmart-net
+
+  # ─────────────────────────────────────────────
+  # FLASK BACKEND API (runs AFTER scraper starts)
+  # Located at /backend
+  # ─────────────────────────────────────────────
+  backend:
+    container_name: shopsmart-backend
+    build:
+      context: ./backend              # ROOT → /backend
+      dockerfile: Dockerfile
+    restart: always
+
+    # IMPORTANT:
+    # (1) Wait for psql healthy
+    # (2) Wait for scraper container to start
+    depends_on:
+      postgres:
+        condition: service_healthy
+      scraper:
+        condition: service_healthy
+
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/shopsmart
+
+    ports:
+      - "3003:3003"
+
+    networks:
+      - shopsmart-net
+    
+  frontend:
+    container_name: shopsmart-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_started
+    environment:
+      NEXT_PUBLIC_API_URL: "http://backend:3003"
+    networks:
+      - shopsmart-net
 
 volumes:
-  postgres_data:
+  pgdata:
+
+networks:
+  shopsmart-net:
+    driver: bridge
