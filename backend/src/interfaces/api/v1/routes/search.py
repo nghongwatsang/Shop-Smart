@@ -20,7 +20,7 @@ def search_items():
 
         page = max(1, int(request.args.get('page', 1)))
         per_page = min(100, max(1, int(request.args.get('per_page', 20))))
-        pattern = f"%{query}%"
+        pattern = f"%{query.strip('\"')}%"
         
         base_query = (
             db.query(Item.name, Item.brand, Item.size, Item.unit, ItemPrice.price, Store.name.label("store_name"))

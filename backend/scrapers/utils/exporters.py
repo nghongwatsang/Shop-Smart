@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import List, Optional
 from datetime import datetime
 
-from scrapers.core import Product, ScraperResult
+from backend.scrapers.core import Product, ScraperResult
 
 
 def save_to_json(

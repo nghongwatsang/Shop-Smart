@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.13-slim
 
 WORKDIR /app
 
@@ -26,4 +26,4 @@ EXPOSE 3003
 
 # Command to run the application
 # Command to run the application using gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:3003", "run:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:3003", "run:app"]
