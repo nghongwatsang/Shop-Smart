@@ -35,8 +35,8 @@ export function GlobalProvider({ children }: { children: ReactNode }) {
       // Default stores (if nothing is saved yet)
       setStores([
         { id: 1, name: "Aldi", logo_path: "/Aldi-logo.png", active: false },
-        { id: 2, name: "Hannafords", logo_path: "/hannafords.svg", active: false },
-        { id: 3, name: "Target", logo_path: "/target.png", active: false },
+        { id: 2, name: "Hannaford", logo_path: "/hannafords.svg", active: false },
+        { id: 3, name: "Price Chopper", logo_path: "/market32.png", active: false },
       ]);
     }
   }, []);

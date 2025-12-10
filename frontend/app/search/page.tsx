@@ -16,7 +16,6 @@ export default function SearchPage() {
     const [categories, setCategories] = useState<string[]>([]);
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        console.log("Test")
         e.preventDefault();
         if (!query.trim()) return; // avoid empty search
         router.push(`/search/${encodeURIComponent(query.trim())}`);
@@ -31,6 +30,10 @@ export default function SearchPage() {
     useEffect(() => {
         const fetchCategories = async () => {
             const data = await getCategories();
+            if (data["errors"]) {
+                console.error("Error fetching categories:", data["errors"]);
+                return;
+            }
             setCategories(data["categories"]);
         }
         fetchCategories();
@@ -61,15 +64,17 @@ export default function SearchPage() {
                         </Button>
                     </form>
                     <div className="flex flex-wrap gap-2 w-3/5 justify-center">
-                        {categories.map((category, index) => (
-                            <Link href={`/search/${category}`} key={index}>
-                                <Card className="w-40 h-20 hover:scale-110 transition-all cursor-pointer bg-gray-50 dark:bg-gray-700">
-                                    <CardContent className="flex h-full items-center justify-center">
-                                        <div>{category}</div>
-                                    </CardContent>
-                                </Card>
-                            </Link>
-                        ))}
+                        {categories !== undefined ?
+                            categories.map((category, index) => (
+                                <Link href={`/search/${category}`} key={index}>
+                                    <Card className="w-40 h-20 hover:scale-110 transition-all cursor-pointer bg-gray-50 dark:bg-gray-700 text-sm">
+                                        <CardContent className="flex h-full items-center justify-center truncate text-ellipsis">
+                                            <div>{category}</div>
+                                        </CardContent>
+                                    </Card>
+                                </Link>
+                        )) :
+                            <div className="pt-10">No categories found.</div>}
                     </div>
                 </section>
             </section>

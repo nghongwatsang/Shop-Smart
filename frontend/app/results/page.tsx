@@ -78,7 +78,9 @@ export default function ResultsPage() {
       if (location) {
         setDistIsLoading(true);
         const data = await getDistance(location.lat, location.lon, store.name);
-        distance = data.data.distance_miles + " mi";
+        if (data.distance_miles !== undefined) {
+          distance = data.data.distance_miles + " mi";
+        }
       }
 
       const cost = listResults.results[store.name]?.reduce(

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Card, CardContent} from "@/components/ui/card";
 import Image from "next/image";
 import GoBackButton from "@/components/back-button";
@@ -35,41 +35,44 @@ export default function ProductPage({ params }: ProductPageProps) {
     {/* Add to cart function */}
     function changeCart (product: Product) {
         return () => {
-            const exists = shoppingList.find(item => item.name === product.name && item.brand === product.brand);
+            const exists = shoppingList.find(item => item.name === product.name && item.brand === product.brand && item.unit === product.unit && item.size === product.size);
             if (!exists) {
                 setShoppingList([...shoppingList, {name: product.name, brand: product.brand, store: product.store, size: product.size, unit: product.unit, price: product.price, quantity:1}]);
             } else {
-                setShoppingList(shoppingList.filter(item => !(item.name === product.name && item.brand === product.brand)));
+                setShoppingList(shoppingList.filter(item => !(item.name === product.name && item.brand === product.brand && item.unit === product.unit && item.size === product.size)));
             }
         }
     }
 
     {/*img, itemname, brandname, lowest_price, source*/}
-    useEffect(() => {
-        async function getResults() {
-            setLoading(true);
-            try {
-                const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-                const res = await fetch(`${baseUrl}/api/v1/search?query=${query}`);
-                if (!res.ok) {
-                    console.error("Error fetching query results:", res.statusText);
-                    setResults([]);
-                    return;
-                }
+    const fetchResults = useCallback(async () => {
+        setLoading(true);
+        try {
+            const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
+            const res = await fetch(`${baseUrl}/api/v1/search?query=${query}`);
 
-                const data = await res.json();
-                setResults(data.items.length > 0 ? data.items : []);
-            } catch (error) {
-                console.error("Error fetching query results:", error);
+            if (!res.ok) {
+                console.error("Error fetching query results:", res.statusText);
                 setResults([]);
+                return;
             }
-            setLoading(false);
-        }
-        getResults();
-    }, [query, results]);
 
-    function inCart (product: {name: string, brand: string}) {
-        return shoppingList.find(item => item.name === product.name && item.brand === product.brand) ? 'bg-green-400 dark:bg-green-700' : '';
+            const data = await res.json();
+            setResults(data.items.length > 0 ? data.items : []);
+        } catch (error) {
+            console.error("Error fetching query results:", error);
+            setResults([]);
+        }
+        setLoading(false);
+    }, [query]);
+
+    useEffect(() => {
+        fetchResults();
+        console.log(results);
+    }, [fetchResults]);
+
+    function inCart (product: {name: string, brand: string, unit: string, size: string}) {
+        return shoppingList.find(item => item.name === product.name && item.brand === product.brand && item.unit === product.unit && item.size === product.size) ? 'bg-green-400 dark:bg-green-700' : '';
     }
 
     function getImage(store: string) {
@@ -121,7 +124,11 @@ export default function ProductPage({ params }: ProductPageProps) {
                         <div className="pt-1 w-3/5" key={index}>
                             <Card className={`flex items-center justify-center w-full bg-gray-100 dark:bg-gray-700 hover:brightness-90 ${inCart(result)}`} onClick={changeCart(result)}>
                                 <section className="flex flex-row items-center justify-between w-full cursor-pointer">
-                                    <CardContent className="w-1/4 text-center">{result.name} ({result.size}{result.unit})</CardContent>
+                                    {result.size === null && result.unit === null ?
+                                        <CardContent className="w-1/4 text-center">{result.name}</CardContent>
+                                        :
+                                        <CardContent className="w-1/4 text-center">{result.name} ({result.size}{result.unit})</CardContent>
+                                    }
                                     <CardContent className="w-1/4 text-center italic">{result.brand}</CardContent>
                                     <CardContent className="w-1/4 flex justify-center items-center">{getImage(result.store)}</CardContent>
                                     <CardContent className="w-1/4 text-center">${result.price}</CardContent>
