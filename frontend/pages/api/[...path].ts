@@ -11,7 +11,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Ensure it's an array of strings
   const pathSegments = Array.isArray(pathArray) ? pathArray : [pathArray];
 
-  const backendUrl = `http://backend:3003/api/${pathSegments.join("/")}`;
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
+  const backendUrl = `${baseUrl}/api/${pathSegments.join("/")}`;
 
   try {
     const response = await fetch(backendUrl, {
