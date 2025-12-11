@@ -84,7 +84,7 @@ services:
     depends_on:
       backend:
         condition: service_started
-    enviroments:
+    environment:
       NEXT_PUBLIC_API_BASE_URL: http://backend:3003
     networks:
       - shopsmart-net
