@@ -14,12 +14,12 @@ class CartPricingService:
         errors = []
 
         # Required fields
-        item_name = cart_item.get("itemName")
+        item_name = cart_item.get("name")
         if not item_name or not isinstance(item_name, str):
             errors.append("itemName (string) is required")
 
         # Optional but must be valid type
-        brand = cart_item.get("brandName")
+        brand = cart_item.get("brand")
         if brand is not None and not isinstance(brand, str):
             errors.append("brandName must be a string")
 
@@ -66,7 +66,6 @@ class CartPricingService:
 
             # ---- Database lookup ----
             filters = []
-
             # name must be partial match
             filters.append(Item.name.ilike(f"%{name}%"))
 
@@ -80,11 +79,9 @@ class CartPricingService:
             if size:
                 # try to cast to int if DB stores size numerically
                 try:
-                    filters.append(Item.size == int(size))
+                    filters.append(Item.size == float(size))
                 except:
                     filters.append(Item.size == size)
-
-            print("Filters:", filters)
 
             query = self.db.query(Item).filter(*filters)
             db_item = query.first()
@@ -113,10 +110,10 @@ class CartPricingService:
 
             for price_row, store in prices:
                 entry = {
-                    "itemName": db_item.name,
-                    "brandName": db_item.brand,
-                    "storeName": store.name,
-                    "lowestPrice": float(price_row.price),
+                    "name": db_item.name,
+                    "brand": db_item.brand,
+                    "store": store.name,
+                    "price": float(price_row.price),
                     "size": size,
                     "unit": unit,
                     "quantity": quantity

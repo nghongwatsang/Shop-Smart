@@ -15,15 +15,15 @@ def search_items():
         query = request.args.get('query')
         if not query:
             query = ""
-
+        query = query.strip()
         
 
         page = max(1, int(request.args.get('page', 1)))
         per_page = min(100, max(1, int(request.args.get('per_page', 20))))
-        pattern = f"%{query.strip('"')}%"
+        pattern = f"%{query.strip('\"')}%"
         
         base_query = (
-            db.query(Item.name, Item.brand, ItemPrice.price, Store.name.label("store_name"))
+            db.query(Item.name, Item.brand, Item.size, Item.unit, ItemPrice.price, Store.name.label("store_name"))
             .join(ItemPrice, Item.id == ItemPrice.itemid)
             .join(Store, Store.id == ItemPrice.storeid)
             .filter(
@@ -39,6 +39,7 @@ def search_items():
         # Pagination
         results = (
             base_query
+            .distinct()
             .order_by(Item.name.asc())
             .offset((page - 1) * per_page)
             .limit(per_page)
@@ -47,13 +48,14 @@ def search_items():
 
         # Count for pagination
         total = base_query.count()
-
         return jsonify({
             "items": [
                 {
                     "name": row.name,
                     "brand": row.brand,
                     "price": row.price,
+                    "size": row.size,
+                    "unit": row.unit,
                     "store": row.store_name
                 }
                 for row in results

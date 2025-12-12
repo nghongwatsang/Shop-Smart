@@ -18,7 +18,7 @@ export default function GoBackButton({
   return (
     <button
       onClick={() => router.back()}
-      className={`absolute left-10 top-24 flex z-[9999] items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors ${className}`}
+      className={`fixed left-10 top-24 flex z-[9999] items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white transition-colors ${className}`}
     >
       <ArrowLeft className="w-5 h-5" />
       <span className="text-base font-medium">{label}</span>

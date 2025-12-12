@@ -34,7 +34,6 @@ CREATE TABLE IF NOT EXISTS item (
   name TEXT NOT NULL,
   brand TEXT,
   category TEXT,
-  product_url TEXT,
   size DOUBLE PRECISION,
   unit TEXT
 );

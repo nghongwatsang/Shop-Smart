@@ -7,7 +7,7 @@ accurate price comparisons by normalizing categories, units, and sizes.
 
 from typing import Dict, List, Optional, Tuple
 import re
-from scrapers.core import Product
+from backend.scrapers.core import Product
 
 
 # ============================================================================

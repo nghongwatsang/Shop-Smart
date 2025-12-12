@@ -23,7 +23,13 @@ def create_app():
     # Initialize extensions
     db.init_app(app)
     migrate.init_app(app, db)
-    CORS(app)
+    CORS(app, 
+        resources={r"/*": {"origins": "*"}},
+        supports_credentials=True,
+        allow_headers="*",
+        methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
+    )
+
     
     # Import models to ensure they are registered with SQLAlchemy
     from src.domain.entities.address import Address

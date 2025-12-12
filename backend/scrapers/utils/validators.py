@@ -7,8 +7,8 @@ Functions:
 """
 
 from typing import Dict, List, Optional, Any
-from scrapers.core import Product, ValidationError
-from scrapers.utils.parsers import clean_text, parse_price, parse_size
+from backend.scrapers.core import Product, ValidationError
+from backend.scrapers.utils.parsers import clean_text, parse_price, parse_size
 
 
 def validate_product(product: Product) -> List[str]:

@@ -11,9 +11,9 @@ from typing import List, Optional, Dict, Any
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-from scrapers.core import Product, ScraperResult, HTTPClient
-from scrapers.core.exceptions import ConnectionError, ParseError
-from scrapers.utils import (
+from backend.scrapers.core import Product, ScraperResult, HTTPClient
+from backend.scrapers.core.exceptions import ConnectionError, ParseError
+from backend.scrapers.utils import (
     parse_price, parse_size, clean_text,
     validate_product, clean_product_data,
     save_scraper_result, parse_brand_and_name
