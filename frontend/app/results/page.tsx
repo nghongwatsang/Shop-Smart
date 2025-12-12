@@ -12,6 +12,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useGlobal } from "@/app/context/GlobalContext";
 import { CartItem } from "@/types/CartItem";
 import { Store } from "@/types/Store";
+import { error } from "console";
 
 
 export default function ResultsPage() {
@@ -26,6 +27,9 @@ export default function ResultsPage() {
       (pos) => {
         setLocation({ lat: pos.coords.latitude, lon: pos.coords.longitude });
       },
+      (err) => {
+        console.error("Error getting location:", err);
+      }
     );
   }, []);
 
@@ -95,12 +99,16 @@ export default function ResultsPage() {
         console.error(err);
       } finally {
         setIsLoading(false);
-        if (location) setDistIsLoading(false);
+        setDistIsLoading(false);
       }
     };
     loadResults();
   }, [location, fetchResults]);
   // Re-run when location or fetchResults changes
+
+  useEffect(() => {
+    console.log("Results updated:", results);
+  }, [results]);
   
   // Loading state
   if (isLoading || distIsLoading) {
@@ -163,10 +171,16 @@ export default function ResultsPage() {
                   className="border rounded-lg shadow-sm bg-card"
                 >
                   <AccordionTrigger className="flex flex-row justify-between items-center px-6 py-3 text-lg font-medium">
-                    <div className="flex-1 text-left">{element.name}</div>
+                    {element.name !== "Price Chopper" ? 
+                      <div className="flex-1 text-left">{element.name}</div> :
+                      <div className="flex-1 text-left">Market32</div>
+                    }
+                    {location !== null && element.distance === "N/A" ? 
+                    <div className="flex-1 text-center">ERR</div>: 
                     <div className="flex-1 text-center">{element.distance}</div>
+                    }
                     {element.cost !== -1 ? 
-                      <div className="flex-1 text-right">${element.cost}</div> :
+                      <div className="flex-1 text-right">${Number(element.cost).toFixed(2)}</div> :
                       <div className="flex-1 text-right">N/A</div>
                     }
                   </AccordionTrigger>

@@ -12,8 +12,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const pathSegments = Array.isArray(pathArray) ? pathArray : [pathArray];
 
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3003';
-  const backendUrl = `${baseUrl}/api/${pathSegments.join("/")}`;
+  const params = new URLSearchParams(req.query as any);
+  params.delete("path"); // remove Next.js catch-all param
+  const searchParams = params.toString();
 
+  const backendUrl = `${baseUrl}/api/${pathSegments.join("/")}/${searchParams ? `?${searchParams}` : ""}`;
   try {
     const response = await fetch(backendUrl, {
       method: req.method,

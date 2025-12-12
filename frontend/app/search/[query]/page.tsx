@@ -67,8 +67,11 @@ export default function ProductPage({ params }: ProductPageProps) {
 
     useEffect(() => {
         fetchResults();
-        console.log(results);
     }, [fetchResults]);
+
+    useEffect(() => {
+        console.log("Updated results:", results);
+    }, [results]);
 
     function inCart (product: {name: string, brand: string, unit: string, size: string}) {
         return shoppingList.find(item => item.name === product.name && item.brand === product.brand && item.unit === product.unit && item.size === product.size) ? 'bg-green-400 dark:bg-green-700' : '';
