@@ -1,6 +1,5 @@
 # Shop-Smart
 <img width="1024" height="1024" alt="Logo" src="images/LOGO-transparent.png" />
-
 ## Getting Started
 
 ### 1) Get the project files (no Git required)
