@@ -78,6 +78,18 @@ pip install -r requirements-test.txt
 pytest
 ```
 
+### Linting with Ruff
+```bash
+# Install Ruff (included in requirements-test.txt)
+pip install -r requirements-test.txt
+
+# Run Ruff to check for linting errors
+ruff check .
+
+# Run Ruff with verbose output
+ruff check . --verbose
+```
+
 ### Database Migrations
 ```bash
 # Create a new migration
